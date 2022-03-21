@@ -20,13 +20,13 @@ public class PlayerCtrl : MonoBehaviour
         Debug.Log(SceneManager.GetActiveScene().name);
         curSceneName = SceneManager.GetActiveScene().name;
 
-        if(curSceneName == "Room") PlayerPrefs.SetInt("SceneNum", 1);
+        if (curSceneName == "Room") PlayerPrefs.SetInt("SceneNum", 1);
         else PlayerPrefs.SetInt("SceneNum", 0);
 
         //PlayerPrefs.SetInt("SceneNum", 0);
         //Debug.Log(PlayerPrefs.GetInt("SceneNum"));
-        obj = GameObject.FindGameObjectWithTag("obj");
-        floor = GameObject.FindGameObjectWithTag("Floor");
+        //obj = GameObject.FindGameObjectWithTag("obj");
+        //floor = GameObject.FindGameObjectWithTag("Floor");
     }
 
     void Update()
@@ -47,14 +47,16 @@ public class PlayerCtrl : MonoBehaviour
 
             else if (GaugeTimer >= 1.0f)
             {
-                if(PlayerPrefs.GetInt("SceneNum") == 0)
+                if (PlayerPrefs.GetInt("SceneNum") == 0)
                 {
                     hit.transform.GetComponent<Button>().onClick.Invoke();
                 }
-                else if(PlayerPrefs.GetInt("SceneNum") == 1)
+                else if (PlayerPrefs.GetInt("SceneNum") == 1)
                 {
-                    obj.SetActive(false);
-                    
+                    if(hit.transform.tag == "obj")
+                    {
+                        hit.transform.gameObject.SetActive(false);
+                    }
                 }
                 GaugeTimer = 0.0f;
             }
