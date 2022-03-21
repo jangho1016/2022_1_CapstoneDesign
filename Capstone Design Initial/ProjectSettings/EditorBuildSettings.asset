@@ -11,4 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Information.unity
     guid: c0ff0118741f7d24caf3dfd05a4be09e
+  - enabled: 1
+    path: Assets/Scenes/Select room.unity
+    guid: c22d4b5e120ca57469083fdc4f553573
+  - enabled: 1
+    path: Assets/Scenes/Room.unity
+    guid: 798f3b4c09e552e4191c9f7149857493
   m_configObjects: {}
