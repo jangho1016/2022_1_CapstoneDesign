@@ -12,6 +12,8 @@ public class PlayerCtrl : MonoBehaviour
     private float gazeTimer = 2.0f;
     private float positionY;
     private string curSceneName;
+    private GameObject obj;
+    private GameObject floor;
 
     void Start()
     {
@@ -23,10 +25,13 @@ public class PlayerCtrl : MonoBehaviour
 
         //PlayerPrefs.SetInt("SceneNum", 0);
         //Debug.Log(PlayerPrefs.GetInt("SceneNum"));
+        obj = GameObject.FindGameObjectWithTag("obj");
+        floor = GameObject.FindGameObjectWithTag("Floor");
     }
 
     void Update()
     {
+        Debug.Log(PlayerPrefs.GetInt("SceneNum"));
         RaycastHit hit;
         Vector3 forward = mainCam.transform.TransformDirection(Vector3.forward) * 1000;
         cursorGauge.fillAmount = GaugeTimer;
@@ -35,11 +40,21 @@ public class PlayerCtrl : MonoBehaviour
         {
             GaugeTimer += 1.0f / gazeTimer * Time.deltaTime;
 
-            if (GaugeTimer >= 1.0f)
+            if (hit.transform.tag == "Floor")
             {
-                if((PlayerPrefs.GetInt("SceneNum") == 0) || (PlayerPrefs.GetInt("SceneNum") == 1))
+                GaugeTimer = 0.0f;
+            }
+
+            else if (GaugeTimer >= 1.0f)
+            {
+                if(PlayerPrefs.GetInt("SceneNum") == 0)
                 {
                     hit.transform.GetComponent<Button>().onClick.Invoke();
+                }
+                else if(PlayerPrefs.GetInt("SceneNum") == 1)
+                {
+                    obj.SetActive(false);
+                    
                 }
                 GaugeTimer = 0.0f;
             }
