@@ -7,7 +7,7 @@ public class ButtonCtrl : MonoBehaviour
 {
     public void StartBT()
     {
-        PlayerPrefs.SetInt("SceneNum", 1);
+        PlayerPrefs.SetInt("SceneNum", 0);
         SceneManager.LoadScene("Select room");
     }
 
@@ -23,14 +23,19 @@ public class ButtonCtrl : MonoBehaviour
         SceneManager.LoadScene("Information");
     }
 
-    public void ExitBT()
-    {
-        Application.Quit();
-    }
-
     public void SelectBT()
     {
-        PlayerPrefs.SetInt("SceneNum", 2);
+        PlayerPrefs.SetInt("SceneNum", 1);
         SceneManager.LoadScene("Room");
     }
+
+    public void ExitBT()
+    {
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
+        Application.Quit(); // 어플리케이션 종료
+#endif
+    }
+
 }
