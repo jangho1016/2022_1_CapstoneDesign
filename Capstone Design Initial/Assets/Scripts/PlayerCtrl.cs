@@ -14,6 +14,7 @@ public class PlayerCtrl : MonoBehaviour
     private string curSceneName;
     private GameObject obj;
     private GameObject floor;
+    //
 
     void Start()
     {
