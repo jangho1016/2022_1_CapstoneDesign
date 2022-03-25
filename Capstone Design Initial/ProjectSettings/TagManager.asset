@@ -6,6 +6,7 @@ TagManager:
   tags:
   - obj
   - Floor
+  - obj1
   layers:
   - Default
   - TransparentFX

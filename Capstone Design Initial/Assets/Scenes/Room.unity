@@ -387,7 +387,7 @@ GameObject:
   - component: {fileID: 1245891799}
   - component: {fileID: 1245891798}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: obj
   m_TagString: obj
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -871,8 +871,8 @@ GameObject:
   - component: {fileID: 1889365709}
   - component: {fileID: 1889365708}
   m_Layer: 0
-  m_Name: Cube (1)
-  m_TagString: obj
+  m_Name: obj1
+  m_TagString: obj1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

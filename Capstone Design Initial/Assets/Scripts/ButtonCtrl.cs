@@ -31,11 +31,15 @@ public class ButtonCtrl : MonoBehaviour
 
     public void ExitBT()
     {
-#if UNITY_EDITOR
-        UnityEditor.EditorApplication.isPlaying = false;
-#else
-        Application.Quit(); // 어플리케이션 종료
-#endif
+        /*#if UNITY_EDITOR
+                UnityEditor.EditorApplication.isPlaying = false;
+        #else
+                Application.Quit(); // 어플리케이션 종료
+        #endif*/
+        Application.Quit();
     }
-
+    public void ToBath()
+    {
+        SceneManager.LoadScene("Real Room1");
+    }
 }

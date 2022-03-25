@@ -14,11 +14,12 @@ public class PlayerCtrl : MonoBehaviour
     private string curSceneName;
     private GameObject obj;
     private GameObject floor;
+    private int cnt = 0;
     //
 
     void Start()
     {
-        Debug.Log(SceneManager.GetActiveScene().name);
+        //Debug.Log(SceneManager.GetActiveScene().name);
         curSceneName = SceneManager.GetActiveScene().name;
 
         if (curSceneName == "Room") PlayerPrefs.SetInt("SceneNum", 1);
@@ -32,7 +33,7 @@ public class PlayerCtrl : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(PlayerPrefs.GetInt("SceneNum"));
+        //Debug.Log(PlayerPrefs.GetInt("SceneNum"));
         RaycastHit hit;
         Vector3 forward = mainCam.transform.TransformDirection(Vector3.forward) * 1000;
         cursorGauge.fillAmount = GaugeTimer;
@@ -54,9 +55,15 @@ public class PlayerCtrl : MonoBehaviour
                 }
                 else if (PlayerPrefs.GetInt("SceneNum") == 1)
                 {
-                    if(hit.transform.tag == "obj")
+                    if(hit.transform.CompareTag("obj") || hit.transform.CompareTag("obj1"))
                     {
                         hit.transform.gameObject.SetActive(false);
+                        cnt++;
+
+                        if(cnt >= 2)
+                        {
+                            SceneManager.LoadScene("Real Room2");
+                        }
                     }
                 }
                 GaugeTimer = 0.0f;
