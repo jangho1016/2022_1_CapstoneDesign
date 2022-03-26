@@ -115,7 +115,7 @@ MonoBehaviour:
   m_MinSize: {x: 1007, y: 371}
   m_MaxSize: {x: 26002, y: 14021}
   vertical: 1
-  controlID: 159
+  controlID: 120
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -143,7 +143,7 @@ MonoBehaviour:
   m_MinSize: {x: 1007, y: 271}
   m_MaxSize: {x: 26002, y: 10021}
   vertical: 0
-  controlID: 160
+  controlID: 121
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -536,23 +536,23 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 28600000
-      m_LastClickedID: 24616
-      m_ExpandedIDs: 2cc1ffff4ac1ffff52c1ffff5cc1ffff66c1ffff70c1ffff7ac1ffff7ec1ffff6ac2ffff88c2ffff78c3ffff82c3ffff8cc3ffff96c3ffffa0c3ffffa4c3ffffd2c7fffff0c7ffffe0c8ffffeac8fffff4c8fffffec8ffff08c9ffff0cc9ffff14ccffff30ccffff2ecdffff3ccdffff4acdffff58cdffff66cdffff6ecdffffe2cdffff18d0ffff3cd2ffff86d2ffffaed2ffffced2fffff6d2ffff18d3ffff46d3ffff52d7ffff54d8fffff4d8ffff26d9ffff58d9ffff42dfffffc0e6ffffceebffff74f5ffff9af6ffff66fbffffc23a0000ca3a0000e43a0000f83a0000b03d0000b83d0000ca3d0000cc3d0000823f00008c3f0000963f0000a23f0000824000008a4000009e400000bc40000098430000a0430000ba4300001e44000026440000384400003a4400009c44000018490000204900002a4900003e490000fa490000024a00001a4a00002e4a0000f8550000025600001e560000265600004056000054560000f25f0000fa5f000014600000
+      m_SelectedIDs: 08390000
+      m_LastClickedID: 14600
+      m_ExpandedIDs: 66fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: Canvas
-        m_OriginalName: Canvas
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 24596
+        m_UserData: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 0
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 9}
       m_SearchString: 
@@ -601,11 +601,11 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Scripts
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Scripts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\Unity Projects\2022_1_CapstoneDesign\Capstone Design Initial
   m_LockTracker:
@@ -614,7 +614,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 90390000
     m_LastClickedID: 14736
-    m_ExpandedIDs: 0000000086390000903900009e390000
+    m_ExpandedIDs: 0000000086390000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -735,7 +735,7 @@ MonoBehaviour:
     m_PrefName: Preview_InspectorPreview
   m_PreviewWindow: {fileID: 0}
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 0
+  m_LastVerticalScrollValue: 82
 --- !u!114 &18
 MonoBehaviour:
   m_ObjectHideFlags: 52

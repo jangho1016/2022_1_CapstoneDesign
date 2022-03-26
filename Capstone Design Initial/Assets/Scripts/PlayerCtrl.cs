@@ -15,6 +15,7 @@ public class PlayerCtrl : MonoBehaviour
     private GameObject obj;
     private GameObject floor;
     private int cnt = 0;
+    private Vector3 ScreenCenter;
     //
 
     void Start()
