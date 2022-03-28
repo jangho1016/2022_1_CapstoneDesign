@@ -20,21 +20,28 @@ public class PlayerCtrl : MonoBehaviour
 
     void Start()
     {
-        //Debug.Log(SceneManager.GetActiveScene().name);
+        PlayerPrefs.SetInt("SceneNum", 0);
+
+        Debug.Log(SceneManager.GetActiveScene().name);
         curSceneName = SceneManager.GetActiveScene().name;
 
-        if (curSceneName == "Room") PlayerPrefs.SetInt("SceneNum", 1);
-        else PlayerPrefs.SetInt("SceneNum", 0);
+        if (curSceneName == "Room")
+        {
+            PlayerPrefs.SetInt("SceneNum", 1);
+        }
+        else
+        {
+            PlayerPrefs.SetInt("SceneNum", 0);
+        }
 
-        //PlayerPrefs.SetInt("SceneNum", 0);
         //Debug.Log(PlayerPrefs.GetInt("SceneNum"));
-        //obj = GameObject.FindGameObjectWithTag("obj");
-        //floor = GameObject.FindGameObjectWithTag("Floor");
+        obj = GameObject.FindGameObjectWithTag("obj");
+        floor = GameObject.FindGameObjectWithTag("Floor");
     }
 
     void Update()
     {
-        //Debug.Log(PlayerPrefs.GetInt("SceneNum"));
+        Debug.Log(PlayerPrefs.GetInt("SceneNum"));
         RaycastHit hit;
         Vector3 forward = mainCam.transform.TransformDirection(Vector3.forward) * 1000;
         cursorGauge.fillAmount = GaugeTimer;
