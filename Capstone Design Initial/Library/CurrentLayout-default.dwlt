@@ -115,7 +115,11 @@ MonoBehaviour:
   m_MinSize: {x: 1013, y: 392}
   m_MaxSize: {x: 26008, y: 14042}
   vertical: 1
+<<<<<<< Updated upstream
   controlID: 143
+=======
+  controlID: 51
+>>>>>>> Stashed changes
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -143,7 +147,11 @@ MonoBehaviour:
   m_MinSize: {x: 1013, y: 271}
   m_MaxSize: {x: 26008, y: 10021}
   vertical: 0
+<<<<<<< Updated upstream
   controlID: 144
+=======
+  controlID: 52
+>>>>>>> Stashed changes
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -536,9 +544,15 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
+<<<<<<< Updated upstream
       m_SelectedIDs: d8f9ffff
       m_LastClickedID: -1576
       m_ExpandedIDs: c2faffff
+=======
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 66fbffff
+>>>>>>> Stashed changes
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: Cube
@@ -613,9 +627,15 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
+<<<<<<< Updated upstream
     m_SelectedIDs: 6c390000
     m_LastClickedID: 14700
     m_ExpandedIDs: 000000006c39000000ca9a3b
+=======
+    m_SelectedIDs: 48390000
+    m_LastClickedID: 14664
+    m_ExpandedIDs: 000000003e390000
+>>>>>>> Stashed changes
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -643,7 +663,11 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
+<<<<<<< Updated upstream
     m_ExpandedIDs: 000000006c390000
+=======
+    m_ExpandedIDs: 000000003e390000
+>>>>>>> Stashed changes
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
