@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerCtrl : MonoBehaviour
 {
+    private Rigidbody rb;
     public Image cursorGauge;
     public GameObject mainCam;
     private float GaugeTimer = 0.0f;
@@ -16,10 +17,10 @@ public class PlayerCtrl : MonoBehaviour
     private GameObject floor;
     private int cnt = 0;
     private Vector3 ScreenCenter;
-    //
 
     void Start()
     {
+        rb = GetComponent<Rigidbody>();
         PlayerPrefs.SetInt("SceneNum", 0);
 
         Debug.Log(SceneManager.GetActiveScene().name);
@@ -45,6 +46,7 @@ public class PlayerCtrl : MonoBehaviour
 
     void Update()
     {
+        rb.velocity = Vector3.zero;
         Debug.Log(PlayerPrefs.GetInt("SceneNum"));
         RaycastHit hit;
         Vector3 forward = mainCam.transform.TransformDirection(Vector3.forward) * 1000;
@@ -56,12 +58,7 @@ public class PlayerCtrl : MonoBehaviour
         {
             GaugeTimer += 1.0f / gazeTimer * Time.deltaTime;
 
-            if (hit.transform.tag == "Untagged")
-            {
-                GaugeTimer = 0.0f;
-            }
-
-            else if (GaugeTimer >= 1.0f)
+            if (GaugeTimer >= 1.0f)
             {
                 if (PlayerPrefs.GetInt("SceneNum") == 0)
                 {
@@ -82,7 +79,11 @@ public class PlayerCtrl : MonoBehaviour
                 }
                 else if (PlayerPrefs.GetInt("SceneNum") == 3)
                 {
-                        hit.transform.gameObject.SetActive(false);
+                    if (hit.transform.tag == "Untagged")
+                    {
+                        GaugeTimer = 0.0f;
+                    }
+                    //hit.transform.gameObject.SetActive(false);
                 }
                 GaugeTimer = 0.0f;
             }
@@ -98,8 +99,8 @@ public class PlayerCtrl : MonoBehaviour
 
                 positionY = this.transform.position.y;
 
-                if (positionY != 8.5f) //플레이어의 y위치를 고정
-                    positionY = 8.5f;
+                if (positionY != 10.0f) //플레이어의 y위치를 고정
+                    positionY = 10.0f;
                 this.transform.position = new Vector3(transform.position.x, positionY, transform.position.z);
             }
         }

@@ -193,7 +193,7 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 224
       Script: {instanceID: 0}
-    Assets/Scenes/Room.unity:
+    Assets/Scenes/Room1.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -220,6 +220,12 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 89
+      Script: {instanceID: 0}
+    - Class: 90
+      Script: {instanceID: 0}
+    - Class: 95
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
@@ -240,9 +246,15 @@ ScriptsOnlyBuild:
       Script: {instanceID: 14184}
     - Class: 115
       Script: {instanceID: 0}
+    - Class: 136
+      Script: {instanceID: 0}
+    - Class: 137
+      Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 205
       Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
@@ -251,6 +263,8 @@ ScriptsOnlyBuild:
     - Class: 223
       Script: {instanceID: 0}
     - Class: 224
+      Script: {instanceID: 0}
+    - Class: 258
       Script: {instanceID: 0}
     Assets/Scenes/Select room.unity:
     - Class: 1
@@ -1086,7 +1100,7 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Start Scene.unity
   - Assets/Scenes/Information.unity
   - Assets/Scenes/Select room.unity
-  - Assets/Scenes/Room.unity
+  - Assets/Scenes/Room1.unity
   - Assets/Scenes/Real Room/Real Room1/Real Room1.unity
   - Assets/Scenes/Real Room/Real Room2/Real Room2.unity
-  playerPath: "C:/Users/\uC624\uC7A5\uD638/Desktop/sssssssssssssssssssssssssssssssssssssssssss.apk"
+  playerPath: "C:/Users/\uC624\uC7A5\uD638/Desktop/roomtest.zip.apk"

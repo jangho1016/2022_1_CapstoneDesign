@@ -26,7 +26,7 @@ public class ButtonCtrl : MonoBehaviour
     public void SelectBT()
     {
         PlayerPrefs.SetInt("SceneNum", 1);
-        SceneManager.LoadScene("Room");
+        SceneManager.LoadScene("Room1");
     }
 
     public void ExitBT()
