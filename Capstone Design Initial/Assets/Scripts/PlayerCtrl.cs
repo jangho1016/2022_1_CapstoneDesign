@@ -29,6 +29,10 @@ public class PlayerCtrl : MonoBehaviour
         {
             PlayerPrefs.SetInt("SceneNum", 1);
         }
+        else if (curSceneName == "Room1")
+        {
+            PlayerPrefs.SetInt("SceneNum", 3);
+        }
         else
         {
             PlayerPrefs.SetInt("SceneNum", 0);
@@ -36,7 +40,7 @@ public class PlayerCtrl : MonoBehaviour
 
         //Debug.Log(PlayerPrefs.GetInt("SceneNum"));
         obj = GameObject.FindGameObjectWithTag("obj");
-        floor = GameObject.FindGameObjectWithTag("Floor");
+        //floor = GameObject.FindGameObjectWithTag("Floor");
     }
 
     void Update()
@@ -46,11 +50,13 @@ public class PlayerCtrl : MonoBehaviour
         Vector3 forward = mainCam.transform.TransformDirection(Vector3.forward) * 1000;
         cursorGauge.fillAmount = GaugeTimer;
 
+        Debug.DrawRay(transform.position, forward, Color.red);
+
         if (Physics.Raycast(this.transform.position, forward, out hit))
         {
             GaugeTimer += 1.0f / gazeTimer * Time.deltaTime;
 
-            if (hit.transform.tag == "Floor")
+            if (hit.transform.tag == "Untagged")
             {
                 GaugeTimer = 0.0f;
             }
@@ -74,13 +80,17 @@ public class PlayerCtrl : MonoBehaviour
                         }
                     }
                 }
+                else if (PlayerPrefs.GetInt("SceneNum") == 3)
+                {
+                        hit.transform.gameObject.SetActive(false);
+                }
                 GaugeTimer = 0.0f;
             }
         }
         else
             GaugeTimer = 0.0f;
 
-        if (PlayerPrefs.GetInt("SceneNum") == 1)
+        if (PlayerPrefs.GetInt("SceneNum") == 1 || PlayerPrefs.GetInt("SceneNum") == 3)
         {
             if (Input.GetMouseButton(0))
             {
@@ -88,8 +98,8 @@ public class PlayerCtrl : MonoBehaviour
 
                 positionY = this.transform.position.y;
 
-                if (positionY != 4.5f) //플레이어의 y위치를 고정
-                    positionY = 4.5f;
+                if (positionY != 8.5f) //플레이어의 y위치를 고정
+                    positionY = 8.5f;
                 this.transform.position = new Vector3(transform.position.x, positionY, transform.position.z);
             }
         }

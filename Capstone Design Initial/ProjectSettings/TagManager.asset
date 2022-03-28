@@ -5,8 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - obj
-  - Floor
-  - obj1
+  - Door
   layers:
   - Default
   - TransparentFX
