@@ -6510,7 +6510,6 @@ GameObject:
   - component: {fileID: 2134063019}
   - component: {fileID: 2134063018}
   - component: {fileID: 2134063017}
-  - component: {fileID: 2134063016}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -6518,20 +6517,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2134063016
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2134063015}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef3af34e0734e4842ac1b6f8566d51db, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timertext: {fileID: 1790379181}
-  time_last: 0
 --- !u!114 &2134063017
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6547,6 +6532,8 @@ MonoBehaviour:
   cursorGauge: {fileID: 14154733}
   mainCam: {fileID: 292737798}
   pPanel: {fileID: 1691388912}
+  timertext: {fileID: 1790379181}
+  time_last: 0
 --- !u!136 &2134063018
 CapsuleCollider:
   m_ObjectHideFlags: 0

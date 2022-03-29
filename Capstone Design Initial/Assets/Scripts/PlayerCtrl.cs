@@ -15,7 +15,10 @@ public class PlayerCtrl : MonoBehaviour
     private string curSceneName;
     private int cnt = 0;
     public GameObject pPanel;
-    float timer = 0.0f;
+    public Text timertext;
+    private float timer;
+    public float time_last;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -27,15 +30,19 @@ public class PlayerCtrl : MonoBehaviour
             PlayerPrefs.SetInt("SceneNum", 2); //씬넘버 2로 설정
             PlayerPrefs.SetInt("pass", 0); //패스하기 위한 값 초기화
         }
+        else if(curSceneName == "Loading")
+        {
+            StartCoroutine(LoadScene());
+        }
         else
         {
             PlayerPrefs.SetInt("SceneNum", 0); //씬넘버 0으로
-        }
+        }  
     }
 
     void Update()
     {
-        Debug.Log(PlayerPrefs.GetInt("SceneNum"));
+        //Debug.Log(cnt);
         rb.velocity = Vector3.zero; //밀림현상 때문에
         RaycastHit hit;
         Vector3 forward = mainCam.transform.TransformDirection(Vector3.forward) * 1000; //forward값을 메인카메라가 바라보는 방향 * 1000으로 설정
@@ -43,14 +50,37 @@ public class PlayerCtrl : MonoBehaviour
 
         Debug.DrawRay(transform.position, forward, Color.red); //레이 확인하기 위함
 
+        if (PlayerPrefs.GetInt("SceneNum") == 2) //방 1-5번이면
+        {
+            timer += Time.deltaTime; //타이머 시작
+
+            time_last = 15.0f - timer; //타이머 제한 시간 설정 (초 - 타이머)
+
+            timertext.text = "남은 시간 : " + ((int)(time_last / 60) + "분" + (int)(time_last % 60) + "초"); //남은 시간 표시
+
+            if (time_last <= 60.0f)
+            {
+                timertext.text = "남은 시간 : " + (int)(time_last % 60) + "초"; //1분 미만일 때 타이머 표시
+            }
+
+            if (time_last <= 0.0f) //시간제한이 다 되면
+            {
+                SceneManager.LoadScene("Select"); //방 선택 씬 로드
+            }
+            
+            else if ((cnt == 1) && (time_last >= 0.0f)) //방에서 하자 부분을 발견하고 시간제한에 걸리지 않았을 때
+            {
+                PlayerPrefs.SetInt("pass", 1); //통과하도록 설정
+            }
+            else if(cnt >= 2)
+            {
+                PlayerPrefs.SetInt("pass", 0); //통과하도록 설정
+            }
+        }
+
         if (Physics.Raycast(this.transform.position, forward, out hit)) //바라봤을 때
         {
             GaugeTimer += 1.0f / gazeTimer * Time.deltaTime; //게이지 차는 시간은 3초
-
-            if(PlayerPrefs.GetInt("SceneNum") == 2) //방 1-5번이면
-            {
-                timer = gameObject.GetComponent<TimerCtrl>().time_last; //타이머 코드에서 남은 시간 가져옴
-            }
 
             if (GaugeTimer >= 1.0f) //게이지가 다 차면
             {
@@ -61,6 +91,7 @@ public class PlayerCtrl : MonoBehaviour
                 
                 else if (PlayerPrefs.GetInt("SceneNum") == 2) //방 1-5번 씬일때
                 {
+                    
                     if (hit.transform.tag == "Untagged") //태그 없는 물체 바라보면
                     {
                         GaugeTimer = 0.0f; //게이지를 채우지 않음
@@ -68,11 +99,6 @@ public class PlayerCtrl : MonoBehaviour
                     else if(hit.transform.tag == "Crack") //방에서 하자 부분을 발견했을때
                     {
                         cnt++; //카운트 증가
-
-                        if(cnt == 1 && (timer >= 0.0f)) //방에서 하자 부분을 발견하고 시간제한에 걸리지 않았을 때
-                        {
-                            PlayerPrefs.SetInt("pass", 1); //통과하도록 설정
-                        }
                     }
                     else if(hit.transform.tag == "Manager") //부동산 중개업자와 상호작용시
                     {
@@ -81,11 +107,6 @@ public class PlayerCtrl : MonoBehaviour
                     else if(hit.transform.tag == "Button") //버튼과 상호작용시
                     {
                         hit.transform.GetComponent<Button>().onClick.Invoke(); //버튼 이벤트 실행
-                    }
-                    else if (timer <= 0.0f) //시간제한이 다 되면
-                    {
-                        PlayerPrefs.SetInt("Replay", 1); //리플레이 설정
-                        SceneManager.LoadScene("Select room"); //방 선택화면 로딩
                     }
                 }
                 GaugeTimer = 0.0f; //게이지 0으로
@@ -109,5 +130,11 @@ public class PlayerCtrl : MonoBehaviour
                 this.transform.position = new Vector3(transform.position.x, positionY, transform.position.z); //플레이어의 y축 고정
             }
         }
+    }
+
+    IEnumerator LoadScene()
+    {
+        yield return new WaitForSeconds(3.0f);
+        SceneManager.LoadScene("Select");
     }
 }

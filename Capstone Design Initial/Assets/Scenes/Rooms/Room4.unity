@@ -1062,6 +1062,8 @@ MonoBehaviour:
   cursorGauge: {fileID: 1662330368}
   mainCam: {fileID: 1724065209}
   pPanel: {fileID: 1522596092}
+  timertext: {fileID: 651532585}
+  time_last: 0
 --- !u!136 &548392445
 CapsuleCollider:
   m_ObjectHideFlags: 0

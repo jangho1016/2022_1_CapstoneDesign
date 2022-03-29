@@ -10,23 +10,21 @@ public class ButtonCtrl : MonoBehaviour
     private void Start()
     {
         num = PlayerPrefs.GetInt("rand_num"); //랜덤 값 가져옴
+        Debug.Log(num);
     }
 
     public void StartBT() //시작 버튼
     {
-        PlayerPrefs.SetInt("SceneNum", 0); //씬넘버 0으로 설정
-        SceneManager.LoadScene("Select room"); //Select room 씬 로딩
+        SceneManager.LoadScene("Loading"); //Select room 씬 로딩
     }
 
     public void MainBT() //메인화면으로 가기 버튼
     {
-        PlayerPrefs.SetInt("SceneNum", 0); //씬넘버 0으로 설정
         SceneManager.LoadScene("Start Scene"); //시작 씬 로딩
     }
 
     public void Information()
     {
-        PlayerPrefs.SetInt("SceneNum", 0); //씬넘버 0으로 설정
         SceneManager.LoadScene("Information"); //진행 방식 씬 로딩
     }
 
@@ -148,6 +146,7 @@ public class ButtonCtrl : MonoBehaviour
             SceneManager.LoadScene("Room1");
         }
     }
+
     public void ExitBT() //종료 버튼
     {
         Application.Quit(); //종료
@@ -157,13 +156,14 @@ public class ButtonCtrl : MonoBehaviour
     {
         if(PlayerPrefs.GetInt("pass") == 1) //성공시
         {
-            PlayerPrefs.SetInt("Replay", 0); //랜덤 넘버 초기화
+            Debug.Log("Success");
+            PlayerPrefs.SetInt("rand_num", 0);
+            PlayerPrefs.SetInt("pass", 0);
             SceneManager.LoadScene("Real Room1"); //실제 방 로드
         }
         else
         {
-            PlayerPrefs.SetInt("Replay", 1); //실패시
-            SceneManager.LoadScene("Select room"); //방 선택 씬 로드
+            SceneManager.LoadScene("Select"); //방 선택 씬 로드
         }
     }
 

@@ -3516,6 +3516,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timertext: {fileID: 371009812}
+  time_last: 0
 --- !u!114 &1192123581
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3531,6 +3532,8 @@ MonoBehaviour:
   cursorGauge: {fileID: 2064913070}
   mainCam: {fileID: 1061797062}
   pPanel: {fileID: 2021715478}
+  timertext: {fileID: 371009812}
+  time_last: 0
 --- !u!136 &1192123582
 CapsuleCollider:
   m_ObjectHideFlags: 0
