@@ -1,5 +1,9 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/Room_ch.unity
+=======
+- path: Assets/Scenes/Urban/LowPolyInterior2_Overview 1.unity
+>>>>>>> 7bcd496ac6afc09c9c496b61f209c628e1c21cce
   isLoaded: 1
   isActive: 1
   isSubScene: 0
