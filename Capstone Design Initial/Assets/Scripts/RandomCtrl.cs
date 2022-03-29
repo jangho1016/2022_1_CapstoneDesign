@@ -5,7 +5,6 @@ using UnityEngine;
 public class RandomCtrl : MonoBehaviour
 {
     private int rand_num;
-    private string curSceneName;
 
     // Start is called before the first frame update
     void Start()

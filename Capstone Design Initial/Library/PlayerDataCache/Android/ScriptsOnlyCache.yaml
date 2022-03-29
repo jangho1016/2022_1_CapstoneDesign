@@ -4,6 +4,8 @@ ScriptsOnlyBuild:
     - ButtonCtrl
     - GvrEditorEmulator
     - PlayerCtrl
+    - RandomCtrl
+    - TimerCtrl
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     UnityEditor.TestRunner.dll:
@@ -52,21 +54,21 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11398}
     - Class: 114
-      Script: {instanceID: 11426}
+      Script: {instanceID: 11636}
     - Class: 114
-      Script: {instanceID: 11968}
+      Script: {instanceID: 12178}
     - Class: 114
-      Script: {instanceID: 12004}
+      Script: {instanceID: 12214}
     - Class: 114
-      Script: {instanceID: 12280}
+      Script: {instanceID: 12490}
     - Class: 114
-      Script: {instanceID: 12318}
+      Script: {instanceID: 12528}
     - Class: 114
-      Script: {instanceID: 12942}
+      Script: {instanceID: 13152}
     - Class: 114
-      Script: {instanceID: 13644}
+      Script: {instanceID: 13854}
     - Class: 114
-      Script: {instanceID: 14184}
+      Script: {instanceID: 14398}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -82,6 +84,8 @@ ScriptsOnlyBuild:
     - Class: 223
       Script: {instanceID: 0}
     - Class: 224
+      Script: {instanceID: 0}
+    - Class: 258
       Script: {instanceID: 0}
     Assets/Scenes/Real Room/Real Room1/Real Room1.unity:
     - Class: 1
@@ -109,17 +113,17 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11394}
     - Class: 114
-      Script: {instanceID: 11426}
+      Script: {instanceID: 11636}
     - Class: 114
-      Script: {instanceID: 11968}
+      Script: {instanceID: 12178}
     - Class: 114
-      Script: {instanceID: 12004}
+      Script: {instanceID: 12214}
     - Class: 114
-      Script: {instanceID: 12280}
+      Script: {instanceID: 12490}
     - Class: 114
-      Script: {instanceID: 13644}
+      Script: {instanceID: 13854}
     - Class: 114
-      Script: {instanceID: 14184}
+      Script: {instanceID: 14398}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -164,19 +168,19 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11398}
     - Class: 114
-      Script: {instanceID: 11426}
+      Script: {instanceID: 11636}
     - Class: 114
-      Script: {instanceID: 11968}
+      Script: {instanceID: 12178}
     - Class: 114
-      Script: {instanceID: 12004}
+      Script: {instanceID: 12214}
     - Class: 114
-      Script: {instanceID: 12280}
+      Script: {instanceID: 12490}
     - Class: 114
-      Script: {instanceID: 12318}
+      Script: {instanceID: 12528}
     - Class: 114
-      Script: {instanceID: 13644}
+      Script: {instanceID: 13854}
     - Class: 114
-      Script: {instanceID: 14184}
+      Script: {instanceID: 14398}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -193,7 +197,7 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 224
       Script: {instanceID: 0}
-    Assets/Scenes/Room1.unity:
+    Assets/Scenes/Rooms/Room1.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -233,18 +237,340 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11394}
     - Class: 114
-      Script: {instanceID: 11426}
+      Script: {instanceID: 11396}
     - Class: 114
-      Script: {instanceID: 11968}
+      Script: {instanceID: 11636}
     - Class: 114
-      Script: {instanceID: 12004}
+      Script: {instanceID: 12178}
     - Class: 114
-      Script: {instanceID: 12280}
+      Script: {instanceID: 12214}
     - Class: 114
-      Script: {instanceID: 13644}
+      Script: {instanceID: 12490}
     - Class: 114
-      Script: {instanceID: 14184}
+      Script: {instanceID: 13854}
+    - Class: 114
+      Script: {instanceID: 14216}
+    - Class: 114
+      Script: {instanceID: 14398}
     - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 136
+      Script: {instanceID: 0}
+    - Class: 137
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 205
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    - Class: 258
+      Script: {instanceID: 0}
+    Assets/Scenes/Rooms/Room2.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 23
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 33
+      Script: {instanceID: 0}
+    - Class: 43
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 54
+      Script: {instanceID: 0}
+    - Class: 64
+      Script: {instanceID: 0}
+    - Class: 65
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 89
+      Script: {instanceID: 0}
+    - Class: 90
+      Script: {instanceID: 0}
+    - Class: 95
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 108
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 11394}
+    - Class: 114
+      Script: {instanceID: 11396}
+    - Class: 114
+      Script: {instanceID: 11636}
+    - Class: 114
+      Script: {instanceID: 12178}
+    - Class: 114
+      Script: {instanceID: 12214}
+    - Class: 114
+      Script: {instanceID: 12490}
+    - Class: 114
+      Script: {instanceID: 13854}
+    - Class: 114
+      Script: {instanceID: 14216}
+    - Class: 114
+      Script: {instanceID: 14398}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 136
+      Script: {instanceID: 0}
+    - Class: 137
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 205
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    - Class: 258
+      Script: {instanceID: 0}
+    Assets/Scenes/Rooms/Room3.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 23
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 33
+      Script: {instanceID: 0}
+    - Class: 43
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 54
+      Script: {instanceID: 0}
+    - Class: 64
+      Script: {instanceID: 0}
+    - Class: 65
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 89
+      Script: {instanceID: 0}
+    - Class: 90
+      Script: {instanceID: 0}
+    - Class: 95
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 108
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 11394}
+    - Class: 114
+      Script: {instanceID: 11396}
+    - Class: 114
+      Script: {instanceID: 11636}
+    - Class: 114
+      Script: {instanceID: 12178}
+    - Class: 114
+      Script: {instanceID: 12214}
+    - Class: 114
+      Script: {instanceID: 12490}
+    - Class: 114
+      Script: {instanceID: 13854}
+    - Class: 114
+      Script: {instanceID: 14216}
+    - Class: 114
+      Script: {instanceID: 14398}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 136
+      Script: {instanceID: 0}
+    - Class: 137
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 205
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    - Class: 258
+      Script: {instanceID: 0}
+    Assets/Scenes/Rooms/Room4.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 23
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 33
+      Script: {instanceID: 0}
+    - Class: 43
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 54
+      Script: {instanceID: 0}
+    - Class: 64
+      Script: {instanceID: 0}
+    - Class: 65
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 89
+      Script: {instanceID: 0}
+    - Class: 90
+      Script: {instanceID: 0}
+    - Class: 95
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 108
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 11394}
+    - Class: 114
+      Script: {instanceID: 11396}
+    - Class: 114
+      Script: {instanceID: 11636}
+    - Class: 114
+      Script: {instanceID: 12178}
+    - Class: 114
+      Script: {instanceID: 12214}
+    - Class: 114
+      Script: {instanceID: 12490}
+    - Class: 114
+      Script: {instanceID: 13854}
+    - Class: 114
+      Script: {instanceID: 14216}
+    - Class: 114
+      Script: {instanceID: 14398}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 136
+      Script: {instanceID: 0}
+    - Class: 137
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 205
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    - Class: 258
+      Script: {instanceID: 0}
+    Assets/Scenes/Rooms/Room5.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 23
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 33
+      Script: {instanceID: 0}
+    - Class: 43
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 54
+      Script: {instanceID: 0}
+    - Class: 64
+      Script: {instanceID: 0}
+    - Class: 65
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 89
+      Script: {instanceID: 0}
+    - Class: 90
+      Script: {instanceID: 0}
+    - Class: 95
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 108
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 11394}
+    - Class: 114
+      Script: {instanceID: 11396}
+    - Class: 114
+      Script: {instanceID: 11636}
+    - Class: 114
+      Script: {instanceID: 12178}
+    - Class: 114
+      Script: {instanceID: 12214}
+    - Class: 114
+      Script: {instanceID: 12490}
+    - Class: 114
+      Script: {instanceID: 13854}
+    - Class: 114
+      Script: {instanceID: 14216}
+    - Class: 114
+      Script: {instanceID: 14398}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
       Script: {instanceID: 0}
     - Class: 136
       Script: {instanceID: 0}
@@ -298,21 +624,23 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11398}
     - Class: 114
-      Script: {instanceID: 11426}
+      Script: {instanceID: 11636}
     - Class: 114
-      Script: {instanceID: 11968}
+      Script: {instanceID: 12178}
     - Class: 114
-      Script: {instanceID: 12004}
+      Script: {instanceID: 12214}
     - Class: 114
-      Script: {instanceID: 12280}
+      Script: {instanceID: 12490}
     - Class: 114
-      Script: {instanceID: 12318}
+      Script: {instanceID: 12528}
     - Class: 114
-      Script: {instanceID: 12942}
+      Script: {instanceID: 13152}
     - Class: 114
-      Script: {instanceID: 13644}
+      Script: {instanceID: 13854}
     - Class: 114
-      Script: {instanceID: 14184}
+      Script: {instanceID: 14352}
+    - Class: 114
+      Script: {instanceID: 14398}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -328,6 +656,8 @@ ScriptsOnlyBuild:
     - Class: 223
       Script: {instanceID: 0}
     - Class: 224
+      Script: {instanceID: 0}
+    - Class: 258
       Script: {instanceID: 0}
     Assets/Scenes/Start Scene.unity:
     - Class: 1
@@ -361,21 +691,21 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11398}
     - Class: 114
-      Script: {instanceID: 11426}
+      Script: {instanceID: 11636}
     - Class: 114
-      Script: {instanceID: 11968}
+      Script: {instanceID: 12178}
     - Class: 114
-      Script: {instanceID: 12004}
+      Script: {instanceID: 12214}
     - Class: 114
-      Script: {instanceID: 12280}
+      Script: {instanceID: 12490}
     - Class: 114
-      Script: {instanceID: 12318}
+      Script: {instanceID: 12528}
     - Class: 114
-      Script: {instanceID: 12942}
+      Script: {instanceID: 13152}
     - Class: 114
-      Script: {instanceID: 13644}
+      Script: {instanceID: 13854}
     - Class: 114
-      Script: {instanceID: 14184}
+      Script: {instanceID: 14398}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -391,6 +721,8 @@ ScriptsOnlyBuild:
     - Class: 223
       Script: {instanceID: 0}
     - Class: 224
+      Script: {instanceID: 0}
+    - Class: 258
       Script: {instanceID: 0}
   scriptHashData:
   - hash:
@@ -953,6 +1285,12 @@ ScriptsOnlyBuild:
     className: KeyboardDelegateExample
   - hash:
       serializedVersion: 2
+      Hash: dffebd814638f681bce9955ae4e64f84
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: TimerCtrl
+  - hash:
+      serializedVersion: 2
       Hash: 8f15c253902ff4eef507927669b9dc80
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -999,6 +1337,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_SubMesh
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: RandomCtrl
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -1100,7 +1444,11 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Start Scene.unity
   - Assets/Scenes/Information.unity
   - Assets/Scenes/Select room.unity
-  - Assets/Scenes/Room1.unity
+  - Assets/Scenes/Rooms/Room1.unity
+  - Assets/Scenes/Rooms/Room2.unity
+  - Assets/Scenes/Rooms/Room3.unity
+  - Assets/Scenes/Rooms/Room4.unity
+  - Assets/Scenes/Rooms/Room5.unity
   - Assets/Scenes/Real Room/Real Room1/Real Room1.unity
   - Assets/Scenes/Real Room/Real Room2/Real Room2.unity
-  playerPath: "C:/Users/\uC624\uC7A5\uD638/Desktop/roomtest.zip.apk"
+  playerPath: C:/Users/Home/Desktop/test2.apk

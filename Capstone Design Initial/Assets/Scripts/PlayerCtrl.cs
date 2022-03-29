@@ -22,7 +22,7 @@ public class PlayerCtrl : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        PlayerPrefs.SetInt("SceneNum", 0);
+        Debug.Log(PlayerPrefs.GetInt("SceneNum"));
 
         curSceneName = SceneManager.GetActiveScene().name;
 
