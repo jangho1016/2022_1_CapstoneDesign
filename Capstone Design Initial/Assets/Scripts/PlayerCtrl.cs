@@ -13,62 +13,82 @@ public class PlayerCtrl : MonoBehaviour
     private float gazeTimer = 2.0f;
     private float positionY;
     private string curSceneName;
-    private GameObject obj;
-    private GameObject floor;
     private int cnt = 0;
-    private Vector3 ScreenCenter;
-
-
+    public GameObject pPanel;
+    float timer = 0.0f;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        Debug.Log(PlayerPrefs.GetInt("SceneNum"));
 
-        curSceneName = SceneManager.GetActiveScene().name;
+        curSceneName = SceneManager.GetActiveScene().name; //씬 이름 가져옴
 
-        if ((curSceneName == "Room1") || (curSceneName == "Room2") || (curSceneName == "Room3") || (curSceneName == "Room4") || (curSceneName == "Room5"))
+        if ((curSceneName == "Room1") || (curSceneName == "Room2") || (curSceneName == "Room3") || (curSceneName == "Room4") || (curSceneName == "Room5")) //1-5번 방이면
         {
-            PlayerPrefs.SetInt("SceneNum", 2);
-            PlayerPrefs.SetInt("pass", 0);
+            PlayerPrefs.SetInt("SceneNum", 2); //씬넘버 2로 설정
+            PlayerPrefs.SetInt("pass", 0); //패스하기 위한 값 초기화
         }
         else
         {
-            PlayerPrefs.SetInt("SceneNum", 0);
+            PlayerPrefs.SetInt("SceneNum", 0); //씬넘버 0으로
         }
     }
 
     void Update()
     {
+        Debug.Log(PlayerPrefs.GetInt("SceneNum"));
         rb.velocity = Vector3.zero; //밀림현상 때문에
         RaycastHit hit;
-        Vector3 forward = mainCam.transform.TransformDirection(Vector3.forward) * 1000;
-        cursorGauge.fillAmount = GaugeTimer;
+        Vector3 forward = mainCam.transform.TransformDirection(Vector3.forward) * 1000; //forward값을 메인카메라가 바라보는 방향 * 1000으로 설정
+        cursorGauge.fillAmount = GaugeTimer; //커서게이지 이미지 채워서 게이지 로딩
 
-        Debug.DrawRay(transform.position, forward, Color.red);
+        Debug.DrawRay(transform.position, forward, Color.red); //레이 확인하기 위함
 
-        if (Physics.Raycast(this.transform.position, forward, out hit))
+        if (Physics.Raycast(this.transform.position, forward, out hit)) //바라봤을 때
         {
-            GaugeTimer += 1.0f / gazeTimer * Time.deltaTime;
+            GaugeTimer += 1.0f / gazeTimer * Time.deltaTime; //게이지 차는 시간은 3초
 
-            if (GaugeTimer >= 1.0f)
+            if(PlayerPrefs.GetInt("SceneNum") == 2) //방 1-5번이면
             {
-                if (PlayerPrefs.GetInt("SceneNum") == 0)
+                timer = gameObject.GetComponent<TimerCtrl>().time_last; //타이머 코드에서 남은 시간 가져옴
+            }
+
+            if (GaugeTimer >= 1.0f) //게이지가 다 차면
+            {
+                if (PlayerPrefs.GetInt("SceneNum") == 0) //방 1-5번이 아닐때
                 {
-                    hit.transform.GetComponent<Button>().onClick.Invoke();
+                    hit.transform.GetComponent<Button>().onClick.Invoke(); //버튼 이벤트 실행
                 }
                 
-                else if (PlayerPrefs.GetInt("SceneNum") == 2)
+                else if (PlayerPrefs.GetInt("SceneNum") == 2) //방 1-5번 씬일때
                 {
-                    if (hit.transform.tag == "Untagged")
+                    if (hit.transform.tag == "Untagged") //태그 없는 물체 바라보면
                     {
-                        GaugeTimer = 0.0f;
+                        GaugeTimer = 0.0f; //게이지를 채우지 않음
                     }
-                    else if(hit.transform.tag == "Crack")
+                    else if(hit.transform.tag == "Crack") //방에서 하자 부분을 발견했을때
                     {
-                        cnt++;
+                        cnt++; //카운트 증가
+
+                        if(cnt == 1 && (timer >= 0.0f)) //방에서 하자 부분을 발견하고 시간제한에 걸리지 않았을 때
+                        {
+                            PlayerPrefs.SetInt("pass", 1); //통과하도록 설정
+                        }
+                    }
+                    else if(hit.transform.tag == "Manager") //부동산 중개업자와 상호작용시
+                    {
+                        pPanel.SetActive(true); //패널 활성화
+                    }
+                    else if(hit.transform.tag == "Button") //버튼과 상호작용시
+                    {
+                        hit.transform.GetComponent<Button>().onClick.Invoke(); //버튼 이벤트 실행
+                    }
+                    else if (timer <= 0.0f) //시간제한이 다 되면
+                    {
+                        PlayerPrefs.SetInt("Replay", 1); //리플레이 설정
+                        SceneManager.LoadScene("Select room"); //방 선택화면 로딩
                     }
                 }
-                GaugeTimer = 0.0f;
+                GaugeTimer = 0.0f; //게이지 0으로
             }
         }
         else
@@ -80,9 +100,9 @@ public class PlayerCtrl : MonoBehaviour
             {
                 transform.Translate(mainCam.transform.TransformDirection(Vector3.forward) * 7.0f * Time.deltaTime); //메인카메라가 바라보는 방향으로 플레이어 이동
 
-                positionY = this.transform.position.y;
+                positionY = this.transform.position.y; //플레이어의 y좌표 받아옴
 
-                if (positionY != 10.0f)
+                if (positionY != 10.0f) //초기 설정된 플레이어의 위치가 아니면
                 {
                     positionY = 10.0f; //플레이어의 y위치를 고정 (아래나 위로 내려가지 않게)
                 }
