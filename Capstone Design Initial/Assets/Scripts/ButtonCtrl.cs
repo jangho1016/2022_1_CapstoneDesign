@@ -2,9 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
 public class ButtonCtrl : MonoBehaviour
 {
+    int num;
+
+    private void Start()
+    {
+        num = PlayerPrefs.GetInt("rand_num");
+    }
+
     public void StartBT()
     {
         PlayerPrefs.SetInt("SceneNum", 0);
@@ -23,19 +29,127 @@ public class ButtonCtrl : MonoBehaviour
         SceneManager.LoadScene("Information");
     }
 
-    public void SelectBT()
+    public void SelectBT1()
     {
-        PlayerPrefs.SetInt("SceneNum", 1);
-        SceneManager.LoadScene("Room1");
+        if (num == 1)
+        {
+            SceneManager.LoadScene("Room1");
+        }
+        else if (num == 2)
+        {
+            SceneManager.LoadScene("Room2");
+        }
+        else if (num == 3)
+        {
+            SceneManager.LoadScene("Room3");
+        }
+        else if (num == 4)
+        {
+            SceneManager.LoadScene("Room4");
+        }
+        else if (num == 5)
+        {
+            SceneManager.LoadScene("Room5");
+        }
+    }
+
+    public void SelectBT2()
+    {
+        if (num == 1)
+        {
+            SceneManager.LoadScene("Room5");
+        }
+        else if (num == 2)
+        {
+            SceneManager.LoadScene("Room1");
+        }
+        else if (num == 3)
+        {
+            SceneManager.LoadScene("Room2");
+        }
+        else if (num == 4)
+        {
+            SceneManager.LoadScene("Room3");
+        }
+        else if (num == 5)
+        {
+            SceneManager.LoadScene("Room4");
+        }
+    }
+
+    public void SelectBT3()
+    {
+        if (num == 1)
+        {
+            SceneManager.LoadScene("Room4");
+        }
+        else if (num == 2)
+        {
+            SceneManager.LoadScene("Room5");
+        }
+        else if (num == 3)
+        {
+            SceneManager.LoadScene("Room1");
+        }
+        else if (num == 4)
+        {
+            SceneManager.LoadScene("Room2");
+        }
+        else if (num == 5)
+        {
+            SceneManager.LoadScene("Room3");
+        }
+    }
+
+    public void SelectBT4()
+    {
+        if (num == 1)
+        {
+            SceneManager.LoadScene("Room3");
+        }
+        else if (num == 2)
+        {
+            SceneManager.LoadScene("Room4");
+        }
+        else if (num == 3)
+        {
+            SceneManager.LoadScene("Room5");
+        }
+        else if (num == 4)
+        {
+            SceneManager.LoadScene("Room1");
+        }
+        else if (num == 5)
+        {
+            SceneManager.LoadScene("Room2");
+        }
+    }
+    public void SelectBT5()
+    {
+        if (num == 1)
+        {
+            SceneManager.LoadScene("Room2");
+        }
+        else if (num == 2)
+        {
+            SceneManager.LoadScene("Room3");
+        }
+        else if (num == 3)
+        {
+            SceneManager.LoadScene("Room4");
+        }
+        else if (num == 4)
+        {
+            SceneManager.LoadScene("Room5");
+        }
+        else if (num == 5)
+        {
+            SceneManager.LoadScene("Room1");
+        }
     }
 
     public void ExitBT()
     {
-        /*#if UNITY_EDITOR
-                UnityEditor.EditorApplication.isPlaying = false;
-        #else
-                Application.Quit(); // 어플리케이션 종료
-        #endif*/
         Application.Quit();
     }
     public void ToBath()
