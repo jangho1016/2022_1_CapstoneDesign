@@ -182,6 +182,7 @@
     <Compile Include="Assets\Scripts\Default.cs" />
     <Compile Include="Assets\Scripts\PlayerCtrl.cs" />
     <Compile Include="Assets\Scripts\RandomCtrl.cs" />
+    <Compile Include="Assets\Toilet.cs" />
     <Compile Include="Assets\WindowAnim.cs" />
   </ItemGroup>
   <ItemGroup>

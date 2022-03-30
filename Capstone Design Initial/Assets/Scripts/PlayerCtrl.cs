@@ -20,10 +20,9 @@ public class PlayerCtrl : MonoBehaviour
     public float time_last;
     bool windowisOpen = false;
     bool refrigeratorisOpen = false;
-
+    bool toiletisOpen = false;
     void Start()
     {
-        
         rb = GetComponent<Rigidbody>();
 
         curSceneName = SceneManager.GetActiveScene().name; //씬 이름 가져옴
@@ -35,22 +34,21 @@ public class PlayerCtrl : MonoBehaviour
 
             PlayerPrefs.SetInt("Window", 0);
             PlayerPrefs.SetInt("Refrigerator", 0);
+            PlayerPrefs.SetInt("Toilet", 0);
 
         }
-        else if(curSceneName == "Loading")
+        else if (curSceneName == "Loading")
         {
             StartCoroutine(LoadScene());
         }
         else
         {
             PlayerPrefs.SetInt("SceneNum", 0); //씬넘버 0으로
-        }  
+        }
     }
 
     void Update()
     {
-        //Debug.Log(cnt);
-        Debug.Log("0");
         rb.velocity = Vector3.zero; //밀림현상 때문에
         RaycastHit hit;
         Vector3 forward = mainCam.transform.TransformDirection(Vector3.forward) * 1000; //forward값을 메인카메라가 바라보는 방향 * 1000으로 설정
@@ -89,7 +87,7 @@ public class PlayerCtrl : MonoBehaviour
         if (Physics.Raycast(this.transform.position, forward, out hit)) //바라봤을 때
         {
             GaugeTimer += 1.0f / gazeTimer * Time.deltaTime; //게이지 차는 시간은 3초
-            Debug.Log(hit.transform.name);
+            //Debug.Log(hit.transform.name);
 
             if (GaugeTimer >= 1.0f) //게이지가 다 차면
             {
@@ -117,15 +115,15 @@ public class PlayerCtrl : MonoBehaviour
                         hit.transform.GetComponent<Button>().onClick.Invoke(); //버튼 이벤트 실행
                     }
 
-                    else if (((hit.transform.tag == "Window") == true) && (windowisOpen == false)) //태그 없는 물체 바라보면
+                    else if ((hit.transform.tag == "Window" == true) && (windowisOpen == false)) //태그 없는 물체 바라보면
                     {
-                        PlayerPrefs.SetInt("window", 1);
+                        PlayerPrefs.SetInt("Window", 1);
                         windowisOpen = true;
                     }
 
-                    else if (((hit.transform.tag == "Window") == true) && (windowisOpen == true)) //태그 없는 물체 바라보면
+                    else if ((hit.transform.tag == "Window" == true) && (windowisOpen == true)) //태그 없는 물체 바라보면
                     {
-                        PlayerPrefs.SetInt("window", 0);
+                        PlayerPrefs.SetInt("Window", 0);
                         windowisOpen = false;
                     }
 
@@ -139,6 +137,18 @@ public class PlayerCtrl : MonoBehaviour
                     {
                         PlayerPrefs.SetInt("Refrigerator", 0);
                         refrigeratorisOpen = false;
+                    }
+
+                    else if ((hit.transform.tag == "Toilet Cover" == true) && (toiletisOpen == false)) //태그 없는 물체 바라보면
+                    {
+                        PlayerPrefs.SetInt("Toilet", 1);
+                        toiletisOpen = true;
+                    }
+
+                    else if ((hit.transform.tag == "Toilet Cover" == true) && (toiletisOpen == true)) //태그 없는 물체 바라보면
+                    {
+                        PlayerPrefs.SetInt("Toilet", 0);
+                        toiletisOpen = false;
                     }
                 }
                 GaugeTimer = 0.0f; //게이지 0으로

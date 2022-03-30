@@ -14,11 +14,11 @@ public class WindowAnim : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (PlayerPrefs.GetInt("window") == 1)
+        if (PlayerPrefs.GetInt("Window") == 1)
         {
             anim.SetBool("isOpen", true);
         }
-        else if (PlayerPrefs.GetInt("window") == 0)
+        else if (PlayerPrefs.GetInt("Window") == 0)
         {
             anim.SetBool("isOpen", false);
         }
