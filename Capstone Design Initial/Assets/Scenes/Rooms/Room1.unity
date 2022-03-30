@@ -5384,13 +5384,46 @@ GameObject:
   - component: {fileID: 4331252201743570629}
   - component: {fileID: 2017407729292616207}
   - component: {fileID: 882371300348116621}
+  - component: {fileID: 71980439936599003}
+  - component: {fileID: 71980439936599004}
   m_Layer: 0
   m_Name: Door1_C1_01
-  m_TagString: Untagged
+  m_TagString: KitchenDoor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!95 &71980439936599003
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 71980439936599002}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d67f74fe5996bb848b4caf139a452e0d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &71980439936599004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 71980439936599002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76094f1ed6dd22b4fb01db817ae62299, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &71980440091060803
 GameObject:
   m_ObjectHideFlags: 0
@@ -7534,13 +7567,60 @@ GameObject:
   - component: {fileID: 4507530291819460373}
   - component: {fileID: 1830996522157130719}
   - component: {fileID: 1728355917034408967}
+  - component: {fileID: 173949143285850635}
+  - component: {fileID: 173949143285850636}
+  - component: {fileID: 173949143285850637}
   m_Layer: 0
   m_Name: Washer_03
-  m_TagString: Untagged
+  m_TagString: Washer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!95 &173949143285850635
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 173949143285850634}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 268dc7a75ee42964eb47c76330273acf, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &173949143285850636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 173949143285850634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98bea534e889ef84d807fd56e265b019, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &173949143285850637
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 173949143285850634}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.37857783, y: 0.37857795, z: 0.08788829}
+  m_Center: {x: -0.18940468, y: 0.000000031789146, z: 0.044243388}
 --- !u!4 &222934995038856895
 Transform:
   m_ObjectHideFlags: 0
@@ -10037,7 +10117,7 @@ MeshCollider:
   m_GameObject: {fileID: 173949143285850634}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30

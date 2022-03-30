@@ -177,12 +177,14 @@
     <Compile Include="Assets\GoogleVR\Scripts\Utilities\Internal\GvrCursorHelper.cs" />
     <Compile Include="Assets\GoogleVR\Scripts\Utilities\Internal\SuppressMemoryAllocationErrorAttribute.cs" />
     <Compile Include="Assets\GoogleVR\Scripts\Video\GvrVideoPlayerTexture.cs" />
+    <Compile Include="Assets\KitchenDoor.cs" />
     <Compile Include="Assets\Refrigerator.cs" />
     <Compile Include="Assets\Scripts\ButtonCtrl.cs" />
     <Compile Include="Assets\Scripts\Default.cs" />
     <Compile Include="Assets\Scripts\PlayerCtrl.cs" />
     <Compile Include="Assets\Scripts\RandomCtrl.cs" />
     <Compile Include="Assets\Toilet.cs" />
+    <Compile Include="Assets\Washer.cs" />
     <Compile Include="Assets\WindowAnim.cs" />
   </ItemGroup>
   <ItemGroup>

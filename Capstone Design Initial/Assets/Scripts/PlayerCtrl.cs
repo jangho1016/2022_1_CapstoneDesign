@@ -21,6 +21,9 @@ public class PlayerCtrl : MonoBehaviour
     bool windowisOpen = false;
     bool refrigeratorisOpen = false;
     bool toiletisOpen = false;
+    bool washerisOpen = false;
+    bool kitchendoorisOpen = false;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -35,6 +38,8 @@ public class PlayerCtrl : MonoBehaviour
             PlayerPrefs.SetInt("Window", 0);
             PlayerPrefs.SetInt("Refrigerator", 0);
             PlayerPrefs.SetInt("Toilet", 0);
+            PlayerPrefs.SetInt("Washer", 0);
+            PlayerPrefs.SetInt("KitchenDoor", 0);
 
         }
         else if (curSceneName == "Loading")
@@ -149,6 +154,28 @@ public class PlayerCtrl : MonoBehaviour
                     {
                         PlayerPrefs.SetInt("Toilet", 0);
                         toiletisOpen = false;
+                    }
+                    else if ((hit.transform.tag == "Washer" == true) && (washerisOpen == false)) //태그 없는 물체 바라보면
+                    {
+                        PlayerPrefs.SetInt("Washer", 1);
+                        washerisOpen = true;
+                    }
+
+                    else if ((hit.transform.tag == "Washer" == true) && (washerisOpen == true)) //태그 없는 물체 바라보면
+                    {
+                        PlayerPrefs.SetInt("Washer", 0);
+                        washerisOpen = false;
+                    }
+                    else if ((hit.transform.tag == "KitchenDoor" == true) && (kitchendoorisOpen == false)) //태그 없는 물체 바라보면
+                    {
+                        PlayerPrefs.SetInt("KitchenDoor", 1);
+                        kitchendoorisOpen = true;
+                    }
+
+                    else if ((hit.transform.tag == "KitchenDoor" == true) && (kitchendoorisOpen == true)) //태그 없는 물체 바라보면
+                    {
+                        PlayerPrefs.SetInt("KitchenDoor", 0);
+                        kitchendoorisOpen = false;
                     }
                 }
                 GaugeTimer = 0.0f; //게이지 0으로

@@ -12,6 +12,8 @@ TagManager:
   - Window
   - Refrigerator
   - Toilet Cover
+  - Washer
+  - KitchenDoor
   layers:
   - Default
   - TransparentFX
