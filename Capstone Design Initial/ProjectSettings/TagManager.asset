@@ -11,9 +11,10 @@ TagManager:
   - Button
   - Window
   - Refrigerator
-  - Toilet Cover
   - Washer
   - KitchenDoor
+  - RoomSwitch1
+  - ToiletCover
   layers:
   - Default
   - TransparentFX

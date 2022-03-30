@@ -8,6 +8,7 @@ public class PlayerCtrl : MonoBehaviour
 {
     private Rigidbody rb;
     public Image cursorGauge;
+    public Image timerGauge;
     public GameObject mainCam;
     private float GaugeTimer = 0.0f;
     private float gazeTimer = 2.0f;
@@ -23,6 +24,8 @@ public class PlayerCtrl : MonoBehaviour
     bool toiletisOpen = false;
     bool washerisOpen = false;
     bool kitchendoorisOpen = false;
+    bool RoomSwitch1isOpen = false;
+    public GameObject RoomLight1;
 
     void Start()
     {
@@ -40,7 +43,7 @@ public class PlayerCtrl : MonoBehaviour
             PlayerPrefs.SetInt("Toilet", 0);
             PlayerPrefs.SetInt("Washer", 0);
             PlayerPrefs.SetInt("KitchenDoor", 0);
-
+            PlayerPrefs.SetInt("RoomSwitch1", 0);
         }
         else if (curSceneName == "Loading")
         {
@@ -57,21 +60,26 @@ public class PlayerCtrl : MonoBehaviour
         rb.velocity = Vector3.zero; //밀림현상 때문에
         RaycastHit hit;
         Vector3 forward = mainCam.transform.TransformDirection(Vector3.forward) * 1000; //forward값을 메인카메라가 바라보는 방향 * 1000으로 설정
-        cursorGauge.fillAmount = GaugeTimer; //커서게이지 이미지 채워서 게이지 로딩
+         //커서게이지 이미지 채워서 게이지 로딩
+        //
 
         Debug.DrawRay(transform.position, forward, Color.red); //레이 확인하기 위함
 
         if (PlayerPrefs.GetInt("SceneNum") == 2) //방 1-5번이면
         {
             timer += Time.deltaTime; //타이머 시작
+            timerGauge.fillAmount = timer / 10.0f;
+            cursorGauge.fillAmount = GaugeTimer;
 
-            time_last = 15.0f - timer; //타이머 제한 시간 설정 (초 - 타이머)
+            time_last = 11.0f - timer; //타이머 제한 시간 설정 (초 - 타이머)
 
-            timertext.text = "남은 시간 : " + ((int)(time_last / 60) + "분" + (int)(time_last % 60) + "초"); //남은 시간 표시
+            timertext.text = "남\n" + "은\n" + "시\n" + "간\n" + ((int)(time_last / 60) + "\n" + "분\n" + (int)(time_last % 60) + "\n" + "초"); //남은 시간 표시
+            
 
             if (time_last <= 60.0f)
             {
-                timertext.text = "남은 시간 : " + (int)(time_last % 60) + "초"; //1분 미만일 때 타이머 표시
+                //timertext.text = "남은 시간 : " + (int)(time_last % 60) + "초"; //1분 미만일 때 타이머 표시
+                timertext.text = "남\n" + "은\n" + "시\n" + "간\n" + ((int)(time_last / 60) + "\n" + "분\n" + (int)(time_last % 60) + "\n" + "초"); //남은 시간 표시
             }
 
             if (time_last <= 0.0f) //시간제한이 다 되면
@@ -144,13 +152,13 @@ public class PlayerCtrl : MonoBehaviour
                         refrigeratorisOpen = false;
                     }
 
-                    else if ((hit.transform.tag == "Toilet Cover" == true) && (toiletisOpen == false)) //태그 없는 물체 바라보면
+                    else if ((hit.transform.tag == "ToiletCover" == true) && (toiletisOpen == false)) //태그 없는 물체 바라보면
                     {
                         PlayerPrefs.SetInt("Toilet", 1);
                         toiletisOpen = true;
                     }
 
-                    else if ((hit.transform.tag == "Toilet Cover" == true) && (toiletisOpen == true)) //태그 없는 물체 바라보면
+                    else if ((hit.transform.tag == "ToiletCover" == true) && (toiletisOpen == true)) //태그 없는 물체 바라보면
                     {
                         PlayerPrefs.SetInt("Toilet", 0);
                         toiletisOpen = false;
@@ -176,6 +184,20 @@ public class PlayerCtrl : MonoBehaviour
                     {
                         PlayerPrefs.SetInt("KitchenDoor", 0);
                         kitchendoorisOpen = false;
+                    }
+                    else if ((hit.transform.tag == "RoomSwitch1" == true) && (RoomSwitch1isOpen == false)) //태그 없는 물체 바라보면
+                    {
+                        PlayerPrefs.SetInt("RoomSwitch1", 1);
+                        RoomSwitch1isOpen = true;
+                        RoomLight1.SetActive(true);
+                    }
+
+                    else if ((hit.transform.tag == "RoomSwitch1" == true) && (RoomSwitch1isOpen == true)) //태그 없는 물체 바라보면
+                    {
+                        PlayerPrefs.SetInt("RoomSwitch1", 0);
+                        Debug.Log("a");
+                        RoomSwitch1isOpen = false;
+                        RoomLight1.SetActive(false);
                     }
                 }
                 GaugeTimer = 0.0f; //게이지 0으로
