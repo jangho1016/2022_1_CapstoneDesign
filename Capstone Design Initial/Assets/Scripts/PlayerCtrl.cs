@@ -50,6 +50,7 @@ public class PlayerCtrl : MonoBehaviour
     void Update()
     {
         //Debug.Log(cnt);
+        Debug.Log("0");
         rb.velocity = Vector3.zero; //밀림현상 때문에
         RaycastHit hit;
         Vector3 forward = mainCam.transform.TransformDirection(Vector3.forward) * 1000; //forward값을 메인카메라가 바라보는 방향 * 1000으로 설정
