@@ -9,6 +9,8 @@ TagManager:
   - pPanel
   - Manager
   - Button
+  - Window
+  - Refrigerator
   layers:
   - Default
   - TransparentFX
