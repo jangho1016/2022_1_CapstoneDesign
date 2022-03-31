@@ -25,6 +25,7 @@ public class PlayerCtrl : MonoBehaviour
     bool washerisOpen = false;
     bool kitchendoorisOpen = false;
     bool RoomSwitch1isOpen = false;
+    bool doorisOpen = false;
     public GameObject RoomLight1;
 
     void Start()
@@ -44,6 +45,7 @@ public class PlayerCtrl : MonoBehaviour
             PlayerPrefs.SetInt("Washer", 0);
             PlayerPrefs.SetInt("KitchenDoor", 0);
             PlayerPrefs.SetInt("RoomSwitch1", 0);
+            PlayerPrefs.SetInt("Door", 0);
         }
         else if (curSceneName == "Loading")
         {
@@ -185,6 +187,7 @@ public class PlayerCtrl : MonoBehaviour
                         PlayerPrefs.SetInt("KitchenDoor", 0);
                         kitchendoorisOpen = false;
                     }
+
                     else if ((hit.transform.tag == "RoomSwitch1" == true) && (RoomSwitch1isOpen == false)) //태그 없는 물체 바라보면
                     {
                         PlayerPrefs.SetInt("RoomSwitch1", 1);
@@ -198,6 +201,18 @@ public class PlayerCtrl : MonoBehaviour
                         Debug.Log("a");
                         RoomSwitch1isOpen = false;
                         RoomLight1.SetActive(false);
+                    }
+
+                    else if ((hit.transform.tag == "Door" == true) && (doorisOpen == false)) //태그 없는 물체 바라보면
+                    {
+                        PlayerPrefs.SetInt("Door", 1);
+                        doorisOpen = true;
+                    }
+
+                    else if ((hit.transform.tag == "Door" == true) && (doorisOpen == true)) //태그 없는 물체 바라보면
+                    {
+                        PlayerPrefs.SetInt("Door", 0);
+                        doorisOpen = false;
                     }
                 }
                 GaugeTimer = 0.0f; //게이지 0으로
