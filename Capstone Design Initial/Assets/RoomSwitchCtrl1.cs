@@ -17,7 +17,7 @@ public class RoomSwitchCtrl1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(test);
+        //Debug.Log(test);
         if (PlayerPrefs.GetInt("RoomSwitch1") == 1)
         {
             anim.SetBool("isOpen", true);

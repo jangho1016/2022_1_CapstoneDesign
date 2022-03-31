@@ -25,7 +25,9 @@ public class PlayerCtrl : MonoBehaviour
     bool washerisOpen = false;
     bool kitchendoorisOpen = false;
     bool RoomSwitch1isOpen = false;
-    bool doorisOpen = false;
+    bool RoomdoorisOpen = false;
+    bool BathroomdoorisOpen = false;
+    bool MicrowaveDoorisOpen = false;
     public GameObject RoomLight1;
 
     void Start()
@@ -45,7 +47,8 @@ public class PlayerCtrl : MonoBehaviour
             PlayerPrefs.SetInt("Washer", 0);
             PlayerPrefs.SetInt("KitchenDoor", 0);
             PlayerPrefs.SetInt("RoomSwitch1", 0);
-            PlayerPrefs.SetInt("Door", 0);
+            PlayerPrefs.SetInt("RoomDoor", 0);
+            PlayerPrefs.SetInt("BathRoomDoor", 0);
         }
         else if (curSceneName == "Loading")
         {
@@ -63,17 +66,16 @@ public class PlayerCtrl : MonoBehaviour
         RaycastHit hit;
         Vector3 forward = mainCam.transform.TransformDirection(Vector3.forward) * 1000; //forward값을 메인카메라가 바라보는 방향 * 1000으로 설정
          //커서게이지 이미지 채워서 게이지 로딩
-        //
 
         Debug.DrawRay(transform.position, forward, Color.red); //레이 확인하기 위함
 
         if (PlayerPrefs.GetInt("SceneNum") == 2) //방 1-5번이면
         {
             timer += Time.deltaTime; //타이머 시작
-            timerGauge.fillAmount = timer / 10.0f;
+            timerGauge.fillAmount = timer / 601.0f;
             cursorGauge.fillAmount = GaugeTimer;
 
-            time_last = 11.0f - timer; //타이머 제한 시간 설정 (초 - 타이머)
+            time_last = 600.0f - timer; //타이머 제한 시간 설정 (초 - 타이머)
 
             timertext.text = "남\n" + "은\n" + "시\n" + "간\n" + ((int)(time_last / 60) + "\n" + "분\n" + (int)(time_last % 60) + "\n" + "초"); //남은 시간 표시
             
@@ -203,16 +205,39 @@ public class PlayerCtrl : MonoBehaviour
                         RoomLight1.SetActive(false);
                     }
 
-                    else if ((hit.transform.tag == "Door" == true) && (doorisOpen == false)) //태그 없는 물체 바라보면
+                    else if ((hit.transform.tag == "RoomDoor" == true) && (RoomdoorisOpen == false)) //태그 없는 물체 바라보면
                     {
-                        PlayerPrefs.SetInt("Door", 1);
-                        doorisOpen = true;
+                        PlayerPrefs.SetInt("RoomDoor", 1);
+                        RoomdoorisOpen = true;
                     }
 
-                    else if ((hit.transform.tag == "Door" == true) && (doorisOpen == true)) //태그 없는 물체 바라보면
+                    else if ((hit.transform.tag == "RoomDoor" == true) && (RoomdoorisOpen == true)) //태그 없는 물체 바라보면
                     {
-                        PlayerPrefs.SetInt("Door", 0);
-                        doorisOpen = false;
+                        PlayerPrefs.SetInt("RoomDoor", 0);
+                        RoomdoorisOpen = false;
+                    }
+                    else if ((hit.transform.tag == "BathRoomDoor" == true) && (BathroomdoorisOpen == false)) //태그 없는 물체 바라보면
+                    {
+                        PlayerPrefs.SetInt("BathRoomDoor", 1);
+                        BathroomdoorisOpen = true;
+                    }
+
+                    else if ((hit.transform.tag == "BathRoomDoor" == true) && (BathroomdoorisOpen == true)) //태그 없는 물체 바라보면
+                    {
+                        PlayerPrefs.SetInt("BathRoomDoor", 0);
+                        BathroomdoorisOpen = false;
+                    }
+
+                    else if ((hit.transform.tag == "MicrowaveDoor" == true) && (MicrowaveDoorisOpen == false)) //태그 없는 물체 바라보면
+                    {
+                        PlayerPrefs.SetInt("MicrowaveDoor", 1);
+                        MicrowaveDoorisOpen = true;
+                    }
+
+                    else if ((hit.transform.tag == "MicrowaveDoor" == true) && (MicrowaveDoorisOpen == true)) //태그 없는 물체 바라보면
+                    {
+                        PlayerPrefs.SetInt("MicrowaveDoor", 0);
+                        MicrowaveDoorisOpen = false;
                     }
                 }
                 GaugeTimer = 0.0f; //게이지 0으로

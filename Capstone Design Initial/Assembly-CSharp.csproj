@@ -53,7 +53,7 @@
     <UnityVersion>2019.4.35f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Assets\DoorOpen.cs" />
+    <Compile Include="Assets\BathRoomDoorCtrl.cs" />
     <Compile Include="Assets\GoogleVR\Beta\Demos\Scripts\DemoObjectController6DoF.cs" />
     <Compile Include="Assets\GoogleVR\Beta\Demos\Scripts\DemoSeeThroughController.cs" />
     <Compile Include="Assets\GoogleVR\Beta\Scripts\GvrBetaControllerInput.cs" />
@@ -180,7 +180,9 @@
     <Compile Include="Assets\GoogleVR\Scripts\Video\GvrVideoPlayerTexture.cs" />
     <Compile Include="Assets\KitchenDoor.cs" />
     <Compile Include="Assets\LightSwitchCtrl1.cs" />
+    <Compile Include="Assets\MicrowaveDoorCtrl.cs" />
     <Compile Include="Assets\Refrigerator.cs" />
+    <Compile Include="Assets\RoomDoorOpen.cs" />
     <Compile Include="Assets\RoomSwitchCtrl1.cs" />
     <Compile Include="Assets\Scripts\ButtonCtrl.cs" />
     <Compile Include="Assets\Scripts\Default.cs" />

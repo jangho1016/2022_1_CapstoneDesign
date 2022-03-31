@@ -15,6 +15,9 @@ TagManager:
   - KitchenDoor
   - RoomSwitch1
   - ToiletCover
+  - BathRoomDoor
+  - RoomDoor
+  - MicrowaveDoor
   layers:
   - Default
   - TransparentFX
