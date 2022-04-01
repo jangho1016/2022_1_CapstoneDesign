@@ -10,7 +10,7 @@ public class ButtonCtrl : MonoBehaviour
     private void Start()
     {
         num = PlayerPrefs.GetInt("rand_num"); //랜덤 값 가져옴
-        Debug.Log(num);
+        //Debug.Log(num);
     }
 
     public void StartBT() //시작 버튼

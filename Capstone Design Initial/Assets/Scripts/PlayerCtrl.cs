@@ -74,10 +74,10 @@ public class PlayerCtrl : MonoBehaviour
         if (PlayerPrefs.GetInt("SceneNum") == 2) //방 1-5번이면
         {
             timer += Time.deltaTime; //타이머 시작
-            timerGauge.fillAmount = timer / 601.0f;
+            timerGauge.fillAmount = timer / 10.0f;
             
 
-            time_last = 600.0f - timer; //타이머 제한 시간 설정 (초 - 타이머)
+            time_last = 11.0f - timer; //타이머 제한 시간 설정 (초 - 타이머)
 
             timertext.text = "남\n" + "은\n" + "시\n" + "간\n" + ((int)(time_last / 60) + "\n" + "분\n" + (int)(time_last % 60) + "\n" + "초"); //남은 시간 표시
             
@@ -96,6 +96,7 @@ public class PlayerCtrl : MonoBehaviour
             else if ((cnt == 1) && (time_last >= 0.0f)) //방에서 하자 부분을 발견하고 시간제한에 걸리지 않았을 때
             {
                 PlayerPrefs.SetInt("pass", 1); //통과하도록 설정
+                Debug.Log("success");
             }
             else if(cnt >= 2)
             {
@@ -121,7 +122,7 @@ public class PlayerCtrl : MonoBehaviour
                     {
                         GaugeTimer = 0.0f; //게이지를 채우지 않음
                     }
-                    else if(hit.transform.tag == "Crack") //방에서 하자 부분을 발견했을때
+                    else if(hit.transform.tag == "Refrigerator") //방에서 하자 부분을 발견했을때
                     {
                         cnt++; //카운트 증가
                     }
