@@ -8,7 +8,7 @@ public class Default : MonoBehaviour
     void Start()
     {
         PlayerPrefs.SetInt("rand_num", 0);
-        PlayerPrefs.SetInt("SceneNum", 0);
+        //PlayerPrefs.SetInt("SceneNum", 0);
     }
 
     // Update is called once per frame

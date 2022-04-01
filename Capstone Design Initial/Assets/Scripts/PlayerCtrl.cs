@@ -49,6 +49,7 @@ public class PlayerCtrl : MonoBehaviour
             PlayerPrefs.SetInt("RoomSwitch1", 0);
             PlayerPrefs.SetInt("RoomDoor", 0);
             PlayerPrefs.SetInt("BathRoomDoor", 0);
+            PlayerPrefs.SetInt("MicrowaveDoor", 0);
         }
         else if (curSceneName == "Loading")
         {
@@ -65,7 +66,8 @@ public class PlayerCtrl : MonoBehaviour
         rb.velocity = Vector3.zero; //밀림현상 때문에
         RaycastHit hit;
         Vector3 forward = mainCam.transform.TransformDirection(Vector3.forward) * 1000; //forward값을 메인카메라가 바라보는 방향 * 1000으로 설정
-         //커서게이지 이미지 채워서 게이지 로딩
+                                                                                        
+        cursorGauge.fillAmount = GaugeTimer; //커서게이지 이미지 채워서 게이지 로딩
 
         Debug.DrawRay(transform.position, forward, Color.red); //레이 확인하기 위함
 
@@ -73,7 +75,7 @@ public class PlayerCtrl : MonoBehaviour
         {
             timer += Time.deltaTime; //타이머 시작
             timerGauge.fillAmount = timer / 601.0f;
-            cursorGauge.fillAmount = GaugeTimer;
+            
 
             time_last = 600.0f - timer; //타이머 제한 시간 설정 (초 - 타이머)
 

@@ -1018,10 +1018,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cursorGauge: {fileID: 1585642530}
+  timerGauge: {fileID: 0}
   mainCam: {fileID: 963194225}
   pPanel: {fileID: 0}
   timertext: {fileID: 0}
   time_last: 0
+  RoomLight1: {fileID: 0}
 --- !u!114 &1015875479
 MonoBehaviour:
   m_ObjectHideFlags: 0
