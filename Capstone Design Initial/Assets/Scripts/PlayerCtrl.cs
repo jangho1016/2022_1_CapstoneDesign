@@ -200,7 +200,6 @@ public class PlayerCtrl : MonoBehaviour
                     else if ((hit.transform.tag == "RoomSwitch1" == true) && (RoomSwitch1isOpen == true)) //태그 없는 물체 바라보면
                     {
                         PlayerPrefs.SetInt("RoomSwitch1", 0);
-                        Debug.Log("a");
                         RoomSwitch1isOpen = false;
                         RoomLight1.SetActive(false);
                     }
