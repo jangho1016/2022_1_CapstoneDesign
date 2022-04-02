@@ -15,12 +15,14 @@ public class PlayerCtrl : MonoBehaviour
     private float positionY;
     private string curSceneName;
     private int cnt = 0;
-    public GameObject pPanel;
+    public GameObject managerPanel;
     public Text timertext;
     private float timer;
     public float time_last;
     public GameObject RoomLight1;
-    public bool[] isOpened = new bool[32];
+    public bool[] isOpened = new bool[100];
+    public bool refriDcheckUp = false;
+    public bool refriDcheckDown = false;
 
     void Start()
     {
@@ -58,8 +60,11 @@ public class PlayerCtrl : MonoBehaviour
             if (time_last <= 0.0f) //시간제한이 다 되면
                 SceneManager.LoadScene("Select"); //방 선택 씬 로드
             else if ((cnt == 1) && (time_last >= 0.0f)) //방에서 하자 부분을 발견하고 시간제한에 걸리지 않았을 때
+            {
+                Debug.Log("success");
                 PlayerPrefs.SetInt("pass", 1); //통과하도록 설정
-            else if(cnt >= 2)
+            }
+            else if (cnt >= 2)
                 PlayerPrefs.SetInt("pass", 0); //통과하도록 설정
         }
         if (Physics.Raycast(this.transform.position, forward, out hit)) //바라봤을 때
@@ -70,14 +75,14 @@ public class PlayerCtrl : MonoBehaviour
                 if (PlayerPrefs.GetInt("SceneNum") == 0) //방 1-5번이 아닐때
                     hit.transform.GetComponent<Button>().onClick.Invoke(); //버튼 이벤트 실행
                 else if (PlayerPrefs.GetInt("SceneNum") == 2) //방 1-5번 씬일때
-                {   
+                {
                     if (hit.transform.tag == "Untagged") //태그 없는 물체 바라보면
                         GaugeTimer = 0.0f; //게이지를 채우지 않음
-                    else if(hit.transform.tag == "Crack") //방에서 하자 부분을 발견했을때
-                        cnt++; //카운트 증가
-                    else if(hit.transform.tag == "Manager") //부동산 중개업자와 상호작용시
-                        pPanel.SetActive(true); //패널 활성
-                    else if(hit.transform.tag == "Button") //버튼과 상호작용시
+                    else if (hit.transform.tag == "Crack") //방에서 하자 부분을 발견했을때
+                        cnt++;
+                    else if (hit.transform.tag == "Manager") //부동산 중개업자와 상호작용시
+                        managerPanel.SetActive(true); //패널 활성
+                    else if (hit.transform.tag == "Button") //버튼과 상호작용시
                         hit.transform.GetComponent<Button>().onClick.Invoke(); //버튼 이벤트 실행
                     else if ((hit.transform.tag == "RoomDoor" == true) && (isOpened[0] == false)) //태그 없는 물체 바라보면
                         isOpened[0] = true;
@@ -159,34 +164,70 @@ public class PlayerCtrl : MonoBehaviour
                         isOpened[19] = true;
                     else if ((hit.transform.tag == "Refrigerator2" == true) && (isOpened[19] == true)) //태그 없는 물체 바라보면
                         isOpened[19] = false;
-
-
-                    else if ((hit.transform.tag == "RefrigeratorD1" == true) && (isOpened[19] == false)) //태그 없는 물체 바라보면
-                        isOpened[19] = true;
-                    else if ((hit.transform.tag == "RefrigeratorD1" == true) && (isOpened[19] == true)) //태그 없는 물체 바라보면
-                        isOpened[19] = false;
-
-                    else if ((hit.transform.tag == "RefrigeratorD2" == true) && (isOpened[20] == false)) //태그 없는 물체 바라보면
+                    else if ((hit.transform.tag == "RefrigeratorD1" == true) && (isOpened[20] == false)) //태그 없는 물체 바라보면
                         isOpened[20] = true;
-                    else if ((hit.transform.tag == "RefrigeratorD2" == true) && (isOpened[20] == true)) //태그 없는 물체 바라보면
+                    else if ((hit.transform.tag == "RefrigeratorD1" == true) && (isOpened[20] == true)) //태그 없는 물체 바라보면
                         isOpened[20] = false;
-
-                    else if ((hit.transform.tag == "RefrigeratorD3" == true) && (isOpened[21] == false)) //태그 없는 물체 바라보면
+                    else if ((hit.transform.tag == "RefrigeratorD2" == true) && (isOpened[21] == false)) //태그 없는 물체 바라보면
                         isOpened[21] = true;
-                    else if ((hit.transform.tag == "RefrigeratorD3" == true) && (isOpened[21] == true)) //태그 없는 물체 바라보면
+                    else if ((hit.transform.tag == "RefrigeratorD2" == true) && (isOpened[21] == true)) //태그 없는 물체 바라보면
                         isOpened[21] = false;
-
-                    else if ((hit.transform.tag == "RefrigeratorD4" == true) && (isOpened[22] == false)) //태그 없는 물체 바라보면
+                    else if ((hit.transform.tag == "RefrigeratorD3" == true) && (isOpened[22] == false)) //태그 없는 물체 바라보면
                         isOpened[22] = true;
-                    else if ((hit.transform.tag == "RefrigeratorD4" == true) && (isOpened[22] == true)) //태그 없는 물체 바라보면
+                    else if ((hit.transform.tag == "RefrigeratorD3" == true) && (isOpened[22] == true)) //태그 없는 물체 바라보면
                         isOpened[22] = false;
+                    else if ((hit.transform.tag == "RefrigeratorD4" == true) && (isOpened[23] == false)) //태그 없는 물체 바라보면
+                        isOpened[23] = true;
+                    else if ((hit.transform.tag == "RefrigeratorD4" == true) && (isOpened[23] == true)) //태그 없는 물체 바라보면
+                        isOpened[23] = false;
+                    else if ((hit.transform.tag == "Hood" == true) && (isOpened[24] == false)) //태그 없는 물체 바라보면
+                        isOpened[24] = true;
+                    else if ((hit.transform.tag == "Hood" == true) && (isOpened[24] == true)) //태그 없는 물체 바라보면
+                        isOpened[24] = false;
+                    else if ((hit.transform.tag == "RoomSwitch1" == true) && (isOpened[25] == false)) //태그 없는 물체 바라보면
+                        isOpened[25] = true;
+                    else if ((hit.transform.tag == "RoomSwitch1" == true) && (isOpened[25] == true)) //태그 없는 물체 바라보면
+                        isOpened[25] = false;
+                    else if ((hit.transform.tag == "RoomSwitch2" == true) && (isOpened[26] == false)) //태그 없는 물체 바라보면
+                        isOpened[26] = true;
+                    else if ((hit.transform.tag == "RoomSwitch2" == true) && (isOpened[26] == true)) //태그 없는 물체 바라보면
+                        isOpened[26] = false;
+                    else if ((hit.transform.tag == "ToiletCover" == true) && (isOpened[27] == false)) //태그 없는 물체 바라보면
+                        isOpened[27] = true;
+                    else if ((hit.transform.tag == "ToiletCover" == true) && (isOpened[27] == true)) //태그 없는 물체 바라보면
+                        isOpened[27] = false;
+                    else if ((hit.transform.tag == "BathroomD1" == true) && (isOpened[28] == false)) //태그 없는 물체 바라보면
+                        isOpened[28] = true;
+                    else if ((hit.transform.tag == "BathroomD1" == true) && (isOpened[28] == true)) //태그 없는 물체 바라보면
+                        isOpened[28] = false;
+                    else if ((hit.transform.tag == "BathroomD2" == true) && (isOpened[29] == false)) //태그 없는 물체 바라보면
+                        isOpened[29] = true;
+                    else if ((hit.transform.tag == "BathroomD2" == true) && (isOpened[29] == true)) //태그 없는 물체 바라보면
+                        isOpened[29] = false;
+                    else if ((hit.transform.tag == "BathroomCdoor" == true) && (isOpened[30] == false)) //태그 없는 물체 바라보면
+                        isOpened[30] = true;
+                    else if ((hit.transform.tag == "BathroomCdoor" == true) && (isOpened[30] == true)) //태그 없는 물체 바라보면
+                        isOpened[30] = false;
+                    else if ((hit.transform.tag == "BathroomSwitch1" == true) && (isOpened[31] == false)) //태그 없는 물체 바라보면
+                        isOpened[31] = true;
+                    else if ((hit.transform.tag == "BathroomSwitch1" == true) && (isOpened[31] == true)) //태그 없는 물체 바라보면
+                        isOpened[31] = false;
+                    else if ((hit.transform.tag == "BathroomSwitch2" == true) && (isOpened[32] == false)) //태그 없는 물체 바라보면
+                        isOpened[32] = true;
+                    else if ((hit.transform.tag == "BathroomSwitch2" == true) && (isOpened[32] == true)) //태그 없는 물체 바라보면
+                        isOpened[32] = false;
 
+                    if (isOpened[20] == true)
+                        refriDcheckUp = true;
 
+                    if (isOpened[20] == false)
+                        refriDcheckUp = false;
+                    
+                    if ((isOpened[21] == true) || (isOpened[22] == true) || (isOpened[23] == true))
+                        refriDcheckDown = true;
 
-
-
-
-
+                    if ((isOpened[21] == false) && (isOpened[22] == false) && (isOpened[23] == false))
+                        refriDcheckDown = false;
                 }
                 GaugeTimer = 0.0f; //게이지 0으로
             }

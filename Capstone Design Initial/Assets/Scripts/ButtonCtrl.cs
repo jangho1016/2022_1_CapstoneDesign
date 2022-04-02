@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 public class ButtonCtrl : MonoBehaviour
 {
     int num;
-    GameObject pPanel;
+    GameObject ManagerPanel;
 
     private void Start()
     {
@@ -169,8 +169,8 @@ public class ButtonCtrl : MonoBehaviour
 
     public void No()
     {
-        pPanel = GameObject.FindGameObjectWithTag("pPanel"); //부동산 중개업자 위의 이미지 찾기
-        pPanel.gameObject.SetActive(false); //비활성화
+        ManagerPanel = GameObject.FindGameObjectWithTag("ManagerPanel"); //부동산 중개업자 위의 이미지 찾기
+        ManagerPanel.gameObject.SetActive(false); //비활성화
     }
 
     public void ToBath() //실제 화장실 씬으로

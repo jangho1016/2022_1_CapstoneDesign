@@ -34,10 +34,14 @@ TagManager:
   - RoomSwitch1
   - RoomSwitch2
   - ToiletCover
-  - BathroomDrawer
   - BathroomCdoor
   - BathroomSwitch1
   - BathroomSwitch2
+  - BathroomD1
+  - BathroomD2
+  - Crack
+  - ManagerPanel
+  - Ventilation
   layers:
   - Default
   - TransparentFX
