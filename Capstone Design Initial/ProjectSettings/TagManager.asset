@@ -4,20 +4,40 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Door
-  - Crack
-  - pPanel
   - Manager
   - Button
-  - Window
-  - Refrigerator
-  - Washer
-  - KitchenDoor
-  - RoomSwitch1
-  - ToiletCover
-  - BathRoomDoor
   - RoomDoor
-  - MicrowaveDoor
+  - BathroomDoor
+  - Window
+  - Microwave
+  - Induction
+  - SinkL
+  - SinkR
+  - WasherDoor
+  - WasherDrawer
+  - Dresser1
+  - Dresser2
+  - Dresser3
+  - Dresser4
+  - CabinetL
+  - CabinetR
+  - WardrobeL
+  - WardrobeM
+  - WardrobeR
+  - Refrigerator1
+  - Refrigerator2
+  - RefrigeratorD1
+  - RefrigeratorD2
+  - RefrigeratorD3
+  - RefrigeratorD4
+  - Hood
+  - RoomSwitch1
+  - RoomSwitch2
+  - ToiletCover
+  - BathroomDrawer
+  - BathroomCdoor
+  - BathroomSwitch1
+  - BathroomSwitch2
   layers:
   - Default
   - TransparentFX

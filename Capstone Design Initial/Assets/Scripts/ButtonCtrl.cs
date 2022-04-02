@@ -156,9 +156,9 @@ public class ButtonCtrl : MonoBehaviour
     {
         if(PlayerPrefs.GetInt("pass") == 1) //성공시
         {
-            Debug.Log("Success");
             PlayerPrefs.SetInt("rand_num", 0);
             PlayerPrefs.SetInt("pass", 0);
+            Debug.Log(PlayerPrefs.GetInt("pass"));
             SceneManager.LoadScene("Real Room1"); //실제 방 로드
         }
         else
