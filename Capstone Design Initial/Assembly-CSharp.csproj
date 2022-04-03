@@ -215,7 +215,9 @@
     <Compile Include="Assets\Scripts\ButtonCtrl.cs" />
     <Compile Include="Assets\Scripts\PlayerCtrl.cs" />
     <Compile Include="Assets\Scripts\RandomCtrl.cs" />
-    <Compile Include="Assets\Ventilation.cs" />
+    <Compile Include="Assets\Scripts\Ventilation.cs" />
+    <Compile Include="Assets\SinkFaiucet.cs" />
+    <Compile Include="Assets\ToiletWater.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\GoogleVR\Shaders\GvrUIOverlayFont.shader" />

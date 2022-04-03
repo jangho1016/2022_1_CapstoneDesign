@@ -27,7 +27,6 @@ public class BathroomCdoor : MonoBehaviour
         else if (isOpen == false)
         {
             anim.SetBool("isOpen", false);
-
         }
     }
 }

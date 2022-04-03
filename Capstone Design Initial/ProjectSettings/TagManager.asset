@@ -42,6 +42,9 @@ TagManager:
   - Crack
   - ManagerPanel
   - Ventilation
+  - SinkFaucet
+  - BathroomFaucet
+  - ToiletBT
   layers:
   - Default
   - TransparentFX

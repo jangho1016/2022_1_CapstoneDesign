@@ -7,7 +7,6 @@ public class Refrigerator1 : MonoBehaviour
     Animator anim;
     bool isOpen;
     GameObject player;
-    bool refriDcheckUp;
 
     // Start is called before the first frame update
     void Start()
@@ -20,13 +19,12 @@ public class Refrigerator1 : MonoBehaviour
     void Update()
     {
         isOpen = player.GetComponent<PlayerCtrl>().isOpened[18];
-        refriDcheckUp = player.GetComponent<PlayerCtrl>().refriDcheckUp;
 
         if (isOpen == true)
         {
             anim.SetBool("isOpen", true);
         }
-        else if (isOpen == false && (refriDcheckUp == false))
+        else if (isOpen == false)
         {
             anim.SetBool("isOpen", false);
         }
