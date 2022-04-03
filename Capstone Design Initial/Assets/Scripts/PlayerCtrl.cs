@@ -158,11 +158,11 @@ public class PlayerCtrl : MonoBehaviour
                         isOpened[17] = false;
                     else if ((hit.transform.tag == "Refrigerator1" == true) && (isOpened[18] == false)) //태그 없는 물체 바라보면
                         isOpened[18] = true;
-                    else if ((hit.transform.tag == "Refrigerator1" == true) && (isOpened[18] == true)) //태그 없는 물체 바라보면
+                    else if ((hit.transform.tag == "Refrigerator1" == true) && (isOpened[18] == true) && (isOpened[20] == false)) //태그 없는 물체 바라보면
                         isOpened[18] = false;
                     else if ((hit.transform.tag == "Refrigerator2" == true) && (isOpened[19] == false)) //태그 없는 물체 바라보면
                         isOpened[19] = true;
-                    else if ((hit.transform.tag == "Refrigerator2" == true) && (isOpened[19] == true)) //태그 없는 물체 바라보면
+                    else if ((hit.transform.tag == "Refrigerator2" == true) && (isOpened[19] == true) && (isOpened[21] == false && isOpened[22] == false && isOpened[23] == false)) //태그 없는 물체 바라보면
                         isOpened[19] = false;
                     else if ((hit.transform.tag == "RefrigeratorD1" == true) && (isOpened[20] == false)) //태그 없는 물체 바라보면
                         isOpened[20] = true;
