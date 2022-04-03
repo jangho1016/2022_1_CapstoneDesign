@@ -18,8 +18,6 @@ public class SinkFaiucet : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         player = GameObject.FindGameObjectWithTag("Player");
-        //a = aniUp.GetComponent<Animation>().transform.localPosition.y;
-        //b = aniDown.GetComponent<Animation>().transform.localPosition.y;
     }
 
     // Update is called once per frame
@@ -31,8 +29,6 @@ public class SinkFaiucet : MonoBehaviour
         {
             Water.SetActive(true);
             anim.SetBool("isOpen", true);
-            //
-            //
         }
 
         else if (isOpen == false)

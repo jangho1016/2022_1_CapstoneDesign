@@ -53,6 +53,9 @@
     <UnityVersion>2019.4.35f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Assets\BathroomD1.cs" />
+    <Compile Include="Assets\BathroomD2.cs" />
+    <Compile Include="Assets\BathroomFaucet.cs" />
     <Compile Include="Assets\GoogleVR\Beta\Demos\Scripts\DemoObjectController6DoF.cs" />
     <Compile Include="Assets\GoogleVR\Beta\Demos\Scripts\DemoSeeThroughController.cs" />
     <Compile Include="Assets\GoogleVR\Beta\Scripts\GvrBetaControllerInput.cs" />
@@ -177,10 +180,10 @@
     <Compile Include="Assets\GoogleVR\Scripts\Utilities\Internal\GvrCursorHelper.cs" />
     <Compile Include="Assets\GoogleVR\Scripts\Utilities\Internal\SuppressMemoryAllocationErrorAttribute.cs" />
     <Compile Include="Assets\GoogleVR\Scripts\Video\GvrVideoPlayerTexture.cs" />
+    <Compile Include="Assets\Heater.cs" />
+    <Compile Include="Assets\HeaterCtrl.cs" />
     <Compile Include="Assets\Scripts\Animation\BathRoomDoor.cs" />
     <Compile Include="Assets\Scripts\Animation\BathroomCdoor.cs" />
-    <Compile Include="Assets\Scripts\Animation\BathroomSinkD1.cs" />
-    <Compile Include="Assets\Scripts\Animation\BathroomSinkD2.cs" />
     <Compile Include="Assets\Scripts\Animation\BathroomSwitch1.cs" />
     <Compile Include="Assets\Scripts\Animation\BathroomSwitch2.cs" />
     <Compile Include="Assets\Scripts\Animation\CabinetL.cs" />

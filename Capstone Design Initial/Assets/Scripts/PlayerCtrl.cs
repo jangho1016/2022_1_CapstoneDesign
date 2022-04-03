@@ -20,7 +20,7 @@ public class PlayerCtrl : MonoBehaviour
     private float timer;
     public float time_last;
     public GameObject RoomLight1;
-    public bool[] isOpened = new bool[50];
+    public bool[] isOpened = new bool[40];
 
     void Start()
     {
@@ -214,7 +214,6 @@ public class PlayerCtrl : MonoBehaviour
                         isOpened[32] = true;
                     else if ((hit.transform.tag == "BathroomSwitch2" == true) && (isOpened[32] == true)) //태그 없는 물체 바라보면
                         isOpened[32] = false;
-
                     else if ((hit.transform.tag == "SinkFaucet" == true) && (isOpened[33] == false))
                     {
                         isOpened[33] = true;
@@ -223,12 +222,23 @@ public class PlayerCtrl : MonoBehaviour
                     {
                         isOpened[33] = false;
                     }
-                    else if ((hit.transform.tag == "ToiletBT" == true) && (isOpened[34] == false)) //태그 없는 물체 바라보면
+                    else if ((hit.transform.tag == "Heater" == true) && (isOpened[34] == false))
                     {
                         isOpened[34] = true;
                     }
+                    else if ((hit.transform.tag == "Heater" == true) && (isOpened[34] == true)) //태그 없는 물체 바라보면
+                    {
+                        isOpened[34] = false;
+                    }
+                    else if ((hit.transform.tag == "BathroomFaucet" == true) && (isOpened[35] == false))
+                    {
+                        isOpened[35] = true;
+                    }
+                    else if ((hit.transform.tag == "BathroomFaucet" == true) && (isOpened[35] == true)) //태그 없는 물체 바라보면
+                    {
+                        isOpened[35] = false;
+                    }
                 }
-                Debug.Log(isOpened[34]);
                 GaugeTimer = 0.0f; //게이지 0으로
             }
         }

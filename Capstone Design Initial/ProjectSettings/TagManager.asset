@@ -45,6 +45,7 @@ TagManager:
   - SinkFaucet
   - BathroomFaucet
   - ToiletBT
+  - Heater
   layers:
   - Default
   - TransparentFX
