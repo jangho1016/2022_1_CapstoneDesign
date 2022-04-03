@@ -7,6 +7,9 @@ public class BathroomFaucet : MonoBehaviour
     Animator anim;
     bool isOpen;
     GameObject player;
+    public GameObject Water;
+    Animation aniUp;
+    Animation aniDown;
 
     // Start is called before the first frame update
     void Start()
@@ -22,10 +25,13 @@ public class BathroomFaucet : MonoBehaviour
 
         if (isOpen == true)
         {
+            Water.SetActive(true);
             anim.SetBool("isOpen", true);
         }
+
         else if (isOpen == false)
         {
+            Water.SetActive(false);
             anim.SetBool("isOpen", false);
         }
     }

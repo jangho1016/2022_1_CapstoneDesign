@@ -215,29 +215,17 @@ public class PlayerCtrl : MonoBehaviour
                     else if ((hit.transform.tag == "BathroomSwitch2" == true) && (isOpened[32] == true)) //태그 없는 물체 바라보면
                         isOpened[32] = false;
                     else if ((hit.transform.tag == "SinkFaucet" == true) && (isOpened[33] == false))
-                    {
                         isOpened[33] = true;
-                    }
                     else if ((hit.transform.tag == "SinkFaucet" == true) && (isOpened[33] == true)) //태그 없는 물체 바라보면
-                    {
                         isOpened[33] = false;
-                    }
                     else if ((hit.transform.tag == "Heater" == true) && (isOpened[34] == false))
-                    {
                         isOpened[34] = true;
-                    }
                     else if ((hit.transform.tag == "Heater" == true) && (isOpened[34] == true)) //태그 없는 물체 바라보면
-                    {
                         isOpened[34] = false;
-                    }
                     else if ((hit.transform.tag == "BathroomFaucet" == true) && (isOpened[35] == false))
-                    {
                         isOpened[35] = true;
-                    }
                     else if ((hit.transform.tag == "BathroomFaucet" == true) && (isOpened[35] == true)) //태그 없는 물체 바라보면
-                    {
                         isOpened[35] = false;
-                    }
                 }
                 GaugeTimer = 0.0f; //게이지 0으로
             }

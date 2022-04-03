@@ -10,8 +10,6 @@ public class SinkFaiucet : MonoBehaviour
     public GameObject Water;
     Animation aniUp;
     Animation aniDown;
-    float a;
-    float b;
 
     // Start is called before the first frame update
     void Start()
@@ -33,7 +31,6 @@ public class SinkFaiucet : MonoBehaviour
 
         else if (isOpen == false)
         {
-            b = a;
             Water.SetActive(false);
             anim.SetBool("isOpen", false);
         }
