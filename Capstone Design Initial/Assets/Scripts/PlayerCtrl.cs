@@ -88,7 +88,7 @@ public class PlayerCtrl : MonoBehaviour
                         isOpened[0] = false;
                     else if ((hit.transform.tag == "BathroomDoor" == true) && (isOpened[1] == false)) //태그 없는 물체 바라보면
                         isOpened[1] = true;
-                    else if ((hit.transform.tag == "BathroomDoor" == true) && (isOpened[1] == true)) //태그 없는 물체 바라보면
+                    else if ((hit.transform.tag == "BathroomDoor" == true) && (isOpened[1] == true) && (isOpened[28] == false)) //태그 없는 물체 바라보면
                         isOpened[1] = false;
                     else if ((hit.transform.tag == "Window" == true) && (isOpened[2] == false)) //태그 없는 물체 바라보면
                         isOpened[2] = true;
