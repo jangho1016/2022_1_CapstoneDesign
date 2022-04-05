@@ -219,6 +219,7 @@
     <Compile Include="Assets\Scripts\PlayerCtrl.cs" />
     <Compile Include="Assets\Scripts\RandomCtrl.cs" />
     <Compile Include="Assets\Scripts\Ventilation.cs" />
+    <Compile Include="Assets\ShowerSwitch.cs" />
     <Compile Include="Assets\SinkFaiucet.cs" />
     <Compile Include="Assets\ToiletWater.cs" />
   </ItemGroup>

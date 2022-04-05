@@ -86,7 +86,7 @@ public class PlayerCtrl : MonoBehaviour
                         isOpened[0] = true;
                     else if ((hit.transform.tag == "RoomDoor" == true) && (isOpened[0] == true)) //태그 없는 물체 바라보면
                         isOpened[0] = false;
-                    else if ((hit.transform.tag == "BathroomDoor" == true) && (isOpened[1] == false)) //태그 없는 물체 바라보면
+                    else if ((hit.transform.tag == "BathroomDoor" == true) && (isOpened[1] == false) && (isOpened[28] == false)) //태그 없는 물체 바라보면
                         isOpened[1] = true;
                     else if ((hit.transform.tag == "BathroomDoor" == true) && (isOpened[1] == true) && (isOpened[28] == false)) //태그 없는 물체 바라보면
                         isOpened[1] = false;
@@ -226,6 +226,10 @@ public class PlayerCtrl : MonoBehaviour
                         isOpened[35] = true;
                     else if ((hit.transform.tag == "BathroomFaucet" == true) && (isOpened[35] == true)) //태그 없는 물체 바라보면
                         isOpened[35] = false;
+                    else if ((hit.transform.tag == "ShowerSwitch" == true) && (isOpened[36] == false))
+                        isOpened[36] = true;
+                    else if ((hit.transform.tag == "ShowerSwitch" == true) && (isOpened[36] == true)) //태그 없는 물체 바라보면
+                        isOpened[36] = false;
                 }
                 GaugeTimer = 0.0f; //게이지 0으로
             }
