@@ -2,27 +2,25 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ToiletWater : MonoBehaviour
+public class ToiletCtrl : MonoBehaviour
 {
-    Animator anim;
+    //Animator anim;
+    private Animation anim;
     bool isOpen;
     GameObject player;
 
     // Start is called before the first frame update
     void Start()
     {
-        anim = GetComponent<Animator>();
+        //anim = GetComponent<Animator>();
+        anim = GetComponent<Animation>();
         player = GameObject.FindGameObjectWithTag("Player");
     }
 
     // Update is called once per frame
     void Update()
     {
-        isOpen = player.GetComponent<PlayerCtrl>().isOpened[34];
-
-        if (isOpen == true)
-        {
-            anim.SetBool("isOpen", true);
-        }
+        anim.wrapMode = WrapMode.Once;
+        anim.Play();
     }
 }
