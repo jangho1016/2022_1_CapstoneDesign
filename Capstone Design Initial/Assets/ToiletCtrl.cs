@@ -22,12 +22,9 @@ public class ToiletCtrl : MonoBehaviour
 
         if (isOpen == true)
         {
-            anim.SetBool("isOpen", true);
-            Debug.Log(anim.GetBool("isOpen"));
-
-            anim.SetBool("isOpen", false);
+            anim.SetTrigger("isOpen");
+            isOpen = false;
         }
-        
-            
+        isOpen = false;
     }
 }

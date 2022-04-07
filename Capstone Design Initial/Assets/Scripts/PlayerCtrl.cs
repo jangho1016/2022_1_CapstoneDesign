@@ -237,6 +237,7 @@ public class PlayerCtrl : MonoBehaviour
                     else if ((hit.transform.tag == "ToiletBT" == true) && isOpened[38] == false)
                     {
                         isOpened[38] = true;
+                        StartCoroutine(test());
                     }
                 }
                 GaugeTimer = 0.0f; //게이지 0으로
@@ -261,5 +262,11 @@ public class PlayerCtrl : MonoBehaviour
     {
         yield return new WaitForSeconds(3.0f);
         SceneManager.LoadScene("Select");
+    }
+
+    IEnumerator test()
+    {
+        yield return new WaitForSeconds(0.1f);
+        isOpened[38] = false;
     }
 }
