@@ -47,6 +47,8 @@ TagManager:
   - ToiletBT
   - Heater
   - ShowerSwitch
+  - Door
+  - RoomDoor2
   layers:
   - Default
   - TransparentFX
