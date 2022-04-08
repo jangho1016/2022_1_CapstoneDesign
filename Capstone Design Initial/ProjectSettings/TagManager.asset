@@ -49,6 +49,8 @@ TagManager:
   - ShowerSwitch
   - Door
   - RoomDoor2
+  - ShoseCase1
+  - ShoseCase2
   layers:
   - Default
   - TransparentFX

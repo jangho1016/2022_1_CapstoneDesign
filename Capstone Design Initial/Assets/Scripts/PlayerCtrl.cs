@@ -239,6 +239,14 @@ public class PlayerCtrl : MonoBehaviour
                         isOpened[38] = true;
                         StartCoroutine(test());
                     }
+                    else if ((hit.transform.tag == "ShoseCase1" == true) && (isOpened[39] == false))
+                        isOpened[39] = true;
+                    else if ((hit.transform.tag == "ShoseCase1" == true) && (isOpened[39] == true)) //태그 없는 물체 바라보면
+                        isOpened[39] = false;
+                    else if ((hit.transform.tag == "ShoseCase2" == true) && (isOpened[40] == false))
+                        isOpened[40] = true;
+                    else if ((hit.transform.tag == "ShoseCase2" == true) && (isOpened[40] == true)) //태그 없는 물체 바라보면
+                        isOpened[40] = false;
                 }
                 GaugeTimer = 0.0f; //게이지 0으로
             }
