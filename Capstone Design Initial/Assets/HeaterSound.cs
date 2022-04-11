@@ -4,14 +4,16 @@ using UnityEngine;
 
 public class HeaterSound : MonoBehaviour
 {
-    public AudioSource audioSource;
-    public AudioClip ac;
+    private AudioSource audioSource;
+    public AudioClip test;
     bool isOpen;
     GameObject player;
 
     // Start is called before the first frame update
     void Start()
     {
+        audioSource = this.gameObject.GetComponent<AudioSource>();
+
         player = GameObject.FindGameObjectWithTag("Player");
     }
 
@@ -19,14 +21,20 @@ public class HeaterSound : MonoBehaviour
     void Update()
     {
         isOpen = player.GetComponent<PlayerCtrl>().isOpened[34];
+        audioSource.clip = test;
 
         if (isOpen == true)
         {
-            audioSource.Play();
+            this.audioSource.Play();
+
+            if((this.audioSource.isPlaying) == true)
+            {
+                Debug.Log("com");
+            }
         }
         else if (isOpen == false)
         {
-            audioSource.Stop();
+            this.audioSource.Stop();
         }
     }
 }

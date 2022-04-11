@@ -4,14 +4,16 @@ using UnityEngine;
 
 public class AirConditioner : MonoBehaviour
 {
-    public AudioSource audioSource;
-    public AudioClip ac;
+    private AudioSource audioSource;
+    public AudioClip bgm;
     bool isOpen;
     GameObject player;
 
     // Start is called before the first frame update
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
+        
         player = GameObject.FindGameObjectWithTag("Player");
     }
 
@@ -19,9 +21,11 @@ public class AirConditioner : MonoBehaviour
     void Update()
     {
         isOpen = player.GetComponent<PlayerCtrl>().isOpened[41];
+        audioSource.clip = bgm;
 
         if (isOpen == true)
         {
+            Debug.Log(audioSource.clip.name);
             audioSource.Play();
         }
         else if (isOpen == false)
