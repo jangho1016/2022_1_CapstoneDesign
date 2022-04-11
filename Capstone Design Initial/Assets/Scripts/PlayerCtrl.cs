@@ -21,6 +21,8 @@ public class PlayerCtrl : MonoBehaviour
     public float time_last;
     public GameObject RoomLight1;
     public bool[] isOpened = new bool[40];
+    public AudioClip[] clips = new AudioClip[20];
+    private AudioSource audioSource;
 
     void Start()
     {
@@ -82,14 +84,28 @@ public class PlayerCtrl : MonoBehaviour
                         managerPanel.SetActive(true); //패널 활성
                     else if (hit.transform.tag == "Button") //버튼과 상호작용시
                         hit.transform.GetComponent<Button>().onClick.Invoke(); //버튼 이벤트 실행
-                    else if ((hit.transform.tag == "RoomDoor" == true) && (isOpened[0] == false)) //태그 없는 물체 바라보면
+                    else if ((hit.transform.tag == "RoomDoor" == true) && (isOpened[0] == false))
+                    {
                         isOpened[0] = true;
-                    else if ((hit.transform.tag == "RoomDoor" == true) && (isOpened[0] == true)) //태그 없는 물체 바라보면
+                    }
+                    else if ((hit.transform.tag == "RoomDoor" == true) && (isOpened[0] == true))
+                    {
                         isOpened[0] = false;
+                    }
+
                     else if ((hit.transform.tag == "BathroomDoor" == true) && (isOpened[1] == false) && (isOpened[28] == false)) //태그 없는 물체 바라보면
+                    {
                         isOpened[1] = true;
-                    else if ((hit.transform.tag == "BathroomDoor" == true) && (isOpened[1] == true) && (isOpened[28] == false)) //태그 없는 물체 바라보면
+                        audioSource = GameObject.FindGameObjectWithTag("BathroomDoor").GetComponent<AudioSource>();
+                        audioSource.PlayOneShot(clips[0]);
+                    }
+                    else if ((hit.transform.tag == "BathroomDoor" == true) && (isOpened[1] == true) && (isOpened[28] == false))
+                    {
                         isOpened[1] = false;
+                        audioSource = GameObject.FindGameObjectWithTag("BathroomDoor").GetComponent<AudioSource>();
+                        audioSource.PlayOneShot(clips[1]);
+                    }//태그 없는 물체 바라보면
+
                     else if ((hit.transform.tag == "Window" == true) && (isOpened[2] == false)) //태그 없는 물체 바라보면
                         isOpened[2] = true;
                     else if ((hit.transform.tag == "Window" == true) && (isOpened[2] == true)) //태그 없는 물체 바라보면
