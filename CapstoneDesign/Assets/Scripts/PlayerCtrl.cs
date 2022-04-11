@@ -124,22 +124,61 @@ public class PlayerCtrl : MonoBehaviour
                         audioSource.PlayOneShot(clips[3]);
                     }
                         
-                    else if ((hit.transform.tag == "Microwave" == true) && (isOpened[3] == false)) 
+                    else if ((hit.transform.tag == "MicrowaveOpener" == true) && (isOpened[3] == false) && (isOpened[4] == false))
+                    {
                         isOpened[3] = true;
-                    else if ((hit.transform.tag == "Microwave" == true) && (isOpened[3] == true)) 
+                    }
+                    else if ((hit.transform.tag == "MicrowaveDoor" == true) && (isOpened[3] == true) && (isOpened[4] == false))
+                    {
                         isOpened[3] = false;
-                    else if ((hit.transform.tag == "MicrowaveDoor" == true) && (isOpened[4] == false)) 
+                    }
+                        
+                    else if ((hit.transform.tag == "MicrowaveBT" == true) && (isOpened[4] == false) && (isOpened[3] == false))
+                    {
                         isOpened[4] = true;
-                    else if ((hit.transform.tag == "Microwave" == true) && (isOpened[4] == true)) 
+                        audioSource = GameObject.FindGameObjectWithTag("Microwave").GetComponent<AudioSource>();
+                        audioSource.clip = clips[4];
+                        audioSource.loop = true;
+                        audioSource.Play();
+                    }
+                        
+                    else if ((hit.transform.tag == "MicrowaveBT" == true) && (isOpened[4] == true) && (isOpened[3] == false))
+                    {
                         isOpened[4] = false;
-                    else if ((hit.transform.tag == "SinkL" == true) && (isOpened[5] == false)) 
+                        audioSource = GameObject.FindGameObjectWithTag("Microwave").GetComponent<AudioSource>();
+                        audioSource.Stop();
+                    }
+
+                    else if ((hit.transform.tag == "SinkL" == true) && (isOpened[5] == false))
+                    {
                         isOpened[5] = true;
-                    else if ((hit.transform.tag == "SinkL" == true) && (isOpened[5] == true)) 
+                        audioSource = GameObject.FindGameObjectWithTag("RoomSink").GetComponent<AudioSource>();
+                        audioSource.PlayOneShot(clips[5]);
+                    }
+                        
+                    else if ((hit.transform.tag == "SinkL" == true) && (isOpened[5] == true))
+                    {
                         isOpened[5] = false;
-                    else if ((hit.transform.tag == "SinkR" == true) && (isOpened[6] == false)) 
+                        audioSource = GameObject.FindGameObjectWithTag("RoomSink").GetComponent<AudioSource>();
+                        audioSource.PlayOneShot(clips[6]);
+                    }
+
+
+                    else if ((hit.transform.tag == "SinkR" == true) && (isOpened[6] == false))
+                    {
                         isOpened[6] = true;
-                    else if ((hit.transform.tag == "SinkR" == true) && (isOpened[6] == true)) 
+                        audioSource = GameObject.FindGameObjectWithTag("RoomSink").GetComponent<AudioSource>();
+                        audioSource.PlayOneShot(clips[5]);
+                    }
+                        
+                    else if ((hit.transform.tag == "SinkR" == true) && (isOpened[6] == true))
+                    {
                         isOpened[6] = false;
+                        audioSource = GameObject.FindGameObjectWithTag("RoomSink").GetComponent<AudioSource>();
+                        audioSource.PlayOneShot(clips[6]);
+                    }
+
+
                     else if ((hit.transform.tag == "WasherDoor" == true) && (isOpened[7] == false)) 
                         isOpened[7] = true;
                     else if ((hit.transform.tag == "WasherDoor" == true) && (isOpened[7] == true)) 
