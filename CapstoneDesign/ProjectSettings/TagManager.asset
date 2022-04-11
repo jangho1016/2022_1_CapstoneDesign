@@ -55,6 +55,18 @@ TagManager:
   - MicrowaveOpener
   - Microwave
   - RoomSink
+  - WasherBT
+  - Washer
+  - Dresser
+  - Cabinet
+  - Wardrobe
+  - Refrigerator
+  - HoodFrame
+  - Switch1
+  - Switch2
+  - Toilet
+  - BathroomSink
+  - BathroomC
   layers:
   - Default
   - TransparentFX
