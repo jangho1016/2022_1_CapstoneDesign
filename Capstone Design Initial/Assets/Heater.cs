@@ -1,10 +1,10 @@
-﻿using System.Collections;
+﻿
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Heater : MonoBehaviour
 {
-    //Animator anim;
     bool isOpen;
     GameObject player;
 
@@ -12,7 +12,6 @@ public class Heater : MonoBehaviour
     void Start()
     {
         GetComponent<MeshRenderer>().materials[0].color = Color.gray;
-        //anim = GetComponent<Animator>();
         player = GameObject.FindGameObjectWithTag("Player");
     }
 
@@ -24,12 +23,10 @@ public class Heater : MonoBehaviour
         if (isOpen == true)
         {
             GetComponent<MeshRenderer>().materials[0].color = Color.green;
-            //anim.SetBool("isOpen", true);
         }
         else if (isOpen == false)
         {
             GetComponent<MeshRenderer>().materials[0].color = Color.gray;
-            //anim.SetBool("isOpen", false);
         }
     }
 }

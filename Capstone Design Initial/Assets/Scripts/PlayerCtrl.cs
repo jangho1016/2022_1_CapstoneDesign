@@ -47,8 +47,8 @@ public class PlayerCtrl : MonoBehaviour
         if (PlayerPrefs.GetInt("SceneNum") == 2) //방 1-5번이면
         {
             timer += Time.deltaTime; //타이머 시작
-            timerGauge.fillAmount = timer / 900.0f;
-            time_last = 901.0f - timer; //타이머 제한 시간 설정 (초 - 타이머)
+            timerGauge.fillAmount = timer / 420.0f;
+            time_last = 421.0f - timer; //타이머 제한 시간 설정 (초 - 타이머)
             timertext.text = "남\n" + "은\n" + "시\n" + "간\n" + ((int)(time_last / 60) + "\n" + "분\n" + (int)(time_last % 60) + "\n" + "초"); //남은 시간 표시
             if (time_last <= 60.0f)
             {
@@ -94,9 +94,9 @@ public class PlayerCtrl : MonoBehaviour
                         isOpened[2] = true;
                     else if ((hit.transform.tag == "Window" == true) && (isOpened[2] == true)) //태그 없는 물체 바라보면
                         isOpened[2] = false;
-                    else if ((hit.transform.tag == "Microwave" == true) && (isOpened[3] == false)) //태그 없는 물체 바라보면
+                    else if ((hit.transform.tag == "MicrowaveOpener" == true) && (isOpened[3] == false)) //태그 없는 물체 바라보면
                         isOpened[3] = true;
-                    else if ((hit.transform.tag == "Microwave" == true) && (isOpened[3] == true)) //태그 없는 물체 바라보면
+                    else if ((hit.transform.tag == "MicrowaveDoor" == true) && (isOpened[3] == true)) //태그 없는 물체 바라보면
                         isOpened[3] = false;
                     else if ((hit.transform.tag == "Induction" == true) && (isOpened[4] == false)) //태그 없는 물체 바라보면
                         isOpened[4] = true;
@@ -247,6 +247,14 @@ public class PlayerCtrl : MonoBehaviour
                         isOpened[40] = true;
                     else if ((hit.transform.tag == "ShoseCase2" == true) && (isOpened[40] == true)) //태그 없는 물체 바라보면
                         isOpened[40] = false;
+                    else if ((hit.transform.tag == "AC" == true) && (isOpened[41] == false))
+                        isOpened[41] = true;
+                    else if ((hit.transform.tag == "AC" == true) && (isOpened[41] == true)) //태그 없는 물체 바라보면
+                        isOpened[41] = false;
+                    else if ((hit.transform.tag == "MicrowaveOpr" == true) && (isOpened[42] == false))
+                        isOpened[42] = true;
+                    else if ((hit.transform.tag == "MicrowaveOpr" == true) && (isOpened[42] == true)) //태그 없는 물체 바라보면
+                        isOpened[42] = false;
                 }
                 GaugeTimer = 0.0f; //게이지 0으로
             }

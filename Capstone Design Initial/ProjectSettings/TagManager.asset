@@ -9,7 +9,6 @@ TagManager:
   - RoomDoor
   - BathroomDoor
   - Window
-  - Microwave
   - Induction
   - SinkL
   - SinkR
@@ -51,6 +50,10 @@ TagManager:
   - RoomDoor2
   - ShoseCase1
   - ShoseCase2
+  - AC
+  - MicrowaveDoor
+  - MicrowaveOpr
+  - MicrowaveOpener
   layers:
   - Default
   - TransparentFX
