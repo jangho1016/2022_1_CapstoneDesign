@@ -76,7 +76,7 @@ public class PlayerCtrl : MonoBehaviour
                     hit.transform.GetComponent<Button>().onClick.Invoke(); //버튼 이벤트 실행
                 else if (PlayerPrefs.GetInt("SceneNum") == 2) //방 1-5번 씬일때
                 {
-                    if (hit.transform.tag == "Untagged") //태그 없는 물체 바라보면
+                    if (hit.transform.tag == "Untagged") 
                         GaugeTimer = 0.0f; //게이지를 채우지 않음
                     else if (hit.transform.tag == "Crack") //방에서 하자 부분을 발견했을때
                         cnt++;
@@ -87,13 +87,17 @@ public class PlayerCtrl : MonoBehaviour
                     else if ((hit.transform.tag == "RoomDoor" == true) && (isOpened[0] == false))
                     {
                         isOpened[0] = true;
+                        audioSource = GameObject.FindGameObjectWithTag("BathroomDoor").GetComponent<AudioSource>();
+                        audioSource.PlayOneShot(clips[0]);
                     }
                     else if ((hit.transform.tag == "RoomDoor" == true) && (isOpened[0] == true))
                     {
                         isOpened[0] = false;
+                        audioSource = GameObject.FindGameObjectWithTag("BathroomDoor").GetComponent<AudioSource>();
+                        audioSource.PlayOneShot(clips[1]);
                     }
 
-                    else if ((hit.transform.tag == "BathroomDoor" == true) && (isOpened[1] == false) && (isOpened[28] == false)) //태그 없는 물체 바라보면
+                    else if ((hit.transform.tag == "BathroomDoor" == true) && (isOpened[1] == false) && (isOpened[28] == false)) 
                     {
                         isOpened[1] = true;
                         audioSource = GameObject.FindGameObjectWithTag("BathroomDoor").GetComponent<AudioSource>();
@@ -104,151 +108,161 @@ public class PlayerCtrl : MonoBehaviour
                         isOpened[1] = false;
                         audioSource = GameObject.FindGameObjectWithTag("BathroomDoor").GetComponent<AudioSource>();
                         audioSource.PlayOneShot(clips[1]);
-                    }//태그 없는 물체 바라보면
+                    }
 
-                    else if ((hit.transform.tag == "Window" == true) && (isOpened[2] == false)) //태그 없는 물체 바라보면
+                    else if ((hit.transform.tag == "Window" == true) && (isOpened[2] == false))
+                    {
                         isOpened[2] = true;
-                    else if ((hit.transform.tag == "Window" == true) && (isOpened[2] == true)) //태그 없는 물체 바라보면
+                        audioSource = GameObject.FindGameObjectWithTag("Window").GetComponent<AudioSource>();
+                        audioSource.PlayOneShot(clips[2]);
+                    }
+                        
+                    else if ((hit.transform.tag == "Window" == true) && (isOpened[2] == true))
+                    {
                         isOpened[2] = false;
-                    else if ((hit.transform.tag == "Microwave" == true) && (isOpened[3] == false)) //태그 없는 물체 바라보면
+                        audioSource = GameObject.FindGameObjectWithTag("Window").GetComponent<AudioSource>();
+                        audioSource.PlayOneShot(clips[3]);
+                    }
+                        
+                    else if ((hit.transform.tag == "Microwave" == true) && (isOpened[3] == false)) 
                         isOpened[3] = true;
-                    else if ((hit.transform.tag == "Microwave" == true) && (isOpened[3] == true)) //태그 없는 물체 바라보면
+                    else if ((hit.transform.tag == "Microwave" == true) && (isOpened[3] == true)) 
                         isOpened[3] = false;
-                    else if ((hit.transform.tag == "Induction" == true) && (isOpened[4] == false)) //태그 없는 물체 바라보면
+                    else if ((hit.transform.tag == "MicrowaveDoor" == true) && (isOpened[4] == false)) 
                         isOpened[4] = true;
-                    else if ((hit.transform.tag == "Induction" == true) && (isOpened[4] == true)) //태그 없는 물체 바라보면
+                    else if ((hit.transform.tag == "Microwave" == true) && (isOpened[4] == true)) 
                         isOpened[4] = false;
-                    else if ((hit.transform.tag == "SinkL" == true) && (isOpened[5] == false)) //태그 없는 물체 바라보면
+                    else if ((hit.transform.tag == "SinkL" == true) && (isOpened[5] == false)) 
                         isOpened[5] = true;
-                    else if ((hit.transform.tag == "SinkL" == true) && (isOpened[5] == true)) //태그 없는 물체 바라보면
+                    else if ((hit.transform.tag == "SinkL" == true) && (isOpened[5] == true)) 
                         isOpened[5] = false;
-                    else if ((hit.transform.tag == "SinkR" == true) && (isOpened[6] == false)) //태그 없는 물체 바라보면
+                    else if ((hit.transform.tag == "SinkR" == true) && (isOpened[6] == false)) 
                         isOpened[6] = true;
-                    else if ((hit.transform.tag == "SinkR" == true) && (isOpened[6] == true)) //태그 없는 물체 바라보면
+                    else if ((hit.transform.tag == "SinkR" == true) && (isOpened[6] == true)) 
                         isOpened[6] = false;
-                    else if ((hit.transform.tag == "WasherDoor" == true) && (isOpened[7] == false)) //태그 없는 물체 바라보면
+                    else if ((hit.transform.tag == "WasherDoor" == true) && (isOpened[7] == false)) 
                         isOpened[7] = true;
-                    else if ((hit.transform.tag == "WasherDoor" == true) && (isOpened[7] == true)) //태그 없는 물체 바라보면
+                    else if ((hit.transform.tag == "WasherDoor" == true) && (isOpened[7] == true)) 
                         isOpened[7] = false;
-                    else if ((hit.transform.tag == "WasherDrawer" == true) && (isOpened[8] == false)) //태그 없는 물체 바라보면
+                    else if ((hit.transform.tag == "WasherDrawer" == true) && (isOpened[8] == false)) 
                         isOpened[8] = true;
-                    else if ((hit.transform.tag == "WasherDrawer" == true) && (isOpened[8] == true)) //태그 없는 물체 바라보면
+                    else if ((hit.transform.tag == "WasherDrawer" == true) && (isOpened[8] == true)) 
                         isOpened[8] = false;
-                    else if ((hit.transform.tag == "Dresser1" == true) && (isOpened[9] == false)) //태그 없는 물체 바라보면
+                    else if ((hit.transform.tag == "Dresser1" == true) && (isOpened[9] == false)) 
                         isOpened[9] = true;
-                    else if ((hit.transform.tag == "Dresser1" == true) && (isOpened[9] == true)) //태그 없는 물체 바라보면
+                    else if ((hit.transform.tag == "Dresser1" == true) && (isOpened[9] == true)) 
                         isOpened[9] = false;
-                    else if ((hit.transform.tag == "Dresser2" == true) && (isOpened[10] == false)) //태그 없는 물체 바라보면
+                    else if ((hit.transform.tag == "Dresser2" == true) && (isOpened[10] == false)) 
                         isOpened[10] = true;
-                    else if ((hit.transform.tag == "Dresser2" == true) && (isOpened[10] == true)) //태그 없는 물체 바라보면
+                    else if ((hit.transform.tag == "Dresser2" == true) && (isOpened[10] == true)) 
                         isOpened[10] = false;
-                    else if ((hit.transform.tag == "Dresser3" == true) && (isOpened[11] == false)) //태그 없는 물체 바라보면
+                    else if ((hit.transform.tag == "Dresser3" == true) && (isOpened[11] == false)) 
                         isOpened[11] = true;
-                    else if ((hit.transform.tag == "Dresser3" == true) && (isOpened[11] == true)) //태그 없는 물체 바라보면
+                    else if ((hit.transform.tag == "Dresser3" == true) && (isOpened[11] == true)) 
                         isOpened[11] = false;
-                    else if ((hit.transform.tag == "Dresser4" == true) && (isOpened[12] == false)) //태그 없는 물체 바라보면
+                    else if ((hit.transform.tag == "Dresser4" == true) && (isOpened[12] == false)) 
                         isOpened[12] = true;
-                    else if ((hit.transform.tag == "Dresser4" == true) && (isOpened[12] == true)) //태그 없는 물체 바라보면
+                    else if ((hit.transform.tag == "Dresser4" == true) && (isOpened[12] == true)) 
                         isOpened[12] = false;
-                    else if ((hit.transform.tag == "CabinetL" == true) && (isOpened[13] == false)) //태그 없는 물체 바라보면
+                    else if ((hit.transform.tag == "CabinetL" == true) && (isOpened[13] == false)) 
                         isOpened[13] = true;
-                    else if ((hit.transform.tag == "CabinetL" == true) && (isOpened[13] == true)) //태그 없는 물체 바라보면
+                    else if ((hit.transform.tag == "CabinetL" == true) && (isOpened[13] == true)) 
                         isOpened[13] = false;
-                    else if ((hit.transform.tag == "CabinetR" == true) && (isOpened[14] == false)) //태그 없는 물체 바라보면
+                    else if ((hit.transform.tag == "CabinetR" == true) && (isOpened[14] == false)) 
                         isOpened[14] = true;
-                    else if ((hit.transform.tag == "CabinetR" == true) && (isOpened[14] == true)) //태그 없는 물체 바라보면
+                    else if ((hit.transform.tag == "CabinetR" == true) && (isOpened[14] == true)) 
                         isOpened[14] = false;
-                    else if ((hit.transform.tag == "WardrobeL" == true) && (isOpened[15] == false)) //태그 없는 물체 바라보면
+                    else if ((hit.transform.tag == "WardrobeL" == true) && (isOpened[15] == false)) 
                         isOpened[15] = true;
-                    else if ((hit.transform.tag == "WardrobeL" == true) && (isOpened[15] == true)) //태그 없는 물체 바라보면
+                    else if ((hit.transform.tag == "WardrobeL" == true) && (isOpened[15] == true)) 
                         isOpened[15] = false;
-                    else if ((hit.transform.tag == "WardrobeM" == true) && (isOpened[16] == false)) //태그 없는 물체 바라보면
+                    else if ((hit.transform.tag == "WardrobeM" == true) && (isOpened[16] == false)) 
                         isOpened[16] = true;
-                    else if ((hit.transform.tag == "WardrobeM" == true) && (isOpened[16] == true)) //태그 없는 물체 바라보면
+                    else if ((hit.transform.tag == "WardrobeM" == true) && (isOpened[16] == true)) 
                         isOpened[16] = false;
-                    else if ((hit.transform.tag == "WardrobeR" == true) && (isOpened[17] == false)) //태그 없는 물체 바라보면
+                    else if ((hit.transform.tag == "WardrobeR" == true) && (isOpened[17] == false)) 
                         isOpened[17] = true;
-                    else if ((hit.transform.tag == "WardrobeR" == true) && (isOpened[17] == true)) //태그 없는 물체 바라보면
+                    else if ((hit.transform.tag == "WardrobeR" == true) && (isOpened[17] == true)) 
                         isOpened[17] = false;
-                    else if ((hit.transform.tag == "Refrigerator1" == true) && (isOpened[18] == false)) //태그 없는 물체 바라보면
+                    else if ((hit.transform.tag == "Refrigerator1" == true) && (isOpened[18] == false)) 
                         isOpened[18] = true;
-                    else if ((hit.transform.tag == "Refrigerator1" == true) && (isOpened[18] == true) && (isOpened[20] == false)) //태그 없는 물체 바라보면
+                    else if ((hit.transform.tag == "Refrigerator1" == true) && (isOpened[18] == true) && (isOpened[20] == false)) 
                         isOpened[18] = false;
-                    else if ((hit.transform.tag == "Refrigerator2" == true) && (isOpened[19] == false)) //태그 없는 물체 바라보면
+                    else if ((hit.transform.tag == "Refrigerator2" == true) && (isOpened[19] == false)) 
                         isOpened[19] = true;
-                    else if ((hit.transform.tag == "Refrigerator2" == true) && (isOpened[19] == true) && (isOpened[21] == false && isOpened[22] == false && isOpened[23] == false)) //태그 없는 물체 바라보면
+                    else if ((hit.transform.tag == "Refrigerator2" == true) && (isOpened[19] == true) && (isOpened[21] == false && isOpened[22] == false && isOpened[23] == false)) 
                         isOpened[19] = false;
-                    else if ((hit.transform.tag == "RefrigeratorD1" == true) && (isOpened[20] == false)) //태그 없는 물체 바라보면
+                    else if ((hit.transform.tag == "RefrigeratorD1" == true) && (isOpened[20] == false)) 
                         isOpened[20] = true;
-                    else if ((hit.transform.tag == "RefrigeratorD1" == true) && (isOpened[20] == true)) //태그 없는 물체 바라보면
+                    else if ((hit.transform.tag == "RefrigeratorD1" == true) && (isOpened[20] == true)) 
                         isOpened[20] = false;
-                    else if ((hit.transform.tag == "RefrigeratorD2" == true) && (isOpened[21] == false)) //태그 없는 물체 바라보면
+                    else if ((hit.transform.tag == "RefrigeratorD2" == true) && (isOpened[21] == false)) 
                         isOpened[21] = true;
-                    else if ((hit.transform.tag == "RefrigeratorD2" == true) && (isOpened[21] == true)) //태그 없는 물체 바라보면
+                    else if ((hit.transform.tag == "RefrigeratorD2" == true) && (isOpened[21] == true)) 
                         isOpened[21] = false;
-                    else if ((hit.transform.tag == "RefrigeratorD3" == true) && (isOpened[22] == false)) //태그 없는 물체 바라보면
+                    else if ((hit.transform.tag == "RefrigeratorD3" == true) && (isOpened[22] == false)) 
                         isOpened[22] = true;
-                    else if ((hit.transform.tag == "RefrigeratorD3" == true) && (isOpened[22] == true)) //태그 없는 물체 바라보면
+                    else if ((hit.transform.tag == "RefrigeratorD3" == true) && (isOpened[22] == true)) 
                         isOpened[22] = false;
-                    else if ((hit.transform.tag == "RefrigeratorD4" == true) && (isOpened[23] == false)) //태그 없는 물체 바라보면
+                    else if ((hit.transform.tag == "RefrigeratorD4" == true) && (isOpened[23] == false)) 
                         isOpened[23] = true;
-                    else if ((hit.transform.tag == "RefrigeratorD4" == true) && (isOpened[23] == true)) //태그 없는 물체 바라보면
+                    else if ((hit.transform.tag == "RefrigeratorD4" == true) && (isOpened[23] == true)) 
                         isOpened[23] = false;
-                    else if ((hit.transform.tag == "Hood" == true) && (isOpened[24] == false)) //태그 없는 물체 바라보면
+                    else if ((hit.transform.tag == "Hood" == true) && (isOpened[24] == false)) 
                         isOpened[24] = true;
-                    else if ((hit.transform.tag == "Hood" == true) && (isOpened[24] == true)) //태그 없는 물체 바라보면
+                    else if ((hit.transform.tag == "Hood" == true) && (isOpened[24] == true)) 
                         isOpened[24] = false;
-                    else if ((hit.transform.tag == "RoomSwitch1" == true) && (isOpened[25] == false)) //태그 없는 물체 바라보면
+                    else if ((hit.transform.tag == "RoomSwitch1" == true) && (isOpened[25] == false)) 
                         isOpened[25] = true;
-                    else if ((hit.transform.tag == "RoomSwitch1" == true) && (isOpened[25] == true)) //태그 없는 물체 바라보면
+                    else if ((hit.transform.tag == "RoomSwitch1" == true) && (isOpened[25] == true)) 
                         isOpened[25] = false;
-                    else if ((hit.transform.tag == "RoomSwitch2" == true) && (isOpened[26] == false)) //태그 없는 물체 바라보면
+                    else if ((hit.transform.tag == "RoomSwitch2" == true) && (isOpened[26] == false)) 
                         isOpened[26] = true;
-                    else if ((hit.transform.tag == "RoomSwitch2" == true) && (isOpened[26] == true)) //태그 없는 물체 바라보면
+                    else if ((hit.transform.tag == "RoomSwitch2" == true) && (isOpened[26] == true)) 
                         isOpened[26] = false;
-                    else if ((hit.transform.tag == "ToiletCover" == true) && (isOpened[27] == false)) //태그 없는 물체 바라보면
+                    else if ((hit.transform.tag == "ToiletCover" == true) && (isOpened[27] == false)) 
                         isOpened[27] = true;
-                    else if ((hit.transform.tag == "ToiletCover" == true) && (isOpened[27] == true)) //태그 없는 물체 바라보면
+                    else if ((hit.transform.tag == "ToiletCover" == true) && (isOpened[27] == true)) 
                         isOpened[27] = false;
-                    else if ((hit.transform.tag == "BathroomD1" == true) && (isOpened[28] == false)) //태그 없는 물체 바라보면
+                    else if ((hit.transform.tag == "BathroomD1" == true) && (isOpened[28] == false)) 
                         isOpened[28] = true;
-                    else if ((hit.transform.tag == "BathroomD1" == true) && (isOpened[28] == true)) //태그 없는 물체 바라보면
+                    else if ((hit.transform.tag == "BathroomD1" == true) && (isOpened[28] == true)) 
                         isOpened[28] = false;
-                    else if ((hit.transform.tag == "BathroomD2" == true) && (isOpened[29] == false)) //태그 없는 물체 바라보면
+                    else if ((hit.transform.tag == "BathroomD2" == true) && (isOpened[29] == false)) 
                         isOpened[29] = true;
-                    else if ((hit.transform.tag == "BathroomD2" == true) && (isOpened[29] == true)) //태그 없는 물체 바라보면
+                    else if ((hit.transform.tag == "BathroomD2" == true) && (isOpened[29] == true)) 
                         isOpened[29] = false;
-                    else if ((hit.transform.tag == "BathroomCdoor" == true) && (isOpened[30] == false)) //태그 없는 물체 바라보면
+                    else if ((hit.transform.tag == "BathroomCdoor" == true) && (isOpened[30] == false)) 
                         isOpened[30] = true;
-                    else if ((hit.transform.tag == "BathroomCdoor" == true) && (isOpened[30] == true)) //태그 없는 물체 바라보면
+                    else if ((hit.transform.tag == "BathroomCdoor" == true) && (isOpened[30] == true)) 
                         isOpened[30] = false;
-                    else if ((hit.transform.tag == "BathroomSwitch1" == true) && (isOpened[31] == false)) //태그 없는 물체 바라보면
+                    else if ((hit.transform.tag == "BathroomSwitch1" == true) && (isOpened[31] == false)) 
                         isOpened[31] = true;
-                    else if ((hit.transform.tag == "BathroomSwitch1" == true) && (isOpened[31] == true)) //태그 없는 물체 바라보면
+                    else if ((hit.transform.tag == "BathroomSwitch1" == true) && (isOpened[31] == true)) 
                         isOpened[31] = false;
-                    else if ((hit.transform.tag == "BathroomSwitch2" == true) && (isOpened[32] == false)) //태그 없는 물체 바라보면
+                    else if ((hit.transform.tag == "BathroomSwitch2" == true) && (isOpened[32] == false)) 
                         isOpened[32] = true;
-                    else if ((hit.transform.tag == "BathroomSwitch2" == true) && (isOpened[32] == true)) //태그 없는 물체 바라보면
+                    else if ((hit.transform.tag == "BathroomSwitch2" == true) && (isOpened[32] == true)) 
                         isOpened[32] = false;
                     else if ((hit.transform.tag == "SinkFaucet" == true) && (isOpened[33] == false))
                         isOpened[33] = true;
-                    else if ((hit.transform.tag == "SinkFaucet" == true) && (isOpened[33] == true)) //태그 없는 물체 바라보면
+                    else if ((hit.transform.tag == "SinkFaucet" == true) && (isOpened[33] == true)) 
                         isOpened[33] = false;
                     else if ((hit.transform.tag == "Heater" == true) && (isOpened[34] == false))
                         isOpened[34] = true;
-                    else if ((hit.transform.tag == "Heater" == true) && (isOpened[34] == true)) //태그 없는 물체 바라보면
+                    else if ((hit.transform.tag == "Heater" == true) && (isOpened[34] == true)) 
                         isOpened[34] = false;
                     else if ((hit.transform.tag == "BathroomFaucet" == true) && (isOpened[35] == false))
                         isOpened[35] = true;
-                    else if ((hit.transform.tag == "BathroomFaucet" == true) && (isOpened[35] == true)) //태그 없는 물체 바라보면
+                    else if ((hit.transform.tag == "BathroomFaucet" == true) && (isOpened[35] == true)) 
                         isOpened[35] = false;
                     else if ((hit.transform.tag == "ShowerSwitch" == true) && (isOpened[36] == false))
                         isOpened[36] = true;
-                    else if ((hit.transform.tag == "ShowerSwitch" == true) && (isOpened[36] == true)) //태그 없는 물체 바라보면
+                    else if ((hit.transform.tag == "ShowerSwitch" == true) && (isOpened[36] == true)) 
                         isOpened[36] = false;
                     else if ((hit.transform.tag == "RoomDoor2" == true) && (isOpened[37] == false))
                         isOpened[37] = true;
-                    else if ((hit.transform.tag == "RoomDoor2" == true) && (isOpened[37] == true)) //태그 없는 물체 바라보면
+                    else if ((hit.transform.tag == "RoomDoor2" == true) && (isOpened[37] == true)) 
                         isOpened[37] = false;
                     else if ((hit.transform.tag == "ToiletBT" == true) && isOpened[38] == false)
                     {
@@ -257,12 +271,16 @@ public class PlayerCtrl : MonoBehaviour
                     }
                     else if ((hit.transform.tag == "ShoseCase1" == true) && (isOpened[39] == false))
                         isOpened[39] = true;
-                    else if ((hit.transform.tag == "ShoseCase1" == true) && (isOpened[39] == true)) //태그 없는 물체 바라보면
+                    else if ((hit.transform.tag == "ShoseCase1" == true) && (isOpened[39] == true)) 
                         isOpened[39] = false;
                     else if ((hit.transform.tag == "ShoseCase2" == true) && (isOpened[40] == false))
                         isOpened[40] = true;
-                    else if ((hit.transform.tag == "ShoseCase2" == true) && (isOpened[40] == true)) //태그 없는 물체 바라보면
+                    else if ((hit.transform.tag == "ShoseCase2" == true) && (isOpened[40] == true)) 
                         isOpened[40] = false;
+                    else if ((hit.transform.tag == "Induction" == true) && (isOpened[41] == false))
+                        isOpened[41] = true;
+                    else if ((hit.transform.tag == "Induction" == true) && (isOpened[41] == true))
+                        isOpened[41] = false;
                 }
                 GaugeTimer = 0.0f; //게이지 0으로
             }

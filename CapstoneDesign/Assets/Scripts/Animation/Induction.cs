@@ -18,7 +18,7 @@ public class Induction : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        isOpen = player.GetComponent<PlayerCtrl>().isOpened[4];
+        isOpen = player.GetComponent<PlayerCtrl>().isOpened[41];
 
         if (isOpen == true)
         {
