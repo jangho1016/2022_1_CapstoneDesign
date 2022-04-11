@@ -1,0 +1,90 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Manager
+  - Button
+  - RoomDoor
+  - BathroomDoor
+  - Window
+  - Microwave
+  - Induction
+  - SinkL
+  - SinkR
+  - WasherDoor
+  - WasherDrawer
+  - Dresser1
+  - Dresser2
+  - Dresser3
+  - Dresser4
+  - CabinetL
+  - CabinetR
+  - WardrobeL
+  - WardrobeM
+  - WardrobeR
+  - Refrigerator1
+  - Refrigerator2
+  - RefrigeratorD1
+  - RefrigeratorD2
+  - RefrigeratorD3
+  - RefrigeratorD4
+  - Hood
+  - RoomSwitch1
+  - RoomSwitch2
+  - ToiletCover
+  - BathroomCdoor
+  - BathroomSwitch1
+  - BathroomSwitch2
+  - BathroomD1
+  - BathroomD2
+  - Crack
+  - ManagerPanel
+  - Ventilation
+  - SinkFaucet
+  - BathroomFaucet
+  - ToiletBT
+  - Heater
+  - ShowerSwitch
+  - Door
+  - RoomDoor2
+  - ShoseCase1
+  - ShoseCase2
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
