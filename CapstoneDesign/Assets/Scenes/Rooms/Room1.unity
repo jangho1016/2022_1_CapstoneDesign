@@ -337,6 +337,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f95d02037a2afcd46ae482d0a1de4a60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isOpen: 0
+  player: {fileID: 0}
 --- !u!23 &72524547
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -801,8 +803,6 @@ GameObject:
   - component: {fileID: 184437204}
   - component: {fileID: 184437203}
   - component: {fileID: 184437202}
-  - component: {fileID: 184437206}
-  - component: {fileID: 184437207}
   m_Layer: 0
   m_Name: Heater
   m_TagString: Untagged
@@ -892,116 +892,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 43
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &184437206
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 184437201}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa6e7ab5f8f3bc549a0c365ddc6b5d2b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioSource: {fileID: 184437207}
-  ac: {fileID: 8300000, guid: c9ad5fd9c2ab042098d2625d6cde66cd, type: 3}
---- !u!82 &184437207
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 184437201}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: c9ad5fd9c2ab042098d2625d6cde66cd, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!1 &190522833
 GameObject:
   m_ObjectHideFlags: 0
@@ -1686,8 +1576,8 @@ GameObject:
   - component: {fileID: 274508354}
   - component: {fileID: 274508353}
   - component: {fileID: 274508352}
-  - component: {fileID: 274508351}
   - component: {fileID: 274508355}
+  - component: {fileID: 274508351}
   m_Layer: 0
   m_Name: Bathroom Sink
   m_TagString: BathroomSink
@@ -1769,7 +1659,7 @@ Transform:
   m_Children:
   - {fileID: 1813864792}
   - {fileID: 817902563}
-  - {fileID: 433536223}
+  - {fileID: 708114115}
   - {fileID: 534653661}
   m_Father: {fileID: 0}
   m_RootOrder: 45
@@ -1785,7 +1675,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -2850,7 +2740,7 @@ GameObject:
   - component: {fileID: 433536225}
   - component: {fileID: 433536224}
   m_Layer: 0
-  m_Name: Room Sink
+  m_Name: Bathroom Sink
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2868,8 +2758,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 416760390}
-  m_Father: {fileID: 274508354}
-  m_RootOrder: 2
+  m_Father: {fileID: 708114115}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!64 &433536224
 MeshCollider:
@@ -3677,6 +3567,26 @@ MonoBehaviour:
   - {fileID: 8300000, guid: eeefe17d59b892e4ea4697736de64b7f, type: 3}
   - {fileID: 8300000, guid: f7491bc024d4e4f1f9a6dd7f09558029, type: 3}
   - {fileID: 8300000, guid: eeefe17d59b892e4ea4697736de64b7f, type: 3}
+  - {fileID: 8300000, guid: eeefe17d59b892e4ea4697736de64b7f, type: 3}
+  - {fileID: 8300000, guid: eeefe17d59b892e4ea4697736de64b7f, type: 3}
+  - {fileID: 8300000, guid: f1de4e67910a3493e9ba31c4745c9bfc, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 0}
 --- !u!1 &534653660
 GameObject:
@@ -4284,6 +4194,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 680106637}
   m_Mesh: {fileID: -2370337028072100445, guid: 314b9703cdc1e154da8bcfa05f01aa77, type: 3}
+--- !u!1 &708114114
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 708114115}
+  m_Layer: 0
+  m_Name: Bathroom Sink
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &708114115
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 708114114}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 433536223}
+  m_Father: {fileID: 274508354}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &750324641
 GameObject:
   m_ObjectHideFlags: 0
@@ -4622,9 +4563,9 @@ GameObject:
   - component: {fileID: 817902563}
   - component: {fileID: 817902568}
   - component: {fileID: 817902567}
-  - component: {fileID: 817902566}
   - component: {fileID: 817902564}
   - component: {fileID: 817902565}
+  - component: {fileID: 817902566}
   m_Layer: 0
   m_Name: Bathroom SInk Door Right
   m_TagString: BathroomD2
@@ -4677,8 +4618,8 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!64 &817902566
-MeshCollider:
+--- !u!65 &817902566
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -4687,10 +4628,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -987199957870596413, guid: 35fdefb425b74764db3680138bfde336, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 0.29, y: 0.5291597, z: 0.05032879}
+  m_Center: {x: 0.14999999, y: 0.2645799, z: 0.025164455}
 --- !u!23 &817902567
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9671,9 +9611,9 @@ GameObject:
   - component: {fileID: 1813864792}
   - component: {fileID: 1813864797}
   - component: {fileID: 1813864796}
-  - component: {fileID: 1813864795}
   - component: {fileID: 1813864793}
   - component: {fileID: 1813864794}
+  - component: {fileID: 1813864795}
   m_Layer: 0
   m_Name: Bathroom SInk Door Left
   m_TagString: BathroomD1
@@ -9726,8 +9666,8 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!64 &1813864795
-MeshCollider:
+--- !u!65 &1813864795
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -9736,10 +9676,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -8131830496024632617, guid: 6faa472094a8b814aac6199af8dae221, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 0.29, y: 0.5291597, z: 0.05032879}
+  m_Center: {x: -0.14999999, y: 0.2645799, z: 0.025164455}
 --- !u!23 &1813864796
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -14964,6 +14903,7 @@ GameObject:
   - component: {fileID: 3507143052725625226}
   - component: {fileID: 1679586817057248576}
   - component: {fileID: 887186309688325270}
+  - component: {fileID: 887186309688325271}
   m_Layer: 0
   m_Name: Room Sink
   m_TagString: RoomSink
@@ -15067,6 +15007,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!64 &887186309688325271
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 887186309688325269}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 580723718994340924, guid: f6d43618a845d2046b29f5a61bb92a59, type: 3}
 --- !u!1 &887186310022046372
 GameObject:
   m_ObjectHideFlags: 0
@@ -17083,7 +17037,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -17874,20 +17828,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1584850869927169459}
   m_Mesh: {fileID: 6773822891795391071, guid: 7b5cf6042b3e90f4fabcf1723de81533, type: 3}
---- !u!64 &2979545584595973379
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9169705594527773303}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 2981791366753404701, guid: 4136c479946fe534289d34d168efee0a, type: 3}
 --- !u!33 &2983160609399561481
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -19243,14 +19183,27 @@ GameObject:
   - component: {fileID: 5351060794664792977}
   - component: {fileID: 9073929595950775348}
   - component: {fileID: 6487969272107387134}
-  - component: {fileID: 5604852935037998196}
+  - component: {fileID: 4686305326770940204}
   m_Layer: 0
   m_Name: Toilet1_C1_05
-  m_TagString: Untagged
+  m_TagString: ToiletBT
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &4686305326770940204
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4686305326770940203}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.06612749, y: 0.050000004, z: 0.020000007}
+  m_Center: {x: 0.016936485, y: 0, z: 0}
 --- !u!1 &4686305326776551785
 GameObject:
   m_ObjectHideFlags: 0
@@ -19353,7 +19306,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -19452,7 +19405,7 @@ GameObject:
   - component: {fileID: 4686305328435340004}
   m_Layer: 0
   m_Name: Toilet1_C1_04
-  m_TagString: ToiletBT
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19468,8 +19421,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.14999986, y: 0.099999994, z: 0.01765312}
-  m_Center: {x: -0.00000011749107, y: 0, z: 0.0038265525}
+  m_Size: {x: 0.14999986, y: 0.099999994, z: 0.009225739}
+  m_Center: {x: -0.00000011749107, y: 0, z: -0.00038713854}
 --- !u!33 &4795005971480771337
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -20313,20 +20266,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -2156952400700298792, guid: db11b3cc81d162344adaa19d420e3323, type: 3}
---- !u!64 &5604852935037998196
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4686305326770940203}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 8116853133305995500, guid: 6fa2efabc2718cd4a8d52df5a7603355, type: 3}
 --- !u!64 &5604852935042577466
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -23953,7 +23892,7 @@ GameObject:
   - component: {fileID: 8361643040675014861}
   - component: {fileID: 4874405106696726376}
   - component: {fileID: 7224243119923057570}
-  - component: {fileID: 2979545584595973379}
+  - component: {fileID: 9169705594527773304}
   m_Layer: 0
   m_Name: Bathroom Switch Frame
   m_TagString: Switch2
@@ -23961,6 +23900,102 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!82 &9169705594527773304
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9169705594527773303}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 1.5
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!33 &9174167873768514507
 MeshFilter:
   m_ObjectHideFlags: 0

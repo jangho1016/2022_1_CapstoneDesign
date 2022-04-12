@@ -21,7 +21,7 @@ public class PlayerCtrl : MonoBehaviour
     public float time_last;
     public GameObject RoomLight1;
     public bool[] isOpened = new bool[40];
-    public AudioClip[] clips = new AudioClip[30];
+    public AudioClip[] clips = new AudioClip[50];
     private AudioSource audioSource;
 
     void Start()
@@ -505,52 +505,92 @@ public class PlayerCtrl : MonoBehaviour
                     else if ((hit.transform.tag == "BathroomSwitch2" == true) && (isOpened[32] == false))
                     {
                         isOpened[32] = true;
+                        audioSource = GameObject.FindGameObjectWithTag("Switch2").GetComponent<AudioSource>();
+                        audioSource.PlayOneShot(clips[23]);
                     }
                     else if ((hit.transform.tag == "BathroomSwitch2" == true) && (isOpened[32] == true))
                     {
                         isOpened[32] = false;
+                        audioSource = GameObject.FindGameObjectWithTag("Switch2").GetComponent<AudioSource>();
+                        audioSource.PlayOneShot(clips[24]);
                     }
                     else if ((hit.transform.tag == "SinkFaucet" == true) && (isOpened[33] == false))
                     {
                         isOpened[33] = true;
+                        audioSource = GameObject.FindGameObjectWithTag("RoomSink").GetComponent<AudioSource>();
+                        audioSource.PlayOneShot(clips[29]);
+                        audioSource.clip = clips[31];
+                        audioSource.loop = true;
+                        audioSource.Play();
                     }
                     else if ((hit.transform.tag == "SinkFaucet" == true) && (isOpened[33] == true))
                     {
                         isOpened[33] = false;
+                        audioSource = GameObject.FindGameObjectWithTag("RoomSink").GetComponent<AudioSource>();
+                        audioSource.Stop();
+                        audioSource.PlayOneShot(clips[30]);
                     }
                     else if ((hit.transform.tag == "Heater" == true) && (isOpened[34] == false))
+                    {
                         isOpened[34] = true;
-                    else if ((hit.transform.tag == "Heater" == true) && (isOpened[34] == true)) 
+                    }
+                    else if ((hit.transform.tag == "Heater" == true) && (isOpened[34] == true))
+                    {
                         isOpened[34] = false;
+                    }
                     else if ((hit.transform.tag == "BathroomFaucet" == true) && (isOpened[35] == false))
+                    {
                         isOpened[35] = true;
-                    else if ((hit.transform.tag == "BathroomFaucet" == true) && (isOpened[35] == true)) 
+                    }
+                    else if ((hit.transform.tag == "BathroomFaucet" == true) && (isOpened[35] == true))
+                    {
                         isOpened[35] = false;
+                    }
                     else if ((hit.transform.tag == "ShowerSwitch" == true) && (isOpened[36] == false))
+                    {
                         isOpened[36] = true;
-                    else if ((hit.transform.tag == "ShowerSwitch" == true) && (isOpened[36] == true)) 
+                    }
+                    else if ((hit.transform.tag == "ShowerSwitch" == true) && (isOpened[36] == true))
+                    {
                         isOpened[36] = false;
+                    }
                     else if ((hit.transform.tag == "RoomDoor2" == true) && (isOpened[37] == false))
+                    {
                         isOpened[37] = true;
-                    else if ((hit.transform.tag == "RoomDoor2" == true) && (isOpened[37] == true)) 
+                    }
+                    else if ((hit.transform.tag == "RoomDoor2" == true) && (isOpened[37] == true))
+                    {
                         isOpened[37] = false;
+                    }
                     else if ((hit.transform.tag == "ToiletBT" == true) && isOpened[38] == false)
                     {
                         isOpened[38] = true;
                         StartCoroutine(ToiletWater());
                     }
                     else if ((hit.transform.tag == "ShoseCase1" == true) && (isOpened[39] == false))
+                    {
                         isOpened[39] = true;
-                    else if ((hit.transform.tag == "ShoseCase1" == true) && (isOpened[39] == true)) 
+                    }
+                    else if ((hit.transform.tag == "ShoseCase1" == true) && (isOpened[39] == true))
+                    {
                         isOpened[39] = false;
+                    }
                     else if ((hit.transform.tag == "ShoseCase2" == true) && (isOpened[40] == false))
+                    {
                         isOpened[40] = true;
-                    else if ((hit.transform.tag == "ShoseCase2" == true) && (isOpened[40] == true)) 
+                    }
+                    else if ((hit.transform.tag == "ShoseCase2" == true) && (isOpened[40] == true))
+                    {
                         isOpened[40] = false;
+                    }
                     else if ((hit.transform.tag == "Induction" == true) && (isOpened[41] == false))
+                    {
                         isOpened[41] = true;
+                    }
                     else if ((hit.transform.tag == "Induction" == true) && (isOpened[41] == true))
+                    {
                         isOpened[41] = false;
+                    }
 
                     else if ((hit.transform.tag == "WasherBT" == true) && (isOpened[42] == false) && (isOpened[7] == false) && (isOpened[8] == false))
                     {

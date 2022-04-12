@@ -26,8 +26,6 @@ public class BathroomSwitch2 : MonoBehaviour
             
         }
 
-        isOpen = false;
-
         if (isOpen == false)
         {
             anim.SetBool("isOpen", false);
