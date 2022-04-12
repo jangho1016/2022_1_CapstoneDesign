@@ -694,6 +694,14 @@ public class PlayerCtrl : MonoBehaviour
                         audioSource.loop = true;
                         audioSource.Play();
                     }
+                    else if ((hit.transform.tag == "ACCtrl" == true) && (isOpened[47] == true))
+                    {
+                        isOpened[47] = false;
+                        audioSource = GameObject.FindGameObjectWithTag("AC").GetComponent<AudioSource>();
+                        audioSource.PlayOneShot(clips[32]);
+                        audioSource.Stop();
+                        audioSource.PlayOneShot(clips[33]);
+                    }
                 }
                 GaugeTimer = 0.0f; //게이지 0으로
             }
