@@ -69,12 +69,7 @@ public class PlayerCtrl : MonoBehaviour
         }
         if (Physics.Raycast(this.transform.position, forward, out hit)) //바라봤을 때
         {
-            if (PlayerPrefs.GetInt("SceneNum") == 2 && (hit.transform.tag == "Untagged")) //처음에 이상하게 나와서 수정해야됨
-            {
-                GaugeTimer = 0.0f; //게이지를 채우지 않음
-            }
-
-            GaugeTimer += 1.0f / gazeTimer * Time.deltaTime; //게이지 차는 시간은 3초
+            GaugeTimer += 1.0f / gazeTimer * Time.deltaTime; //게이지 차는 시간은 2초
                 
             if (GaugeTimer >= 1.0f) //게이지가 다 차면
             {
@@ -698,13 +693,6 @@ public class PlayerCtrl : MonoBehaviour
                         audioSource.clip = clips[40];
                         audioSource.loop = true;
                         audioSource.Play();
-                    }
-                    else if ((hit.transform.tag == "ACCtrl" == true) && (isOpened[47] == true))
-                    {
-                        isOpened[47] = false;
-                        audioSource = GameObject.FindGameObjectWithTag("AC").GetComponent<AudioSource>();
-                        audioSource.Stop();
-                        audioSource.PlayOneShot(clips[33]);
                     }
                 }
                 GaugeTimer = 0.0f; //게이지 0으로

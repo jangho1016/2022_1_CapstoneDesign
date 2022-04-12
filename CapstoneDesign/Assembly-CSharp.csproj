@@ -236,6 +236,7 @@
     <Compile Include="Assets\Scripts\ShowerSwitch.cs" />
     <Compile Include="Assets\Scripts\SinkFaiucet.cs" />
     <Compile Include="Assets\Scripts\ToiletCtrl.cs" />
+    <Compile Include="Assets\ToiletButton.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\GoogleVR\Shaders\GvrUIOverlayFont.shader" />
