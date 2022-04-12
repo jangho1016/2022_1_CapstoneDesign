@@ -69,12 +69,9 @@ public class PlayerCtrl : MonoBehaviour
         }
         if (Physics.Raycast(this.transform.position, forward, out hit)) //바라봤을 때
         {
-            if (PlayerPrefs.GetInt("SceneNum") == 2)
+            if (PlayerPrefs.GetInt("SceneNum") == 2 && (hit.transform.tag == "Untagged")) //처음에 이상하게 나와서 수정해야됨
             {
-                if (hit.transform.tag == "Untagged")
-                {
-                    GaugeTimer = 0.0f; //게이지를 채우지 않음
-                }
+                GaugeTimer = 0.0f; //게이지를 채우지 않음
             }
 
             GaugeTimer += 1.0f / gazeTimer * Time.deltaTime; //게이지 차는 시간은 3초
@@ -404,8 +401,6 @@ public class PlayerCtrl : MonoBehaviour
                         audioSource.PlayOneShot(clips[19]);
                     }
 
-                    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
                     else if ((hit.transform.tag == "Hood" == true) && (isOpened[24] == false))
                     {
                         isOpened[24] = true;
@@ -512,13 +507,17 @@ public class PlayerCtrl : MonoBehaviour
                     else if ((hit.transform.tag == "BathroomSwitch2" == true) && (isOpened[32] == false))
                     {
                         isOpened[32] = true;
-                        audioSource = GameObject.FindGameObjectWithTag("Switch2").GetComponent<AudioSource>();
+                        audioSource = GameObject.FindGameObjectWithTag("Ventilation").GetComponent<AudioSource>();
                         audioSource.PlayOneShot(clips[23]);
+                        audioSource.clip = clips[41];
+                        audioSource.loop = true;
+                        audioSource.Play();
                     }
                     else if ((hit.transform.tag == "BathroomSwitch2" == true) && (isOpened[32] == true))
                     {
                         isOpened[32] = false;
-                        audioSource = GameObject.FindGameObjectWithTag("Switch2").GetComponent<AudioSource>();
+                        audioSource = GameObject.FindGameObjectWithTag("Ventilation").GetComponent<AudioSource>();
+                        audioSource.Stop();
                         audioSource.PlayOneShot(clips[24]);
                     }
                     else if ((hit.transform.tag == "SinkFaucet" == true) && (isOpened[33] == false))
@@ -550,62 +549,97 @@ public class PlayerCtrl : MonoBehaviour
                     {
                         isOpened[34] = false;
                         audioSource = GameObject.FindGameObjectWithTag("Heater").GetComponent<AudioSource>();
-                        
                         audioSource.Stop();
                         audioSource.PlayOneShot(clips[33]);
                     }
                     else if ((hit.transform.tag == "BathroomFaucet" == true) && (isOpened[35] == false))
                     {
                         isOpened[35] = true;
+                        audioSource = GameObject.FindGameObjectWithTag("BathroomSink").GetComponent<AudioSource>();
+                        audioSource.PlayOneShot(clips[29]);
+                        audioSource.clip = clips[31];
+                        audioSource.loop = true;
+                        audioSource.Play();
                     }
                     else if ((hit.transform.tag == "BathroomFaucet" == true) && (isOpened[35] == true))
                     {
                         isOpened[35] = false;
+                        audioSource = GameObject.FindGameObjectWithTag("BathroomSink").GetComponent<AudioSource>();
+                        audioSource.Stop();
+                        audioSource.PlayOneShot(clips[30]);
                     }
                     else if ((hit.transform.tag == "ShowerSwitch" == true) && (isOpened[36] == false))
                     {
                         isOpened[36] = true;
+                        audioSource = GameObject.FindGameObjectWithTag("ShowerBooth").GetComponent<AudioSource>();
+                        audioSource.PlayOneShot(clips[35]);
+                        audioSource.clip = clips[36];
+                        audioSource.loop = true;
+                        audioSource.Play();
                     }
                     else if ((hit.transform.tag == "ShowerSwitch" == true) && (isOpened[36] == true))
                     {
                         isOpened[36] = false;
+                        audioSource = GameObject.FindGameObjectWithTag("ShowerBooth").GetComponent<AudioSource>();
+                        audioSource.Stop();
+                        audioSource.PlayOneShot(clips[35]);
                     }
                     else if ((hit.transform.tag == "RoomDoor2" == true) && (isOpened[37] == false))
                     {
                         isOpened[37] = true;
+                        audioSource = GameObject.FindGameObjectWithTag("RoomDoor2").GetComponent<AudioSource>();
+                        audioSource.PlayOneShot(clips[0]);
                     }
                     else if ((hit.transform.tag == "RoomDoor2" == true) && (isOpened[37] == true))
                     {
                         isOpened[37] = false;
+                        audioSource = GameObject.FindGameObjectWithTag("RoomDoor2").GetComponent<AudioSource>();
+                        audioSource.PlayOneShot(clips[1]);
                     }
                     else if ((hit.transform.tag == "ToiletBT" == true) && isOpened[38] == false)
                     {
                         isOpened[38] = true;
                         StartCoroutine(ToiletWater());
+
+                        audioSource = GameObject.FindGameObjectWithTag("Toilet").GetComponent<AudioSource>();
+                        audioSource.PlayOneShot(clips[39]);
+                        audioSource.PlayOneShot(clips[38]);
                     }
-                    else if ((hit.transform.tag == "ShoseCase1" == true) && (isOpened[39] == false))
+                    else if ((hit.transform.tag == "ShoeCase1" == true) && (isOpened[39] == false))
                     {
                         isOpened[39] = true;
+                        audioSource = GameObject.FindGameObjectWithTag("ShoeCase").GetComponent<AudioSource>();
+                        audioSource.PlayOneShot(clips[7]);
                     }
-                    else if ((hit.transform.tag == "ShoseCase1" == true) && (isOpened[39] == true))
+                    else if ((hit.transform.tag == "ShoeCase1" == true) && (isOpened[39] == true))
                     {
                         isOpened[39] = false;
+                        audioSource = GameObject.FindGameObjectWithTag("ShoeCase").GetComponent<AudioSource>();
+                        audioSource.PlayOneShot(clips[8]);
                     }
-                    else if ((hit.transform.tag == "ShoseCase2" == true) && (isOpened[40] == false))
+                    else if ((hit.transform.tag == "ShoeCase2" == true) && (isOpened[40] == false))
                     {
                         isOpened[40] = true;
+                        audioSource = GameObject.FindGameObjectWithTag("ShoeCase").GetComponent<AudioSource>();
+                        audioSource.PlayOneShot(clips[7]);
                     }
-                    else if ((hit.transform.tag == "ShoseCase2" == true) && (isOpened[40] == true))
+                    else if ((hit.transform.tag == "ShoeCase2" == true) && (isOpened[40] == true))
                     {
                         isOpened[40] = false;
+                        audioSource = GameObject.FindGameObjectWithTag("ShoeCase").GetComponent<AudioSource>();
+                        audioSource.PlayOneShot(clips[8]);
                     }
-                    else if ((hit.transform.tag == "Induction" == true) && (isOpened[41] == false))
+                    else if ((hit.transform.tag == "InductionDoor" == true) && (isOpened[41] == false))
                     {
                         isOpened[41] = true;
+                        audioSource = GameObject.FindGameObjectWithTag("Induction").GetComponent<AudioSource>();
+                        audioSource.PlayOneShot(clips[7]);
                     }
-                    else if ((hit.transform.tag == "Induction" == true) && (isOpened[41] == true))
+                    else if ((hit.transform.tag == "InductionDoor" == true) && (isOpened[41] == true))
                     {
                         isOpened[41] = false;
+                        audioSource = GameObject.FindGameObjectWithTag("Induction").GetComponent<AudioSource>();
+                        audioSource.PlayOneShot(clips[8]);
                     }
 
                     else if ((hit.transform.tag == "WasherBT" == true) && (isOpened[42] == false) && (isOpened[7] == false) && (isOpened[8] == false))
@@ -621,6 +655,56 @@ public class PlayerCtrl : MonoBehaviour
                         isOpened[42] = false;
                         audioSource = GameObject.FindGameObjectWithTag("Washer").GetComponent<AudioSource>();
                         audioSource.Stop();
+                    }
+
+                    else if ((hit.transform.tag == "FireBT1" == true) && (isOpened[43] == false))
+                    {
+                        isOpened[43] = true;
+                    }
+                    else if ((hit.transform.tag == "FireBT1" == true) && (isOpened[43] == true))
+                    {
+                        isOpened[43] = false;
+                    }
+
+                    else if ((hit.transform.tag == "FireBT2" == true) && (isOpened[44] == false))
+                    {
+                        isOpened[44] = true;
+                    }
+                    else if ((hit.transform.tag == "FireBT2" == true) && (isOpened[44] == true))
+                    {
+                        isOpened[44] = false;
+                    }
+                    else if ((hit.transform.tag == "FireBT3" == true) && (isOpened[45] == false))
+                    {
+                        isOpened[45] = true;
+                    }
+                    else if ((hit.transform.tag == "FireBT3" == true) && (isOpened[45] == true))
+                    {
+                        isOpened[45] = false;
+                    }
+                    else if ((hit.transform.tag == "FireBT4" == true) && (isOpened[46] == false))
+                    {
+                        isOpened[46] = true;
+                    }
+                    else if ((hit.transform.tag == "FireBT4" == true) && (isOpened[46] == true))
+                    {
+                        isOpened[46] = false;
+                    }
+                    else if ((hit.transform.tag == "ACCtrl" == true) && (isOpened[47] == false))
+                    {
+                        isOpened[47] = true;
+                        audioSource = GameObject.FindGameObjectWithTag("AC").GetComponent<AudioSource>();
+                        audioSource.PlayOneShot(clips[32]);
+                        audioSource.clip = clips[40];
+                        audioSource.loop = true;
+                        audioSource.Play();
+                    }
+                    else if ((hit.transform.tag == "ACCtrl" == true) && (isOpened[47] == true))
+                    {
+                        isOpened[47] = false;
+                        audioSource = GameObject.FindGameObjectWithTag("AC").GetComponent<AudioSource>();
+                        audioSource.Stop();
+                        audioSource.PlayOneShot(clips[33]);
                     }
                 }
                 GaugeTimer = 0.0f; //게이지 0으로

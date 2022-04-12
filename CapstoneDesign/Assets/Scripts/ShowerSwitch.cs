@@ -5,10 +5,12 @@ using UnityEngine;
 public class ShowerSwitch : MonoBehaviour
 {
     Animator anim;
-    bool isOpen;
+    bool isOpen1;
+    bool isOpen2;
     GameObject player;
     public GameObject Water;
     public GameObject ShowerWater;
+    public GameObject Smoke;
 
     // Start is called before the first frame update
     void Start()
@@ -20,18 +22,45 @@ public class ShowerSwitch : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        isOpen = player.GetComponent<PlayerCtrl>().isOpened[36];
+        isOpen1 = player.GetComponent<PlayerCtrl>().isOpened[34]; //보일러
+        isOpen2 = player.GetComponent<PlayerCtrl>().isOpened[36]; //수도
 
-        if (isOpen == true)
+
+        if (isOpen2 == true) //물 킨 상태
         {
             ShowerWater.SetActive(true);
             anim.SetBool("isOpen", true);
+
+            if (isOpen1 == true) //보일러 킬때
+            {
+                StartCoroutine(SmokeCtrlOn());
+            }
+            else if (isOpen1 == false) //보일러 끌때
+            {
+                StartCoroutine(SmokeCtrlOff());
+            }
+
         }
 
-        else if (isOpen == false)
+        else if (isOpen2 == false)
         {
             ShowerWater.SetActive(false);
             anim.SetBool("isOpen", false);
+
+            StartCoroutine(SmokeCtrlOff());
         }
     }
+
+    IEnumerator SmokeCtrlOn()
+    {
+        yield return new WaitForSeconds(1.0f);
+        Smoke.SetActive(true);
+    }
+
+    IEnumerator SmokeCtrlOff()
+    {
+        yield return new WaitForSeconds(1.0f);
+        Smoke.SetActive(false);
+    }
+
 }

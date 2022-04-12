@@ -48,8 +48,6 @@ TagManager:
   - ShowerSwitch
   - Door
   - RoomDoor2
-  - ShoseCase1
-  - ShoseCase2
   - MicrowaveBT
   - MicrowaveDoor
   - MicrowaveOpener
@@ -68,6 +66,17 @@ TagManager:
   - BathroomSink
   - BathroomC
   - HeaterCtrl
+  - ShowerBooth
+  - ShoeCase
+  - ShoeCase1
+  - ShoeCase2
+  - InductionDoor
+  - FireBT1
+  - FireBT2
+  - FireBT3
+  - FireBT4
+  - AC
+  - ACCtrl
   layers:
   - Default
   - TransparentFX
