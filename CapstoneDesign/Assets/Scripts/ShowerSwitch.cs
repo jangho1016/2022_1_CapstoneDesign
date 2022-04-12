@@ -8,11 +8,12 @@ public class ShowerSwitch : MonoBehaviour
     bool isOpen;
     GameObject player;
     public GameObject Water;
+    public GameObject ShowerWater;
 
     // Start is called before the first frame update
     void Start()
     {
-        anim = GetComponent<Animator>();
+        anim = Water.GetComponent<Animator>();
         player = GameObject.FindGameObjectWithTag("Player");
     }
 
@@ -23,13 +24,13 @@ public class ShowerSwitch : MonoBehaviour
 
         if (isOpen == true)
         {
-            Water.SetActive(true);
+            ShowerWater.SetActive(true);
             anim.SetBool("isOpen", true);
         }
 
         else if (isOpen == false)
         {
-            Water.SetActive(false);
+            ShowerWater.SetActive(false);
             anim.SetBool("isOpen", false);
         }
     }

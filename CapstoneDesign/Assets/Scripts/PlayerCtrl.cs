@@ -69,13 +69,17 @@ public class PlayerCtrl : MonoBehaviour
         }
         if (Physics.Raycast(this.transform.position, forward, out hit)) //바라봤을 때
         {
-            GaugeTimer += 1.0f / gazeTimer * Time.deltaTime; //게이지 차는 시간은 3초
-            if (hit.transform.tag == "Untagged")
+            if (PlayerPrefs.GetInt("SceneNum") == 2)
             {
-                Debug.Log("test");
-                GaugeTimer = 0.0f; //게이지를 채우지 않음
+                if (hit.transform.tag == "Untagged")
+                {
+                    GaugeTimer = 0.0f; //게이지를 채우지 않음
+                }
             }
-            else if (GaugeTimer >= 1.0f) //게이지가 다 차면
+
+            GaugeTimer += 1.0f / gazeTimer * Time.deltaTime; //게이지 차는 시간은 3초
+                
+            if (GaugeTimer >= 1.0f) //게이지가 다 차면
             {
                 if (PlayerPrefs.GetInt("SceneNum") == 0) //방 1-5번이 아닐때
                     hit.transform.GetComponent<Button>().onClick.Invoke(); //버튼 이벤트 실행
@@ -533,13 +537,22 @@ public class PlayerCtrl : MonoBehaviour
                         audioSource.Stop();
                         audioSource.PlayOneShot(clips[30]);
                     }
-                    else if ((hit.transform.tag == "Heater" == true) && (isOpened[34] == false))
+                    else if ((hit.transform.tag == "HeaterCtrl" == true) && (isOpened[34] == false))
                     {
                         isOpened[34] = true;
+                        audioSource = GameObject.FindGameObjectWithTag("Heater").GetComponent<AudioSource>();
+                        audioSource.PlayOneShot(clips[32]);
+                        audioSource.clip = clips[34];
+                        audioSource.loop = true;
+                        audioSource.Play();
                     }
-                    else if ((hit.transform.tag == "Heater" == true) && (isOpened[34] == true))
+                    else if ((hit.transform.tag == "HeaterCtrl" == true) && (isOpened[34] == true))
                     {
                         isOpened[34] = false;
+                        audioSource = GameObject.FindGameObjectWithTag("Heater").GetComponent<AudioSource>();
+                        
+                        audioSource.Stop();
+                        audioSource.PlayOneShot(clips[33]);
                     }
                     else if ((hit.transform.tag == "BathroomFaucet" == true) && (isOpened[35] == false))
                     {

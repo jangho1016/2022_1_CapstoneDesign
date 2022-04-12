@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class HeaterCtrl : MonoBehaviour
 {
-    public AudioSource audioSource;
-    public AudioClip ac;
     bool isOpen;
     GameObject player;
+    public GameObject display;
 
     // Start is called before the first frame update
     void Start()
     {
+        display.GetComponent<MeshRenderer>().materials[0].color = Color.gray;
         player = GameObject.FindGameObjectWithTag("Player");
     }
 
@@ -22,11 +22,11 @@ public class HeaterCtrl : MonoBehaviour
 
         if (isOpen == true)
         {
-            audioSource.Play();
+            display.GetComponent<MeshRenderer>().materials[0].color = Color.red;
         }
         else if (isOpen == false)
         {
-            audioSource.Stop();
+            display.GetComponent<MeshRenderer>().materials[0].color = Color.gray;
         }
     }
 }

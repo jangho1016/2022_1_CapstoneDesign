@@ -67,6 +67,7 @@ TagManager:
   - Toilet
   - BathroomSink
   - BathroomC
+  - HeaterCtrl
   layers:
   - Default
   - TransparentFX
