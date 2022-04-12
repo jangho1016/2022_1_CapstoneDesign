@@ -70,15 +70,18 @@ public class PlayerCtrl : MonoBehaviour
         if (Physics.Raycast(this.transform.position, forward, out hit)) //바라봤을 때
         {
             GaugeTimer += 1.0f / gazeTimer * Time.deltaTime; //게이지 차는 시간은 3초
-            if (GaugeTimer >= 1.0f) //게이지가 다 차면
+            if (hit.transform.tag == "Untagged")
+            {
+                Debug.Log("test");
+                GaugeTimer = 0.0f; //게이지를 채우지 않음
+            }
+            else if (GaugeTimer >= 1.0f) //게이지가 다 차면
             {
                 if (PlayerPrefs.GetInt("SceneNum") == 0) //방 1-5번이 아닐때
                     hit.transform.GetComponent<Button>().onClick.Invoke(); //버튼 이벤트 실행
                 else if (PlayerPrefs.GetInt("SceneNum") == 2) //방 1-5번 씬일때
-                {
-                    if (hit.transform.tag == "Untagged") 
-                        GaugeTimer = 0.0f; //게이지를 채우지 않음
-                    else if (hit.transform.tag == "Crack") //방에서 하자 부분을 발견했을때
+                {  
+                    if (hit.transform.tag == "Crack") //방에서 하자 부분을 발견했을때
                         cnt++;
                     else if (hit.transform.tag == "Manager") //부동산 중개업자와 상호작용시
                         managerPanel.SetActive(true); //패널 활성
