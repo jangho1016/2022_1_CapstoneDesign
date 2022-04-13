@@ -209,8 +209,6 @@
     <Compile Include="Assets\Scripts\Animation\RoomDoor.cs" />
     <Compile Include="Assets\Scripts\Animation\RoomSwitch1.cs" />
     <Compile Include="Assets\Scripts\Animation\RoomSwitch2.cs" />
-    <Compile Include="Assets\Scripts\Animation\RoomSwitch3.cs" />
-    <Compile Include="Assets\Scripts\Animation\RoomSwitch4.cs" />
     <Compile Include="Assets\Scripts\Animation\SinkL.cs" />
     <Compile Include="Assets\Scripts\Animation\SinkR.cs" />
     <Compile Include="Assets\Scripts\Animation\ToiletCover.cs" />
