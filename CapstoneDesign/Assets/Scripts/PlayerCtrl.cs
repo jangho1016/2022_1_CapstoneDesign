@@ -502,8 +502,9 @@ public class PlayerCtrl : MonoBehaviour
                     else if ((hit.transform.tag == "BathroomSwitch2" == true) && (isOpened[32] == false))
                     {
                         isOpened[32] = true;
-                        audioSource = GameObject.FindGameObjectWithTag("Ventilation").GetComponent<AudioSource>();
+                        audioSource = GameObject.FindGameObjectWithTag("Switch2").GetComponent<AudioSource>();
                         audioSource.PlayOneShot(clips[23]);
+                        audioSource = GameObject.FindGameObjectWithTag("Ventilation").GetComponent<AudioSource>();
                         audioSource.clip = clips[41];
                         audioSource.loop = true;
                         audioSource.Play();
@@ -511,9 +512,10 @@ public class PlayerCtrl : MonoBehaviour
                     else if ((hit.transform.tag == "BathroomSwitch2" == true) && (isOpened[32] == true))
                     {
                         isOpened[32] = false;
+                        audioSource = GameObject.FindGameObjectWithTag("Switch2").GetComponent<AudioSource>();
+                        audioSource.PlayOneShot(clips[24]);
                         audioSource = GameObject.FindGameObjectWithTag("Ventilation").GetComponent<AudioSource>();
                         audioSource.Stop();
-                        audioSource.PlayOneShot(clips[24]);
                     }
                     else if ((hit.transform.tag == "SinkFaucet" == true) && (isOpened[33] == false))
                     {
@@ -534,8 +536,9 @@ public class PlayerCtrl : MonoBehaviour
                     else if ((hit.transform.tag == "HeaterCtrl" == true) && (isOpened[34] == false))
                     {
                         isOpened[34] = true;
-                        audioSource = GameObject.FindGameObjectWithTag("Heater").GetComponent<AudioSource>();
+                        audioSource = GameObject.FindGameObjectWithTag("HeaterCtrl").GetComponent<AudioSource>();
                         audioSource.PlayOneShot(clips[32]);
+                        audioSource = GameObject.FindGameObjectWithTag("Heater").GetComponent<AudioSource>();
                         audioSource.clip = clips[34];
                         audioSource.loop = true;
                         audioSource.Play();
@@ -543,9 +546,10 @@ public class PlayerCtrl : MonoBehaviour
                     else if ((hit.transform.tag == "HeaterCtrl" == true) && (isOpened[34] == true))
                     {
                         isOpened[34] = false;
+                        audioSource = GameObject.FindGameObjectWithTag("HeaterCtrl").GetComponent<AudioSource>();
+                        audioSource.PlayOneShot(clips[33]);
                         audioSource = GameObject.FindGameObjectWithTag("Heater").GetComponent<AudioSource>();
                         audioSource.Stop();
-                        audioSource.PlayOneShot(clips[33]);
                     }
                     else if ((hit.transform.tag == "BathroomFaucet" == true) && (isOpened[35] == false))
                     {
@@ -688,8 +692,9 @@ public class PlayerCtrl : MonoBehaviour
                     else if ((hit.transform.tag == "ACCtrl" == true) && (isOpened[47] == false))
                     {
                         isOpened[47] = true;
-                        audioSource = GameObject.FindGameObjectWithTag("AC").GetComponent<AudioSource>();
+                        audioSource = GameObject.FindGameObjectWithTag("ACCtrl").GetComponent<AudioSource>();
                         audioSource.PlayOneShot(clips[32]);
+                        audioSource = GameObject.FindGameObjectWithTag("AC").GetComponent<AudioSource>();
                         audioSource.clip = clips[40];
                         audioSource.loop = true;
                         audioSource.Play();
@@ -697,10 +702,34 @@ public class PlayerCtrl : MonoBehaviour
                     else if ((hit.transform.tag == "ACCtrl" == true) && (isOpened[47] == true))
                     {
                         isOpened[47] = false;
-                        audioSource = GameObject.FindGameObjectWithTag("AC").GetComponent<AudioSource>();
-                        audioSource.PlayOneShot(clips[32]);
-                        audioSource.Stop();
+                        audioSource = GameObject.FindGameObjectWithTag("ACCtrl").GetComponent<AudioSource>();
                         audioSource.PlayOneShot(clips[33]);
+                        audioSource = GameObject.FindGameObjectWithTag("AC").GetComponent<AudioSource>();
+                        audioSource.Stop();
+                    }
+                    else if ((hit.transform.tag == "RoomSwitch3" == true) && (isOpened[48] == false))
+                    {
+                        isOpened[48] = true;
+                        audioSource = GameObject.FindGameObjectWithTag("Switch3").GetComponent<AudioSource>();
+                        audioSource.PlayOneShot(clips[23]);
+                    }
+                    else if ((hit.transform.tag == "RoomSwitch3" == true) && (isOpened[48] == true))
+                    {
+                        isOpened[48] = false;
+                        audioSource = GameObject.FindGameObjectWithTag("Switch3").GetComponent<AudioSource>();
+                        audioSource.PlayOneShot(clips[24]);
+                    }
+                    else if ((hit.transform.tag == "RoomSwitch4" == true) && (isOpened[49] == false))
+                    {
+                        isOpened[49] = true;
+                        audioSource = GameObject.FindGameObjectWithTag("Switch4").GetComponent<AudioSource>();
+                        audioSource.PlayOneShot(clips[23]);
+                    }
+                    else if ((hit.transform.tag == "RoomSwitch4" == true) && (isOpened[49] == true))
+                    {
+                        isOpened[49] = false;
+                        audioSource = GameObject.FindGameObjectWithTag("Switch4").GetComponent<AudioSource>();
+                        audioSource.PlayOneShot(clips[24]);
                     }
                 }
                 GaugeTimer = 0.0f; //게이지 0으로

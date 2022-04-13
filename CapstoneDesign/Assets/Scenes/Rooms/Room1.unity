@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1628,11 +1628,11 @@ GameObject:
   - component: {fileID: 321508972}
   - component: {fileID: 321508971}
   - component: {fileID: 321508973}
-  - component: {fileID: 321508974}
   - component: {fileID: 321508975}
+  - component: {fileID: 321508974}
   m_Layer: 0
-  m_Name: Room Switch Right
-  m_TagString: RoomSwitch2
+  m_Name: Room Switch Up
+  m_TagString: RoomSwitch1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1649,7 +1649,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2006539024}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -8.5, y: 0, z: 0}
 --- !u!23 &321508971
 MeshRenderer:
@@ -1720,10 +1720,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 321508969}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55cdb435607d9514092923e998e86537, type: 3}
+  m_Script: {fileID: 11500000, guid: 623b9692972d95043946c4561cdeb24f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  roomLight: {fileID: 982168666}
+  roomLight: {fileID: 949264624}
 --- !u!95 &321508975
 Animator:
   serializedVersion: 3
@@ -1734,7 +1734,7 @@ Animator:
   m_GameObject: {fileID: 321508969}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 462f766da8c19064c9d01bd047e44c53, type: 2}
+  m_Controller: {fileID: 9100000, guid: 3b63f5d9d157e13458b9c026df0a7d07, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -2041,6 +2041,7 @@ GameObject:
   - component: {fileID: 434025197}
   - component: {fileID: 434025196}
   - component: {fileID: 434025195}
+  - component: {fileID: 434025199}
   m_Layer: 0
   m_Name: Heater Controller
   m_TagString: HeaterCtrl
@@ -2127,6 +2128,102 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 41
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &434025199
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 434025194}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 1.5
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &437747046
 GameObject:
   m_ObjectHideFlags: 0
@@ -11316,8 +11413,8 @@ GameObject:
   - component: {fileID: 1277733375}
   - component: {fileID: 1277733376}
   m_Layer: 0
-  m_Name: Room Switch Left
-  m_TagString: RoomSwitch1
+  m_Name: Room Switch Down
+  m_TagString: RoomSwitch2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11334,7 +11431,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2006539024}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: -8.5, y: 0, z: 0}
 --- !u!23 &1277733372
 MeshRenderer:
@@ -11393,7 +11490,7 @@ Animator:
   m_GameObject: {fileID: 1277733370}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3b63f5d9d157e13458b9c026df0a7d07, type: 2}
+  m_Controller: {fileID: 9100000, guid: 462f766da8c19064c9d01bd047e44c53, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -11424,10 +11521,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1277733370}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 623b9692972d95043946c4561cdeb24f, type: 3}
+  m_Script: {fileID: 11500000, guid: 55cdb435607d9514092923e998e86537, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  roomLight: {fileID: 949264624}
+  roomLight: {fileID: 982168666}
 --- !u!1 &1291076978
 GameObject:
   m_ObjectHideFlags: 0
@@ -27850,7 +27947,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -27989,15 +28086,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2006539020}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 14.47, y: 9, z: 7.558}
-  m_LocalScale: {x: 8, y: 10, z: 8}
+  m_LocalScale: {x: 8, y: 5, z: 8}
   m_Children:
-  - {fileID: 1277733371}
   - {fileID: 321508970}
+  - {fileID: 1277733371}
   m_Father: {fileID: 0}
   m_RootOrder: 30
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!1 &2007916392
 GameObject:
   m_ObjectHideFlags: 0
@@ -28461,6 +28558,7 @@ GameObject:
   - component: {fileID: 2092847485}
   - component: {fileID: 2092847484}
   - component: {fileID: 2092847483}
+  - component: {fileID: 2092847487}
   m_Layer: 0
   m_Name: Airconditioner Controller
   m_TagString: ACCtrl
@@ -28546,6 +28644,102 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 42
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!82 &2092847487
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2092847482}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 1.5
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &2141065226
 GameObject:
   m_ObjectHideFlags: 0
@@ -33446,12 +33640,12 @@ GameObject:
   - component: {fileID: 1910478202681929522}
   - component: {fileID: 3255181521492156567}
   - component: {fileID: 776955671968240733}
-  - component: {fileID: 1281469124279268745}
   - component: {fileID: 1281469124279268746}
   - component: {fileID: 1281469124279268747}
+  - component: {fileID: 1281469124279268745}
   m_Layer: 0
-  m_Name: Bathroom Switch Right
-  m_TagString: BathroomSwitch2
+  m_Name: Bathroom Switch Up
+  m_TagString: BathroomSwitch1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -33465,9 +33659,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1281469124279268744}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f56aabb5a2622449a1bb0e08b0d0682, type: 3}
+  m_Script: {fileID: 11500000, guid: 3c0a1c2916b02344891fdca4f4a5dbad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bathLight: {fileID: 2142918820}
 --- !u!95 &1281469124279268746
 Animator:
   serializedVersion: 3
@@ -33478,7 +33673,7 @@ Animator:
   m_GameObject: {fileID: 1281469124279268744}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 684db3ecebc4fbb4ab51f4121cb4d69a, type: 2}
+  m_Controller: {fileID: 9100000, guid: cb9cb784dfaa54c43b12cdd5d443d2a5, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -33594,12 +33789,12 @@ GameObject:
   - component: {fileID: 2173012692026963456}
   - component: {fileID: 2992584857351207333}
   - component: {fileID: 1036737603076967791}
-  - component: {fileID: 1541294486500338875}
   - component: {fileID: 1541294486500338876}
   - component: {fileID: 1541294486500338877}
+  - component: {fileID: 1541294486500338875}
   m_Layer: 0
-  m_Name: Bathroom Switch Left
-  m_TagString: BathroomSwitch1
+  m_Name: Bathroom Switch Down
+  m_TagString: BathroomSwitch2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -33613,10 +33808,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1541294486500338874}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c0a1c2916b02344891fdca4f4a5dbad, type: 3}
+  m_Script: {fileID: 11500000, guid: 3f56aabb5a2622449a1bb0e08b0d0682, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bathLight: {fileID: 2142918820}
 --- !u!95 &1541294486500338876
 Animator:
   serializedVersion: 3
@@ -33627,7 +33821,7 @@ Animator:
   m_GameObject: {fileID: 1541294486500338874}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: cb9cb784dfaa54c43b12cdd5d443d2a5, type: 2}
+  m_Controller: {fileID: 9100000, guid: 684db3ecebc4fbb4ab51f4121cb4d69a, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -34324,7 +34518,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8361643040675014861}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -8.5, y: 0, z: 0}
 --- !u!23 &1913737478391361775
 MeshRenderer:
@@ -34518,7 +34712,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8361643040675014861}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: -8.5, y: 0, z: 0}
 --- !u!1 &2211638123094126605
 GameObject:
@@ -38090,7 +38284,7 @@ GameObject:
   - component: {fileID: 4851737106726855654}
   - component: {fileID: 7264037680341924529}
   m_Layer: 0
-  m_Name: Bath Room Right
+  m_Name: Bath Room Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -40102,15 +40296,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9169705594527773303}
-  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 14.475, y: 9, z: -3.982}
-  m_LocalScale: {x: 8, y: 10, z: 8}
+  m_LocalRotation: {x: -0.5, y: 0.5, z: -0.5, w: 0.5}
+  m_LocalPosition: {x: 15.525, y: 9, z: -5.08}
+  m_LocalScale: {x: 8, y: 5, z: 8}
   m_Children:
-  - {fileID: 2173012692026963456}
   - {fileID: 1910478202681929522}
+  - {fileID: 2173012692026963456}
   m_Father: {fileID: 0}
   m_RootOrder: 29
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: -90}
 --- !u!64 &8396930023701921866
 MeshCollider:
   m_ObjectHideFlags: 0

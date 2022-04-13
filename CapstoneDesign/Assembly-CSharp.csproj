@@ -199,7 +199,6 @@
     <Compile Include="Assets\Scripts\Animation\Dresser4.cs" />
     <Compile Include="Assets\Scripts\Animation\Hood.cs" />
     <Compile Include="Assets\Scripts\Animation\Induction.cs" />
-    <Compile Include="Assets\Scripts\Animation\LightSwitch1.cs" />
     <Compile Include="Assets\Scripts\Animation\Microwave.cs" />
     <Compile Include="Assets\Scripts\Animation\Refrigerator1.cs" />
     <Compile Include="Assets\Scripts\Animation\Refrigerator2.cs" />
@@ -210,6 +209,8 @@
     <Compile Include="Assets\Scripts\Animation\RoomDoor.cs" />
     <Compile Include="Assets\Scripts\Animation\RoomSwitch1.cs" />
     <Compile Include="Assets\Scripts\Animation\RoomSwitch2.cs" />
+    <Compile Include="Assets\Scripts\Animation\RoomSwitch3.cs" />
+    <Compile Include="Assets\Scripts\Animation\RoomSwitch4.cs" />
     <Compile Include="Assets\Scripts\Animation\SinkL.cs" />
     <Compile Include="Assets\Scripts\Animation\SinkR.cs" />
     <Compile Include="Assets\Scripts\Animation\ToiletCover.cs" />

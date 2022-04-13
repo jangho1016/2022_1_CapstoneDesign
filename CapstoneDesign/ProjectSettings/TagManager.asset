@@ -77,6 +77,10 @@ TagManager:
   - FireBT4
   - AC
   - ACCtrl
+  - Switch3
+  - Switch4
+  - RoomSwitch4
+  - RoomSwitch3
   layers:
   - Default
   - TransparentFX
