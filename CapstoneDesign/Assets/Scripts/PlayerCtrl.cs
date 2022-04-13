@@ -19,7 +19,6 @@ public class PlayerCtrl : MonoBehaviour
     public Text timertext;
     private float timer;
     public float time_last;
-    public GameObject RoomLight1;
     public bool[] isOpened = new bool[40];
     public AudioClip[] clips = new AudioClip[50];
     private AudioSource audioSource;
