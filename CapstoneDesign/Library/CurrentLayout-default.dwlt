@@ -74,7 +74,7 @@ MonoBehaviour:
   m_MinSize: {x: 101, y: 242}
   m_MaxSize: {x: 4001, y: 8042}
   vertical: 1
-  controlID: 174
+  controlID: 72
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -168,7 +168,7 @@ MonoBehaviour:
   m_MinSize: {x: 811, y: 271}
   m_MaxSize: {x: 22006, y: 10021}
   vertical: 0
-  controlID: 173
+  controlID: 71
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -216,8 +216,8 @@ MonoBehaviour:
     y: 0
     width: 242
     height: 947
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
@@ -311,9 +311,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 2.8297653, y: 7.084918, z: 25.816675}
+    m_Target: {x: 1.2702556, y: 9.194279, z: -10.208404}
     speed: 2
-    m_Value: {x: 2.8297653, y: 7.084918, z: 25.816675}
+    m_Value: {x: 1.2702556, y: 9.194279, z: -10.208404}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -359,9 +359,9 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.169874, y: 0.19834407, z: -0.034937266, w: -0.9646768}
+    m_Target: {x: -0.0010958322, y: 0.9988175, z: -0.027284022, w: -0.040488}
     speed: 2
-    m_Value: {x: -0.16847694, y: 0.19694674, z: -0.03438669, w: -0.9652177}
+    m_Value: {x: -0.0010958206, y: 0.9988069, z: -0.027283734, w: -0.040487573}
   m_Size:
     m_Target: 9.879114
     speed: 2
@@ -907,9 +907,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 84470000
-      m_LastClickedID: 0
-      m_ExpandedIDs: 24faffff3afbffff824900004c4b0000
+      m_SelectedIDs: b03d0000
+      m_LastClickedID: 15792
+      m_ExpandedIDs: d8f8fffffc3e0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -972,20 +972,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes/Rooms
+    - Assets/EffectExamples
   m_ViewMode: 1
   m_StartGridSize: 57
   m_LastFolders:
-  - Assets/Scenes/Rooms
+  - Assets/EffectExamples
   m_LastFoldersGridSize: 57
   m_LastProjectPath: D:\Unity Projects\2022_1_CapstoneDesign\CapstoneDesign
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 7a470000
-    m_LastClickedID: 18298
-    m_ExpandedIDs: 00000000584700005a4700005c4700005e4700006047000062470000644700006e470000
+    m_SelectedIDs: 02490000
+    m_LastClickedID: 18690
+    m_ExpandedIDs: 00000000e8480000ea480000ec480000ee480000f0480000f2480000f4480000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1013,7 +1013,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000584700005a4700005c4700005e470000604700006247000064470000
+    m_ExpandedIDs: 00000000e8480000ea480000ec480000ee480000f0480000f2480000f4480000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1040,7 +1040,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: a8f1000002faffff8e8a010078750000667200004c6d0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -1106,4 +1106,4 @@ MonoBehaviour:
     m_PrefName: Preview_InspectorPreview
   m_PreviewWindow: {fileID: 0}
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 0
+  m_LastVerticalScrollValue: 58
