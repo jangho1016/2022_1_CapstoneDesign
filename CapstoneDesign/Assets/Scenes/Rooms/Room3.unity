@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311992, g: 0.38074034, b: 0.35872713, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3241,7 +3241,7 @@ GameObject:
   - component: {fileID: 205772630}
   m_Layer: 0
   m_Name: Room Switch Frame (1)
-  m_TagString: HoodFrame
+  m_TagString: Switch3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23038,8 +23038,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1605887729}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.52, y: -0.01, z: 51.49}
-  m_LocalScale: {x: 10, y: 7, z: 6}
+  m_LocalPosition: {x: 6.52, y: 0.53, z: 51.49}
+  m_LocalScale: {x: 10, y: 6.5, z: 6}
   m_Children:
   - {fileID: 55350323}
   - {fileID: 218574503}
