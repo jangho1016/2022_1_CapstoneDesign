@@ -2505,4 +2505,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Rooms/Room5.unity
   - Assets/Scenes/Real Room/Real Room1/Real Room1.unity
   - Assets/Scenes/Real Room/Real Room2/Real Room2.unity
-  playerPath: C:/Users/Home/Desktop/test0415_last.apk
+  playerPath: "C:/Users/\uC624\uC7A5\uD638/Desktop/test0415.apk"
