@@ -28,7 +28,7 @@ public class PlayerCtrl : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         curSceneName = SceneManager.GetActiveScene().name; //씬 이름 가져옴
-        if ((curSceneName == "Room1") || (curSceneName == "Room2") || (curSceneName == "Room3") || (curSceneName == "Room4") || (curSceneName == "Room5") || (curSceneName == "Room Test")) //1-5번 방이면
+        if ((curSceneName == "Room1") || (curSceneName == "Room2") || (curSceneName == "Room3") || (curSceneName == "Room4") || (curSceneName == "Room5") || (curSceneName == "Room1 Test")) //1-5번 방이면
         {
             PlayerPrefs.SetInt("SceneNum", 2); //씬넘버 2로 설정
             PlayerPrefs.SetInt("pass", 0); //패스하기 위한 값 초기화
