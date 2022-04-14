@@ -7,7 +7,6 @@ public class RoomSwitch3 : MonoBehaviour
     Animator anim;
     bool isOpen;
     GameObject player;
-    public GameObject roomLight;
 
     // Start is called before the first frame update
     void Start()
@@ -23,12 +22,10 @@ public class RoomSwitch3 : MonoBehaviour
 
         if (isOpen == true)
         {
-            roomLight.SetActive(true);
             anim.SetBool("isOpen", true);
         }
         else if (isOpen == false)
         {
-            roomLight.SetActive(false);
             anim.SetBool("isOpen", false);
         }
     }

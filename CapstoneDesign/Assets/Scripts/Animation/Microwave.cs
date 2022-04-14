@@ -14,7 +14,6 @@ public class Microwave : MonoBehaviour
     void Start()
     {
         anim = GetComponent<Animator>();
-        display.GetComponent<MeshRenderer>().materials[0].color = Color.gray;
         player = GameObject.FindGameObjectWithTag("Player");
     }
 
@@ -34,11 +33,13 @@ public class Microwave : MonoBehaviour
             
             if(isOpen2 == true)
             {
-                display.GetComponent<MeshRenderer>().materials[0].color = Color.red;
+                display.GetComponent<MeshRenderer>().materials[0].color = new Color(0.137104f, 0.745283f, 0.169763f);
+                display.GetComponent<MeshRenderer>().materials[0].SetColor("_EmissionColor", Color.white);
             }
             else if(isOpen2 == false)
             {
                 display.GetComponent<MeshRenderer>().materials[0].color = Color.gray;
+                display.GetComponent<MeshRenderer>().materials[0].SetColor("_EmissionColor", Color.black);
             }
         }
     }

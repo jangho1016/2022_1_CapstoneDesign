@@ -209,6 +209,8 @@
     <Compile Include="Assets\Scripts\Animation\RoomDoor.cs" />
     <Compile Include="Assets\Scripts\Animation\RoomSwitch1.cs" />
     <Compile Include="Assets\Scripts\Animation\RoomSwitch2.cs" />
+    <Compile Include="Assets\Scripts\Animation\RoomSwitch3.cs" />
+    <Compile Include="Assets\Scripts\Animation\RoomSwitch4.cs" />
     <Compile Include="Assets\Scripts\Animation\SinkL.cs" />
     <Compile Include="Assets\Scripts\Animation\SinkR.cs" />
     <Compile Include="Assets\Scripts\Animation\ToiletCover.cs" />
@@ -221,6 +223,7 @@
     <Compile Include="Assets\Scripts\BathroomD1.cs" />
     <Compile Include="Assets\Scripts\BathroomD2.cs" />
     <Compile Include="Assets\Scripts\BathroomFaucet.cs" />
+    <Compile Include="Assets\Scripts\BathroomLightCtrl.cs" />
     <Compile Include="Assets\Scripts\ButtonCtrl.cs" />
     <Compile Include="Assets\Scripts\FireBt1.cs" />
     <Compile Include="Assets\Scripts\FireBt2.cs" />
@@ -230,6 +233,8 @@
     <Compile Include="Assets\Scripts\PlayerCtrl.cs" />
     <Compile Include="Assets\Scripts\RandomCtrl.cs" />
     <Compile Include="Assets\Scripts\RoomDoor2.cs" />
+    <Compile Include="Assets\Scripts\RoomLightCtrl1.cs" />
+    <Compile Include="Assets\Scripts\RoomLightCtrl2.cs" />
     <Compile Include="Assets\Scripts\ShoseCase1.cs" />
     <Compile Include="Assets\Scripts\ShoseCase2.cs" />
     <Compile Include="Assets\Scripts\ShowerSwitch.cs" />

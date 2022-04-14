@@ -7,11 +7,11 @@ public class HeaterCtrl : MonoBehaviour
     bool isOpen;
     GameObject player;
     public GameObject display;
+    Color color;
 
     // Start is called before the first frame update
     void Start()
     {
-        display.GetComponent<MeshRenderer>().materials[0].color = Color.gray;
         player = GameObject.FindGameObjectWithTag("Player");
     }
 
@@ -22,7 +22,7 @@ public class HeaterCtrl : MonoBehaviour
 
         if (isOpen == true)
         {
-            display.GetComponent<MeshRenderer>().materials[0].color = Color.red;
+            display.GetComponent<MeshRenderer>().materials[0].color = new Color(0.137104f, 0.745283f, 0.169763f);
         }
         else if (isOpen == false)
         {

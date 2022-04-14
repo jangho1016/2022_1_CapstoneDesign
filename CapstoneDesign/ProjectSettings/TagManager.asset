@@ -81,6 +81,15 @@ TagManager:
   - Switch4
   - RoomSwitch4
   - RoomSwitch3
+  - StartBT
+  - WayBT
+  - ExitBT
+  - MainBT
+  - SelectBT1
+  - SelectBT2
+  - SelectBT3
+  - SelectBT4
+  - SelectBT5
   layers:
   - Default
   - TransparentFX

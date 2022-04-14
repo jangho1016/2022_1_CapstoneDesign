@@ -22,6 +22,7 @@ public class PlayerCtrl : MonoBehaviour
     public bool[] isOpened = new bool[40];
     public AudioClip[] clips = new AudioClip[50];
     private AudioSource audioSource;
+    Animation anim;
 
     void Start()
     {
@@ -66,8 +67,55 @@ public class PlayerCtrl : MonoBehaviour
             else if (cnt >= 2)
                 PlayerPrefs.SetInt("pass", 0); //통과하도록 설정
         }
+
         if (Physics.Raycast(this.transform.position, forward, out hit)) //바라봤을 때
         {
+            if(hit.transform.tag == "StartBT")
+            {
+                anim = GameObject.FindGameObjectWithTag("StartBT").GetComponent<Animation>();
+                anim.Play();
+            }
+            else if (hit.transform.tag == "WayBT")
+            {
+                anim = GameObject.FindGameObjectWithTag("WayBT").GetComponent<Animation>();
+                anim.Play();
+            }
+            else if (hit.transform.tag == "ExitBT")
+            {
+                anim = GameObject.FindGameObjectWithTag("ExitBT").GetComponent<Animation>();
+                anim.Play();
+            }
+            else if (hit.transform.tag == "MainBT")
+            {
+                anim = GameObject.FindGameObjectWithTag("MainBT").GetComponent<Animation>();
+                anim.Play();
+            }
+            else if (hit.transform.tag == "SelectBT1")
+            {
+                anim = GameObject.FindGameObjectWithTag("SelectBT1").GetComponent<Animation>();
+                anim.Play();
+            }
+            else if (hit.transform.tag == "SelectBT2")
+            {
+                anim = GameObject.FindGameObjectWithTag("SelectBT2").GetComponent<Animation>();
+                anim.Play();
+            }
+            else if (hit.transform.tag == "SelectBT3")
+            {
+                anim = GameObject.FindGameObjectWithTag("SelectBT3").GetComponent<Animation>();
+                anim.Play();
+            }
+            else if (hit.transform.tag == "SelectBT4")
+            {
+                anim = GameObject.FindGameObjectWithTag("SelectBT4").GetComponent<Animation>();
+                anim.Play();
+            }
+            else if (hit.transform.tag == "SelectBT5")
+            {
+                anim = GameObject.FindGameObjectWithTag("SelectBT5").GetComponent<Animation>();
+                anim.Play();
+            }
+
             GaugeTimer += 1.0f / gazeTimer * Time.deltaTime; //게이지 차는 시간은 2초
                 
             if (GaugeTimer >= 1.0f) //게이지가 다 차면
