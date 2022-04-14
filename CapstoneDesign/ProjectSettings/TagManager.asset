@@ -90,6 +90,9 @@ TagManager:
   - SelectBT3
   - SelectBT4
   - SelectBT5
+  - UnderCabinet
+  - UnderCabinetL
+  - UnderCabinetR
   layers:
   - Default
   - TransparentFX

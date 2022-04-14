@@ -778,6 +778,36 @@ public class PlayerCtrl : MonoBehaviour
                         audioSource = GameObject.FindGameObjectWithTag("Switch4").GetComponent<AudioSource>();
                         audioSource.PlayOneShot(clips[24]);
                     }
+                    else if(hit.transform.CompareTag("UnderCabinetL"))
+                    {
+                        if (isOpened[50])
+                        {
+                            isOpened[50] = false;
+                            audioSource = GameObject.FindGameObjectWithTag("UnderCabinet").GetComponent<AudioSource>();
+                            audioSource.PlayOneShot(clips[8]);
+                        }
+                        else
+                        {
+                            isOpened[50] = true;
+                            audioSource = GameObject.FindGameObjectWithTag("UnderCabinet").GetComponent<AudioSource>();
+                            audioSource.PlayOneShot(clips[7]);
+                        }
+                    }
+                    else if (hit.transform.CompareTag("UnderCabinetR"))
+                    {
+                        if (isOpened[51])
+                        {
+                            isOpened[51] = false;
+                            audioSource = GameObject.FindGameObjectWithTag("UnderCabinet").GetComponent<AudioSource>();
+                            audioSource.PlayOneShot(clips[8]);
+                        }
+                        else
+                        {
+                            isOpened[51] = true;
+                            audioSource = GameObject.FindGameObjectWithTag("UnderCabinet").GetComponent<AudioSource>();
+                            audioSource.PlayOneShot(clips[7]);
+                        }
+                    }
                 }
                 GaugeTimer = 0.0f; //게이지 0으로
             }
