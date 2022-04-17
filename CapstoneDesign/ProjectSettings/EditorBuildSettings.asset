@@ -28,7 +28,7 @@ EditorBuildSettings:
     guid: 1e723998634805e41b5c8bdb61bce95d
   - enabled: 1
     path: Assets/Scenes/Rooms/Room4.unity
-    guid: da7c3c75b60b376459997f28776900e2
+    guid: 859e7cc6c725c8e4ea5fbb71ec79b275
   - enabled: 1
     path: Assets/Scenes/Rooms/Room5.unity
     guid: ebcfd97aba7b9074ca189e89ed558d01
