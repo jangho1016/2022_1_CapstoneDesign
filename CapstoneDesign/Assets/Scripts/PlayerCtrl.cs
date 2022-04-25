@@ -11,7 +11,7 @@ public class PlayerCtrl : MonoBehaviour
     public Image timerGauge;
     public GameObject mainCam;
     private float GaugeTimer = 0.0f;
-    private float gazeTimer = 2.0f;
+    private float gazeTimer = 3.0f;
     private float positionY;
     private string curSceneName;
     private int cnt = 0;
@@ -20,7 +20,7 @@ public class PlayerCtrl : MonoBehaviour
     private float timer;
     public float time_last;
     public bool[] isOpened = new bool[40];
-    public AudioClip[] clips = new AudioClip[50];
+    public AudioClip[] clips = new AudioClip[30];
     private AudioSource audioSource;
     Animation anim;
 
@@ -46,11 +46,12 @@ public class PlayerCtrl : MonoBehaviour
         Vector3 forward = mainCam.transform.TransformDirection(Vector3.forward) * 1000; //forward값을 메인카메라가 바라보는 방향 * 1000으로 설정                                                                       
         cursorGauge.fillAmount = GaugeTimer; //커서게이지 이미지 채워서 게이지 로딩
         Debug.DrawRay(transform.position, forward, Color.red); //레이 확인하기 위함
+
         if (PlayerPrefs.GetInt("SceneNum") == 2) //방 1-5번이면
         {
             timer += Time.deltaTime; //타이머 시작
-            timerGauge.fillAmount = timer / 900.0f;
-            time_last = 901.0f - timer; //타이머 제한 시간 설정 (초 - 타이머)
+            timerGauge.fillAmount = timer / 300.0f;
+            time_last = 301.0f - timer; //타이머 제한 시간 설정 (초 - 타이머)
             timertext.text = "남\n" + "은\n" + "시\n" + "간\n" + ((int)(time_last / 60) + "\n" + "분\n" + (int)(time_last % 60) + "\n" + "초"); //남은 시간 표시
             if (time_last <= 60.0f)
             {
@@ -59,7 +60,7 @@ public class PlayerCtrl : MonoBehaviour
             }
             if (time_last <= 0.0f) //시간제한이 다 되면
                 SceneManager.LoadScene("Select"); //방 선택 씬 로드
-            else if ((cnt == 1) && (time_last >= 0.0f)) //방에서 하자 부분을 발견하고 시간제한에 걸리지 않았을 때
+            else if ((cnt == 1) && (time_last >= 0.0f)) //이 부분 수정해야됨
             {
                 Debug.Log("success");
                 PlayerPrefs.SetInt("pass", 1); //통과하도록 설정
@@ -126,24 +127,11 @@ public class PlayerCtrl : MonoBehaviour
                 {  
                     if (hit.transform.tag == "Crack") //방에서 하자 부분을 발견했을때
                         cnt++;
+                    //이 부분 수정
                     else if (hit.transform.tag == "Manager") //부동산 중개업자와 상호작용시
                         managerPanel.SetActive(true); //패널 활성
                     else if (hit.transform.tag == "Button") //버튼과 상호작용시
                         hit.transform.GetComponent<Button>().onClick.Invoke(); //버튼 이벤트 실행
-
-                    else if ((hit.transform.tag == "RoomDoor" == true) && (isOpened[0] == false))
-                    {
-                        isOpened[0] = true;
-                        audioSource = GameObject.FindGameObjectWithTag("RoomDoor").GetComponent<AudioSource>();
-                        audioSource.PlayOneShot(clips[0]);
-                    }
-                    else if ((hit.transform.tag == "RoomDoor" == true) && (isOpened[0] == true))
-                    {
-                        isOpened[0] = false;
-                        audioSource = GameObject.FindGameObjectWithTag("RoomDoor").GetComponent<AudioSource>();
-                        audioSource.PlayOneShot(clips[1]);
-                    }
-
 
                     else if ((hit.transform.tag == "BathroomDoor" == true) && (isOpened[1] == false)) 
                     {
@@ -172,7 +160,6 @@ public class PlayerCtrl : MonoBehaviour
                         audioSource.PlayOneShot(clips[3]);
                     }  
 
-
                     else if ((hit.transform.tag == "MicrowaveOpener" == true) && (isOpened[3] == false) && (isOpened[4] == false))
                     {
                         isOpened[3] = true;
@@ -200,7 +187,6 @@ public class PlayerCtrl : MonoBehaviour
                         audioSource.Stop();
                     }
 
-
                     else if ((hit.transform.tag == "SinkL" == true) && (isOpened[5] == false))
                     {
                         isOpened[5] = true;
@@ -213,8 +199,6 @@ public class PlayerCtrl : MonoBehaviour
                         audioSource = GameObject.FindGameObjectWithTag("RoomSink").GetComponent<AudioSource>();
                         audioSource.PlayOneShot(clips[8]);
                     }
-
-                    //클립 7/8번이 문 90도로 여는 소리
 
                     else if ((hit.transform.tag == "SinkR" == true) && (isOpened[6] == false))
                     {
@@ -252,57 +236,56 @@ public class PlayerCtrl : MonoBehaviour
                     {
                         isOpened[8] = false;
                         audioSource = GameObject.FindGameObjectWithTag("Washer").GetComponent<AudioSource>();
-                        audioSource.PlayOneShot(clips[13]);
+                        audioSource.PlayOneShot(clips[12]);
                     }
                     else if ((hit.transform.tag == "Dresser1" == true) && (isOpened[9] == false))
                     {
                         isOpened[9] = true;
                         audioSource = GameObject.FindGameObjectWithTag("Dresser").GetComponent<AudioSource>();
-                        audioSource.PlayOneShot(clips[14]);
+                        audioSource.PlayOneShot(clips[13]);
                     }
                     else if ((hit.transform.tag == "Dresser1" == true) && (isOpened[9] == true)) 
                     {
                         isOpened[9] = false;
                         audioSource = GameObject.FindGameObjectWithTag("Dresser").GetComponent<AudioSource>();
-                        audioSource.PlayOneShot(clips[15]);
+                        audioSource.PlayOneShot(clips[13]);
                     }
                     else if ((hit.transform.tag == "Dresser2" == true) && (isOpened[10] == false))
                     {
                         isOpened[10] = true;
                         audioSource = GameObject.FindGameObjectWithTag("Dresser").GetComponent<AudioSource>();
-                        audioSource.PlayOneShot(clips[14]);
+                        audioSource.PlayOneShot(clips[13]);
                     }
                     else if ((hit.transform.tag == "Dresser2" == true) && (isOpened[10] == true))
                     {
                         isOpened[10] = false;
                         audioSource = GameObject.FindGameObjectWithTag("Dresser").GetComponent<AudioSource>();
-                        audioSource.PlayOneShot(clips[15]);
+                        audioSource.PlayOneShot(clips[13]);
                     }
                     else if ((hit.transform.tag == "Dresser3" == true) && (isOpened[11] == false))
                     {
                         isOpened[11] = true;
                         audioSource = GameObject.FindGameObjectWithTag("Dresser").GetComponent<AudioSource>();
-                        audioSource.PlayOneShot(clips[14]);
+                        audioSource.PlayOneShot(clips[13]);
                     }
                     else if ((hit.transform.tag == "Dresser3" == true) && (isOpened[11] == true))
                     {
                         isOpened[11] = false;
                         audioSource = GameObject.FindGameObjectWithTag("Dresser").GetComponent<AudioSource>();
-                        audioSource.PlayOneShot(clips[15]);
+                        audioSource.PlayOneShot(clips[13]);
                     }
                     else if ((hit.transform.tag == "Dresser4" == true) && (isOpened[12] == false))
                     {
                         isOpened[12] = true;
                         audioSource = GameObject.FindGameObjectWithTag("Dresser").GetComponent<AudioSource>();
-                        audioSource.PlayOneShot(clips[14]);
+                        audioSource.PlayOneShot(clips[13]);
                     }
                     else if ((hit.transform.tag == "Dresser4" == true) && (isOpened[12] == true))
                     {
                         isOpened[12] = false;
                         audioSource = GameObject.FindGameObjectWithTag("Dresser").GetComponent<AudioSource>();
-                        audioSource.PlayOneShot(clips[15]);
+                        audioSource.PlayOneShot(clips[13]);
                     }
-
 
                     else if ((hit.transform.tag == "CabinetL" == true) && (isOpened[13] == false))
                     {
@@ -374,81 +357,81 @@ public class PlayerCtrl : MonoBehaviour
                     {
                         isOpened[18] = true;
                         audioSource = GameObject.FindGameObjectWithTag("Refrigerator").GetComponent<AudioSource>();
-                        audioSource.PlayOneShot(clips[16]);
+                        audioSource.PlayOneShot(clips[14]);
                     }
                     else if ((hit.transform.tag == "Refrigerator1" == true) && (isOpened[18] == true) && (isOpened[20] == false))
                     {
                         isOpened[18] = false;
                         audioSource = GameObject.FindGameObjectWithTag("Refrigerator").GetComponent<AudioSource>();
-                        audioSource.PlayOneShot(clips[17]);
+                        audioSource.PlayOneShot(clips[15]);
                     }
                     else if ((hit.transform.tag == "Refrigerator2" == true) && (isOpened[19] == false))
                     {
                         isOpened[19] = true;
                         audioSource = GameObject.FindGameObjectWithTag("Refrigerator").GetComponent<AudioSource>();
-                        audioSource.PlayOneShot(clips[16]);
+                        audioSource.PlayOneShot(clips[14]);
                     }
                     else if ((hit.transform.tag == "Refrigerator2" == true) && (isOpened[19] == true) && (isOpened[21] == false && isOpened[22] == false && isOpened[23] == false))
                     {
                         isOpened[19] = false;
                         audioSource = GameObject.FindGameObjectWithTag("Refrigerator").GetComponent<AudioSource>();
-                        audioSource.PlayOneShot(clips[17]);
+                        audioSource.PlayOneShot(clips[15]);
                     }
                     else if ((hit.transform.tag == "RefrigeratorD1" == true) && (isOpened[20] == false))
                     {
                         isOpened[20] = true;
                         audioSource = GameObject.FindGameObjectWithTag("Refrigerator").GetComponent<AudioSource>();
-                        audioSource.PlayOneShot(clips[18]);
+                        audioSource.PlayOneShot(clips[13]);
                     }
                     else if ((hit.transform.tag == "RefrigeratorD1" == true) && (isOpened[20] == true))
                     {
                         isOpened[20] = false;
                         audioSource = GameObject.FindGameObjectWithTag("Refrigerator").GetComponent<AudioSource>();
-                        audioSource.PlayOneShot(clips[19]);
+                        audioSource.PlayOneShot(clips[13]);
                     }
                     else if ((hit.transform.tag == "RefrigeratorD2" == true) && (isOpened[21] == false))
                     {
                         isOpened[21] = true;
                         audioSource = GameObject.FindGameObjectWithTag("Refrigerator").GetComponent<AudioSource>();
-                        audioSource.PlayOneShot(clips[18]);
+                        audioSource.PlayOneShot(clips[13]);
                     }
                     else if ((hit.transform.tag == "RefrigeratorD2" == true) && (isOpened[21] == true))
                     {
                         isOpened[21] = false;
                         audioSource = GameObject.FindGameObjectWithTag("Refrigerator").GetComponent<AudioSource>();
-                        audioSource.PlayOneShot(clips[19]);
+                        audioSource.PlayOneShot(clips[13]);
                     }
                     else if ((hit.transform.tag == "RefrigeratorD3" == true) && (isOpened[22] == false))
                     {
                         isOpened[22] = true;
                         audioSource = GameObject.FindGameObjectWithTag("Refrigerator").GetComponent<AudioSource>();
-                        audioSource.PlayOneShot(clips[18]);
+                        audioSource.PlayOneShot(clips[13]);
                     }
                     else if ((hit.transform.tag == "RefrigeratorD3" == true) && (isOpened[22] == true))
                     {
                         isOpened[22] = false;
                         audioSource = GameObject.FindGameObjectWithTag("Refrigerator").GetComponent<AudioSource>();
-                        audioSource.PlayOneShot(clips[19]);
+                        audioSource.PlayOneShot(clips[13]);
                     }
                     else if ((hit.transform.tag == "RefrigeratorD4" == true) && (isOpened[23] == false))
                     {
                         isOpened[23] = true;
                         audioSource = GameObject.FindGameObjectWithTag("Refrigerator").GetComponent<AudioSource>();
-                        audioSource.PlayOneShot(clips[18]);
+                        audioSource.PlayOneShot(clips[13]);
                     }
                     else if ((hit.transform.tag == "RefrigeratorD4" == true) && (isOpened[23] == true))
                     {
                         isOpened[23] = false;
                         audioSource = GameObject.FindGameObjectWithTag("Refrigerator").GetComponent<AudioSource>();
-                        audioSource.PlayOneShot(clips[19]);
+                        audioSource.PlayOneShot(clips[13]);
                     }
 
                     else if ((hit.transform.tag == "Hood" == true) && (isOpened[24] == false))
                     {
                         isOpened[24] = true;
                         audioSource = GameObject.FindGameObjectWithTag("HoodFrame").GetComponent<AudioSource>();
-                        audioSource.PlayOneShot(clips[20]);
-                        audioSource.clip = clips[22];
+                        audioSource.PlayOneShot(clips[16]);
+                        audioSource.clip = clips[17];
                         audioSource.loop = true;
                         audioSource.Play();
                     }
@@ -457,7 +440,7 @@ public class PlayerCtrl : MonoBehaviour
                         isOpened[24] = false;
                         audioSource = GameObject.FindGameObjectWithTag("HoodFrame").GetComponent<AudioSource>();
                         audioSource.Stop();
-                        audioSource.PlayOneShot(clips[21]);
+                        audioSource.PlayOneShot(clips[16]);
                     }
 
 
@@ -465,37 +448,37 @@ public class PlayerCtrl : MonoBehaviour
                     {
                         isOpened[25] = true;
                         audioSource = GameObject.FindGameObjectWithTag("Switch1").GetComponent<AudioSource>();
-                        audioSource.PlayOneShot(clips[23]);
+                        audioSource.PlayOneShot(clips[18]);
                     }
                     else if ((hit.transform.tag == "RoomSwitch1" == true) && (isOpened[25] == true))
                     {
                         isOpened[25] = false;
                         audioSource = GameObject.FindGameObjectWithTag("Switch1").GetComponent<AudioSource>();
-                        audioSource.PlayOneShot(clips[24]);
+                        audioSource.PlayOneShot(clips[18]);
                     }
                     else if ((hit.transform.tag == "RoomSwitch2" == true) && (isOpened[26] == false))
                     {
                         isOpened[26] = true;
                         audioSource = GameObject.FindGameObjectWithTag("Switch1").GetComponent<AudioSource>();
-                        audioSource.PlayOneShot(clips[23]);
+                        audioSource.PlayOneShot(clips[18]);
                     }
                     else if ((hit.transform.tag == "RoomSwitch2" == true) && (isOpened[26] == true))
                     {
                         isOpened[26] = false;
                         audioSource = GameObject.FindGameObjectWithTag("Switch1").GetComponent<AudioSource>();
-                        audioSource.PlayOneShot(clips[24]);
+                        audioSource.PlayOneShot(clips[18]);
                     }
                     else if ((hit.transform.tag == "ToiletCover" == true) && (isOpened[27] == false))
                     {
                         isOpened[27] = true;
                         audioSource = GameObject.FindGameObjectWithTag("Toilet").GetComponent<AudioSource>();
-                        audioSource.PlayOneShot(clips[25]);
+                        audioSource.PlayOneShot(clips[19]);
                     }
                     else if ((hit.transform.tag == "ToiletCover" == true) && (isOpened[27] == true))
                     {
                         isOpened[27] = false;
                         audioSource = GameObject.FindGameObjectWithTag("Toilet").GetComponent<AudioSource>();
-                        audioSource.PlayOneShot(clips[26]);
+                        audioSource.PlayOneShot(clips[20]);
                     }
                     
                     else if ((hit.transform.tag == "BathroomD1" == true) && (isOpened[28] == false)) 
@@ -526,33 +509,33 @@ public class PlayerCtrl : MonoBehaviour
                     {
                         isOpened[30] = true;
                         audioSource = GameObject.FindGameObjectWithTag("BathroomC").GetComponent<AudioSource>();
-                        audioSource.PlayOneShot(clips[27]);
+                        audioSource.PlayOneShot(clips[7]);
                     }
                     else if ((hit.transform.tag == "BathroomCdoor" == true) && (isOpened[30] == true))
                     {
                         isOpened[30] = false;
                         audioSource = GameObject.FindGameObjectWithTag("BathroomC").GetComponent<AudioSource>();
-                        audioSource.PlayOneShot(clips[28]);
+                        audioSource.PlayOneShot(clips[8]);
                     }
                     else if ((hit.transform.tag == "BathroomSwitch1" == true) && (isOpened[31] == false))
                     {
                         isOpened[31] = true;
                         audioSource = GameObject.FindGameObjectWithTag("Switch2").GetComponent<AudioSource>();
-                        audioSource.PlayOneShot(clips[23]);
+                        audioSource.PlayOneShot(clips[18]);
                     }
                     else if ((hit.transform.tag == "BathroomSwitch1" == true) && (isOpened[31] == true))
                     {
                         isOpened[31] = false;
                         audioSource = GameObject.FindGameObjectWithTag("Switch2").GetComponent<AudioSource>();
-                        audioSource.PlayOneShot(clips[24]);
+                        audioSource.PlayOneShot(clips[18]);
                     }
                     else if ((hit.transform.tag == "BathroomSwitch2" == true) && (isOpened[32] == false))
                     {
                         isOpened[32] = true;
                         audioSource = GameObject.FindGameObjectWithTag("Switch2").GetComponent<AudioSource>();
-                        audioSource.PlayOneShot(clips[23]);
+                        audioSource.PlayOneShot(clips[18]);
                         audioSource = GameObject.FindGameObjectWithTag("Ventilation").GetComponent<AudioSource>();
-                        audioSource.clip = clips[41];
+                        audioSource.clip = clips[27];
                         audioSource.loop = true;
                         audioSource.Play();
                     }
@@ -560,7 +543,7 @@ public class PlayerCtrl : MonoBehaviour
                     {
                         isOpened[32] = false;
                         audioSource = GameObject.FindGameObjectWithTag("Switch2").GetComponent<AudioSource>();
-                        audioSource.PlayOneShot(clips[24]);
+                        audioSource.PlayOneShot(clips[18]);
                         audioSource = GameObject.FindGameObjectWithTag("Ventilation").GetComponent<AudioSource>();
                         audioSource.Stop();
                     }
@@ -568,8 +551,8 @@ public class PlayerCtrl : MonoBehaviour
                     {
                         isOpened[33] = true;
                         audioSource = GameObject.FindGameObjectWithTag("RoomSink").GetComponent<AudioSource>();
-                        audioSource.PlayOneShot(clips[29]);
-                        audioSource.clip = clips[31];
+                        audioSource.PlayOneShot(clips[21]);
+                        audioSource.clip = clips[22];
                         audioSource.loop = true;
                         audioSource.Play();
                     }
@@ -578,15 +561,15 @@ public class PlayerCtrl : MonoBehaviour
                         isOpened[33] = false;
                         audioSource = GameObject.FindGameObjectWithTag("RoomSink").GetComponent<AudioSource>();
                         audioSource.Stop();
-                        audioSource.PlayOneShot(clips[30]);
+                        audioSource.PlayOneShot(clips[21]);
                     }
                     else if ((hit.transform.tag == "HeaterCtrl" == true) && (isOpened[34] == false))
                     {
                         isOpened[34] = true;
                         audioSource = GameObject.FindGameObjectWithTag("HeaterCtrl").GetComponent<AudioSource>();
-                        audioSource.PlayOneShot(clips[32]);
+                        audioSource.PlayOneShot(clips[18]);
                         audioSource = GameObject.FindGameObjectWithTag("Heater").GetComponent<AudioSource>();
-                        audioSource.clip = clips[34];
+                        audioSource.clip = clips[17];
                         audioSource.loop = true;
                         audioSource.Play();
                     }
@@ -594,7 +577,7 @@ public class PlayerCtrl : MonoBehaviour
                     {
                         isOpened[34] = false;
                         audioSource = GameObject.FindGameObjectWithTag("HeaterCtrl").GetComponent<AudioSource>();
-                        audioSource.PlayOneShot(clips[33]);
+                        audioSource.PlayOneShot(clips[18]);
                         audioSource = GameObject.FindGameObjectWithTag("Heater").GetComponent<AudioSource>();
                         audioSource.Stop();
                     }
@@ -602,8 +585,8 @@ public class PlayerCtrl : MonoBehaviour
                     {
                         isOpened[35] = true;
                         audioSource = GameObject.FindGameObjectWithTag("BathroomSink").GetComponent<AudioSource>();
-                        audioSource.PlayOneShot(clips[29]);
-                        audioSource.clip = clips[31];
+                        audioSource.PlayOneShot(clips[21]);
+                        audioSource.clip = clips[22];
                         audioSource.loop = true;
                         audioSource.Play();
                     }
@@ -612,14 +595,14 @@ public class PlayerCtrl : MonoBehaviour
                         isOpened[35] = false;
                         audioSource = GameObject.FindGameObjectWithTag("BathroomSink").GetComponent<AudioSource>();
                         audioSource.Stop();
-                        audioSource.PlayOneShot(clips[30]);
+                        audioSource.PlayOneShot(clips[21]);
                     }
                     else if ((hit.transform.tag == "ShowerSwitch" == true) && (isOpened[36] == false))
                     {
                         isOpened[36] = true;
                         audioSource = GameObject.FindGameObjectWithTag("ShowerBooth").GetComponent<AudioSource>();
-                        audioSource.PlayOneShot(clips[35]);
-                        audioSource.clip = clips[36];
+                        audioSource.PlayOneShot(clips[21]);
+                        audioSource.clip = clips[23];
                         audioSource.loop = true;
                         audioSource.Play();
                     }
@@ -628,7 +611,7 @@ public class PlayerCtrl : MonoBehaviour
                         isOpened[36] = false;
                         audioSource = GameObject.FindGameObjectWithTag("ShowerBooth").GetComponent<AudioSource>();
                         audioSource.Stop();
-                        audioSource.PlayOneShot(clips[35]);
+                        audioSource.PlayOneShot(clips[21]);
                     }
                     else if ((hit.transform.tag == "RoomDoor2" == true) && (isOpened[37] == false))
                     {
@@ -648,8 +631,8 @@ public class PlayerCtrl : MonoBehaviour
                         StartCoroutine(ToiletWater());
 
                         audioSource = GameObject.FindGameObjectWithTag("Toilet").GetComponent<AudioSource>();
-                        audioSource.PlayOneShot(clips[39]);
-                        audioSource.PlayOneShot(clips[38]);
+                        audioSource.PlayOneShot(clips[25]);
+                        audioSource.PlayOneShot(clips[24]);
                     }
                     else if ((hit.transform.tag == "ShoeCase1" == true) && (isOpened[39] == false))
                     {
@@ -740,9 +723,9 @@ public class PlayerCtrl : MonoBehaviour
                     {
                         isOpened[47] = true;
                         audioSource = GameObject.FindGameObjectWithTag("ACCtrl").GetComponent<AudioSource>();
-                        audioSource.PlayOneShot(clips[32]);
+                        audioSource.PlayOneShot(clips[18]);
                         audioSource = GameObject.FindGameObjectWithTag("AC").GetComponent<AudioSource>();
-                        audioSource.clip = clips[40];
+                        audioSource.clip = clips[26];
                         audioSource.loop = true;
                         audioSource.Play();
                     }
@@ -750,7 +733,7 @@ public class PlayerCtrl : MonoBehaviour
                     {
                         isOpened[47] = false;
                         audioSource = GameObject.FindGameObjectWithTag("ACCtrl").GetComponent<AudioSource>();
-                        audioSource.PlayOneShot(clips[33]);
+                        audioSource.PlayOneShot(clips[18]);
                         audioSource = GameObject.FindGameObjectWithTag("AC").GetComponent<AudioSource>();
                         audioSource.Stop();
                     }
@@ -758,25 +741,25 @@ public class PlayerCtrl : MonoBehaviour
                     {
                         isOpened[48] = true;
                         audioSource = GameObject.FindGameObjectWithTag("Switch3").GetComponent<AudioSource>();
-                        audioSource.PlayOneShot(clips[23]);
+                        audioSource.PlayOneShot(clips[18]);
                     }
                     else if ((hit.transform.tag == "RoomSwitch3" == true) && (isOpened[48] == true))
                     {
                         isOpened[48] = false;
                         audioSource = GameObject.FindGameObjectWithTag("Switch3").GetComponent<AudioSource>();
-                        audioSource.PlayOneShot(clips[24]);
+                        audioSource.PlayOneShot(clips[18]);
                     }
                     else if ((hit.transform.tag == "RoomSwitch4" == true) && (isOpened[49] == false))
                     {
                         isOpened[49] = true;
                         audioSource = GameObject.FindGameObjectWithTag("Switch4").GetComponent<AudioSource>();
-                        audioSource.PlayOneShot(clips[23]);
+                        audioSource.PlayOneShot(clips[18]);
                     }
                     else if ((hit.transform.tag == "RoomSwitch4" == true) && (isOpened[49] == true))
                     {
                         isOpened[49] = false;
                         audioSource = GameObject.FindGameObjectWithTag("Switch4").GetComponent<AudioSource>();
-                        audioSource.PlayOneShot(clips[24]);
+                        audioSource.PlayOneShot(clips[18]);
                     }
                     else if(hit.transform.CompareTag("UnderCabinetL"))
                     {
