@@ -10,6 +10,7 @@ public class SinkFaiucet : MonoBehaviour
     GameObject player;
     public GameObject Water;
     public GameObject Smoke;
+    string scenename;
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +25,8 @@ public class SinkFaiucet : MonoBehaviour
         isOpen1 = player.GetComponent<PlayerCtrl>().isOpened[34]; //보일러
         isOpen2 = player.GetComponent<PlayerCtrl>().isOpened[33]; //수도
 
+        scenename = player.GetComponent<PlayerCtrl>().curSceneName;
+
         if (isOpen2 == true) //물 킨 상태
         {
             Water.SetActive(true);
@@ -31,7 +34,8 @@ public class SinkFaiucet : MonoBehaviour
 
             if (isOpen1 == true) //보일러 킬때
             {
-                StartCoroutine(SmokeCtrlOn());
+                if (scenename != "Room4")
+                    StartCoroutine(SmokeCtrlOn());
             }
             else if (isOpen1 == false) //보일러 끌때
             {

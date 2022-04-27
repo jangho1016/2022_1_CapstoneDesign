@@ -93,6 +93,11 @@ TagManager:
   - UnderCabinet
   - UnderCabinetL
   - UnderCabinetR
+  - Crack2
+  - Mold
+  - Cockroach
+  - Quiz
+  - RoomSelect
   layers:
   - Default
   - TransparentFX

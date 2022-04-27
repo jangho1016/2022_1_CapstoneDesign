@@ -8,8 +8,10 @@ public class BathroomFaucet : MonoBehaviour
     bool isOpen1;
     bool isOpen2;
     GameObject player;
-    public GameObject Water;
+    public GameObject water;
+    public GameObject water1;
     public GameObject Smoke;
+    string scenename;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +25,7 @@ public class BathroomFaucet : MonoBehaviour
     {
         isOpen1 = player.GetComponent<PlayerCtrl>().isOpened[34]; //보일러
         isOpen2 = player.GetComponent<PlayerCtrl>().isOpened[35]; //수도
+        scenename = player.GetComponent<PlayerCtrl>().curSceneName;
 
         //1. 보일러 킨 상태에서 물 켤때 (연기 생겨야됨)
         //2. 보일러 끈 상태에서 물 켤때 (연기 없어야됨)
@@ -33,12 +36,18 @@ public class BathroomFaucet : MonoBehaviour
 
         if (isOpen2 == true) //물 킨 상태
         {
-            Water.SetActive(true);
+            water.SetActive(true);
             anim.SetBool("isOpen", true);
-            
-            if(isOpen1 == true) //보일러 킬때
+            if (scenename == "Room3")
             {
-                StartCoroutine(SmokeCtrlOn());
+                water.GetComponent<MeshRenderer>().materials[0].color = new Color(0.9811321f, 0.8250644f, 0.495194f);
+                water1.GetComponent<MeshRenderer>().materials[0].color = new Color(0.9811321f, 0.8250644f, 0.495194f);
+            }
+
+            if (isOpen1 == true) //보일러 킬때
+            {
+                if(scenename != "Room4")
+                    StartCoroutine(SmokeCtrlOn());
             }
             else if(isOpen1 == false) //보일러 끌때
             {
@@ -48,7 +57,7 @@ public class BathroomFaucet : MonoBehaviour
 
         else if (isOpen2 == false)
         {
-            Water.SetActive(false);
+            water.SetActive(false);
             anim.SetBool("isOpen", false);
             StartCoroutine(SmokeCtrlOff());
         }

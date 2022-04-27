@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using DG.Tweening;
 
 public class PlayerCtrl : MonoBehaviour
 {
@@ -11,28 +10,45 @@ public class PlayerCtrl : MonoBehaviour
     public Image cursorGauge;
     public Image timerGauge;
     public GameObject mainCam;
+    public GameObject managerPanel;
+    private float timer;
+    public float time_last;
     private float GaugeTimer = 0.0f;
     private float gazeTimer = 3.0f;
     private float positionY;
-    private string curSceneName;
+    public string curSceneName;
     private int cnt = 0;
-    public GameObject managerPanel;
     public Text timertext;
-    private float timer;
-    public float time_last;
     public bool[] isOpened = new bool[40];
     public AudioClip[] clips = new AudioClip[30];
     private AudioSource audioSource;
     Animation anim;
+    public bool[] crackChk = new bool[15];
+    public Text crackText;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         curSceneName = SceneManager.GetActiveScene().name; //씬 이름 가져옴
+
+        PlayerPrefs.SetInt("crack1", 0);
+        PlayerPrefs.SetInt("crack2", 0);
+        PlayerPrefs.SetInt("crack3", 0);
+        PlayerPrefs.SetInt("crack4", 0);
+        PlayerPrefs.SetInt("crack5", 0);
+        PlayerPrefs.SetInt("crack6", 0);
+        PlayerPrefs.SetInt("crack7", 0);
+        PlayerPrefs.SetInt("crack8", 0);
+        PlayerPrefs.SetInt("crack9", 0);
+        PlayerPrefs.SetInt("crack10", 0);
+        PlayerPrefs.SetInt("crack11", 0);
+        PlayerPrefs.SetInt("crack12", 0);
+        PlayerPrefs.SetInt("crack13", 0);
+        PlayerPrefs.SetInt("pass", 0);
+
         if ((curSceneName == "Room1") || (curSceneName == "Room2") || (curSceneName == "Room3") || (curSceneName == "Room4") || (curSceneName == "Room5")) //1-5번 방이면
         {
             PlayerPrefs.SetInt("SceneNum", 2); //씬넘버 2로 설정
-            //PlayerPrefs.SetInt("pass", 0); //패스하기 위한 값 초기화
         }
         else
             PlayerPrefs.SetInt("SceneNum", 0); //씬넘버 0으로
@@ -40,11 +56,10 @@ public class PlayerCtrl : MonoBehaviour
 
     void Update()
     {
-        rb.velocity = Vector3.zero; //밀림현상 때문에
+        rb.velocity = Vector3.zero; //플레이어 밀림현상 해결
         RaycastHit hit;
         Vector3 forward = mainCam.transform.TransformDirection(Vector3.forward) * 1000; //forward값을 메인카메라가 바라보는 방향 * 1000으로 설정                                                                       
         cursorGauge.fillAmount = GaugeTimer; //커서게이지 이미지 채워서 게이지 로딩
-        Debug.DrawRay(transform.position, forward, Color.red); //레이 확인하기 위함
 
         if (PlayerPrefs.GetInt("SceneNum") == 2) //방 1-5번이면
         {
@@ -58,22 +73,63 @@ public class PlayerCtrl : MonoBehaviour
                 timertext.text = "남\n" + "은\n" + "시\n" + "간\n" + ((int)(time_last / 60) + "\n" + "분\n" + (int)(time_last % 60) + "\n" + "초"); //남은 시간 표시
             }
             if (time_last <= 0.0f) //시간제한이 다 되면
-                SceneManager.LoadScene("Select"); //방 선택 씬 로드
-            else if ((cnt == 1) && (time_last >= 0.0f)) //이 부분 수정해야됨
+                SceneManager.LoadScene("Fail1"); //방 선택 씬 로드
+
+            else if(curSceneName == "Room1")
             {
-                Debug.Log("success");
-                PlayerPrefs.SetInt("pass", 1); //통과하도록 설정
+                if(time_last >= 0.0f)
+                {
+                    crackText.text = "남은 하자: 0개";
+                    PlayerPrefs.SetInt("pass", 1);
+                }
             }
-            else if (cnt >= 2)
-                PlayerPrefs.SetInt("pass", 0); //통과하도록 설정
+
+            else if(curSceneName == "Room2")
+            {
+                crackText.text = "남은 하자: " + (3 - cnt) + "개";
+
+                if ((PlayerPrefs.GetInt("crack1") == 1) && (PlayerPrefs.GetInt("crack2") == 1) && (PlayerPrefs.GetInt("crack3") == 1) && (time_last >= 0.0f)) //이 부분 수정해야됨
+                {
+                    PlayerPrefs.SetInt("pass", 1);
+                }
+            }
+            else if (curSceneName == "Room3")
+            {
+                crackText.text = "남은 하자: " + (3 - cnt) + "개";
+
+                if ((PlayerPrefs.GetInt("crack4") == 1) && (PlayerPrefs.GetInt("crack5") == 1) && (PlayerPrefs.GetInt("crack6") == 1) && (time_last >= 0.0f)) //이 부분 수정해야됨
+                {
+                    PlayerPrefs.SetInt("pass", 1);
+                }
+            }
+            else if(curSceneName == "Room4")
+            {
+                crackText.text = "남은 하자: " + (4 - cnt) + "개";
+
+                if ((PlayerPrefs.GetInt("crack7") == 1) && (PlayerPrefs.GetInt("crack8") == 1) && (PlayerPrefs.GetInt("crack4") == 1) && (PlayerPrefs.GetInt("crack10") == 1) && (time_last >= 0.0f)) //이 부분 수정해야됨
+                {
+                    PlayerPrefs.SetInt("pass", 1);
+                }
+            }
+            else if (curSceneName == "Room5")
+            {
+                crackText.text = "남은 하자: " + (5 - cnt) + "개";
+
+                if ((PlayerPrefs.GetInt("crack10") == 1) && (PlayerPrefs.GetInt("crack11") == 1) && (PlayerPrefs.GetInt("crack4") == 1) && (PlayerPrefs.GetInt("crack12") == 1) && (PlayerPrefs.GetInt("crack13") == 1) && (time_last >= 0.0f)) //이 부분 수정해야됨
+                {
+                    PlayerPrefs.SetInt("pass", 1);
+                }
+            }
         }
 
-        if (Physics.Raycast(this.transform.position, forward, out hit)) //바라봤을 때
+        if (Physics.Raycast(this.transform.position, forward, out hit)) //오브젝트를 바라봤을 때
         {
             if(hit.transform.tag == "StartBT")
             {
                 anim = GameObject.FindGameObjectWithTag("StartBT").GetComponent<Animation>();
                 anim.Play();
+                /*audioSource = GameObject.FindGameObjectWithTag("StartBT").GetComponent<AudioSource>();
+                audioSource.PlayOneShot(clips[29]);*/
             }
             else if (hit.transform.tag == "WayBT")
             {
@@ -115,19 +171,30 @@ public class PlayerCtrl : MonoBehaviour
                 anim = GameObject.FindGameObjectWithTag("SelectBT5").GetComponent<Animation>();
                 anim.Play();
             }
+            else if (hit.transform.tag == "Quiz")
+            {
+                anim = GameObject.FindGameObjectWithTag("Quiz").GetComponent<Animation>();
+                anim.Play();
+            }
+            else if (hit.transform.tag == "RoomSelect")
+            {
+                anim = GameObject.FindGameObjectWithTag("RoomSelect").GetComponent<Animation>();
+                anim.Play();
+            }
 
             GaugeTimer += 1.0f / gazeTimer * Time.deltaTime; //게이지 차는 시간은 3초
                 
             if (GaugeTimer >= 1.0f) //게이지가 다 차면
             {
-                if (PlayerPrefs.GetInt("SceneNum") == 0) //방 1-5번이 아닐때
+                if (PlayerPrefs.GetInt("SceneNum") == 0)
+                {
+                    //방 1-5번이 아닐때
                     hit.transform.GetComponent<Button>().onClick.Invoke(); //버튼 이벤트 실행
+                }
+                    
                 else if (PlayerPrefs.GetInt("SceneNum") == 2) //방 1-5번 씬일때
                 {  
-                    if (hit.transform.tag == "Crack") //방에서 하자 부분을 발견했을때
-                        cnt++;
-                    //이 부분 수정
-                    else if (hit.transform.tag == "Manager") //부동산 중개업자 오브젝트와 상호작용시
+                    if (hit.transform.tag == "Manager") //부동산 중개업자 오브젝트와 상호작용시
                         managerPanel.SetActive(true); //패널 활성화
                     else if (hit.transform.tag == "Button") //버튼과 상호작용시
                         hit.transform.GetComponent<Button>().onClick.Invoke(); //버튼 이벤트 실행
@@ -144,8 +211,6 @@ public class PlayerCtrl : MonoBehaviour
                         audioSource = GameObject.FindGameObjectWithTag("BathroomDoor").GetComponent<AudioSource>();
                         audioSource.PlayOneShot(clips[1]);
                     }
-
-
                     else if ((hit.transform.tag == "Window" == true) && (isOpened[2] == false))
                     {
                         isOpened[2] = true;
@@ -158,7 +223,6 @@ public class PlayerCtrl : MonoBehaviour
                         audioSource = GameObject.FindGameObjectWithTag("Window").GetComponent<AudioSource>();
                         audioSource.PlayOneShot(clips[3]);
                     }  
-
                     else if ((hit.transform.tag == "MicrowaveOpener" == true) && (isOpened[3] == false) && (isOpened[4] == false))
                     {
                         isOpened[3] = true;
@@ -431,12 +495,21 @@ public class PlayerCtrl : MonoBehaviour
                         audioSource = GameObject.FindGameObjectWithTag("HoodFrame").GetComponent<AudioSource>();
                         audioSource.PlayOneShot(clips[16]);
                         audioSource.clip = clips[17];
-                        audioSource.loop = true;
-                        audioSource.Play();
 
-                        if(curSceneName == "Room2")
+                        if (curSceneName != "Room2")
                         {
-                            Debug.Log("하자부분 체크");
+                            audioSource.loop = true;
+                            audioSource.Play();
+                        }
+                        
+                        else if (curSceneName == "Room2")
+                        {
+                            PlayerPrefs.SetInt("crack1", 1);
+                            if((crackChk[0] == false) && (PlayerPrefs.GetInt("crack1") == 1))
+                            {
+                                cnt++;
+                                crackChk[0] = true;
+                            }
                         }
                     }
                     else if ((hit.transform.tag == "Hood" == true) && (isOpened[24] == true))
@@ -540,8 +613,22 @@ public class PlayerCtrl : MonoBehaviour
                         audioSource.PlayOneShot(clips[18]);
                         audioSource = GameObject.FindGameObjectWithTag("Ventilation").GetComponent<AudioSource>();
                         audioSource.clip = clips[27];
-                        audioSource.loop = true;
-                        audioSource.Play();
+                        
+                        if(curSceneName != "Room2")
+                        {
+                            audioSource.loop = true;
+                            audioSource.Play();
+                        }
+                        else if (curSceneName == "Room2")
+                        {
+                            PlayerPrefs.SetInt("crack3", 1);
+
+                            if ((crackChk[2] == false) && (PlayerPrefs.GetInt("crack3") == 1))
+                            {
+                                cnt++;
+                                crackChk[2] = true;
+                            }
+                        }
                     }
                     else if ((hit.transform.tag == "BathroomSwitch2" == true) && (isOpened[32] == true))
                     {
@@ -555,10 +642,29 @@ public class PlayerCtrl : MonoBehaviour
                     {
                         isOpened[33] = true;
                         audioSource = GameObject.FindGameObjectWithTag("RoomSink").GetComponent<AudioSource>();
+
                         audioSource.PlayOneShot(clips[21]);
-                        audioSource.clip = clips[22];
+                        if (curSceneName != "Room5")
+                        {
+                            audioSource.clip = clips[22];
+                        }
+                        else if (curSceneName == "Room5")
+                        {
+                            audioSource.clip = clips[28];
+                        }
                         audioSource.loop = true;
                         audioSource.Play();
+
+                        if (curSceneName == "Room5")
+                        {
+                            PlayerPrefs.SetInt("crack9", 1);
+
+                            if ((crackChk[8] == false) && (PlayerPrefs.GetInt("crack9") == 1))
+                            {
+                                cnt++;
+                                crackChk[8] = true;
+                            }
+                        }
                     }
                     else if ((hit.transform.tag == "SinkFaucet" == true) && (isOpened[33] == true))
                     {
@@ -574,8 +680,22 @@ public class PlayerCtrl : MonoBehaviour
                         audioSource.PlayOneShot(clips[18]);
                         audioSource = GameObject.FindGameObjectWithTag("Heater").GetComponent<AudioSource>();
                         audioSource.clip = clips[17];
-                        audioSource.loop = true;
-                        audioSource.Play();
+                        if (curSceneName != "Room4")
+                        {
+                            audioSource.loop = true;
+                            audioSource.Play();
+                        }
+
+                        else if (curSceneName == "Room4")
+                        {
+                            PlayerPrefs.SetInt("crack8", 1);
+
+                            if ((crackChk[7] == false) && (PlayerPrefs.GetInt("crack8") == 1))
+                            {
+                                cnt++;
+                                crackChk[7] = true;
+                            }
+                        }
                     }
                     else if ((hit.transform.tag == "HeaterCtrl" == true) && (isOpened[34] == true))
                     {
@@ -593,6 +713,17 @@ public class PlayerCtrl : MonoBehaviour
                         audioSource.clip = clips[22];
                         audioSource.loop = true;
                         audioSource.Play();
+                        
+                        if (curSceneName == "Room3")
+                        {
+                            PlayerPrefs.SetInt("crack6", 1);
+
+                            if ((crackChk[5] == false) && (PlayerPrefs.GetInt("crack6") == 1))
+                            {
+                                cnt++;
+                                crackChk[5] = true;
+                            }
+                        }
                     }
                     else if ((hit.transform.tag == "BathroomFaucet" == true) && (isOpened[35] == true))
                     {
@@ -680,8 +811,22 @@ public class PlayerCtrl : MonoBehaviour
                         isOpened[42] = true;
                         audioSource = GameObject.FindGameObjectWithTag("Washer").GetComponent<AudioSource>();
                         audioSource.clip = clips[11];
-                        audioSource.loop = true;
-                        audioSource.Play();
+                        if (curSceneName != "Room2")
+                        {
+                            audioSource.loop = true;
+                            audioSource.Play();
+                        }
+
+                        else if (curSceneName == "Room2")
+                        {
+                            PlayerPrefs.SetInt("crack2", 1);
+
+                            if ((crackChk[1] == false) && (PlayerPrefs.GetInt("crack2") == 1))
+                            {
+                                cnt++;
+                                crackChk[1] = true;
+                            }
+                        }
                     }
                     else if ((hit.transform.tag == "WasherBT" == true) && (isOpened[42] == true) && (isOpened[7] == false) && (isOpened[8] == false))
                     {
@@ -718,6 +863,17 @@ public class PlayerCtrl : MonoBehaviour
                     else if ((hit.transform.tag == "FireBT4" == true) && (isOpened[46] == false))
                     {
                         isOpened[46] = true;
+
+                        if (curSceneName == "Room3")
+                        {
+                            PlayerPrefs.SetInt("crack5", 1);
+
+                            if ((crackChk[4] == false) && (PlayerPrefs.GetInt("crack5") == 1))
+                            {
+                                cnt++;
+                                crackChk[4] = true;
+                            }
+                        }
                     }
                     else if ((hit.transform.tag == "FireBT4" == true) && (isOpened[46] == true))
                     {
@@ -730,8 +886,22 @@ public class PlayerCtrl : MonoBehaviour
                         audioSource.PlayOneShot(clips[18]);
                         audioSource = GameObject.FindGameObjectWithTag("AC").GetComponent<AudioSource>();
                         audioSource.clip = clips[26];
-                        audioSource.loop = true;
-                        audioSource.Play();
+                        if (curSceneName != "Room4")
+                        {
+                            audioSource.loop = true;
+                            audioSource.Play();
+                        }
+
+                        else if (curSceneName == "Room4")
+                        {
+                            PlayerPrefs.SetInt("crack7", 1);
+
+                            if ((crackChk[6] == false) && (PlayerPrefs.GetInt("crack7") == 1))
+                            {
+                                cnt++;
+                                crackChk[6] = true;
+                            }
+                        }
                     }
                     else if ((hit.transform.tag == "ACCtrl" == true) && (isOpened[47] == true))
                     {
@@ -795,6 +965,56 @@ public class PlayerCtrl : MonoBehaviour
                             audioSource.PlayOneShot(clips[7]);
                         }
                     }
+                    else if (hit.transform.tag == "Crack" == true)
+                    {
+                        if ((curSceneName == "Room3") || (curSceneName == "Room4") || (curSceneName == "Room5"))
+                        {
+                            PlayerPrefs.SetInt("crack4", 1);
+
+                            if ((crackChk[3] == false) && (PlayerPrefs.GetInt("crack4") == 1))
+                            {
+                                cnt++;
+                                crackChk[3] = true;
+                                Debug.Log(cnt);
+                            }
+                        }
+                    }
+                    else if (hit.transform.tag == "Crack2" == true)
+                    {
+                        if ((curSceneName == "Room4") || (curSceneName == "Room5"))
+                        {
+                            PlayerPrefs.SetInt("crack10", 1);
+
+                            if ((crackChk[9] == false) && (PlayerPrefs.GetInt("crack10") == 1))
+                            {
+                                cnt++;
+                                crackChk[9] = true;
+                                Debug.Log(cnt);
+                            }
+                        }
+                    }
+                    else if (hit.transform.tag == "Mold" == true)
+                    {
+                            PlayerPrefs.SetInt("crack11", 1);
+
+                            if ((crackChk[10] == false) && (PlayerPrefs.GetInt("crack11") == 1))
+                            {
+                                cnt++;
+                                crackChk[10] = true;
+                                Debug.Log(cnt);
+                            }
+                    }
+                    else if (hit.transform.tag == "Cockroach" == true)
+                    {
+                        PlayerPrefs.SetInt("crack12", 1);
+
+                        if ((crackChk[11] == false) && (PlayerPrefs.GetInt("crack12") == 1))
+                        {
+                            cnt++;
+                            crackChk[11] = true;
+                            Debug.Log(cnt);
+                        }
+                    }
                 }
                 GaugeTimer = 0.0f; //게이지 0으로
             }
@@ -814,7 +1034,6 @@ public class PlayerCtrl : MonoBehaviour
             }
         }
     }
-
     IEnumerator ToiletWater()
     {
         yield return new WaitForSeconds(0.1f);

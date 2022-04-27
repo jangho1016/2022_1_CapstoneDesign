@@ -27,7 +27,6 @@ public class Hood : MonoBehaviour
         else if (isOpen == false)
         {
             anim.SetBool("isOpen", false);
-
         }
     }
 }

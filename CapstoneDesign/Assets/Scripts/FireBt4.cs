@@ -7,6 +7,7 @@ public class FireBt4 : MonoBehaviour
     bool isOpen;
     GameObject player;
     public GameObject fire;
+    string scenename;
 
     // Start is called before the first frame update
     void Start()
@@ -18,10 +19,12 @@ public class FireBt4 : MonoBehaviour
     void Update()
     {
         isOpen = player.GetComponent<PlayerCtrl>().isOpened[46];
+        scenename = player.GetComponent<PlayerCtrl>().curSceneName;
 
         if (isOpen == true)
         {
-            fire.SetActive(true);
+            if(scenename != "Room3")
+                fire.SetActive(true);
         }
         else if (isOpen == false)
         {

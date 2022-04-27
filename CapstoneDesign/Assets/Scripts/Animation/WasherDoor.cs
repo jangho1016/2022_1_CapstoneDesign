@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class WasherDoor : MonoBehaviour
 {
@@ -17,6 +18,7 @@ public class WasherDoor : MonoBehaviour
         anim = GetComponent<Animator>();
         player = GameObject.FindGameObjectWithTag("Player");
         display.GetComponent<MeshRenderer>().materials[0].color = Color.gray;
+        
     }
 
     // Update is called once per frame

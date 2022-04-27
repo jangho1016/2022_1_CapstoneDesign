@@ -212,8 +212,8 @@ GameObject:
   - component: {fileID: 233738978}
   - component: {fileID: 233738977}
   - component: {fileID: 233738976}
-  - component: {fileID: 233738975}
   - component: {fileID: 233738980}
+  - component: {fileID: 233738975}
   m_Layer: 5
   m_Name: BT2
   m_TagString: SelectBT2
@@ -493,8 +493,9 @@ MonoBehaviour:
   timerGauge: {fileID: 0}
   mainCam: {fileID: 287799485}
   managerPanel: {fileID: 0}
-  timertext: {fileID: 0}
   time_last: 0
+  curSceneName: 
+  timertext: {fileID: 0}
   isOpened: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   clips:
   - {fileID: 0}
@@ -781,8 +782,8 @@ GameObject:
   - component: {fileID: 627712439}
   - component: {fileID: 627712438}
   - component: {fileID: 627712437}
-  - component: {fileID: 627712436}
   - component: {fileID: 627712441}
+  - component: {fileID: 627712436}
   m_Layer: 5
   m_Name: BT3
   m_TagString: SelectBT3
@@ -956,8 +957,8 @@ GameObject:
   - component: {fileID: 629596154}
   - component: {fileID: 629596153}
   - component: {fileID: 629596152}
-  - component: {fileID: 629596151}
   - component: {fileID: 629596156}
+  - component: {fileID: 629596151}
   m_Layer: 5
   m_Name: BT1
   m_TagString: SelectBT1
@@ -1693,8 +1694,8 @@ GameObject:
   - component: {fileID: 1900394377}
   - component: {fileID: 1900394376}
   - component: {fileID: 1900394375}
-  - component: {fileID: 1900394374}
   - component: {fileID: 1900394379}
+  - component: {fileID: 1900394374}
   m_Layer: 5
   m_Name: BT4
   m_TagString: SelectBT4
@@ -2014,8 +2015,8 @@ GameObject:
   - component: {fileID: 2028238188}
   - component: {fileID: 2028238187}
   - component: {fileID: 2028238186}
-  - component: {fileID: 2028238185}
   - component: {fileID: 2028238190}
+  - component: {fileID: 2028238185}
   m_Layer: 5
   m_Name: BT5
   m_TagString: SelectBT5

@@ -11,6 +11,7 @@ public class ShowerSwitch : MonoBehaviour
     public GameObject Water;
     public GameObject ShowerWater;
     public GameObject Smoke;
+    string scenename;
 
     // Start is called before the first frame update
     void Start()
@@ -24,7 +25,7 @@ public class ShowerSwitch : MonoBehaviour
     {
         isOpen1 = player.GetComponent<PlayerCtrl>().isOpened[34]; //보일러
         isOpen2 = player.GetComponent<PlayerCtrl>().isOpened[36]; //수도
-
+        scenename = player.GetComponent<PlayerCtrl>().curSceneName;
 
         if (isOpen2 == true) //물 킨 상태
         {
@@ -33,7 +34,8 @@ public class ShowerSwitch : MonoBehaviour
 
             if (isOpen1 == true) //보일러 킬때
             {
-                StartCoroutine(SmokeCtrlOn());
+                if (scenename != "Room4")
+                    StartCoroutine(SmokeCtrlOn());
             }
             else if (isOpen1 == false) //보일러 끌때
             {
