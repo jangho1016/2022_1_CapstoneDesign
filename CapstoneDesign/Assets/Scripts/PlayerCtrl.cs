@@ -29,13 +29,11 @@ public class PlayerCtrl : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         curSceneName = SceneManager.GetActiveScene().name; //씬 이름 가져옴
-        if ((curSceneName == "Room1") || (curSceneName == "Room2") || (curSceneName == "Room3") || (curSceneName == "Room4") || (curSceneName == "Room5") || (curSceneName == "Room1 Test")) //1-5번 방이면
+        if ((curSceneName == "Room1") || (curSceneName == "Room2") || (curSceneName == "Room3") || (curSceneName == "Room4") || (curSceneName == "Room5")) //1-5번 방이면
         {
             PlayerPrefs.SetInt("SceneNum", 2); //씬넘버 2로 설정
-            PlayerPrefs.SetInt("pass", 0); //패스하기 위한 값 초기화
+            //PlayerPrefs.SetInt("pass", 0); //패스하기 위한 값 초기화
         }
-        else if (curSceneName == "Loading")
-            StartCoroutine(LoadScene());
         else
             PlayerPrefs.SetInt("SceneNum", 0); //씬넘버 0으로
     }
@@ -118,7 +116,7 @@ public class PlayerCtrl : MonoBehaviour
                 anim.Play();
             }
 
-            GaugeTimer += 1.0f / gazeTimer * Time.deltaTime; //게이지 차는 시간은 2초
+            GaugeTimer += 1.0f / gazeTimer * Time.deltaTime; //게이지 차는 시간은 3초
                 
             if (GaugeTimer >= 1.0f) //게이지가 다 차면
             {
@@ -129,8 +127,8 @@ public class PlayerCtrl : MonoBehaviour
                     if (hit.transform.tag == "Crack") //방에서 하자 부분을 발견했을때
                         cnt++;
                     //이 부분 수정
-                    else if (hit.transform.tag == "Manager") //부동산 중개업자와 상호작용시
-                        managerPanel.SetActive(true); //패널 활성
+                    else if (hit.transform.tag == "Manager") //부동산 중개업자 오브젝트와 상호작용시
+                        managerPanel.SetActive(true); //패널 활성화
                     else if (hit.transform.tag == "Button") //버튼과 상호작용시
                         hit.transform.GetComponent<Button>().onClick.Invoke(); //버튼 이벤트 실행
 
@@ -435,6 +433,11 @@ public class PlayerCtrl : MonoBehaviour
                         audioSource.clip = clips[17];
                         audioSource.loop = true;
                         audioSource.Play();
+
+                        if(curSceneName == "Room2")
+                        {
+                            Debug.Log("하자부분 체크");
+                        }
                     }
                     else if ((hit.transform.tag == "Hood" == true) && (isOpened[24] == true))
                     {
@@ -810,11 +813,6 @@ public class PlayerCtrl : MonoBehaviour
                 this.transform.position = new Vector3(transform.position.x, positionY, transform.position.z); //플레이어의 y축 고정
             }
         }
-    }
-    IEnumerator LoadScene()
-    {
-        yield return new WaitForSeconds(3.0f);
-        SceneManager.LoadScene("Select");
     }
 
     IEnumerator ToiletWater()
