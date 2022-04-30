@@ -1,19 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!64 &852120671640711539
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 509538898006002780}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 84434928585241623, guid: 219b92ba98bda204382748e34f6cfada, type: 3}
 --- !u!1 &509538898907112552
 GameObject:
   m_ObjectHideFlags: 0
@@ -27,7 +13,7 @@ GameObject:
   - component: {fileID: 2022893166406239677}
   - component: {fileID: 852120670393801023}
   m_Layer: 0
-  m_Name: Toaster_03
+  m_Name: Toaster_C3_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -109,6 +95,20 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -6935560433005474235, guid: 230c3f42d9fe322409002d2792d8e4e1, type: 3}
+--- !u!64 &852120671640711539
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 509538898006002780}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 84434928585241623, guid: 219b92ba98bda204382748e34f6cfada, type: 3}
 --- !u!1001 &852120671640711437
 PrefabInstance:
   m_ObjectHideFlags: 0

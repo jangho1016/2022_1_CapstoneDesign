@@ -27,7 +27,7 @@ GameObject:
   - component: {fileID: 7228823002725329361}
   - component: {fileID: 8327267420007773527}
   m_Layer: 0
-  m_Name: Toaster_01
+  m_Name: Toaster_C1_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

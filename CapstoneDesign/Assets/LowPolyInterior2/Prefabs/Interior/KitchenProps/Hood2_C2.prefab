@@ -27,7 +27,7 @@ GameObject:
   - component: {fileID: 8541960630359684928}
   - component: {fileID: 1203816942216763205}
   m_Layer: 0
-  m_Name: Hood2_C2
+  m_Name: Hood2_C2_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3352888107245628982}
   - component: {fileID: 2786384146172844886}
   m_Layer: 0
-  m_Name: Hood3_C1
+  m_Name: Hood3_C1_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

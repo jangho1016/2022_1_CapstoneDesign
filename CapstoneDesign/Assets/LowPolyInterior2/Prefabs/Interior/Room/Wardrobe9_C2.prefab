@@ -1,33 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!64 &625067029891147911
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 319129912796861908}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -3014306536460904497, guid: 3f8e7f2a5a8be2749a6d4b2c2453142f, type: 3}
---- !u!64 &625067029896682054
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 319129912801879829}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -3014306536460904497, guid: 3f8e7f2a5a8be2749a6d4b2c2453142f, type: 3}
 --- !u!1 &319129913126121884
 GameObject:
   m_ObjectHideFlags: 0
@@ -130,27 +102,27 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4387154795841921476, guid: a10d918665ef73649ba6989ba12b7d9b, type: 3}
---- !u!64 &625067030283029842
+--- !u!64 &625067028502065590
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 319129913189281793}
+  m_GameObject: {fileID: 319129914762693861}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: -2335685216524127942, guid: c648780ca13343f41973b18d8b56335d, type: 3}
---- !u!64 &625067030324169623
+  m_Mesh: {fileID: 5016783462862089569, guid: e2bbee191fcb0184d810384ef067a99a, type: 3}
+--- !u!64 &625067028633692937
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 319129913230292676}
+  m_GameObject: {fileID: 319129914895242838}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
@@ -186,27 +158,55 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -2335685216524127942, guid: c648780ca13343f41973b18d8b56335d, type: 3}
---- !u!64 &625067028502065590
+--- !u!64 &625067029891147911
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 319129914762693861}
+  m_GameObject: {fileID: 319129912796861908}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 5016783462862089569, guid: e2bbee191fcb0184d810384ef067a99a, type: 3}
---- !u!64 &625067028633692937
+  m_Mesh: {fileID: -3014306536460904497, guid: 3f8e7f2a5a8be2749a6d4b2c2453142f, type: 3}
+--- !u!64 &625067029896682054
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 319129914895242838}
+  m_GameObject: {fileID: 319129912801879829}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -3014306536460904497, guid: 3f8e7f2a5a8be2749a6d4b2c2453142f, type: 3}
+--- !u!64 &625067030283029842
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 319129913189281793}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2335685216524127942, guid: c648780ca13343f41973b18d8b56335d, type: 3}
+--- !u!64 &625067030324169623
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 319129913230292676}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
