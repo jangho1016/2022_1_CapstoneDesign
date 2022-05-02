@@ -43,7 +43,6 @@ public class PlayerCtrl : MonoBehaviour
         PlayerPrefs.SetInt("crack10", 0);
         PlayerPrefs.SetInt("crack11", 0);
         PlayerPrefs.SetInt("crack12", 0);
-        PlayerPrefs.SetInt("crack13", 0);
         PlayerPrefs.SetInt("pass", 0);
 
         if ((curSceneName == "Room1") || (curSceneName == "Room2") || (curSceneName == "Room3") || (curSceneName == "Room4") || (curSceneName == "Room5")) //1-5번 방이면
@@ -77,7 +76,7 @@ public class PlayerCtrl : MonoBehaviour
 
             else if(curSceneName == "Room1")
             {
-                if(time_last >= 0.0f)
+                if(time_last >= 0.0f) //시간만 0초 이상이면
                 {
                     crackText.text = "남은 하자: 0개";
                     PlayerPrefs.SetInt("pass", 1);
@@ -106,7 +105,7 @@ public class PlayerCtrl : MonoBehaviour
             {
                 crackText.text = "남은 하자: " + (4 - cnt) + "개";
 
-                if ((PlayerPrefs.GetInt("crack7") == 1) && (PlayerPrefs.GetInt("crack8") == 1) && (PlayerPrefs.GetInt("crack4") == 1) && (PlayerPrefs.GetInt("crack10") == 1) && (time_last >= 0.0f)) //이 부분 수정해야됨
+                if ((PlayerPrefs.GetInt("crack7") == 1) && (PlayerPrefs.GetInt("crack8") == 1) && (PlayerPrefs.GetInt("crack4") == 1) && (PlayerPrefs.GetInt("crack9") == 1) && (time_last >= 0.0f)) //이 부분 수정해야됨
                 {
                     PlayerPrefs.SetInt("pass", 1);
                 }
@@ -115,7 +114,7 @@ public class PlayerCtrl : MonoBehaviour
             {
                 crackText.text = "남은 하자: " + (5 - cnt) + "개";
 
-                if ((PlayerPrefs.GetInt("crack10") == 1) && (PlayerPrefs.GetInt("crack11") == 1) && (PlayerPrefs.GetInt("crack4") == 1) && (PlayerPrefs.GetInt("crack12") == 1) && (PlayerPrefs.GetInt("crack13") == 1) && (time_last >= 0.0f)) //이 부분 수정해야됨
+                if ((PlayerPrefs.GetInt("crack9") == 1) && (PlayerPrefs.GetInt("crack10") == 1) && (PlayerPrefs.GetInt("crack4") == 1) && (PlayerPrefs.GetInt("crack11") == 1) && (PlayerPrefs.GetInt("crack12") == 1) && (time_last >= 0.0f)) //이 부분 수정해야됨
                 {
                     PlayerPrefs.SetInt("pass", 1);
                 }
@@ -657,12 +656,13 @@ public class PlayerCtrl : MonoBehaviour
 
                         if (curSceneName == "Room5")
                         {
-                            PlayerPrefs.SetInt("crack9", 1);
+                            PlayerPrefs.SetInt("crack10", 1);
 
-                            if ((crackChk[8] == false) && (PlayerPrefs.GetInt("crack9") == 1))
+                            if ((crackChk[9] == false) && (PlayerPrefs.GetInt("crack10") == 1))
                             {
                                 cnt++;
-                                crackChk[8] = true;
+                                Debug.Log("Room5_1");
+                                crackChk[9] = true;
                             }
                         }
                     }
@@ -975,7 +975,7 @@ public class PlayerCtrl : MonoBehaviour
                             {
                                 cnt++;
                                 crackChk[3] = true;
-                                Debug.Log(cnt);
+                                Debug.Log("Room5_2");
                             }
                         }
                     }
@@ -983,13 +983,13 @@ public class PlayerCtrl : MonoBehaviour
                     {
                         if ((curSceneName == "Room4") || (curSceneName == "Room5"))
                         {
-                            PlayerPrefs.SetInt("crack10", 1);
+                            PlayerPrefs.SetInt("crack9", 1);
 
-                            if ((crackChk[9] == false) && (PlayerPrefs.GetInt("crack10") == 1))
+                            if ((crackChk[8] == false) && (PlayerPrefs.GetInt("crack9") == 1))
                             {
                                 cnt++;
-                                crackChk[9] = true;
-                                Debug.Log(cnt);
+                                crackChk[8] = true;
+                                Debug.Log("Room5_3");
                             }
                         }
                     }
@@ -1001,8 +1001,8 @@ public class PlayerCtrl : MonoBehaviour
                             {
                                 cnt++;
                                 crackChk[10] = true;
-                                Debug.Log(cnt);
-                            }
+                            Debug.Log("Room5_4");
+                        }
                     }
                     else if (hit.transform.tag == "Cockroach" == true)
                     {
@@ -1012,7 +1012,7 @@ public class PlayerCtrl : MonoBehaviour
                         {
                             cnt++;
                             crackChk[11] = true;
-                            Debug.Log(cnt);
+                            Debug.Log("Room5_5");
                         }
                     }
                 }
