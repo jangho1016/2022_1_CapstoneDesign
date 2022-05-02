@@ -1,0 +1,2 @@
+C:\Githib Local Path\2022_1_CapstoneDesign\CapstoneDesign\obj\Debug\Assembly-CSharp-firstpass.csproj.AssemblyReference.cache
+C:\Githib Local Path\2022_1_CapstoneDesign\CapstoneDesign\obj\Debug\Assembly-CSharp-firstpass.csproj.CoreCompileInputs.cache

@@ -17,6 +17,6 @@ public class RandomCtrl : MonoBehaviour
     IEnumerator LoadScene()
     {
         yield return new WaitForSeconds(3.0f);
-        SceneManager.LoadScene("Select");
+        SceneManager.LoadScene("Map Select");
     }
 }

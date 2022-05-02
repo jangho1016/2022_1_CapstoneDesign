@@ -186,6 +186,8 @@
     <Compile Include="Assets\GoogleVR\Scripts\Utilities\Internal\GvrCursorHelper.cs" />
     <Compile Include="Assets\GoogleVR\Scripts\Utilities\Internal\SuppressMemoryAllocationErrorAttribute.cs" />
     <Compile Include="Assets\GoogleVR\Scripts\Video\GvrVideoPlayerTexture.cs" />
+    <Compile Include="Assets\QuizCtrl.cs" />
+    <Compile Include="Assets\RoomDrawing.cs" />
     <Compile Include="Assets\Scripts\AirconditionerCtrl.cs" />
     <Compile Include="Assets\Scripts\Animation\BathRoomDoor.cs" />
     <Compile Include="Assets\Scripts\Animation\BathroomCdoor.cs" />

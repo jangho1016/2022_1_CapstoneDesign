@@ -61,23 +61,23 @@ public class ButtonCtrl : MonoBehaviour
     {
         if (num == 1)
         {
-            SceneManager.LoadScene("Room1");
+            SceneManager.LoadScene("Room1 Drawing");
         }
         else if (num == 2)
         {
-            SceneManager.LoadScene("Room2");
+            SceneManager.LoadScene("Room2 Drawing");
         }
         else if (num == 3)
         {
-            SceneManager.LoadScene("Room3");
+            SceneManager.LoadScene("Room3 Drawing");
         }
         else if (num == 4)
         {
-            SceneManager.LoadScene("Room4");
+            SceneManager.LoadScene("Room4 Drawing");
         }
         else if (num == 5)
         {
-            SceneManager.LoadScene("Room5");
+            SceneManager.LoadScene("Room5 Drawing");
         }
     }
 
@@ -85,23 +85,23 @@ public class ButtonCtrl : MonoBehaviour
     {
         if (num == 1)
         {
-            SceneManager.LoadScene("Room5");
+            SceneManager.LoadScene("Room5 Drawing");
         }
         else if (num == 2)
         {
-            SceneManager.LoadScene("Room1");
+            SceneManager.LoadScene("Room1 Drawing");
         }
         else if (num == 3)
         {
-            SceneManager.LoadScene("Room2");
+            SceneManager.LoadScene("Room2 Drawing");
         }
         else if (num == 4)
         {
-            SceneManager.LoadScene("Room3");
+            SceneManager.LoadScene("Room3 Drawing");
         }
         else if (num == 5)
         {
-            SceneManager.LoadScene("Room4");
+            SceneManager.LoadScene("Room4 Drawing");
         }
     }
 
@@ -109,23 +109,23 @@ public class ButtonCtrl : MonoBehaviour
     {
         if (num == 1)
         {
-            SceneManager.LoadScene("Room4");
+            SceneManager.LoadScene("Room4 Drawing");
         }
         else if (num == 2)
         {
-            SceneManager.LoadScene("Room5");
+            SceneManager.LoadScene("Room5 Drawing");
         }
         else if (num == 3)
         {
-            SceneManager.LoadScene("Room1");
+            SceneManager.LoadScene("Room1 Drawing");
         }
         else if (num == 4)
         {
-            SceneManager.LoadScene("Room2");
+            SceneManager.LoadScene("Room2 Drawing");
         }
         else if (num == 5)
         {
-            SceneManager.LoadScene("Room3");
+            SceneManager.LoadScene("Room3 Drawing");
         }
     }
 
@@ -133,51 +133,51 @@ public class ButtonCtrl : MonoBehaviour
     {
         if (num == 1)
         {
-            SceneManager.LoadScene("Room3");
+            SceneManager.LoadScene("Room3 Drawing");
         }
         else if (num == 2)
         {
-            SceneManager.LoadScene("Room4");
+            SceneManager.LoadScene("Room4 Drawing");
         }
         else if (num == 3)
         {
-            SceneManager.LoadScene("Room5");
+            SceneManager.LoadScene("Room5 Drawing");
         }
         else if (num == 4)
         {
-            SceneManager.LoadScene("Room1");
+            SceneManager.LoadScene("Room1 Drawing");
         }
         else if (num == 5)
         {
-            SceneManager.LoadScene("Room2");
+            SceneManager.LoadScene("Room2 Drawing");
         }
     }
     public void SelectBT5()
     {
         if (num == 1)
         {
-            SceneManager.LoadScene("Room2");
+            SceneManager.LoadScene("Room2 Drawing");
         }
         else if (num == 2)
         {
-            SceneManager.LoadScene("Room3");
+            SceneManager.LoadScene("Room3 Drawing");
         }
         else if (num == 3)
         {
-            SceneManager.LoadScene("Room4");
+            SceneManager.LoadScene("Room4 Drawing");
         }
         else if (num == 4)
         {
-            SceneManager.LoadScene("Room5");
+            SceneManager.LoadScene("Room5 Drawing");
         }
         else if (num == 5)
         {
-            SceneManager.LoadScene("Room1");
+            SceneManager.LoadScene("Room1 Drawing");
         }
     }
     public void RoomSelect()
     {
-        SceneManager.LoadScene("Select");
+        SceneManager.LoadScene("Map Select");
     }
     public void Quiz()
     {
