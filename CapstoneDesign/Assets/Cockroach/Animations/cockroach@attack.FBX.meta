@@ -1,0 +1,721 @@
+fileFormatVersion: 2
+guid: 9c10197393d1b294e935fb9dc33fcf16
+timeCreated: 1490355753
+licenseType: Store
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: cockroach_Abdomen-nub_bone
+    100004: cockroach_Abdomen_bone
+    100006: cockroach_Abdomen_ctrl
+    100008: cockroach_COM_ctrl
+    100010: cockroach_Head-nub_bone
+    100012: cockroach_Head_bone
+    100014: cockroach_Head_ctrl
+    100016: cockroach_l_Antenna10_bone
+    100018: cockroach_l_Antenna11_bone
+    100020: cockroach_l_Antenna11_ctrl
+    100022: cockroach_l_Antenna12-nub_bone
+    100024: cockroach_l_Antenna12-nub_ctrl
+    100026: cockroach_l_Antenna12_bone
+    100028: cockroach_l_Antenna1_bone
+    100030: cockroach_l_Antenna1_ctrl
+    100032: cockroach_l_Antenna2_bone
+    100034: cockroach_l_Antenna3_bone
+    100036: cockroach_l_Antenna3_ctrl
+    100038: cockroach_l_Antenna4_bone
+    100040: cockroach_l_Antenna5_bone
+    100042: cockroach_l_Antenna5_ctrl
+    100044: cockroach_l_Antenna6_bone
+    100046: cockroach_l_Antenna7_bone
+    100048: cockroach_l_Antenna7_ctrl
+    100050: cockroach_l_Antenna8_bone
+    100052: cockroach_l_Antenna9_bone
+    100054: cockroach_l_Antenna9_ctrl
+    100056: cockroach_l_ball_hind_IKGoal
+    100058: cockroach_l_ball_IKGoal
+    100060: cockroach_l_ball_middle_IKGoal
+    100062: cockroach_l_Claw-nub_bone
+    100064: cockroach_l_Claw_bone
+    100066: cockroach_l_Claw_hind-nub_bone
+    100068: cockroach_l_Claw_hind_bone
+    100070: cockroach_l_Claw_middle-nub_bone
+    100072: cockroach_l_Claw_middle_bone
+    100074: cockroach_l_Coxa_bone
+    100076: cockroach_l_Coxa_ctrl
+    100078: cockroach_l_Coxa_hind_bone
+    100080: cockroach_l_Coxa_hind_ctrl
+    100082: cockroach_l_Coxa_middle_bone
+    100084: cockroach_l_Coxa_middle_ctrl
+    100086: cockroach_l_Femur_bone
+    100088: cockroach_l_Femur_hind_bone
+    100090: cockroach_l_Femur_middle_bone
+    100092: cockroach_l_Heel_hind_hlp
+    100094: cockroach_l_heel_hind_IKGoal
+    100096: cockroach_l_Heel_hlp
+    100098: cockroach_l_heel_IKGoal
+    100100: cockroach_l_Heel_middle_hlp
+    100102: cockroach_l_heel_middle_IKGoal
+    100104: cockroach_l_HeelPeel_hind_hlp
+    100106: cockroach_l_HeelPeel_hlp
+    100108: cockroach_l_HeelPeel_middle_hlp
+    100110: cockroach_l_Tarsus_bone
+    100112: cockroach_l_Tarsus_hind_bone
+    100114: cockroach_l_Tarsus_middle_bone
+    100116: cockroach_l_Tibia_bone
+    100118: cockroach_l_Tibia_hind_bone
+    100120: cockroach_l_Tibia_middle_bone
+    100122: cockroach_l_Toe_bone
+    100124: cockroach_l_Toe_hind_bone
+    100126: cockroach_l_toe_hind_IKGoal
+    100128: cockroach_l_toe_IKGoal
+    100130: cockroach_l_Toe_middle_bone
+    100132: cockroach_l_toe_middle_IKGoal
+    100134: cockroach_l_ToeLift_hind_hlp
+    100136: cockroach_l_ToeLift_hind_hlp 1
+    100138: cockroach_l_ToeLift_hlp
+    100140: cockroach_l_ToeTap_hind_hlp
+    100142: cockroach_l_ToeTap_hlp
+    100144: cockroach_l_ToeTap_middle_hlp
+    100146: cockroach_Main_ctrl
+    100148: cockroach_mesh
+    100150: cockroach_r_Antenna10_bone
+    100152: cockroach_r_Antenna11_bone
+    100154: cockroach_r_Antenna11_ctrl
+    100156: cockroach_r_Antenna12-nub_bone
+    100158: cockroach_r_Antenna12-nub_ctrl
+    100160: cockroach_r_Antenna12_bone
+    100162: cockroach_r_Antenna1_bone
+    100164: cockroach_r_Antenna1_ctrl
+    100166: cockroach_r_Antenna2_bone
+    100168: cockroach_r_Antenna3_bone
+    100170: cockroach_r_Antenna3_ctrl
+    100172: cockroach_r_Antenna4_bone
+    100174: cockroach_r_Antenna5_bone
+    100176: cockroach_r_Antenna5_ctrl
+    100178: cockroach_r_Antenna6_bone
+    100180: cockroach_r_Antenna7_bone
+    100182: cockroach_r_Antenna7_ctrl
+    100184: cockroach_r_Antenna8_bone
+    100186: cockroach_r_Antenna9_bone
+    100188: cockroach_r_Antenna9_ctrl
+    100190: cockroach_r_ball_hind_IKGoal
+    100192: cockroach_r_ball_IKGoal
+    100194: cockroach_r_ball_middle_IKGoal
+    100196: cockroach_r_Claw-nub_bone
+    100198: cockroach_r_Claw_bone
+    100200: cockroach_r_Claw_hind-nub_bone
+    100202: cockroach_r_Claw_hind_bone
+    100204: cockroach_r_Claw_middle-nub_bone
+    100206: cockroach_r_Claw_middle_bone
+    100208: cockroach_r_Coxa_bone
+    100210: cockroach_r_Coxa_ctrl
+    100212: cockroach_r_Coxa_hind_bone
+    100214: cockroach_r_Coxa_hind_ctrl
+    100216: cockroach_r_Coxa_middle_bone
+    100218: cockroach_r_Coxa_middle_ctrl
+    100220: cockroach_r_Femur_bone
+    100222: cockroach_r_Femur_hind_bone
+    100224: cockroach_r_Femur_middle_bone
+    100226: cockroach_r_Heel_hind_hlp
+    100228: cockroach_r_heel_hind_IKGoal
+    100230: cockroach_r_Heel_hlp
+    100232: cockroach_r_heel_IKGoal
+    100234: cockroach_r_Heel_middle_hlp
+    100236: cockroach_r_heel_middle_IKGoal
+    100238: cockroach_r_HeelPeel_hind_hlp
+    100240: cockroach_r_HeelPeel_hlp
+    100242: cockroach_r_HeelPeel_middle_hlp
+    100244: cockroach_r_Tarsus_bone
+    100246: cockroach_r_Tarsus_hind_bone
+    100248: cockroach_r_Tarsus_middle_bone
+    100250: cockroach_r_Tibia_bone
+    100252: cockroach_r_Tibia_hind_bone
+    100254: cockroach_r_Tibia_middle_bone
+    100256: cockroach_r_Toe_bone
+    100258: cockroach_r_Toe_hind_bone
+    100260: cockroach_r_toe_hind_IKGoal
+    100262: cockroach_r_toe_IKGoal
+    100264: cockroach_r_Toe_middle_bone
+    100266: cockroach_r_toe_middle_IKGoa
+    100268: cockroach_r_ToeLift_hind_hlp
+    100270: cockroach_r_ToeLift_hind_hlp 1
+    100272: cockroach_r_ToeLift_hlp
+    100274: cockroach_r_ToeTap_hind_hlp
+    100276: cockroach_r_ToeTap_hlp
+    100278: cockroach_r_ToeTap_middle_hlp
+    100280: cockroach_Spine_bone
+    100282: wasp_l_Foot_ctrl
+    100284: wasp_l_Foot_hind_ctrl
+    100286: wasp_l_Foot_middle_ctrl
+    100288: wasp_r_Foot_ctrl
+    100290: wasp_r_Foot_hind_ctrl
+    100292: wasp_r_Foot_middle_ctrl
+    400000: //RootNode
+    400002: cockroach_Abdomen-nub_bone
+    400004: cockroach_Abdomen_bone
+    400006: cockroach_Abdomen_ctrl
+    400008: cockroach_COM_ctrl
+    400010: cockroach_Head-nub_bone
+    400012: cockroach_Head_bone
+    400014: cockroach_Head_ctrl
+    400016: cockroach_l_Antenna10_bone
+    400018: cockroach_l_Antenna11_bone
+    400020: cockroach_l_Antenna11_ctrl
+    400022: cockroach_l_Antenna12-nub_bone
+    400024: cockroach_l_Antenna12-nub_ctrl
+    400026: cockroach_l_Antenna12_bone
+    400028: cockroach_l_Antenna1_bone
+    400030: cockroach_l_Antenna1_ctrl
+    400032: cockroach_l_Antenna2_bone
+    400034: cockroach_l_Antenna3_bone
+    400036: cockroach_l_Antenna3_ctrl
+    400038: cockroach_l_Antenna4_bone
+    400040: cockroach_l_Antenna5_bone
+    400042: cockroach_l_Antenna5_ctrl
+    400044: cockroach_l_Antenna6_bone
+    400046: cockroach_l_Antenna7_bone
+    400048: cockroach_l_Antenna7_ctrl
+    400050: cockroach_l_Antenna8_bone
+    400052: cockroach_l_Antenna9_bone
+    400054: cockroach_l_Antenna9_ctrl
+    400056: cockroach_l_ball_hind_IKGoal
+    400058: cockroach_l_ball_IKGoal
+    400060: cockroach_l_ball_middle_IKGoal
+    400062: cockroach_l_Claw-nub_bone
+    400064: cockroach_l_Claw_bone
+    400066: cockroach_l_Claw_hind-nub_bone
+    400068: cockroach_l_Claw_hind_bone
+    400070: cockroach_l_Claw_middle-nub_bone
+    400072: cockroach_l_Claw_middle_bone
+    400074: cockroach_l_Coxa_bone
+    400076: cockroach_l_Coxa_ctrl
+    400078: cockroach_l_Coxa_hind_bone
+    400080: cockroach_l_Coxa_hind_ctrl
+    400082: cockroach_l_Coxa_middle_bone
+    400084: cockroach_l_Coxa_middle_ctrl
+    400086: cockroach_l_Femur_bone
+    400088: cockroach_l_Femur_hind_bone
+    400090: cockroach_l_Femur_middle_bone
+    400092: cockroach_l_Heel_hind_hlp
+    400094: cockroach_l_heel_hind_IKGoal
+    400096: cockroach_l_Heel_hlp
+    400098: cockroach_l_heel_IKGoal
+    400100: cockroach_l_Heel_middle_hlp
+    400102: cockroach_l_heel_middle_IKGoal
+    400104: cockroach_l_HeelPeel_hind_hlp
+    400106: cockroach_l_HeelPeel_hlp
+    400108: cockroach_l_HeelPeel_middle_hlp
+    400110: cockroach_l_Tarsus_bone
+    400112: cockroach_l_Tarsus_hind_bone
+    400114: cockroach_l_Tarsus_middle_bone
+    400116: cockroach_l_Tibia_bone
+    400118: cockroach_l_Tibia_hind_bone
+    400120: cockroach_l_Tibia_middle_bone
+    400122: cockroach_l_Toe_bone
+    400124: cockroach_l_Toe_hind_bone
+    400126: cockroach_l_toe_hind_IKGoal
+    400128: cockroach_l_toe_IKGoal
+    400130: cockroach_l_Toe_middle_bone
+    400132: cockroach_l_toe_middle_IKGoal
+    400134: cockroach_l_ToeLift_hind_hlp
+    400136: cockroach_l_ToeLift_hind_hlp 1
+    400138: cockroach_l_ToeLift_hlp
+    400140: cockroach_l_ToeTap_hind_hlp
+    400142: cockroach_l_ToeTap_hlp
+    400144: cockroach_l_ToeTap_middle_hlp
+    400146: cockroach_Main_ctrl
+    400148: cockroach_mesh
+    400150: cockroach_r_Antenna10_bone
+    400152: cockroach_r_Antenna11_bone
+    400154: cockroach_r_Antenna11_ctrl
+    400156: cockroach_r_Antenna12-nub_bone
+    400158: cockroach_r_Antenna12-nub_ctrl
+    400160: cockroach_r_Antenna12_bone
+    400162: cockroach_r_Antenna1_bone
+    400164: cockroach_r_Antenna1_ctrl
+    400166: cockroach_r_Antenna2_bone
+    400168: cockroach_r_Antenna3_bone
+    400170: cockroach_r_Antenna3_ctrl
+    400172: cockroach_r_Antenna4_bone
+    400174: cockroach_r_Antenna5_bone
+    400176: cockroach_r_Antenna5_ctrl
+    400178: cockroach_r_Antenna6_bone
+    400180: cockroach_r_Antenna7_bone
+    400182: cockroach_r_Antenna7_ctrl
+    400184: cockroach_r_Antenna8_bone
+    400186: cockroach_r_Antenna9_bone
+    400188: cockroach_r_Antenna9_ctrl
+    400190: cockroach_r_ball_hind_IKGoal
+    400192: cockroach_r_ball_IKGoal
+    400194: cockroach_r_ball_middle_IKGoal
+    400196: cockroach_r_Claw-nub_bone
+    400198: cockroach_r_Claw_bone
+    400200: cockroach_r_Claw_hind-nub_bone
+    400202: cockroach_r_Claw_hind_bone
+    400204: cockroach_r_Claw_middle-nub_bone
+    400206: cockroach_r_Claw_middle_bone
+    400208: cockroach_r_Coxa_bone
+    400210: cockroach_r_Coxa_ctrl
+    400212: cockroach_r_Coxa_hind_bone
+    400214: cockroach_r_Coxa_hind_ctrl
+    400216: cockroach_r_Coxa_middle_bone
+    400218: cockroach_r_Coxa_middle_ctrl
+    400220: cockroach_r_Femur_bone
+    400222: cockroach_r_Femur_hind_bone
+    400224: cockroach_r_Femur_middle_bone
+    400226: cockroach_r_Heel_hind_hlp
+    400228: cockroach_r_heel_hind_IKGoal
+    400230: cockroach_r_Heel_hlp
+    400232: cockroach_r_heel_IKGoal
+    400234: cockroach_r_Heel_middle_hlp
+    400236: cockroach_r_heel_middle_IKGoal
+    400238: cockroach_r_HeelPeel_hind_hlp
+    400240: cockroach_r_HeelPeel_hlp
+    400242: cockroach_r_HeelPeel_middle_hlp
+    400244: cockroach_r_Tarsus_bone
+    400246: cockroach_r_Tarsus_hind_bone
+    400248: cockroach_r_Tarsus_middle_bone
+    400250: cockroach_r_Tibia_bone
+    400252: cockroach_r_Tibia_hind_bone
+    400254: cockroach_r_Tibia_middle_bone
+    400256: cockroach_r_Toe_bone
+    400258: cockroach_r_Toe_hind_bone
+    400260: cockroach_r_toe_hind_IKGoal
+    400262: cockroach_r_toe_IKGoal
+    400264: cockroach_r_Toe_middle_bone
+    400266: cockroach_r_toe_middle_IKGoa
+    400268: cockroach_r_ToeLift_hind_hlp
+    400270: cockroach_r_ToeLift_hind_hlp 1
+    400272: cockroach_r_ToeLift_hlp
+    400274: cockroach_r_ToeTap_hind_hlp
+    400276: cockroach_r_ToeTap_hlp
+    400278: cockroach_r_ToeTap_middle_hlp
+    400280: cockroach_Spine_bone
+    400282: wasp_l_Foot_ctrl
+    400284: wasp_l_Foot_hind_ctrl
+    400286: wasp_l_Foot_middle_ctrl
+    400288: wasp_r_Foot_ctrl
+    400290: wasp_r_Foot_hind_ctrl
+    400292: wasp_r_Foot_middle_ctrl
+    2300000: wasp_l_Foot_ctrl
+    2300002: wasp_l_Foot_hind_ctrl
+    2300004: wasp_l_Foot_middle_ctrl
+    2300006: wasp_r_Foot_ctrl
+    2300008: wasp_r_Foot_hind_ctrl
+    2300010: wasp_r_Foot_middle_ctrl
+    3300000: wasp_l_Foot_ctrl
+    3300002: wasp_l_Foot_hind_ctrl
+    3300004: wasp_l_Foot_middle_ctrl
+    3300006: wasp_r_Foot_ctrl
+    3300008: wasp_r_Foot_hind_ctrl
+    3300010: wasp_r_Foot_middle_ctrl
+    4300000: cockroach_mesh
+    4300002: wasp_r_Foot_hind_ctrl
+    4300004: wasp_l_Foot_hind_ctrl
+    4300006: wasp_r_Foot_middle_ctrl
+    4300008: wasp_l_Foot_middle_ctrl
+    4300010: wasp_l_Foot_ctrl
+    4300012: wasp_r_Foot_ctrl
+    7400000: attack
+    9500000: //RootNode
+    13700000: cockroach_mesh
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: attack
+      takeName: Take 001
+      firstFrame: 257
+      lastFrame: 280
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: cockroach_Abdomen_ctrl
+        weight: 1
+      - path: cockroach_Head_ctrl
+        weight: 1
+      - path: cockroach_Main_ctrl
+        weight: 1
+      - path: cockroach_Main_ctrl/cockroach_COM_ctrl
+        weight: 1
+      - path: cockroach_Main_ctrl/cockroach_COM_ctrl/cockroach_Spine_bone
+        weight: 1
+      - path: cockroach_Main_ctrl/cockroach_COM_ctrl/cockroach_Spine_bone/cockroach_Abdomen_bone
+        weight: 1
+      - path: cockroach_Main_ctrl/cockroach_COM_ctrl/cockroach_Spine_bone/cockroach_Abdomen_bone/cockroach_Abdomen-nub_bone
+        weight: 1
+      - path: cockroach_Main_ctrl/cockroach_COM_ctrl/cockroach_Spine_bone/cockroach_Head_bone
+        weight: 1
+      - path: cockroach_Main_ctrl/cockroach_COM_ctrl/cockroach_Spine_bone/cockroach_Head_bone/cockroach_Head-nub_bone
+        weight: 1
+      - path: cockroach_Main_ctrl/cockroach_COM_ctrl/cockroach_Spine_bone/cockroach_Head_bone/cockroach_l_Antenna1_bone
+        weight: 1
+      - path: cockroach_Main_ctrl/cockroach_COM_ctrl/cockroach_Spine_bone/cockroach_Head_bone/cockroach_l_Antenna1_bone/cockroach_l_Antenna2_bone
+        weight: 1
+      - path: cockroach_Main_ctrl/cockroach_COM_ctrl/cockroach_Spine_bone/cockroach_Head_bone/cockroach_l_Antenna1_bone/cockroach_l_Antenna2_bone/cockroach_l_Antenna3_bone
+        weight: 1
+      - path: cockroach_Main_ctrl/cockroach_COM_ctrl/cockroach_Spine_bone/cockroach_Head_bone/cockroach_l_Antenna1_bone/cockroach_l_Antenna2_bone/cockroach_l_Antenna3_bone/cockroach_l_Antenna4_bone
+        weight: 1
+      - path: cockroach_Main_ctrl/cockroach_COM_ctrl/cockroach_Spine_bone/cockroach_Head_bone/cockroach_l_Antenna1_bone/cockroach_l_Antenna2_bone/cockroach_l_Antenna3_bone/cockroach_l_Antenna4_bone/cockroach_l_Antenna5_bone
+        weight: 1
+      - path: cockroach_Main_ctrl/cockroach_COM_ctrl/cockroach_Spine_bone/cockroach_Head_bone/cockroach_l_Antenna1_bone/cockroach_l_Antenna2_bone/cockroach_l_Antenna3_bone/cockroach_l_Antenna4_bone/cockroach_l_Antenna5_bone/cockroach_l_Antenna6_bone
+        weight: 1
+      - path: cockroach_Main_ctrl/cockroach_COM_ctrl/cockroach_Spine_bone/cockroach_Head_bone/cockroach_l_Antenna1_bone/cockroach_l_Antenna2_bone/cockroach_l_Antenna3_bone/cockroach_l_Antenna4_bone/cockroach_l_Antenna5_bone/cockroach_l_Antenna6_bone/cockroach_l_Antenna7_bone
+        weight: 1
+      - path: cockroach_Main_ctrl/cockroach_COM_ctrl/cockroach_Spine_bone/cockroach_Head_bone/cockroach_l_Antenna1_bone/cockroach_l_Antenna2_bone/cockroach_l_Antenna3_bone/cockroach_l_Antenna4_bone/cockroach_l_Antenna5_bone/cockroach_l_Antenna6_bone/cockroach_l_Antenna7_bone/cockroach_l_Antenna8_bone
+        weight: 1
+      - path: cockroach_Main_ctrl/cockroach_COM_ctrl/cockroach_Spine_bone/cockroach_Head_bone/cockroach_l_Antenna1_bone/cockroach_l_Antenna2_bone/cockroach_l_Antenna3_bone/cockroach_l_Antenna4_bone/cockroach_l_Antenna5_bone/cockroach_l_Antenna6_bone/cockroach_l_Antenna7_bone/cockroach_l_Antenna8_bone/cockroach_l_Antenna9_bone
+        weight: 1
+      - path: cockroach_Main_ctrl/cockroach_COM_ctrl/cockroach_Spine_bone/cockroach_Head_bone/cockroach_l_Antenna1_bone/cockroach_l_Antenna2_bone/cockroach_l_Antenna3_bone/cockroach_l_Antenna4_bone/cockroach_l_Antenna5_bone/cockroach_l_Antenna6_bone/cockroach_l_Antenna7_bone/cockroach_l_Antenna8_bone/cockroach_l_Antenna9_bone/cockroach_l_Antenna10_bone
+        weight: 1
+      - path: cockroach_Main_ctrl/cockroach_COM_ctrl/cockroach_Spine_bone/cockroach_Head_bone/cockroach_l_Antenna1_bone/cockroach_l_Antenna2_bone/cockroach_l_Antenna3_bone/cockroach_l_Antenna4_bone/cockroach_l_Antenna5_bone/cockroach_l_Antenna6_bone/cockroach_l_Antenna7_bone/cockroach_l_Antenna8_bone/cockroach_l_Antenna9_bone/cockroach_l_Antenna10_bone/cockroach_l_Antenna11_bone
+        weight: 1
+      - path: cockroach_Main_ctrl/cockroach_COM_ctrl/cockroach_Spine_bone/cockroach_Head_bone/cockroach_l_Antenna1_bone/cockroach_l_Antenna2_bone/cockroach_l_Antenna3_bone/cockroach_l_Antenna4_bone/cockroach_l_Antenna5_bone/cockroach_l_Antenna6_bone/cockroach_l_Antenna7_bone/cockroach_l_Antenna8_bone/cockroach_l_Antenna9_bone/cockroach_l_Antenna10_bone/cockroach_l_Antenna11_bone/cockroach_l_Antenna12_bone
+        weight: 1
+      - path: cockroach_Main_ctrl/cockroach_COM_ctrl/cockroach_Spine_bone/cockroach_Head_bone/cockroach_l_Antenna1_bone/cockroach_l_Antenna2_bone/cockroach_l_Antenna3_bone/cockroach_l_Antenna4_bone/cockroach_l_Antenna5_bone/cockroach_l_Antenna6_bone/cockroach_l_Antenna7_bone/cockroach_l_Antenna8_bone/cockroach_l_Antenna9_bone/cockroach_l_Antenna10_bone/cockroach_l_Antenna11_bone/cockroach_l_Antenna12_bone/cockroach_l_Antenna12-nub_bone
+        weight: 1
+      - path: cockroach_Main_ctrl/cockroach_COM_ctrl/cockroach_Spine_bone/cockroach_Head_bone/cockroach_l_Antenna1_ctrl
+        weight: 1
+      - path: cockroach_Main_ctrl/cockroach_COM_ctrl/cockroach_Spine_bone/cockroach_Head_bone/cockroach_l_Antenna1_ctrl/cockroach_l_Antenna3_ctrl
+        weight: 1
+      - path: cockroach_Main_ctrl/cockroach_COM_ctrl/cockroach_Spine_bone/cockroach_Head_bone/cockroach_l_Antenna1_ctrl/cockroach_l_Antenna3_ctrl/cockroach_l_Antenna5_ctrl
+        weight: 1
+      - path: cockroach_Main_ctrl/cockroach_COM_ctrl/cockroach_Spine_bone/cockroach_Head_bone/cockroach_l_Antenna1_ctrl/cockroach_l_Antenna3_ctrl/cockroach_l_Antenna5_ctrl/cockroach_l_Antenna7_ctrl
+        weight: 1
+      - path: cockroach_Main_ctrl/cockroach_COM_ctrl/cockroach_Spine_bone/cockroach_Head_bone/cockroach_l_Antenna1_ctrl/cockroach_l_Antenna3_ctrl/cockroach_l_Antenna5_ctrl/cockroach_l_Antenna7_ctrl/cockroach_l_Antenna9_ctrl
+        weight: 1
+      - path: cockroach_Main_ctrl/cockroach_COM_ctrl/cockroach_Spine_bone/cockroach_Head_bone/cockroach_l_Antenna1_ctrl/cockroach_l_Antenna3_ctrl/cockroach_l_Antenna5_ctrl/cockroach_l_Antenna7_ctrl/cockroach_l_Antenna9_ctrl/cockroach_l_Antenna11_ctrl
+        weight: 1
+      - path: cockroach_Main_ctrl/cockroach_COM_ctrl/cockroach_Spine_bone/cockroach_Head_bone/cockroach_l_Antenna1_ctrl/cockroach_l_Antenna3_ctrl/cockroach_l_Antenna5_ctrl/cockroach_l_Antenna7_ctrl/cockroach_l_Antenna9_ctrl/cockroach_l_Antenna11_ctrl/cockroach_l_Antenna12-nub_ctrl
+        weight: 1
+      - path: cockroach_Main_ctrl/cockroach_COM_ctrl/cockroach_Spine_bone/cockroach_Head_bone/cockroach_r_Antenna1_bone
+        weight: 1
+      - path: cockroach_Main_ctrl/cockroach_COM_ctrl/cockroach_Spine_bone/cockroach_Head_bone/cockroach_r_Antenna1_bone/cockroach_r_Antenna2_bone
+        weight: 1
+      - path: cockroach_Main_ctrl/cockroach_COM_ctrl/cockroach_Spine_bone/cockroach_Head_bone/cockroach_r_Antenna1_bone/cockroach_r_Antenna2_bone/cockroach_r_Antenna3_bone
+        weight: 1
+      - path: cockroach_Main_ctrl/cockroach_COM_ctrl/cockroach_Spine_bone/cockroach_Head_bone/cockroach_r_Antenna1_bone/cockroach_r_Antenna2_bone/cockroach_r_Antenna3_bone/cockroach_r_Antenna4_bone
+        weight: 1
+      - path: cockroach_Main_ctrl/cockroach_COM_ctrl/cockroach_Spine_bone/cockroach_Head_bone/cockroach_r_Antenna1_bone/cockroach_r_Antenna2_bone/cockroach_r_Antenna3_bone/cockroach_r_Antenna4_bone/cockroach_r_Antenna5_bone
+        weight: 1
+      - path: cockroach_Main_ctrl/cockroach_COM_ctrl/cockroach_Spine_bone/cockroach_Head_bone/cockroach_r_Antenna1_bone/cockroach_r_Antenna2_bone/cockroach_r_Antenna3_bone/cockroach_r_Antenna4_bone/cockroach_r_Antenna5_bone/cockroach_r_Antenna6_bone
+        weight: 1
+      - path: cockroach_Main_ctrl/cockroach_COM_ctrl/cockroach_Spine_bone/cockroach_Head_bone/cockroach_r_Antenna1_bone/cockroach_r_Antenna2_bone/cockroach_r_Antenna3_bone/cockroach_r_Antenna4_bone/cockroach_r_Antenna5_bone/cockroach_r_Antenna6_bone/cockroach_r_Antenna7_bone
+        weight: 1
+      - path: cockroach_Main_ctrl/cockroach_COM_ctrl/cockroach_Spine_bone/cockroach_Head_bone/cockroach_r_Antenna1_bone/cockroach_r_Antenna2_bone/cockroach_r_Antenna3_bone/cockroach_r_Antenna4_bone/cockroach_r_Antenna5_bone/cockroach_r_Antenna6_bone/cockroach_r_Antenna7_bone/cockroach_r_Antenna8_bone
+        weight: 1
+      - path: cockroach_Main_ctrl/cockroach_COM_ctrl/cockroach_Spine_bone/cockroach_Head_bone/cockroach_r_Antenna1_bone/cockroach_r_Antenna2_bone/cockroach_r_Antenna3_bone/cockroach_r_Antenna4_bone/cockroach_r_Antenna5_bone/cockroach_r_Antenna6_bone/cockroach_r_Antenna7_bone/cockroach_r_Antenna8_bone/cockroach_r_Antenna9_bone
+        weight: 1
+      - path: cockroach_Main_ctrl/cockroach_COM_ctrl/cockroach_Spine_bone/cockroach_Head_bone/cockroach_r_Antenna1_bone/cockroach_r_Antenna2_bone/cockroach_r_Antenna3_bone/cockroach_r_Antenna4_bone/cockroach_r_Antenna5_bone/cockroach_r_Antenna6_bone/cockroach_r_Antenna7_bone/cockroach_r_Antenna8_bone/cockroach_r_Antenna9_bone/cockroach_r_Antenna10_bone
+        weight: 1
+      - path: cockroach_Main_ctrl/cockroach_COM_ctrl/cockroach_Spine_bone/cockroach_Head_bone/cockroach_r_Antenna1_bone/cockroach_r_Antenna2_bone/cockroach_r_Antenna3_bone/cockroach_r_Antenna4_bone/cockroach_r_Antenna5_bone/cockroach_r_Antenna6_bone/cockroach_r_Antenna7_bone/cockroach_r_Antenna8_bone/cockroach_r_Antenna9_bone/cockroach_r_Antenna10_bone/cockroach_r_Antenna11_bone
+        weight: 1
+      - path: cockroach_Main_ctrl/cockroach_COM_ctrl/cockroach_Spine_bone/cockroach_Head_bone/cockroach_r_Antenna1_bone/cockroach_r_Antenna2_bone/cockroach_r_Antenna3_bone/cockroach_r_Antenna4_bone/cockroach_r_Antenna5_bone/cockroach_r_Antenna6_bone/cockroach_r_Antenna7_bone/cockroach_r_Antenna8_bone/cockroach_r_Antenna9_bone/cockroach_r_Antenna10_bone/cockroach_r_Antenna11_bone/cockroach_r_Antenna12_bone
+        weight: 1
+      - path: cockroach_Main_ctrl/cockroach_COM_ctrl/cockroach_Spine_bone/cockroach_Head_bone/cockroach_r_Antenna1_bone/cockroach_r_Antenna2_bone/cockroach_r_Antenna3_bone/cockroach_r_Antenna4_bone/cockroach_r_Antenna5_bone/cockroach_r_Antenna6_bone/cockroach_r_Antenna7_bone/cockroach_r_Antenna8_bone/cockroach_r_Antenna9_bone/cockroach_r_Antenna10_bone/cockroach_r_Antenna11_bone/cockroach_r_Antenna12_bone/cockroach_r_Antenna12-nub_bone
+        weight: 1
+      - path: cockroach_Main_ctrl/cockroach_COM_ctrl/cockroach_Spine_bone/cockroach_Head_bone/cockroach_r_Antenna1_ctrl
+        weight: 1
+      - path: cockroach_Main_ctrl/cockroach_COM_ctrl/cockroach_Spine_bone/cockroach_Head_bone/cockroach_r_Antenna1_ctrl/cockroach_r_Antenna3_ctrl
+        weight: 1
+      - path: cockroach_Main_ctrl/cockroach_COM_ctrl/cockroach_Spine_bone/cockroach_Head_bone/cockroach_r_Antenna1_ctrl/cockroach_r_Antenna3_ctrl/cockroach_r_Antenna5_ctrl
+        weight: 1
+      - path: cockroach_Main_ctrl/cockroach_COM_ctrl/cockroach_Spine_bone/cockroach_Head_bone/cockroach_r_Antenna1_ctrl/cockroach_r_Antenna3_ctrl/cockroach_r_Antenna5_ctrl/cockroach_r_Antenna7_ctrl
+        weight: 1
+      - path: cockroach_Main_ctrl/cockroach_COM_ctrl/cockroach_Spine_bone/cockroach_Head_bone/cockroach_r_Antenna1_ctrl/cockroach_r_Antenna3_ctrl/cockroach_r_Antenna5_ctrl/cockroach_r_Antenna7_ctrl/cockroach_r_Antenna9_ctrl
+        weight: 1
+      - path: cockroach_Main_ctrl/cockroach_COM_ctrl/cockroach_Spine_bone/cockroach_Head_bone/cockroach_r_Antenna1_ctrl/cockroach_r_Antenna3_ctrl/cockroach_r_Antenna5_ctrl/cockroach_r_Antenna7_ctrl/cockroach_r_Antenna9_ctrl/cockroach_r_Antenna11_ctrl
+        weight: 1
+      - path: cockroach_Main_ctrl/cockroach_COM_ctrl/cockroach_Spine_bone/cockroach_Head_bone/cockroach_r_Antenna1_ctrl/cockroach_r_Antenna3_ctrl/cockroach_r_Antenna5_ctrl/cockroach_r_Antenna7_ctrl/cockroach_r_Antenna9_ctrl/cockroach_r_Antenna11_ctrl/cockroach_r_Antenna12-nub_ctrl
+        weight: 1
+      - path: cockroach_Main_ctrl/cockroach_COM_ctrl/cockroach_Spine_bone/cockroach_l_Coxa_bone
+        weight: 1
+      - path: cockroach_Main_ctrl/cockroach_COM_ctrl/cockroach_Spine_bone/cockroach_l_Coxa_bone/cockroach_l_Femur_bone
+        weight: 1
+      - path: cockroach_Main_ctrl/cockroach_COM_ctrl/cockroach_Spine_bone/cockroach_l_Coxa_bone/cockroach_l_Femur_bone/cockroach_l_Tibia_bone
+        weight: 1
+      - path: cockroach_Main_ctrl/cockroach_COM_ctrl/cockroach_Spine_bone/cockroach_l_Coxa_bone/cockroach_l_Femur_bone/cockroach_l_Tibia_bone/cockroach_l_Tarsus_bone
+        weight: 1
+      - path: cockroach_Main_ctrl/cockroach_COM_ctrl/cockroach_Spine_bone/cockroach_l_Coxa_bone/cockroach_l_Femur_bone/cockroach_l_Tibia_bone/cockroach_l_Tarsus_bone/cockroach_l_Toe_bone
+        weight: 1
+      - path: cockroach_Main_ctrl/cockroach_COM_ctrl/cockroach_Spine_bone/cockroach_l_Coxa_bone/cockroach_l_Femur_bone/cockroach_l_Tibia_bone/cockroach_l_Tarsus_bone/cockroach_l_Toe_bone/cockroach_l_Claw_bone
+        weight: 1
+      - path: cockroach_Main_ctrl/cockroach_COM_ctrl/cockroach_Spine_bone/cockroach_l_Coxa_bone/cockroach_l_Femur_bone/cockroach_l_Tibia_bone/cockroach_l_Tarsus_bone/cockroach_l_Toe_bone/cockroach_l_Claw_bone/cockroach_l_Claw-nub_bone
+        weight: 1
+      - path: cockroach_Main_ctrl/cockroach_COM_ctrl/cockroach_Spine_bone/cockroach_l_Coxa_ctrl
+        weight: 1
+      - path: cockroach_Main_ctrl/cockroach_COM_ctrl/cockroach_Spine_bone/cockroach_l_Coxa_hind_bone
+        weight: 1
+      - path: cockroach_Main_ctrl/cockroach_COM_ctrl/cockroach_Spine_bone/cockroach_l_Coxa_hind_bone/cockroach_l_Femur_hind_bone
+        weight: 1
+      - path: cockroach_Main_ctrl/cockroach_COM_ctrl/cockroach_Spine_bone/cockroach_l_Coxa_hind_bone/cockroach_l_Femur_hind_bone/cockroach_l_Tibia_hind_bone
+        weight: 1
+      - path: cockroach_Main_ctrl/cockroach_COM_ctrl/cockroach_Spine_bone/cockroach_l_Coxa_hind_bone/cockroach_l_Femur_hind_bone/cockroach_l_Tibia_hind_bone/cockroach_l_Tarsus_hind_bone
+        weight: 1
+      - path: cockroach_Main_ctrl/cockroach_COM_ctrl/cockroach_Spine_bone/cockroach_l_Coxa_hind_bone/cockroach_l_Femur_hind_bone/cockroach_l_Tibia_hind_bone/cockroach_l_Tarsus_hind_bone/cockroach_l_Toe_hind_bone
+        weight: 1
+      - path: cockroach_Main_ctrl/cockroach_COM_ctrl/cockroach_Spine_bone/cockroach_l_Coxa_hind_bone/cockroach_l_Femur_hind_bone/cockroach_l_Tibia_hind_bone/cockroach_l_Tarsus_hind_bone/cockroach_l_Toe_hind_bone/cockroach_l_Claw_hind_bone
+        weight: 1
+      - path: cockroach_Main_ctrl/cockroach_COM_ctrl/cockroach_Spine_bone/cockroach_l_Coxa_hind_bone/cockroach_l_Femur_hind_bone/cockroach_l_Tibia_hind_bone/cockroach_l_Tarsus_hind_bone/cockroach_l_Toe_hind_bone/cockroach_l_Claw_hind_bone/cockroach_l_Claw_hind-nub_bone
+        weight: 1
+      - path: cockroach_Main_ctrl/cockroach_COM_ctrl/cockroach_Spine_bone/cockroach_l_Coxa_hind_ctrl
+        weight: 1
+      - path: cockroach_Main_ctrl/cockroach_COM_ctrl/cockroach_Spine_bone/cockroach_l_Coxa_middle_bone
+        weight: 1
+      - path: cockroach_Main_ctrl/cockroach_COM_ctrl/cockroach_Spine_bone/cockroach_l_Coxa_middle_bone/cockroach_l_Femur_middle_bone
+        weight: 1
+      - path: cockroach_Main_ctrl/cockroach_COM_ctrl/cockroach_Spine_bone/cockroach_l_Coxa_middle_bone/cockroach_l_Femur_middle_bone/cockroach_l_Tibia_middle_bone
+        weight: 1
+      - path: cockroach_Main_ctrl/cockroach_COM_ctrl/cockroach_Spine_bone/cockroach_l_Coxa_middle_bone/cockroach_l_Femur_middle_bone/cockroach_l_Tibia_middle_bone/cockroach_l_Tarsus_middle_bone
+        weight: 1
+      - path: cockroach_Main_ctrl/cockroach_COM_ctrl/cockroach_Spine_bone/cockroach_l_Coxa_middle_bone/cockroach_l_Femur_middle_bone/cockroach_l_Tibia_middle_bone/cockroach_l_Tarsus_middle_bone/cockroach_l_Toe_middle_bone
+        weight: 1
+      - path: cockroach_Main_ctrl/cockroach_COM_ctrl/cockroach_Spine_bone/cockroach_l_Coxa_middle_bone/cockroach_l_Femur_middle_bone/cockroach_l_Tibia_middle_bone/cockroach_l_Tarsus_middle_bone/cockroach_l_Toe_middle_bone/cockroach_l_Claw_middle_bone
+        weight: 1
+      - path: cockroach_Main_ctrl/cockroach_COM_ctrl/cockroach_Spine_bone/cockroach_l_Coxa_middle_bone/cockroach_l_Femur_middle_bone/cockroach_l_Tibia_middle_bone/cockroach_l_Tarsus_middle_bone/cockroach_l_Toe_middle_bone/cockroach_l_Claw_middle_bone/cockroach_l_Claw_middle-nub_bone
+        weight: 1
+      - path: cockroach_Main_ctrl/cockroach_COM_ctrl/cockroach_Spine_bone/cockroach_l_Coxa_middle_ctrl
+        weight: 1
+      - path: cockroach_Main_ctrl/cockroach_COM_ctrl/cockroach_Spine_bone/cockroach_r_Coxa_bone
+        weight: 1
+      - path: cockroach_Main_ctrl/cockroach_COM_ctrl/cockroach_Spine_bone/cockroach_r_Coxa_bone/cockroach_r_Femur_bone
+        weight: 1
+      - path: cockroach_Main_ctrl/cockroach_COM_ctrl/cockroach_Spine_bone/cockroach_r_Coxa_bone/cockroach_r_Femur_bone/cockroach_r_Tibia_bone
+        weight: 1
+      - path: cockroach_Main_ctrl/cockroach_COM_ctrl/cockroach_Spine_bone/cockroach_r_Coxa_bone/cockroach_r_Femur_bone/cockroach_r_Tibia_bone/cockroach_r_Tarsus_bone
+        weight: 1
+      - path: cockroach_Main_ctrl/cockroach_COM_ctrl/cockroach_Spine_bone/cockroach_r_Coxa_bone/cockroach_r_Femur_bone/cockroach_r_Tibia_bone/cockroach_r_Tarsus_bone/cockroach_r_Toe_bone
+        weight: 1
+      - path: cockroach_Main_ctrl/cockroach_COM_ctrl/cockroach_Spine_bone/cockroach_r_Coxa_bone/cockroach_r_Femur_bone/cockroach_r_Tibia_bone/cockroach_r_Tarsus_bone/cockroach_r_Toe_bone/cockroach_r_Claw_bone
+        weight: 1
+      - path: cockroach_Main_ctrl/cockroach_COM_ctrl/cockroach_Spine_bone/cockroach_r_Coxa_bone/cockroach_r_Femur_bone/cockroach_r_Tibia_bone/cockroach_r_Tarsus_bone/cockroach_r_Toe_bone/cockroach_r_Claw_bone/cockroach_r_Claw-nub_bone
+        weight: 1
+      - path: cockroach_Main_ctrl/cockroach_COM_ctrl/cockroach_Spine_bone/cockroach_r_Coxa_ctrl
+        weight: 1
+      - path: cockroach_Main_ctrl/cockroach_COM_ctrl/cockroach_Spine_bone/cockroach_r_Coxa_hind_bone
+        weight: 1
+      - path: cockroach_Main_ctrl/cockroach_COM_ctrl/cockroach_Spine_bone/cockroach_r_Coxa_hind_bone/cockroach_r_Femur_hind_bone
+        weight: 1
+      - path: cockroach_Main_ctrl/cockroach_COM_ctrl/cockroach_Spine_bone/cockroach_r_Coxa_hind_bone/cockroach_r_Femur_hind_bone/cockroach_r_Tibia_hind_bone
+        weight: 1
+      - path: cockroach_Main_ctrl/cockroach_COM_ctrl/cockroach_Spine_bone/cockroach_r_Coxa_hind_bone/cockroach_r_Femur_hind_bone/cockroach_r_Tibia_hind_bone/cockroach_r_Tarsus_hind_bone
+        weight: 1
+      - path: cockroach_Main_ctrl/cockroach_COM_ctrl/cockroach_Spine_bone/cockroach_r_Coxa_hind_bone/cockroach_r_Femur_hind_bone/cockroach_r_Tibia_hind_bone/cockroach_r_Tarsus_hind_bone/cockroach_r_Toe_hind_bone
+        weight: 1
+      - path: cockroach_Main_ctrl/cockroach_COM_ctrl/cockroach_Spine_bone/cockroach_r_Coxa_hind_bone/cockroach_r_Femur_hind_bone/cockroach_r_Tibia_hind_bone/cockroach_r_Tarsus_hind_bone/cockroach_r_Toe_hind_bone/cockroach_r_Claw_hind_bone
+        weight: 1
+      - path: cockroach_Main_ctrl/cockroach_COM_ctrl/cockroach_Spine_bone/cockroach_r_Coxa_hind_bone/cockroach_r_Femur_hind_bone/cockroach_r_Tibia_hind_bone/cockroach_r_Tarsus_hind_bone/cockroach_r_Toe_hind_bone/cockroach_r_Claw_hind_bone/cockroach_r_Claw_hind-nub_bone
+        weight: 1
+      - path: cockroach_Main_ctrl/cockroach_COM_ctrl/cockroach_Spine_bone/cockroach_r_Coxa_hind_ctrl
+        weight: 1
+      - path: cockroach_Main_ctrl/cockroach_COM_ctrl/cockroach_Spine_bone/cockroach_r_Coxa_middle_bone
+        weight: 1
+      - path: cockroach_Main_ctrl/cockroach_COM_ctrl/cockroach_Spine_bone/cockroach_r_Coxa_middle_bone/cockroach_r_Femur_middle_bone
+        weight: 1
+      - path: cockroach_Main_ctrl/cockroach_COM_ctrl/cockroach_Spine_bone/cockroach_r_Coxa_middle_bone/cockroach_r_Femur_middle_bone/cockroach_r_Tibia_middle_bone
+        weight: 1
+      - path: cockroach_Main_ctrl/cockroach_COM_ctrl/cockroach_Spine_bone/cockroach_r_Coxa_middle_bone/cockroach_r_Femur_middle_bone/cockroach_r_Tibia_middle_bone/cockroach_r_Tarsus_middle_bone
+        weight: 1
+      - path: cockroach_Main_ctrl/cockroach_COM_ctrl/cockroach_Spine_bone/cockroach_r_Coxa_middle_bone/cockroach_r_Femur_middle_bone/cockroach_r_Tibia_middle_bone/cockroach_r_Tarsus_middle_bone/cockroach_r_Toe_middle_bone
+        weight: 1
+      - path: cockroach_Main_ctrl/cockroach_COM_ctrl/cockroach_Spine_bone/cockroach_r_Coxa_middle_bone/cockroach_r_Femur_middle_bone/cockroach_r_Tibia_middle_bone/cockroach_r_Tarsus_middle_bone/cockroach_r_Toe_middle_bone/cockroach_r_Claw_middle_bone
+        weight: 1
+      - path: cockroach_Main_ctrl/cockroach_COM_ctrl/cockroach_Spine_bone/cockroach_r_Coxa_middle_bone/cockroach_r_Femur_middle_bone/cockroach_r_Tibia_middle_bone/cockroach_r_Tarsus_middle_bone/cockroach_r_Toe_middle_bone/cockroach_r_Claw_middle_bone/cockroach_r_Claw_middle-nub_bone
+        weight: 1
+      - path: cockroach_Main_ctrl/cockroach_COM_ctrl/cockroach_Spine_bone/cockroach_r_Coxa_middle_ctrl
+        weight: 1
+      - path: cockroach_Main_ctrl/wasp_l_Foot_ctrl
+        weight: 1
+      - path: cockroach_Main_ctrl/wasp_l_Foot_ctrl/cockroach_l_Heel_hlp
+        weight: 1
+      - path: cockroach_Main_ctrl/wasp_l_Foot_ctrl/cockroach_l_Heel_hlp/cockroach_l_ToeLift_hlp
+        weight: 1
+      - path: cockroach_Main_ctrl/wasp_l_Foot_ctrl/cockroach_l_Heel_hlp/cockroach_l_ToeLift_hlp/cockroach_l_HeelPeel_hlp
+        weight: 1
+      - path: cockroach_Main_ctrl/wasp_l_Foot_ctrl/cockroach_l_Heel_hlp/cockroach_l_ToeLift_hlp/cockroach_l_HeelPeel_hlp/cockroach_l_ball_IKGoal
+        weight: 1
+      - path: cockroach_Main_ctrl/wasp_l_Foot_ctrl/cockroach_l_Heel_hlp/cockroach_l_ToeLift_hlp/cockroach_l_HeelPeel_hlp/cockroach_l_heel_IKGoal
+        weight: 1
+      - path: cockroach_Main_ctrl/wasp_l_Foot_ctrl/cockroach_l_Heel_hlp/cockroach_l_ToeLift_hlp/cockroach_l_ToeTap_hlp
+        weight: 1
+      - path: cockroach_Main_ctrl/wasp_l_Foot_ctrl/cockroach_l_Heel_hlp/cockroach_l_ToeLift_hlp/cockroach_l_ToeTap_hlp/cockroach_l_toe_IKGoal
+        weight: 1
+      - path: cockroach_Main_ctrl/wasp_l_Foot_hind_ctrl
+        weight: 1
+      - path: cockroach_Main_ctrl/wasp_l_Foot_hind_ctrl/cockroach_l_Heel_hind_hlp
+        weight: 1
+      - path: cockroach_Main_ctrl/wasp_l_Foot_hind_ctrl/cockroach_l_Heel_hind_hlp/cockroach_l_ToeLift_hind_hlp
+        weight: 1
+      - path: cockroach_Main_ctrl/wasp_l_Foot_hind_ctrl/cockroach_l_Heel_hind_hlp/cockroach_l_ToeLift_hind_hlp/cockroach_l_HeelPeel_hind_hlp
+        weight: 1
+      - path: cockroach_Main_ctrl/wasp_l_Foot_hind_ctrl/cockroach_l_Heel_hind_hlp/cockroach_l_ToeLift_hind_hlp/cockroach_l_HeelPeel_hind_hlp/cockroach_l_ball_hind_IKGoal
+        weight: 1
+      - path: cockroach_Main_ctrl/wasp_l_Foot_hind_ctrl/cockroach_l_Heel_hind_hlp/cockroach_l_ToeLift_hind_hlp/cockroach_l_HeelPeel_hind_hlp/cockroach_l_heel_hind_IKGoal
+        weight: 1
+      - path: cockroach_Main_ctrl/wasp_l_Foot_hind_ctrl/cockroach_l_Heel_hind_hlp/cockroach_l_ToeLift_hind_hlp/cockroach_l_ToeTap_hind_hlp
+        weight: 1
+      - path: cockroach_Main_ctrl/wasp_l_Foot_hind_ctrl/cockroach_l_Heel_hind_hlp/cockroach_l_ToeLift_hind_hlp/cockroach_l_ToeTap_hind_hlp/cockroach_l_toe_hind_IKGoal
+        weight: 1
+      - path: cockroach_Main_ctrl/wasp_l_Foot_middle_ctrl
+        weight: 1
+      - path: cockroach_Main_ctrl/wasp_l_Foot_middle_ctrl/cockroach_l_Heel_middle_hlp
+        weight: 1
+      - path: cockroach_Main_ctrl/wasp_l_Foot_middle_ctrl/cockroach_l_Heel_middle_hlp/cockroach_l_ToeLift_hind_hlp
+          1
+        weight: 1
+      - path: cockroach_Main_ctrl/wasp_l_Foot_middle_ctrl/cockroach_l_Heel_middle_hlp/cockroach_l_ToeLift_hind_hlp
+          1/cockroach_l_HeelPeel_middle_hlp
+        weight: 1
+      - path: cockroach_Main_ctrl/wasp_l_Foot_middle_ctrl/cockroach_l_Heel_middle_hlp/cockroach_l_ToeLift_hind_hlp
+          1/cockroach_l_HeelPeel_middle_hlp/cockroach_l_ball_middle_IKGoal
+        weight: 1
+      - path: cockroach_Main_ctrl/wasp_l_Foot_middle_ctrl/cockroach_l_Heel_middle_hlp/cockroach_l_ToeLift_hind_hlp
+          1/cockroach_l_HeelPeel_middle_hlp/cockroach_l_heel_middle_IKGoal
+        weight: 1
+      - path: cockroach_Main_ctrl/wasp_l_Foot_middle_ctrl/cockroach_l_Heel_middle_hlp/cockroach_l_ToeLift_hind_hlp
+          1/cockroach_l_ToeTap_middle_hlp
+        weight: 1
+      - path: cockroach_Main_ctrl/wasp_l_Foot_middle_ctrl/cockroach_l_Heel_middle_hlp/cockroach_l_ToeLift_hind_hlp
+          1/cockroach_l_ToeTap_middle_hlp/cockroach_l_toe_middle_IKGoal
+        weight: 1
+      - path: cockroach_Main_ctrl/wasp_r_Foot_ctrl
+        weight: 1
+      - path: cockroach_Main_ctrl/wasp_r_Foot_ctrl/cockroach_r_Heel_hlp
+        weight: 1
+      - path: cockroach_Main_ctrl/wasp_r_Foot_ctrl/cockroach_r_Heel_hlp/cockroach_r_ToeLift_hlp
+        weight: 1
+      - path: cockroach_Main_ctrl/wasp_r_Foot_ctrl/cockroach_r_Heel_hlp/cockroach_r_ToeLift_hlp/cockroach_r_HeelPeel_hlp
+        weight: 1
+      - path: cockroach_Main_ctrl/wasp_r_Foot_ctrl/cockroach_r_Heel_hlp/cockroach_r_ToeLift_hlp/cockroach_r_HeelPeel_hlp/cockroach_r_ball_IKGoal
+        weight: 1
+      - path: cockroach_Main_ctrl/wasp_r_Foot_ctrl/cockroach_r_Heel_hlp/cockroach_r_ToeLift_hlp/cockroach_r_HeelPeel_hlp/cockroach_r_heel_IKGoal
+        weight: 1
+      - path: cockroach_Main_ctrl/wasp_r_Foot_ctrl/cockroach_r_Heel_hlp/cockroach_r_ToeLift_hlp/cockroach_r_ToeTap_hlp
+        weight: 1
+      - path: cockroach_Main_ctrl/wasp_r_Foot_ctrl/cockroach_r_Heel_hlp/cockroach_r_ToeLift_hlp/cockroach_r_ToeTap_hlp/cockroach_r_toe_IKGoal
+        weight: 1
+      - path: cockroach_Main_ctrl/wasp_r_Foot_hind_ctrl
+        weight: 1
+      - path: cockroach_Main_ctrl/wasp_r_Foot_hind_ctrl/cockroach_r_Heel_hind_hlp
+        weight: 1
+      - path: cockroach_Main_ctrl/wasp_r_Foot_hind_ctrl/cockroach_r_Heel_hind_hlp/cockroach_r_ToeLift_hind_hlp
+        weight: 1
+      - path: cockroach_Main_ctrl/wasp_r_Foot_hind_ctrl/cockroach_r_Heel_hind_hlp/cockroach_r_ToeLift_hind_hlp/cockroach_r_HeelPeel_hind_hlp
+        weight: 1
+      - path: cockroach_Main_ctrl/wasp_r_Foot_hind_ctrl/cockroach_r_Heel_hind_hlp/cockroach_r_ToeLift_hind_hlp/cockroach_r_HeelPeel_hind_hlp/cockroach_r_ball_hind_IKGoal
+        weight: 1
+      - path: cockroach_Main_ctrl/wasp_r_Foot_hind_ctrl/cockroach_r_Heel_hind_hlp/cockroach_r_ToeLift_hind_hlp/cockroach_r_HeelPeel_hind_hlp/cockroach_r_heel_hind_IKGoal
+        weight: 1
+      - path: cockroach_Main_ctrl/wasp_r_Foot_hind_ctrl/cockroach_r_Heel_hind_hlp/cockroach_r_ToeLift_hind_hlp/cockroach_r_ToeTap_hind_hlp
+        weight: 1
+      - path: cockroach_Main_ctrl/wasp_r_Foot_hind_ctrl/cockroach_r_Heel_hind_hlp/cockroach_r_ToeLift_hind_hlp/cockroach_r_ToeTap_hind_hlp/cockroach_r_toe_hind_IKGoal
+        weight: 1
+      - path: cockroach_Main_ctrl/wasp_r_Foot_middle_ctrl
+        weight: 1
+      - path: cockroach_Main_ctrl/wasp_r_Foot_middle_ctrl/cockroach_r_Heel_middle_hlp
+        weight: 1
+      - path: cockroach_Main_ctrl/wasp_r_Foot_middle_ctrl/cockroach_r_Heel_middle_hlp/cockroach_r_ToeLift_hind_hlp
+          1
+        weight: 1
+      - path: cockroach_Main_ctrl/wasp_r_Foot_middle_ctrl/cockroach_r_Heel_middle_hlp/cockroach_r_ToeLift_hind_hlp
+          1/cockroach_r_HeelPeel_middle_hlp
+        weight: 1
+      - path: cockroach_Main_ctrl/wasp_r_Foot_middle_ctrl/cockroach_r_Heel_middle_hlp/cockroach_r_ToeLift_hind_hlp
+          1/cockroach_r_HeelPeel_middle_hlp/cockroach_r_ball_middle_IKGoal
+        weight: 1
+      - path: cockroach_Main_ctrl/wasp_r_Foot_middle_ctrl/cockroach_r_Heel_middle_hlp/cockroach_r_ToeLift_hind_hlp
+          1/cockroach_r_HeelPeel_middle_hlp/cockroach_r_heel_middle_IKGoal
+        weight: 1
+      - path: cockroach_Main_ctrl/wasp_r_Foot_middle_ctrl/cockroach_r_Heel_middle_hlp/cockroach_r_ToeLift_hind_hlp
+          1/cockroach_r_ToeTap_middle_hlp
+        weight: 1
+      - path: cockroach_Main_ctrl/wasp_r_Foot_middle_ctrl/cockroach_r_Heel_middle_hlp/cockroach_r_ToeLift_hind_hlp
+          1/cockroach_r_ToeTap_middle_hlp/cockroach_r_toe_middle_IKGoa
+        weight: 1
+      - path: cockroach_mesh
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 257
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: cockroach_Main_ctrl
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
