@@ -180,6 +180,26 @@ public class PlayerCtrl : MonoBehaviour
                 anim = GameObject.FindGameObjectWithTag("RoomSelect").GetComponent<Animation>();
                 anim.Play();
             }
+            else if (hit.transform.tag == "QuizBT1")
+            {
+                anim = GameObject.FindGameObjectWithTag("QuizBT1").GetComponent<Animation>();
+                anim.Play();
+            }
+            else if (hit.transform.tag == "QuizBT2")
+            {
+                anim = GameObject.FindGameObjectWithTag("QuizBT2").GetComponent<Animation>();
+                anim.Play();
+            }
+            else if (hit.transform.tag == "QuizBT3")
+            {
+                anim = GameObject.FindGameObjectWithTag("QuizBT3").GetComponent<Animation>();
+                anim.Play();
+            }
+            else if (hit.transform.tag == "QuizBT4")
+            {
+                anim = GameObject.FindGameObjectWithTag("QuizBT4").GetComponent<Animation>();
+                anim.Play();
+            }
 
             GaugeTimer += 1.0f / gazeTimer * Time.deltaTime; //게이지 차는 시간은 3초
                 

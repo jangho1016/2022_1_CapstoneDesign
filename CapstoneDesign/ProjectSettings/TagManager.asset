@@ -98,6 +98,10 @@ TagManager:
   - Cockroach
   - Quiz
   - RoomSelect
+  - QuizBT1
+  - QuizBT2
+  - QuizBT3
+  - QuizBT4
   layers:
   - Default
   - TransparentFX

@@ -278,6 +278,45 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 293534485}
   m_CullTransparentMesh: 0
+--- !u!1 &325585927
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 325585928}
+  m_Layer: 5
+  m_Name: Buttons
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &325585928
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 325585927}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_Children:
+  - {fileID: 849664312}
+  - {fileID: 377592861}
+  - {fileID: 1694021369}
+  - {fileID: 1343373527}
+  m_Father: {fileID: 2006240497}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -25, y: -225}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &377592860
 GameObject:
   m_ObjectHideFlags: 0
@@ -293,13 +332,14 @@ GameObject:
   - component: {fileID: 377592864}
   - component: {fileID: 377592862}
   - component: {fileID: 377592868}
+  - component: {fileID: 377592863}
   m_Layer: 5
   m_Name: BT2
-  m_TagString: Button
+  m_TagString: QuizBT2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &377592861
 RectTransform:
   m_ObjectHideFlags: 0
@@ -312,12 +352,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5986236}
-  m_Father: {fileID: 2006240497}
-  m_RootOrder: 2
+  m_Father: {fileID: 325585928}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 37.5, y: -200}
+  m_AnchoredPosition: {x: 25, y: 0}
   m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!111 &377592862
@@ -336,6 +376,28 @@ Animation:
   m_PlayAutomatically: 0
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!114 &377592863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 377592860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd6cd3114d2f56a419d08c134f620781, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bt:
+  - {fileID: 849664317}
+  - {fileID: 377592865}
+  - {fileID: 1694021373}
+  - {fileID: 1343373531}
+  answer: {fileID: 1115346981}
+  select: {fileID: 817478107}
+  question: {fileID: 960367064}
+  cnt: {fileID: 1265306993}
+  buttons: {fileID: 325585927}
 --- !u!65 &377592864
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -392,7 +454,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 377592863}
         m_MethodName: Bt2
         m_Mode: 1
         m_Arguments:
@@ -903,7 +965,7 @@ GameObject:
   - component: {fileID: 817478108}
   - component: {fileID: 817478107}
   m_Layer: 5
-  m_Name: qText
+  m_Name: Select
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -921,11 +983,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2006240497}
-  m_RootOrder: 5
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -200}
+  m_AnchoredPosition: {x: -25, y: -225}
   m_SizeDelta: {x: 500, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &817478107
@@ -960,7 +1022,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: "\uC815\uB2F5\uC744 \uACE0\uB974\uC2DC\uC624 "
 --- !u!222 &817478108
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -984,13 +1046,14 @@ GameObject:
   - component: {fileID: 849664316}
   - component: {fileID: 849664314}
   - component: {fileID: 849664313}
+  - component: {fileID: 849664315}
   m_Layer: 5
   m_Name: BT1
-  m_TagString: Button
+  m_TagString: QuizBT1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &849664312
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1003,12 +1066,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1658937893}
-  m_Father: {fileID: 2006240497}
-  m_RootOrder: 1
+  m_Father: {fileID: 325585928}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -25, y: -200}
+  m_AnchoredPosition: {x: -25, y: 0}
   m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!82 &849664313
@@ -1123,6 +1186,28 @@ Animation:
   m_PlayAutomatically: 0
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!114 &849664315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 849664311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd6cd3114d2f56a419d08c134f620781, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bt:
+  - {fileID: 849664317}
+  - {fileID: 377592865}
+  - {fileID: 1694021373}
+  - {fileID: 1343373531}
+  answer: {fileID: 1115346981}
+  select: {fileID: 817478107}
+  question: {fileID: 960367064}
+  cnt: {fileID: 1265306993}
+  buttons: {fileID: 325585927}
 --- !u!65 &849664316
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1179,7 +1264,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 849664315}
         m_MethodName: Bt1
         m_Mode: 1
         m_Arguments:
@@ -1257,12 +1342,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2006240497}
-  m_RootOrder: 0
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 700, y: 400}
+  m_AnchoredPosition: {x: 0, y: 100}
+  m_SizeDelta: {x: 900, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &960367064
 MonoBehaviour:
@@ -1496,6 +1581,84 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1 &1115346979
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1115346980}
+  - component: {fileID: 1115346982}
+  - component: {fileID: 1115346981}
+  m_Layer: 5
+  m_Name: Answer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1115346980
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1115346979}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2006240497}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -90}
+  m_SizeDelta: {x: 900, y: 400}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1115346981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1115346979}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 25
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 1
+    m_MaxSize: 40
+    m_Alignment: 3
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 
+--- !u!222 &1115346982
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1115346979}
+  m_CullTransparentMesh: 0
 --- !u!1 &1174963457
 GameObject:
   m_ObjectHideFlags: 0
@@ -1586,7 +1749,6 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 700}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1265306992}
   - {fileID: 2006240497}
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -1625,12 +1787,12 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1174963461}
+  m_Father: {fileID: 2006240497}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 500, y: -200}
+  m_AnchoredPosition: {x: 500, y: -225}
   m_SizeDelta: {x: 500, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1265306993
@@ -1665,7 +1827,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uB9DE\uC740 \uBB38\uC81C: 11/11\uAC1C"
+  m_Text: "\uB9DE\uC740 \uBB38\uC81C: 5/5"
 --- !u!222 &1265306994
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1689,13 +1851,14 @@ GameObject:
   - component: {fileID: 1343373530}
   - component: {fileID: 1343373528}
   - component: {fileID: 1343373534}
+  - component: {fileID: 1343373529}
   m_Layer: 5
   m_Name: BT4
-  m_TagString: Button
+  m_TagString: QuizBT4
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1343373527
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1708,12 +1871,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 293534486}
-  m_Father: {fileID: 2006240497}
-  m_RootOrder: 4
+  m_Father: {fileID: 325585928}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 162.5, y: -200}
+  m_AnchoredPosition: {x: 125, y: 0}
   m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!111 &1343373528
@@ -1732,6 +1895,28 @@ Animation:
   m_PlayAutomatically: 0
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!114 &1343373529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1343373526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd6cd3114d2f56a419d08c134f620781, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bt:
+  - {fileID: 849664317}
+  - {fileID: 377592865}
+  - {fileID: 1694021373}
+  - {fileID: 1343373531}
+  answer: {fileID: 1115346981}
+  select: {fileID: 817478107}
+  question: {fileID: 960367064}
+  cnt: {fileID: 1265306993}
+  buttons: {fileID: 325585927}
 --- !u!65 &1343373530
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1788,7 +1973,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1343373529}
         m_MethodName: Bt4
         m_Mode: 1
         m_Arguments:
@@ -2119,13 +2304,14 @@ GameObject:
   - component: {fileID: 1694021372}
   - component: {fileID: 1694021370}
   - component: {fileID: 1694021376}
+  - component: {fileID: 1694021371}
   m_Layer: 5
   m_Name: BT3
-  m_TagString: Button
+  m_TagString: QuizBT3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1694021369
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2138,12 +2324,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 613587276}
-  m_Father: {fileID: 2006240497}
-  m_RootOrder: 3
+  m_Father: {fileID: 325585928}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 100, y: -200}
+  m_AnchoredPosition: {x: 75, y: 0}
   m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!111 &1694021370
@@ -2162,6 +2348,28 @@ Animation:
   m_PlayAutomatically: 0
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!114 &1694021371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1694021368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd6cd3114d2f56a419d08c134f620781, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bt:
+  - {fileID: 849664317}
+  - {fileID: 377592865}
+  - {fileID: 1694021373}
+  - {fileID: 1343373531}
+  answer: {fileID: 1115346981}
+  select: {fileID: 817478107}
+  question: {fileID: 960367064}
+  cnt: {fileID: 1265306993}
+  buttons: {fileID: 325585927}
 --- !u!65 &1694021372
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2218,7 +2426,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1694021371}
         m_MethodName: Bt3
         m_Mode: 1
         m_Arguments:
@@ -2373,6 +2581,7 @@ GameObject:
   - component: {fileID: 2006240497}
   - component: {fileID: 2006240499}
   - component: {fileID: 2006240498}
+  - component: {fileID: 2006240500}
   m_Layer: 5
   m_Name: Question Panel
   m_TagString: Untagged
@@ -2391,19 +2600,18 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 960367063}
-  - {fileID: 849664312}
-  - {fileID: 377592861}
-  - {fileID: 1694021369}
-  - {fileID: 1343373527}
+  - {fileID: 1265306992}
+  - {fileID: 325585928}
   - {fileID: 817478106}
+  - {fileID: 960367063}
+  - {fileID: 1115346980}
   m_Father: {fileID: 1174963461}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 171, y: -119}
+  m_SizeDelta: {x: 171, y: -100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2006240498
 MonoBehaviour:
@@ -2442,6 +2650,29 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2006240496}
   m_CullTransparentMesh: 0
+--- !u!114 &2006240500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2006240496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86f5c021935dde14f9e95656924e99ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  question: {fileID: 960367064}
+  select: {fileID: 817478107}
+  cnt: {fileID: 1265306993}
+  bt:
+  - {fileID: 849664317}
+  - {fileID: 377592865}
+  - {fileID: 1694021373}
+  - {fileID: 1343373531}
+  oText: {fileID: 1658937895}
+  xText: {fileID: 5986237}
+  answer: {fileID: 1115346981}
 --- !u!1 &2040294198
 GameObject:
   m_ObjectHideFlags: 0

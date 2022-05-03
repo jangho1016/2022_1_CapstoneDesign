@@ -183,4 +183,9 @@ public class ButtonCtrl : MonoBehaviour
     {
         SceneManager.LoadScene("Quiz");
     }
+
+    public void RealRoom()
+    {
+        SceneManager.LoadScene("Real Room1");
+    }
 }
