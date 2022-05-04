@@ -1381,7 +1381,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uBA54\uC778\uD654\uBA74"
+  m_Text: "\uBA54\uC778\uBA54\uB274"
 --- !u!224 &8781921393134818321
 RectTransform:
   m_ObjectHideFlags: 0
