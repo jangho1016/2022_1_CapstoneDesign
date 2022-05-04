@@ -387,15 +387,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd6cd3114d2f56a419d08c134f620781, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bt3: {fileID: 1694021373}
-  bt4: {fileID: 1343373531}
-  answer: {fileID: 1115346981}
-  select: {fileID: 817478107}
-  question: {fileID: 960367064}
-  cnt: {fileID: 1265306993}
-  buttons: {fileID: 325585927}
-  correct: {fileID: 8300000, guid: d9dca211a4557ae4b8c30b33039c6096, type: 3}
-  wrong: {fileID: 8300000, guid: 91a959e50da59a6449fad0c4d8c7604c, type: 3}
 --- !u!65 &377592864
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -675,6 +666,7 @@ GameObject:
   - component: {fileID: 692221165}
   - component: {fileID: 692221164}
   - component: {fileID: 692221163}
+  - component: {fileID: 692221168}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -895,6 +887,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &692221168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 692221162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 737a07d8208a92640ba21072ca8c3b3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bt3: {fileID: 1694021373}
+  bt4: {fileID: 1343373531}
+  answer: {fileID: 1115346981}
+  select: {fileID: 817478107}
+  question: {fileID: 960367064}
+  cnt: {fileID: 1265306993}
+  buttons: {fileID: 325585927}
+  correct: {fileID: 8300000, guid: d9dca211a4557ae4b8c30b33039c6096, type: 3}
+  wrong: {fileID: 8300000, guid: 91a959e50da59a6449fad0c4d8c7604c, type: 3}
 --- !u!1001 &719681302
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1100,15 +1113,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd6cd3114d2f56a419d08c134f620781, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bt3: {fileID: 1694021373}
-  bt4: {fileID: 1343373531}
-  answer: {fileID: 1115346981}
-  select: {fileID: 817478107}
-  question: {fileID: 960367064}
-  cnt: {fileID: 1265306993}
-  buttons: {fileID: 325585927}
-  correct: {fileID: 8300000, guid: d9dca211a4557ae4b8c30b33039c6096, type: 3}
-  wrong: {fileID: 8300000, guid: 91a959e50da59a6449fad0c4d8c7604c, type: 3}
 --- !u!65 &849664316
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1807,15 +1811,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd6cd3114d2f56a419d08c134f620781, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bt3: {fileID: 1694021373}
-  bt4: {fileID: 1343373531}
-  answer: {fileID: 1115346981}
-  select: {fileID: 817478107}
-  question: {fileID: 960367064}
-  cnt: {fileID: 1265306993}
-  buttons: {fileID: 325585927}
-  correct: {fileID: 8300000, guid: d9dca211a4557ae4b8c30b33039c6096, type: 3}
-  wrong: {fileID: 8300000, guid: 91a959e50da59a6449fad0c4d8c7604c, type: 3}
 --- !u!65 &1343373530
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2162,15 +2157,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd6cd3114d2f56a419d08c134f620781, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bt3: {fileID: 1694021373}
-  bt4: {fileID: 1343373531}
-  answer: {fileID: 1115346981}
-  select: {fileID: 817478107}
-  question: {fileID: 960367064}
-  cnt: {fileID: 1265306993}
-  buttons: {fileID: 325585927}
-  correct: {fileID: 8300000, guid: d9dca211a4557ae4b8c30b33039c6096, type: 3}
-  wrong: {fileID: 8300000, guid: 91a959e50da59a6449fad0c4d8c7604c, type: 3}
 --- !u!65 &1694021372
 BoxCollider:
   m_ObjectHideFlags: 0
