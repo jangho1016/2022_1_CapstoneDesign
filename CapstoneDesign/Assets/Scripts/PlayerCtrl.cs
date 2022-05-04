@@ -127,8 +127,6 @@ public class PlayerCtrl : MonoBehaviour
             {
                 anim = GameObject.FindGameObjectWithTag("StartBT").GetComponent<Animation>();
                 anim.Play();
-                /*audioSource = GameObject.FindGameObjectWithTag("StartBT").GetComponent<AudioSource>();
-                audioSource.PlayOneShot(clips[29]);*/
             }
             else if (hit.transform.tag == "WayBT")
             {
