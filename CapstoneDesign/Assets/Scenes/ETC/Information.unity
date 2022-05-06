@@ -180,10 +180,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 30
+    m_FontSize: 25
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 3
+    m_MinSize: 2
     m_MaxSize: 50
     m_Alignment: 3
     m_AlignByGeometry: 0
@@ -240,6 +240,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nText: {fileID: 415375932}
+  mainButton: {fileID: 8781921391069936810}
 --- !u!114 &501640971
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -254,12 +255,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cursorGauge: {fileID: 1340862027}
   timerGauge: {fileID: 0}
+  timertext: {fileID: 0}
+  crackText: {fileID: 0}
   mainCam: {fileID: 1922480422}
   managerPanel: {fileID: 0}
   time_last: 0
   curSceneName: 
-  timertext: {fileID: 0}
   isOpened: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  crackChk: 000000000000000000000000000000
   clips:
   - {fileID: 0}
   - {fileID: 0}
@@ -311,8 +314,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  crackChk: 000000000000000000000000000000
-  crackText: {fileID: 0}
 --- !u!65 &501640972
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1332,7 +1333,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!111 &8781921391069936811
 Animation:
   m_ObjectHideFlags: 0

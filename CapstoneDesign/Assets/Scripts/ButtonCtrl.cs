@@ -52,11 +52,6 @@ public class ButtonCtrl : MonoBehaviour
         ManagerPanel.gameObject.SetActive(false); //비활성화
     }
 
-    public void ToBath() //실제 화장실 씬으로
-    {
-        SceneManager.LoadScene("Real Room1"); //화장실 로드
-    }
-
     public void SelectBT1() //값 랜덤 가져와 씬 로드
     {
         if (num == 1)
@@ -187,5 +182,38 @@ public class ButtonCtrl : MonoBehaviour
     public void RealRoom()
     {
         SceneManager.LoadScene("Real Room1");
+    }
+
+    public void RealRoom1()
+    {
+        SceneManager.LoadScene("Real Room Bathroom1");
+    }
+    public void RealRoom2()
+    {
+        SceneManager.LoadScene("Real Room Bathroom2");
+    }
+    public void RealRoom3()
+    {
+        SceneManager.LoadScene("Real Room Bathroom3");
+    }
+    public void RealRoom4()
+    {
+        SceneManager.LoadScene("Real Room Bathroom4");
+    }
+    public void RealRoomBathroom1()
+    {
+        SceneManager.LoadScene("Real Room2");
+    }
+    public void RealRoomBathroom2()
+    {
+        SceneManager.LoadScene("Real Room3");
+    }
+    public void RealRoomBathroom3()
+    {
+        SceneManager.LoadScene("Real Room4");
+    }
+    public void RealRoomBathroom4()
+    {
+        SceneManager.LoadScene("Restart");
     }
 }

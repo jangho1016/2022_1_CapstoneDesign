@@ -53,6 +53,7 @@
     <UnityVersion>2019.4.35f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Assets\ButtonsLookAt.cs" />
     <Compile Include="Assets\Cockroach\Scripts\Cockroach.cs" />
     <Compile Include="Assets\EffectExamples\Shared\Scripts\DecalDestroyer.cs" />
     <Compile Include="Assets\EffectExamples\Shared\Scripts\ExtinguishableFire.cs" />
@@ -234,6 +235,7 @@
     <Compile Include="Assets\Scripts\FireBt4.cs" />
     <Compile Include="Assets\Scripts\HeaterCtrl.cs" />
     <Compile Include="Assets\Scripts\InformationText.cs" />
+    <Compile Include="Assets\Scripts\LoadingText.cs" />
     <Compile Include="Assets\Scripts\PlayerCtrl.cs" />
     <Compile Include="Assets\Scripts\RandomCtrl.cs" />
     <Compile Include="Assets\Scripts\RoomDoor2.cs" />

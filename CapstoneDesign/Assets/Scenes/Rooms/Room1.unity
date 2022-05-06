@@ -3309,12 +3309,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cursorGauge: {fileID: 777985786}
   timerGauge: {fileID: 1815230471}
+  timertext: {fileID: 1291076980}
+  crackText: {fileID: 395717479}
   mainCam: {fileID: 394104615}
   managerPanel: {fileID: 1248057822}
   time_last: 0
   curSceneName: 
-  timertext: {fileID: 1291076980}
   isOpened: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  crackChk: 000000000000000000000000000000
   clips:
   - {fileID: 8300000, guid: 79063132dce02d74da6820d5e30ff48e, type: 3}
   - {fileID: 8300000, guid: 3ade9bf34149fc949860b4abfd68563e, type: 3}
@@ -3344,8 +3346,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 62d966fef44b82f498a9fa6406cc94ae, type: 3}
   - {fileID: 8300000, guid: 31ff409db07fb6b47a3d014ef4b4c7e8, type: 3}
   - {fileID: 8300000, guid: a1885d576c82a79498ff5beeb928f318, type: 3}
-  crackChk: 000000000000000000000000000000
-  crackText: {fileID: 395717479}
 --- !u!1 &543115818
 GameObject:
   m_ObjectHideFlags: 0
@@ -4300,7 +4300,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -4471,7 +4471,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -4608,7 +4608,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -4627,7 +4627,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uAC00\uC2E4\uAE4C\uC694?"
+  m_Text: "\uBCF4\uC168\uB098\uC694?"
 --- !u!222 &744975287
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -12848,7 +12848,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 0.5882353, g: 0.6862745, b: 0.7372549, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -23067,7 +23067,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -23086,7 +23086,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uACC4\uC57D\uD558\uB7EC"
+  m_Text: "\uBC29 \uB2E4 \uB458\uB7EC"
 --- !u!222 &1448997093
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -24379,9 +24379,10 @@ GameObject:
   - component: {fileID: 1633326789}
   - component: {fileID: 1633326788}
   - component: {fileID: 1633326787}
+  - component: {fileID: 1633326792}
   m_Layer: 0
   m_Name: No Button
-  m_TagString: Button
+  m_TagString: NoBT
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24498,7 +24499,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.4745098, g: 0.4745098, b: 0.4745098, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -24522,6 +24523,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1633326785}
   m_CullTransparentMesh: 0
+--- !u!111 &1633326792
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1633326785}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 74fbea146f09d944f97b86511c520b32, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 74fbea146f09d944f97b86511c520b32, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &1657796527
 GameObject:
   m_ObjectHideFlags: 0
@@ -26130,9 +26147,10 @@ GameObject:
   - component: {fileID: 1910055365}
   - component: {fileID: 1910055364}
   - component: {fileID: 1910055363}
+  - component: {fileID: 1910055368}
   m_Layer: 0
   m_Name: Yes Button
-  m_TagString: Button
+  m_TagString: YesBT
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26249,7 +26267,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.4745098, g: 0.4745098, b: 0.4745098, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -26273,6 +26291,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1910055361}
   m_CullTransparentMesh: 0
+--- !u!111 &1910055368
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1910055361}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 74fbea146f09d944f97b86511c520b32, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 74fbea146f09d944f97b86511c520b32, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &1950449701
 GameObject:
   m_ObjectHideFlags: 0

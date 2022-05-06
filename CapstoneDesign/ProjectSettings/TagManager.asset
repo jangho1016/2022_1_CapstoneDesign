@@ -102,6 +102,8 @@ TagManager:
   - QuizBT2
   - QuizBT3
   - QuizBT4
+  - YesBT
+  - NoBT
   layers:
   - Default
   - TransparentFX
