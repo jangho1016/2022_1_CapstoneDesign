@@ -215,6 +215,11 @@ public class PlayerCtrl : MonoBehaviour
                 anim = GameObject.FindGameObjectWithTag("NoBT").GetComponent<Animation>();
                 anim.Play();
             }
+            else if (hit.transform.tag == "Button")
+            {
+                anim = GameObject.FindGameObjectWithTag("Button").GetComponent<Animation>();
+                anim.Play();
+            }
 
             GaugeTimer += 1.0f / gazeTimer * Time.deltaTime; //게이지 차는 시간은 3초
                 
@@ -222,6 +227,10 @@ public class PlayerCtrl : MonoBehaviour
             {
                 if (PlayerPrefs.GetInt("SceneNum") == 0)
                 {
+                    if(PlayerPrefs.GetInt("SceneNum") == 0)
+                    {
+                        Debug.Log("test");
+                    }
                     hit.transform.GetComponent<Button>().onClick.Invoke(); //버튼 이벤트 실행
                 }
                     

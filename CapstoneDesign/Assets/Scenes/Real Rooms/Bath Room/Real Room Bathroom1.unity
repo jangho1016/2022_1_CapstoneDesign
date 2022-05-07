@@ -228,9 +228,10 @@ GameObject:
   - component: {fileID: 964536183}
   - component: {fileID: 964536182}
   - component: {fileID: 964536181}
+  - component: {fileID: 964536186}
   m_Layer: 5
   m_Name: ToRoom
-  m_TagString: Untagged
+  m_TagString: Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -278,7 +279,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 225, y: 80, z: 1}
+  m_Size: {x: 140, y: 50, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &964536183
 MonoBehaviour:
@@ -371,6 +372,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 964536179}
   m_CullTransparentMesh: 0
+--- !u!111 &964536186
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 964536179}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 74fbea146f09d944f97b86511c520b32, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 74fbea146f09d944f97b86511c520b32, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &1188990259
 GameObject:
   m_ObjectHideFlags: 0
