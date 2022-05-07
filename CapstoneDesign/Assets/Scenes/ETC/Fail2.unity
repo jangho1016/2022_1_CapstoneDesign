@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 112000000, guid: 013d2dd5950b58d4fa34194a65b7a376,
+  m_LightingDataAsset: {fileID: 112000000, guid: 57f31cfd92772694c9694eb6c274bbb2,
     type: 2}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -434,12 +434,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cursorGauge: {fileID: 2040294201}
   timerGauge: {fileID: 0}
+  timertext: {fileID: 0}
+  crackText: {fileID: 0}
   mainCam: {fileID: 451699863}
   managerPanel: {fileID: 0}
   time_last: 0
   curSceneName: 
-  timertext: {fileID: 0}
   isOpened: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  crackChk: 000000000000000000000000000000
   clips:
   - {fileID: 0}
   - {fileID: 0}
@@ -491,8 +493,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  crackChk: 000000000000000000000000000000
-  crackText: {fileID: 0}
 --- !u!65 &692221165
 BoxCollider:
   m_ObjectHideFlags: 0
