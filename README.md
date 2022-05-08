@@ -4,4 +4,4 @@
 
 일정표
 
-![Flow Chart](https://user-images.githubusercontent.com/3304322/166938950-945c3105-d788-49bb-b942-6e06eccf5e87.jpg)
+![flow chart](https://user-images.githubusercontent.com/3304322/167302687-1284c039-886c-44cd-a57a-3a9052a5348d.jpg)
