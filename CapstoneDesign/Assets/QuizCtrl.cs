@@ -174,7 +174,7 @@ public class QuizCtrl : MonoBehaviour
 
         select.text = "";
 
-        answer.DOText("정답입니다! 5문제 남았습니다\n\n\n\n\n\n\n\n", 2.0f);
+        answer.DOText("정답입니다! 5문제 남았습니다.\n\n\n\n\n\n\n\n", 2.0f);
         yield return new WaitForSeconds(3.0f);
         answer.text = "";
         yield return new WaitForSeconds(2.0f);
@@ -192,7 +192,7 @@ public class QuizCtrl : MonoBehaviour
 
         select.text = "";
 
-        answer.DOText("정답입니다! 4문제 남았습니다\n\n\n\n\n\n\n\n", 2.0f);
+        answer.DOText("정답입니다! 4문제 남았습니다.\n\n\n\n\n\n\n\n", 2.0f);
         yield return new WaitForSeconds(3.0f);
         answer.text = "";
         yield return new WaitForSeconds(2.0f);
@@ -208,7 +208,7 @@ public class QuizCtrl : MonoBehaviour
 
         select.text = "";
 
-        answer.DOText("정답입니다! 3문제 남았습니다\n\n\n\n\n\n\n\n", 2.0f);
+        answer.DOText("정답입니다! 3문제 남았습니다.\n\n\n\n\n\n\n\n", 2.0f);
         yield return new WaitForSeconds(3.0f);
         answer.text = "";
         yield return new WaitForSeconds(2.0f);
@@ -224,7 +224,7 @@ public class QuizCtrl : MonoBehaviour
 
         select.text = "";
 
-        answer.DOText("정답입니다! 2문제 남았습니다", 2.0f);
+        answer.DOText("정답입니다! 2문제 남았습니다.", 2.0f);
         yield return new WaitForSeconds(3.0f);
         answer.text = "";
         yield return new WaitForSeconds(2.0f);
@@ -240,7 +240,7 @@ public class QuizCtrl : MonoBehaviour
 
         select.text = "";
 
-        answer.DOText("정답입니다! 1문제 남았습니다\n\n\n\n", 2.0f);
+        answer.DOText("정답입니다! 1문제 남았습니다.\n\n\n\n", 2.0f);
         yield return new WaitForSeconds(3.0f);
         answer.text = "";
         yield return new WaitForSeconds(2.0f);
@@ -269,7 +269,7 @@ public class QuizCtrl : MonoBehaviour
         select.text = "";
         question.text = "";
         answer.text = "";
-        question.DOText("1. 임대차 계약 시 반드시 확인해야 하는 것이 아닌 것을 고르시오\n(1) 등기부등본\n(2) 확정일자와 전입 신고일자\n(3) 건축물대장\n(4) 임대인\n\n\n\n", 2.0f);
+        question.DOText("1. 임대차 계약 시 반드시 확인해야 하는 것이 아닌 것을 고르시오.\n(1) 등기부등본\n(2) 확정일자와 전입 신고일자\n(3) 건축물대장\n(4) 임대인\n\n\n\n", 2.0f);
         yield return new WaitForSeconds(2.0f);
         select.DOText("정답을 고르시오", 2.0f);
         yield return new WaitForSeconds(2.0f);
@@ -297,7 +297,7 @@ public class QuizCtrl : MonoBehaviour
         PlayerPrefs.SetInt("Quiz", 3);
         select.text = "";
         question.text = "";
-        question.DOText("3. 임대인의 체납 세금 여부를 확인하는 방법으로 옳지 않은 것을 고르시오\n(1) 국세 완납 증명서\n(2) 미납국세 열람 신청\n(3) 등기부등본\n(4) 지방세 완납 증명서\n\n\n\n", 2.0f);
+        question.DOText("3. 임대인의 체납 세금 여부를 확인하는 방법으로 옳지 않은 것을 고르시오.\n(1) 국세 완납 증명서\n(2) 미납국세 열람 신청\n(3) 등기부등본\n(4) 지방세 완납 증명서\n\n\n\n", 2.0f);
         yield return new WaitForSeconds(2.0f);
         select.DOText("정답을 고르시오", 2.0f);
         yield return new WaitForSeconds(2.0f);
@@ -325,7 +325,7 @@ public class QuizCtrl : MonoBehaviour
         PlayerPrefs.SetInt("Quiz", 5);
         select.text = "";
         question.text = "";
-        question.DOText("5. 다음 중 임대차계약을 피해야 하는 상황으로 옳은 것을 보기 중에서 고르시오\n(1) 다른 호수의 임대차보증금, 근저당 채권 최고액의 채무액과 본인이 임대차하려는 호수의 보증금의 합계액을 합한 금액이 매매시세의 70%를 넘어가지 않는 경우\n(2) 임대차 하려는 건물이 가등기나 가처분이 설정되지 않은 경우\n(3) 등기부등본에 기재된 집주인 명의와 전세 계약 시 계약자 명의가 동일한 경우\n(4) 소유자가 다수인 경우\n\n", 2.0f);
+        question.DOText("5. 다음 중 임대차계약을 피해야 하는 상황으로 옳은 것을 보기 중에서 고르시오.\n(1) 다른 호수의 임대차보증금, 근저당 채권 최고액의 채무액과 본인이 임대차하려는 호수의 보증금의 합계액을 합한 금액이 매매시세의 70%를 넘어가지 않는 경우\n(2) 임대차 하려는 건물이 가등기나 가처분이 설정되지 않은 경우\n(3) 등기부등본에 기재된 집주인 명의와 전세 계약 시 계약자 명의가 동일한 경우\n(4) 소유자가 다수인 경우\n\n", 2.0f);
         yield return new WaitForSeconds(2.0f);
         select.DOText("정답을 고르시오", 2.0f);
         yield return new WaitForSeconds(2.0f);
@@ -337,7 +337,7 @@ public class QuizCtrl : MonoBehaviour
         PlayerPrefs.SetInt("Quiz", 6);
         select.text = "";
         question.text = "";
-        question.DOText("6. 확정일자를 발급받는 방법으로 옳지 않은 것을 보기 중에서 고르시오\n(1) 동 주민센터\n(2) 공인중개사 사무소\n(3) 인터넷 등기소 \n(4) 관할 구청\n\n\n\n", 2.0f);
+        question.DOText("6. 확정일자를 발급받는 방법으로 옳지 않은 것을 보기 중에서 고르시오.\n(1) 동 주민센터\n(2) 공인중개사 사무소\n(3) 인터넷 등기소 \n(4) 관할 구청\n\n\n\n", 2.0f);
         yield return new WaitForSeconds(2.0f);
         select.DOText("정답을 고르시오", 2.0f);
         yield return new WaitForSeconds(2.0f);
