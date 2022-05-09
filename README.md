@@ -2,6 +2,7 @@
 한림대학교 2022년 1학기 소프트웨어캡스톤디자인 파라노이드 팀입니다
 
 일정표
+
 ![Schedule](https://user-images.githubusercontent.com/3304322/167393219-2a22b93d-a5f4-48da-b13d-56f570f5ad8a.PNG)
 
 설계도
