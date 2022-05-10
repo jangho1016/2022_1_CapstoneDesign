@@ -7,6 +7,8 @@
 
 설계도
 
+![Blueprint](https://user-images.githubusercontent.com/3304322/167609138-054e4d98-a7b2-4ae1-8ba8-d5f5817e5984.jpg)
+
 
 테스트 문서
 ![Test file](https://user-images.githubusercontent.com/3304322/167393304-575d8218-aba4-49d0-91ce-df6d077c088c.PNG)
