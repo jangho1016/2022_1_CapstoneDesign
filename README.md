@@ -7,7 +7,6 @@
 
 설계도
 
-![flow chart](https://user-images.githubusercontent.com/3304322/167302687-1284c039-886c-44cd-a57a-3a9052a5348d.jpg)
 
 테스트 문서
 ![Test file](https://user-images.githubusercontent.com/3304322/167393304-575d8218-aba4-49d0-91ce-df6d077c088c.PNG)
