@@ -9,10 +9,4 @@ public class Default : MonoBehaviour
     {
         PlayerPrefs.SetInt("rand_num", 0); //랜덤 숫자 초기화
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
