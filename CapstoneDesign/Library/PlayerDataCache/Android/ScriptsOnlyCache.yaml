@@ -33,7 +33,6 @@ ScriptsOnlyBuild:
     - QuizBTCtrl
     - QuizCtrl
     - RandomCtrl
-    - Readme
     - Refrigerator1
     - Refrigerator2
     - RefrigeratorD1
@@ -774,7 +773,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13996}
     - Class: 114
-      Script: {instanceID: 49232}
+      Script: {instanceID: 15346}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -3805,4 +3804,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Real Rooms/Rooms/Real Room4.unity
   - Assets/Scenes/Real Rooms/Bath Room/Real Room Bathroom4.unity
   - Assets/Scenes/ETC/Restart.unity
-  playerPath: C:/Users/Home/Desktop/Final BUild.apk
+  playerPath: C:/Users/Home/Desktop/Final Build Test.apk
