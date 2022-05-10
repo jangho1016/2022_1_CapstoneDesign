@@ -8,10 +8,10 @@ public class PlayerCtrl : MonoBehaviour
 {
     private Rigidbody rb;
     
-    public Image cursorGauge;
-    public Image timerGauge;
-    public Text timertext;
-    public Text crackText;
+    public Image cursorGauge; //커서게이지 이미지
+    public Image timerGauge; //타이머 게이지 이미지
+    public Text timertext; //타이머 글자
+    public Text crackText; //하자부분 갯수
 
     public GameObject mainCam;
     public GameObject managerPanel;
@@ -26,10 +26,10 @@ public class PlayerCtrl : MonoBehaviour
 
     private int cnt = 0;
     
-    public bool[] isOpened = new bool[40];
+    public bool[] isOpened = new bool[40]; 
     public bool[] crackChk = new bool[15];
 
-    public AudioClip[] clips = new AudioClip[30];
+    public AudioClip[] clips = new AudioClip[30]; //각종 효과음 배열
     private AudioSource audioSource;
     Animation anim;
 
@@ -52,7 +52,7 @@ public class PlayerCtrl : MonoBehaviour
         PlayerPrefs.SetInt("crack12", 0);
         PlayerPrefs.SetInt("pass", 0);
 
-        if ((curSceneName == "Room1") || (curSceneName == "Room2") || (curSceneName == "Room3") || (curSceneName == "Room4") || (curSceneName == "Room5")) //1-5번 방이면
+        if ((curSceneName == "Room1") || (curSceneName == "Room2") || (curSceneName == "Room3") || (curSceneName == "Room4") || (curSceneName == "Room5")) //현재 Scene이 1-5번 방일 때
         {
             PlayerPrefs.SetInt("SceneNum", 2); //씬넘버 2로 설정
         }
