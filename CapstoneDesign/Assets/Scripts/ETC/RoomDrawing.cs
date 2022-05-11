@@ -11,57 +11,51 @@ public class RoomDrawing : MonoBehaviour
     {
         curSceneName = SceneManager.GetActiveScene().name;
 
-        if (curSceneName == "Room1 Drawing")
+        if (curSceneName == "Room 1 Floor Plan")
         {
-            Debug.Log("test");
             StartCoroutine(Room1());
         }
-        else if (curSceneName == "Room2 Drawing")
+        else if (curSceneName == "Room 2 Floor Plan")
         {
             StartCoroutine(Room2());
         }
-        else if (curSceneName == "Room3 Drawing")
+        else if (curSceneName == "Room 3 Floor Plan")
         {
             StartCoroutine(Room3());
         }
-        else if (curSceneName == "Room4 Drawing")
+        else if (curSceneName == "Room 4 Floor Plan")
         {
             StartCoroutine(Room4());
         }
-        else if (curSceneName == "Room5 Drawing")
+        else if (curSceneName == "Room 5 Floor Plan")
         {
             StartCoroutine(Room5());
         }
     }
 
-    void Update()
-    {
-        
-    }
-
     IEnumerator Room1()
     {
         yield return new WaitForSeconds(3.0f);
-        SceneManager.LoadScene("Room1");
+        SceneManager.LoadScene("Room 1");
     }
     IEnumerator Room2()
     {
         yield return new WaitForSeconds(3.0f);
-        SceneManager.LoadScene("Room2");
+        SceneManager.LoadScene("Room 2");
     }
     IEnumerator Room3()
     {
         yield return new WaitForSeconds(3.0f);
-        SceneManager.LoadScene("Room3");
+        SceneManager.LoadScene("Room 3");
     }
     IEnumerator Room4()
     {
         yield return new WaitForSeconds(3.0f);
-        SceneManager.LoadScene("Room4");
+        SceneManager.LoadScene("Room 4");
     }
     IEnumerator Room5()
     {
         yield return new WaitForSeconds(3.0f);
-        SceneManager.LoadScene("Room5");
+        SceneManager.LoadScene("Room 5");
     }
 }

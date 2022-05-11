@@ -52,7 +52,7 @@ public class PlayerCtrl : MonoBehaviour
         PlayerPrefs.SetInt("crack12", 0);
         PlayerPrefs.SetInt("pass", 0);
 
-        if ((curSceneName == "Room1") || (curSceneName == "Room2") || (curSceneName == "Room3") || (curSceneName == "Room4") || (curSceneName == "Room5")) //현재 Scene이 1-5번 방일 때
+        if ((curSceneName == "Room 1") || (curSceneName == "Room 2") || (curSceneName == "Room 3") || (curSceneName == "Room 4") || (curSceneName == "Room 5")) //현재 Scene이 1-5번 방일 때
         {
             PlayerPrefs.SetInt("SceneNum", 2); //씬넘버 2로 설정
         }
@@ -80,7 +80,7 @@ public class PlayerCtrl : MonoBehaviour
             if (time_last <= 0.0f) //시간제한이 다 되면
                 SceneManager.LoadScene("Fail1"); //실패 씬1 로드 (실패)
 
-            else if(curSceneName == "Room1") //1번 방일 때
+            else if(curSceneName == "Room 1") //1번 방일 때
             {
                 if(time_last >= 0.0f) //시간만 0초 이상이면
                 {
@@ -89,7 +89,7 @@ public class PlayerCtrl : MonoBehaviour
                 }
             }
 
-            else if(curSceneName == "Room2") //2번 방일 때
+            else if(curSceneName == "Room 2") //2번 방일 때
             {
                 crackText.text = "남은 하자: " + (3 - cnt) + "개"; //하자를 3개로 세팅
 
@@ -98,7 +98,7 @@ public class PlayerCtrl : MonoBehaviour
                     PlayerPrefs.SetInt("pass", 1); //패스값 설정
                 }
             }
-            else if (curSceneName == "Room3") //3번 방일 때
+            else if (curSceneName == "Room 3") //3번 방일 때
             {
                 crackText.text = "남은 하자: " + (3 - cnt) + "개"; //하자를 3개로 세팅
 
@@ -107,7 +107,7 @@ public class PlayerCtrl : MonoBehaviour
                     PlayerPrefs.SetInt("pass", 1); //패스값 설정
                 }
             }
-            else if(curSceneName == "Room4") //4번 방일 때
+            else if(curSceneName == "Room 4") //4번 방일 때
             {
                 crackText.text = "남은 하자: " + (4 - cnt) + "개"; //하자를 4개로 세팅
 
@@ -116,7 +116,7 @@ public class PlayerCtrl : MonoBehaviour
                     PlayerPrefs.SetInt("pass", 1); //패스값 설정
                 }
             }
-            else if (curSceneName == "Room5") //5번 방일 때
+            else if (curSceneName == "Room 5") //5번 방일 때
             {
                 crackText.text = "남은 하자: " + (5 - cnt) + "개"; //하자를 5개로 설정
 
@@ -533,13 +533,13 @@ public class PlayerCtrl : MonoBehaviour
                         audioSource.PlayOneShot(clips[16]);
                         audioSource.clip = clips[17];
 
-                        if (curSceneName != "Room2")
+                        if (curSceneName != "Room 2")
                         {
                             audioSource.loop = true;
                             audioSource.Play();
                         }
 
-                        else if (curSceneName == "Room2")
+                        else if (curSceneName == "Room 2")
                         {
                             PlayerPrefs.SetInt("crack1", 1);
                             if ((crackChk[0] == false) && (PlayerPrefs.GetInt("crack1") == 1))
@@ -651,12 +651,12 @@ public class PlayerCtrl : MonoBehaviour
                         audioSource = GameObject.FindGameObjectWithTag("Ventilation").GetComponent<AudioSource>();
                         audioSource.clip = clips[27];
 
-                        if (curSceneName != "Room2")
+                        if (curSceneName != "Room 2")
                         {
                             audioSource.loop = true;
                             audioSource.Play();
                         }
-                        else if (curSceneName == "Room2")
+                        else if (curSceneName == "Room 2")
                         {
                             PlayerPrefs.SetInt("crack3", 1);
 
@@ -681,18 +681,18 @@ public class PlayerCtrl : MonoBehaviour
                         audioSource = GameObject.FindGameObjectWithTag("RoomSink").GetComponent<AudioSource>();
 
                         audioSource.PlayOneShot(clips[21]);
-                        if (curSceneName != "Room5")
+                        if (curSceneName != "Room 5")
                         {
                             audioSource.clip = clips[22];
                         }
-                        else if (curSceneName == "Room5")
+                        else if (curSceneName == "Room 5")
                         {
                             audioSource.clip = clips[28];
                         }
                         audioSource.loop = true;
                         audioSource.Play();
 
-                        if (curSceneName == "Room5")
+                        if (curSceneName == "Room 5")
                         {
                             PlayerPrefs.SetInt("crack10", 1);
 
@@ -717,13 +717,13 @@ public class PlayerCtrl : MonoBehaviour
                         audioSource.PlayOneShot(clips[18]);
                         audioSource = GameObject.FindGameObjectWithTag("Heater").GetComponent<AudioSource>();
                         audioSource.clip = clips[17];
-                        if (curSceneName != "Room4")
+                        if (curSceneName != "Room 4")
                         {
                             audioSource.loop = true;
                             audioSource.Play();
                         }
 
-                        else if (curSceneName == "Room4")
+                        else if (curSceneName == "Room 4")
                         {
                             PlayerPrefs.SetInt("crack8", 1);
 
@@ -751,7 +751,7 @@ public class PlayerCtrl : MonoBehaviour
                         audioSource.loop = true;
                         audioSource.Play();
 
-                        if (curSceneName == "Room3")
+                        if (curSceneName == "Room 3")
                         {
                             PlayerPrefs.SetInt("crack6", 1);
 
@@ -848,13 +848,13 @@ public class PlayerCtrl : MonoBehaviour
                         isOpened[42] = true;
                         audioSource = GameObject.FindGameObjectWithTag("Washer").GetComponent<AudioSource>();
                         audioSource.clip = clips[11];
-                        if (curSceneName != "Room2")
+                        if (curSceneName != "Room 2")
                         {
                             audioSource.loop = true;
                             audioSource.Play();
                         }
 
-                        else if (curSceneName == "Room2")
+                        else if (curSceneName == "Room 2")
                         {
                             PlayerPrefs.SetInt("crack2", 1);
 
@@ -901,7 +901,7 @@ public class PlayerCtrl : MonoBehaviour
                     {
                         isOpened[46] = true;
 
-                        if (curSceneName == "Room3")
+                        if (curSceneName == "Room 3")
                         {
                             PlayerPrefs.SetInt("crack5", 1);
 
@@ -923,13 +923,13 @@ public class PlayerCtrl : MonoBehaviour
                         audioSource.PlayOneShot(clips[18]);
                         audioSource = GameObject.FindGameObjectWithTag("AC").GetComponent<AudioSource>();
                         audioSource.clip = clips[26];
-                        if (curSceneName != "Room4")
+                        if (curSceneName != "Room 4")
                         {
                             audioSource.loop = true;
                             audioSource.Play();
                         }
 
-                        else if (curSceneName == "Room4")
+                        else if (curSceneName == "Room 4")
                         {
                             PlayerPrefs.SetInt("crack7", 1);
 
@@ -1004,7 +1004,7 @@ public class PlayerCtrl : MonoBehaviour
                     }
                     else if (hit.transform.tag == "Crack" == true)
                     {
-                        if ((curSceneName == "Room3") || (curSceneName == "Room4") || (curSceneName == "Room5"))
+                        if ((curSceneName == "Room 3") || (curSceneName == "Room 4") || (curSceneName == "Room 5"))
                         {
                             PlayerPrefs.SetInt("crack4", 1);
 
@@ -1017,7 +1017,7 @@ public class PlayerCtrl : MonoBehaviour
                     }
                     else if (hit.transform.tag == "Crack2" == true)
                     {
-                        if ((curSceneName == "Room4") || (curSceneName == "Room5"))
+                        if ((curSceneName == "Room 4") || (curSceneName == "Room 5"))
                         {
                             PlayerPrefs.SetInt("crack9", 1);
 

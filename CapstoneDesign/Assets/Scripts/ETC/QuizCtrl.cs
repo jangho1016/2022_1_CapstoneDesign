@@ -70,11 +70,11 @@ public class QuizCtrl : MonoBehaviour
             {
                 if (count == 6)
                 {
-                    SceneManager.LoadScene("Success2");
+                    SceneManager.LoadScene("Success Scene 2");
                 }
                 else
                 {
-                    SceneManager.LoadScene("Fail2");
+                    SceneManager.LoadScene("Fail Scene 2");
                 }
             }
         }
