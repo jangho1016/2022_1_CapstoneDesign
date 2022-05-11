@@ -38,7 +38,7 @@ public class BathroomFaucet : MonoBehaviour
         {
             water.SetActive(true);
             anim.SetBool("isOpen", true);
-            if (scenename == "Room3")
+            if (scenename == "Room 3")
             {
                 water.GetComponent<MeshRenderer>().materials[0].color = new Color(0.9811321f, 0.8250644f, 0.495194f);
                 water1.GetComponent<MeshRenderer>().materials[0].color = new Color(0.9811321f, 0.8250644f, 0.495194f);
@@ -46,7 +46,7 @@ public class BathroomFaucet : MonoBehaviour
 
             if (isOpen1 == true) //보일러 킬때
             {
-                if(scenename != "Room4")
+                if(scenename != "Room 4")
                     StartCoroutine(SmokeCtrlOn());
             }
             else if(isOpen1 == false) //보일러 끌때

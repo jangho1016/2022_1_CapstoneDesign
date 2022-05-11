@@ -23,7 +23,7 @@ public class FireBt4 : MonoBehaviour
 
         if (isOpen == true)
         {
-            if(scenename != "Room3")
+            if(scenename != "Room 3")
                 fire.SetActive(true);
         }
         else if (isOpen == false)

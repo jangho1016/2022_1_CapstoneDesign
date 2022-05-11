@@ -153,7 +153,6 @@ RectTransform:
   m_Children:
   - {fileID: 8781921391069936789}
   - {fileID: 1159222563}
-  - {fileID: 415375931}
   m_Father: {fileID: 1076173670}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -223,10 +222,10 @@ RectTransform:
   m_GameObject: {fileID: 415375930}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 4.2117677, z: 1}
   m_Children: []
-  m_Father: {fileID: 262671275}
-  m_RootOrder: 2
+  m_Father: {fileID: 1159222563}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -255,7 +254,7 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 25
-    m_FontStyle: 0
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 2
     m_MaxSize: 50
@@ -267,11 +266,13 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: "\uC870\uC791\uBC95\n\uC774\uB3D9: \uCE74\uB4DC\uBCF4\uB4DC \uC790\uC11D
     \uBC84\uD2BC \uC0AC\uC6A9\n\uC0C1\uD638\uC791\uC6A9: \uCEE4\uC11C\uAC8C\uC774\uC9C0\uB97C
-    \uC774\uC6A9\uD558\uC5EC \uD574\uB2F9 \uBB3C\uCCB4\uB97C \uC751\uC2DC\n\n\uC9C4\uD589
-    \uACFC\uC815\n\uD558\uC790 \uC5C6\uB294 \uC790\uCDE8\uBC29\uC744 \uCC3E\uAC8C
-    \uB418\uBA74 \uD034\uC988\uB85C \uB118\uC5B4\uAC00\uBA70 \uADF8 \uD6C4 360\uB3C4\uB85C
-    \uCD2C\uC601\uB41C \uC2E4\uC81C \uBC29\uC744 \uBCF4\uBA70 \uBC30\uC6B4 \uAC83\uC744
-    \uBCF5\uC2B5"
+    \uC774\uC6A9\uD558\uC5EC \uD574\uB2F9 \uBB3C\uCCB4\uB97C 3\uCD08\uAC04 \uC751\uC2DC\n\n\uC9C4\uD589
+    \uACFC\uC815\n\uC9C0\uB3C4\uC5D0\uC11C \uBCF4\uACE0\uC2F6\uC740 \uBC29 \uC120\uD0DD
+    \uD6C4 \uD558\uC790\uAC00 \uC5C6\uB294 \uBC29\uC774\uB098 \uBAA8\uB4E0 \uD558\uC790\uB97C
+    \uCC3E\uC740 \uB4A4 \uBD80\uB3D9\uC0B0\uC911\uAC1C\uC5C5\uC790\uC640 \uC0C1\uD638\uC791\uC6A9\uD558\uC5EC
+    \uBC84\uD2BC\uC744 \uC774\uC6A9\uD569\uB2C8\uB2E4. \uADF8 \uD6C4 \uD034\uC988\uB97C
+    \uB9DE\uCD94\uACE0 \uC2E4\uC81C \uBC29\uACFC \uD654\uC7A5\uC2E4\uC744 \uB458\uB7EC\uBCF4\uBA74
+    \uB429\uB2C8\uB2E4."
 --- !u!222 &415375933
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -804,14 +805,15 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 0.23743, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 415375931}
   m_Father: {fileID: 262671275}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -450, y: 900}
+  m_SizeDelta: {x: -490, y: 900}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1159222564
 MonoBehaviour:
@@ -1368,7 +1370,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.4745098, g: 0.4745098, b: 0.4745098, a: 1}
+  m_Color: {r: 0.34117648, g: 0.34117648, b: 0.34117648, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -1443,8 +1445,8 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
-    m_FontStyle: 0
+    m_FontSize: 22
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 2
     m_MaxSize: 40

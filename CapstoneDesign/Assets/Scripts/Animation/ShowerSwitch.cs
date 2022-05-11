@@ -34,7 +34,7 @@ public class ShowerSwitch : MonoBehaviour
 
             if (isOpen1 == true) //보일러 킬때
             {
-                if (scenename != "Room4")
+                if (scenename != "Room 4")
                     StartCoroutine(SmokeCtrlOn());
             }
             else if (isOpen1 == false) //보일러 끌때

@@ -11,6 +11,7 @@ public class WasherDoor : MonoBehaviour
     bool isOpen3;
     GameObject player;
     public GameObject display;
+    string scenename;
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +28,7 @@ public class WasherDoor : MonoBehaviour
         isOpen1 = player.GetComponent<PlayerCtrl>().isOpened[7]; //문이 닫혀 있음
         isOpen2 = player.GetComponent<PlayerCtrl>().isOpened[8]; //서랍이 닫혀 있음
         isOpen3 = player.GetComponent<PlayerCtrl>().isOpened[42]; //버튼 동작
+        scenename = player.GetComponent<PlayerCtrl>().curSceneName;
 
         if (isOpen1 == true)
         {
@@ -40,7 +42,8 @@ public class WasherDoor : MonoBehaviour
             {
                 if(isOpen3 == true)
                 {
-                    display.GetComponent<MeshRenderer>().materials[0].color = Color.red;
+                    if (scenename != "Room 2")
+                        display.GetComponent<MeshRenderer>().materials[0].color = Color.red;
                 }
                 else if (isOpen3 == false)
                 {

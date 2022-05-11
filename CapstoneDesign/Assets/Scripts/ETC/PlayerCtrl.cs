@@ -78,7 +78,7 @@ public class PlayerCtrl : MonoBehaviour
                 timertext.text = "남\n" + "은\n" + "시\n" + "간\n" + ((int)(time_last / 60) + "\n" + "분\n" + (int)(time_last % 60) + "\n" + "초"); //남은 시간 표시
             }
             if (time_last <= 0.0f) //시간제한이 다 되면
-                SceneManager.LoadScene("Fail1"); //실패 씬1 로드 (실패)
+                SceneManager.LoadScene("Fail Scene 1"); //실패 씬1 로드 (실패)
 
             else if(curSceneName == "Room 1") //1번 방일 때
             {
