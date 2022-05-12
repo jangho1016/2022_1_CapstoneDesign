@@ -11,4 +11,4 @@
 
 
 테스트 문서
-![Test file](https://user-images.githubusercontent.com/3304322/167393304-575d8218-aba4-49d0-91ce-df6d077c088c.PNG)
+![테스트 결과표](https://user-images.githubusercontent.com/3304322/168055712-2878a5eb-a6d6-4922-941f-4d75a6ff1f8f.PNG)
