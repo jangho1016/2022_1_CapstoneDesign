@@ -1,4 +1,4 @@
-# 2022_1_CapstoneDesign
+# 올바른 자취방 구하기 VR 시뮬레이터
 > **한림대학교 2022년 1학기 소프트웨어캡스톤디자인 파라노이드 팀입니다.**<br/><br/>
 ![image](https://user-images.githubusercontent.com/67461878/169653972-93b812bd-a23d-4211-8e03-9be543d73cf4.png)
 
