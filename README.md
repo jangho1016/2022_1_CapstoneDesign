@@ -26,7 +26,7 @@ ___
 
 ### 사용한 도구
 ![Google Cardboard](https://img.shields.io/badge/Google%20Cardboard-FF7F00?style=plastic&logo=Google%20Cardboard&logoColor=white)
-
+![Insta360](https://img.shields.io/badge/Insta360-000000?style=plastic&logo=Insomnia&logoColor=white)
 
 ___
 
