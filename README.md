@@ -19,10 +19,14 @@
 | 김선정 | 한림대 |
 ___
 
-### 사용한 도구
+### 개발 환경
 ![C#](https://img.shields.io/badge/C%23-%23239120.svg?style=plastic&logo=c-sharp&logoColor=white)
 ![VS](https://img.shields.io/badge/VS-%235C2D91.svg?style=plastic&logo=Visual%20Studio&logoColor=white)
 ![Unity](https://img.shields.io/badge/Unity-000000?style=plastic&logo=Unity&logoColor=white)
+
+### 사용한 도구
+![Google Cardboard](https://img.shields.io/badge/Google%20Cardboard-FF7F00?style=plastic&logo=Google%20Cardboard&logoColor=white)
+
 
 ___
 
