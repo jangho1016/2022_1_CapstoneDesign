@@ -4,7 +4,7 @@
 
 # Paranoid
 
-### 팀원
+### 팀 구성
 | 이름 | 학번 | 학과 |
 |:---:|:---:|:---:|
 | 오장호 | 20145329 | 콘텐츠IT |
@@ -13,10 +13,16 @@
 | 김민석 | 20195124 | 콘텐츠IT |
 | 최혁 | 20193008 | 경영 |
 
+### 지도 교수님
+| 이름 | 소속 |
+|:---:|:---:|
+| 김선정 | 한림대 |
 ___
 
-### 사용한 기술
-~~
+### 사용한 도구
+![C#](https://img.shields.io/badge/C%23-%23239120.svg?style=plastic&logo=c-sharp&logoColor=white)
+![VS](https://img.shields.io/badge/VS-%235C2D91.svg?style=plastic&logo=Visual%20Studio&logoColor=white)
+![Unity](https://img.shields.io/badge/Unity-000000?style=plastic&logo=Unity&logoColor=white)
 
 ___
 
