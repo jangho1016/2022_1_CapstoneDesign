@@ -33,21 +33,21 @@ ___
 ___
 
 ### 바로가기
-1. [일정표](https://github.com/jangho1016/2022_1_CapstoneDesign/edit/main/README.md#%EC%9D%BC%EC%A0%95%ED%91%9C)
-2. [설계도](https://github.com/jangho1016/2022_1_CapstoneDesign/edit/main/README.md#%EC%84%A4%EA%B3%84%EB%8F%84)
-3. [테스트 문서](https://github.com/jangho1016/2022_1_CapstoneDesign/edit/main/README.md#%ED%85%8C%EC%8A%A4%ED%8A%B8-%EB%AC%B8%EC%84%9C)
+1. [일정표](https://github.com/jangho1016/2022_1_CapstoneDesign#%EC%9D%BC%EC%A0%95%ED%91%9C)
+2. [설계도](https://github.com/jangho1016/2022_1_CapstoneDesign#%EC%84%A4%EA%B3%84%EB%8F%84)
+3. [테스트 문서](https://github.com/jangho1016/2022_1_CapstoneDesign#%ED%85%8C%EC%8A%A4%ED%8A%B8-%EB%AC%B8%EC%84%9C)
 
 ___
 
 ### 일정표
-![Schedule](https://github.com/jangho1016/2022_1_CapstoneDesign#%EC%9D%BC%EC%A0%95%ED%91%9C)
+![Schedule](https://github.com/jangho1016/2022_1_CapstoneDesign/blob/main/Documents/Schedule/Schedule.PNG)
 
 ___
 
 ### 설계도
-![Blueprint](https://github.com/jangho1016/2022_1_CapstoneDesign#%EC%84%A4%EA%B3%84%EB%8F%84)
+![Blueprint](https://github.com/jangho1016/2022_1_CapstoneDesign/blob/main/Documents/Blueprint/Blueprint.jpg)
 
 ___
 
 ### 테스트 문서
-![테스트 결과표](https://github.com/jangho1016/2022_1_CapstoneDesign#%ED%85%8C%EC%8A%A4%ED%8A%B8-%EB%AC%B8%EC%84%9C)
+![테스트 결과표](https://github.com/jangho1016/2022_1_CapstoneDesign/blob/main/Documents/Test%20Result/%ED%85%8C%EC%8A%A4%ED%8A%B8%20%EA%B2%B0%EA%B3%BC%ED%91%9C.PNG)
