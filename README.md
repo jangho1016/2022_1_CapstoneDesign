@@ -13,7 +13,7 @@
 | 김민석 | 20195124 | 콘텐츠IT |
 | 최혁 | 20193008 | 경영 |
 
-### 지도 교수님
+### 지도 교수
 | 이름 | 소속 |
 |:---:|:---:|
 | 김선정 | 한림대 |
@@ -40,14 +40,14 @@ ___
 ___
 
 ### 일정표
-![Schedule](https://user-images.githubusercontent.com/3304322/167393219-2a22b93d-a5f4-48da-b13d-56f570f5ad8a.PNG)
+![Schedule](https://github.com/jangho1016/2022_1_CapstoneDesign#%EC%9D%BC%EC%A0%95%ED%91%9C)
 
 ___
 
 ### 설계도
-![Blueprint](https://user-images.githubusercontent.com/3304322/167609138-054e4d98-a7b2-4ae1-8ba8-d5f5817e5984.jpg)
+![Blueprint](https://github.com/jangho1016/2022_1_CapstoneDesign#%EC%84%A4%EA%B3%84%EB%8F%84)
 
 ___
 
 ### 테스트 문서
-![테스트 결과표](https://user-images.githubusercontent.com/3304322/168055712-2878a5eb-a6d6-4922-941f-4d75a6ff1f8f.PNG)
+![테스트 결과표](https://github.com/jangho1016/2022_1_CapstoneDesign#%ED%85%8C%EC%8A%A4%ED%8A%B8-%EB%AC%B8%EC%84%9C)
