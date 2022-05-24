@@ -25,12 +25,22 @@ ___
 * ![Google Cardboard](https://img.shields.io/badge/Google%20Cardboard-FF7F00?style=plastic&logo=Google%20Cardboard&logoColor=white)
 * ![VS](https://img.shields.io/badge/VS-5C2D91.svg?style=plastic&logo=Visual%20Studio&logoColor=white)
 * ![C#](https://img.shields.io/badge/C%23-239120.svg?style=plastic&logo=c-sharp&logoColor=white)
+* Android SDK
+* JDK
 
-### 사용한 도구 및 기술
+### 사용한 오픈소스 목록
 * ![Insta360](https://img.shields.io/badge/Insta360-000000.svg?style=plastic&logoColor=white)
 * ![DOTween](https://img.shields.io/badge/DOTween-00FF80.svg?style=plastic&logoColor=white)
 * ![Diagram](https://img.shields.io/badge/Diagram-FF7F00.svg?style=plastic&logoColor=white)
+* Google VR
+* Cardboard XR Plugin
+* Kakao Map
+* Homestyler
 
+### 에셋 스토어 사용 목록
+
+
+#FF7143
 ___
 
 ### 바로가기
