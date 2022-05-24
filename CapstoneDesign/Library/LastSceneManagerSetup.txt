@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/ETC/Quiz Scene.unity
+- path: Assets/Scenes/Floor Plan/Room 3 Floor Plan.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
