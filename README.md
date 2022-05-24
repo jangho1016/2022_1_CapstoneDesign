@@ -17,38 +17,15 @@
 | 이름 | 소속 |
 |:---:|:---:|
 | 김선정 | 한림대 |
-___
 
-### 개발 환경
-* ![Unity](https://img.shields.io/badge/Unity-000000?style=plastic&logo=Unity&logoColor=white)
-* ![Android](https://img.shields.io/badge/Android-3DDC84.svg?style=plastic&logo=Android&logoColor=white)
-* ![Google Cardboard](https://img.shields.io/badge/Google%20Cardboard-FF7F00?style=plastic&logo=Google%20Cardboard&logoColor=white)
-* ![VS](https://img.shields.io/badge/VS-5C2D91.svg?style=plastic&logo=Visual%20Studio&logoColor=white)
-* ![C#](https://img.shields.io/badge/C%23-239120.svg?style=plastic&logo=c-sharp&logoColor=white)
-* Android SDK
-* JDK
-
-### 사용한 오픈소스 목록
-* ![Insta360](https://img.shields.io/badge/Insta360-000000.svg?style=plastic&logoColor=white)
-* ![DOTween](https://img.shields.io/badge/DOTween-00FF80.svg?style=plastic&logoColor=white)
-* ![Diagram](https://img.shields.io/badge/Diagram-FF7F00.svg?style=plastic&logoColor=white)
-* Google VR
-* Cardboard XR Plugin
-* Kakao Map
-* Homestyler
-
-### 에셋 스토어 사용 목록
-
-
-<!--
-<a href="http://melonicedlatte.com/">
-    <img src="https://img.shields.io/badge/라벨-메시지-red"
-        style="height : auto; margin-left : 8px; margin-right : 8px;"/>
-</a>
-
-#FF7143
-
--->
+### 기술
+| 개발 환경 | 사용한 오픈소스 목록 | 사용한 도구 |
+|:---:|:---:|:---:|
+| ![Unity](https://img.shields.io/badge/Unity-000000?style=plastic&logo=Unity&logoColor=white) | ![Android SDK](https://img.shields.io/badge/Android%20SDK-3DDC84.svg?style=plastic&logo=Android%20Studio&logoColor=white) | ![Diagram](https://img.shields.io/badge/Diagram-FF7F00.svg?style=plastic&logo=diagrams%2Enet&logoColor=white) |
+| ![Android](https://img.shields.io/badge/Android-3DDC84.svg?style=plastic&logo=Android&logoColor=white) | ![Open JDK](https://img.shields.io/badge/Open%20JDK-000000.svg?style=plastic&logo=OpenJDK&logoColor=white) | ![Photoshop](https://img.shields.io/badge/Adobe%20Photoshop-31A8FF.svg?style=plastic&logo=Adobe%20Photoshop&logoColor=white) |
+| ![Google Cardboard](https://img.shields.io/badge/Google%20Cardboard-FF7F00?style=plastic&logo=Google%20Cardboard&logoColor=white) | ![Cardboard XR Plugin](https://img.shields.io/badge/Cardboard%20XR%20Plugin-FF7F00?style=plastic&logo=Google%20Cardboard&logoColor=white) | ![Insta360](https://img.shields.io/badge/Insta%20360-000000.svg?style=plastic&logoColor=white) |
+| ![VS](https://img.shields.io/badge/Visual%20Studio-5C2D91.svg?style=plastic&logo=Visual%20Studio&logoColor=white) | ![DOTween](https://img.shields.io/badge/DOTween-00FF80.svg?style=plastic&logoColor=white) | ![Homestyler](https://img.shields.io/badge/Homestyler-3CC2FF.svg?style=plastic&logoColor=white) |
+| ![C#](https://img.shields.io/badge/C%23-239120.svg?style=plastic&logo=c-sharp&logoColor=white) || ![Vapshion2](https://img.shields.io/badge/Vapshion%202-F44336.svg?style=plastic&logoColor=white) |
 
 ___
 
