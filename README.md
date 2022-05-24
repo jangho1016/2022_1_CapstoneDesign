@@ -26,9 +26,10 @@ ___
 * ![VS](https://img.shields.io/badge/VS-5C2D91.svg?style=plastic&logo=Visual%20Studio&logoColor=white)
 * ![C#](https://img.shields.io/badge/C%23-239120.svg?style=plastic&logo=c-sharp&logoColor=white)
 
-### 사용한 도구
+### 사용한 도구 및 기술
 * ![Insta360](https://img.shields.io/badge/Insta360-000000.svg?style=plastic&logoColor=white)
 * ![DOTween](https://img.shields.io/badge/DOTween-00FF80.svg?style=plastic&logoColor=white)
+* ![Diagram](https://img.shields.io/badge/Diagram-FF7F00.svg?style=plastic&logoColor=white)
 
 ___
 
