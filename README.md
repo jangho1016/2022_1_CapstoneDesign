@@ -40,7 +40,16 @@ ___
 ### 에셋 스토어 사용 목록
 
 
+<!--
+<a href="http://melonicedlatte.com/">
+    <img src="https://img.shields.io/badge/라벨-메시지-red"
+        style="height : auto; margin-left : 8px; margin-right : 8px;"/>
+</a>
+
 #FF7143
+
+-->
+
 ___
 
 ### 바로가기
