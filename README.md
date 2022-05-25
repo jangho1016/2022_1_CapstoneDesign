@@ -25,7 +25,7 @@
 | ![Android](https://img.shields.io/badge/Android-3DDC84.svg?style=plastic&logo=Android&logoColor=white) | ![Open JDK](https://img.shields.io/badge/Open%20JDK-000000.svg?style=plastic&logo=OpenJDK&logoColor=white) | ![Photoshop](https://img.shields.io/badge/Adobe%20Photoshop-31A8FF.svg?style=plastic&logo=Adobe%20Photoshop&logoColor=white) |
 | ![Google Cardboard](https://img.shields.io/badge/Google%20Cardboard-FF7F00?style=plastic&logo=Google%20Cardboard&logoColor=white) | ![Cardboard XR Plugin](https://img.shields.io/badge/Cardboard%20XR%20Plugin-FF7F00?style=plastic&logo=Google%20Cardboard&logoColor=white) | ![Insta360](https://img.shields.io/badge/Insta%20360-000000.svg?style=plastic&logoColor=white) |
 | ![VS](https://img.shields.io/badge/Visual%20Studio-5C2D91.svg?style=plastic&logo=Visual%20Studio&logoColor=white) | ![DOTween](https://img.shields.io/badge/DOTween-00FF80.svg?style=plastic&logoColor=white) | ![Homestyler](https://img.shields.io/badge/Homestyler-3CC2FF.svg?style=plastic&logoColor=white) |
-| ![C#](https://img.shields.io/badge/C%23-239120.svg?style=plastic&logo=c-sharp&logoColor=white) || ![Vapshion2](https://img.shields.io/badge/Vapshion%202-F44336.svg?style=plastic&logoColor=white) |
+| ![C#](https://img.shields.io/badge/C%23-239120.svg?style=plastic&logo=c-sharp&logoColor=white) || ![Vapmix2](https://img.shields.io/badge/Vapmix%202-F44336.svg?style=plastic&logoColor=white) |
 
 ___
 
